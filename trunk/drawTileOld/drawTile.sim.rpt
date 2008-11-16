@@ -1,0 +1,221 @@
+Simulator report for drawTile
+Sat Nov 29 16:54:55 2008
+Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 5.0 us       ;
+; Simulation Netlist Size     ; 45 nodes     ;
+; Simulation Coverage         ;      84.00 % ;
+; Total Number of Transitions ; 4196         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      84.00 % ;
+; Total nodes checked                                 ; 45           ;
+; Total output ports checked                          ; 50           ;
+; Total output ports with complete 1/0-value coverage ; 42           ;
+; Total output ports with no 1/0-value coverage       ; 8            ;
+; Total output ports with no 1-value coverage         ; 8            ;
+; Total output ports with no 0-value coverage         ; 8            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                                                               ;
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                        ; Output Port Name                                                                                                    ; Output Port Type ;
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_reg_bit1a[2] ; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2]               ; regout           ;
+; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_reg_bit1a[1] ; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1]               ; regout           ;
+; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_reg_bit1a[0] ; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0]               ; regout           ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_reg_bit1a[2] ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2]               ; regout           ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_reg_bit1a[1] ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1]               ; regout           ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_reg_bit1a[0] ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0]               ; regout           ;
+; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita0   ; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita0      ; combout          ;
+; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita0   ; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita0~COUT ; cout             ;
+; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita1   ; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita1      ; combout          ;
+; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita1   ; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita1~COUT ; cout             ;
+; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita2   ; |drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|counter_comb_bita2      ; combout          ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita0   ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita0      ; combout          ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita0   ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita0~COUT ; cout             ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita1   ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita1      ; combout          ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita1   ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita1~COUT ; cout             ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita2   ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita2      ; combout          ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita2   ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita2~COUT ; cout             ;
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita3   ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_comb_bita3      ; combout          ;
+; |drawTile|y_Q[0]~reg0                                                                                            ; |drawTile|y_Q[0]~reg0                                                                                               ; regout           ;
+; |drawTile|Mux0~192                                                                                               ; |drawTile|Mux0~192                                                                                                  ; combout          ;
+; |drawTile|y_Q[1]~reg0                                                                                            ; |drawTile|y_Q[1]~reg0                                                                                               ; regout           ;
+; |drawTile|Mux0~193                                                                                               ; |drawTile|Mux0~193                                                                                                  ; combout          ;
+; |drawTile|Mux0~194                                                                                               ; |drawTile|Mux0~194                                                                                                  ; combout          ;
+; |drawTile|Decoder1~63                                                                                            ; |drawTile|Decoder1~63                                                                                               ; combout          ;
+; |drawTile|Decoder1~64                                                                                            ; |drawTile|Decoder1~64                                                                                               ; combout          ;
+; |drawTile|Mux0~195                                                                                               ; |drawTile|Mux0~195                                                                                                  ; combout          ;
+; |drawTile|Decoder0~22                                                                                            ; |drawTile|Decoder0~22                                                                                               ; combout          ;
+; |drawTile|Mux0~195_wirecell                                                                                      ; |drawTile|Mux0~195_wirecell                                                                                         ; combout          ;
+; |drawTile|drawDone                                                                                               ; |drawTile|drawDone                                                                                                  ; padio            ;
+; |drawTile|plot                                                                                                   ; |drawTile|plot                                                                                                      ; padio            ;
+; |drawTile|draw_x[0]                                                                                              ; |drawTile|draw_x[0]                                                                                                 ; padio            ;
+; |drawTile|draw_x[1]                                                                                              ; |drawTile|draw_x[1]                                                                                                 ; padio            ;
+; |drawTile|draw_x[2]                                                                                              ; |drawTile|draw_x[2]                                                                                                 ; padio            ;
+; |drawTile|draw_y[0]                                                                                              ; |drawTile|draw_y[0]                                                                                                 ; padio            ;
+; |drawTile|draw_y[1]                                                                                              ; |drawTile|draw_y[1]                                                                                                 ; padio            ;
+; |drawTile|draw_y[2]                                                                                              ; |drawTile|draw_y[2]                                                                                                 ; padio            ;
+; |drawTile|y_D[0]                                                                                                 ; |drawTile|y_D[0]                                                                                                    ; padio            ;
+; |drawTile|y_D[1]                                                                                                 ; |drawTile|y_D[1]                                                                                                    ; padio            ;
+; |drawTile|y_Q[0]                                                                                                 ; |drawTile|y_Q[0]                                                                                                    ; padio            ;
+; |drawTile|y_Q[1]                                                                                                 ; |drawTile|y_Q[1]                                                                                                    ; padio            ;
+; |drawTile|clock                                                                                                  ; |drawTile|clock~corein                                                                                              ; combout          ;
+; |drawTile|clock~clkctrl                                                                                          ; |drawTile|clock~clkctrl                                                                                             ; outclk           ;
++------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                        ; Output Port Name                                                                                      ; Output Port Type ;
++------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_reg_bit1a[3] ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; regout           ;
+; |drawTile|~GND                                                                                                   ; |drawTile|~GND                                                                                        ; combout          ;
+; |drawTile|draw_y[3]                                                                                              ; |drawTile|draw_y[3]                                                                                   ; padio            ;
+; |drawTile|y_D[2]                                                                                                 ; |drawTile|y_D[2]                                                                                      ; padio            ;
+; |drawTile|y_Q[2]                                                                                                 ; |drawTile|y_Q[2]                                                                                      ; padio            ;
+; |drawTile|draw                                                                                                   ; |drawTile|draw~corein                                                                                 ; combout          ;
+; |drawTile|resetn                                                                                                 ; |drawTile|resetn~corein                                                                               ; combout          ;
+; |drawTile|resetn~clkctrl                                                                                         ; |drawTile|resetn~clkctrl                                                                              ; outclk           ;
++------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                    ;
++------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                        ; Output Port Name                                                                                      ; Output Port Type ;
++------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|counter_reg_bit1a[3] ; |drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; regout           ;
+; |drawTile|~GND                                                                                                   ; |drawTile|~GND                                                                                        ; combout          ;
+; |drawTile|draw_y[3]                                                                                              ; |drawTile|draw_y[3]                                                                                   ; padio            ;
+; |drawTile|y_D[2]                                                                                                 ; |drawTile|y_D[2]                                                                                      ; padio            ;
+; |drawTile|y_Q[2]                                                                                                 ; |drawTile|y_Q[2]                                                                                      ; padio            ;
+; |drawTile|draw                                                                                                   ; |drawTile|draw~corein                                                                                 ; combout          ;
+; |drawTile|resetn                                                                                                 ; |drawTile|resetn~corein                                                                               ; combout          ;
+; |drawTile|resetn~clkctrl                                                                                         ; |drawTile|resetn~clkctrl                                                                              ; outclk           ;
++------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Simulator INI Usage                                                                             ;
++----------------------+--------------------------------------------------------------------------+
+; Option               ; Usage                                                                    ;
++----------------------+--------------------------------------------------------------------------+
+; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
+; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
++----------------------+--------------------------------------------------------------------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+    Info: Processing started: Sat Nov 29 16:54:52 2008
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off drawTile -c drawTile
+Info: Using vector source file "W:/quartus/project/drawTile/drawTile.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      84.00 %
+Info: Number of transitions in simulation is 4196
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Allocated 95 megabytes of memory during processing
+    Info: Processing ended: Sat Nov 29 16:54:56 2008
+    Info: Elapsed time: 00:00:04
+
+

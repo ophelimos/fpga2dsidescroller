@@ -1,0 +1,171 @@
+Analysis & Synthesis report for drawBackground
+Sun Nov 16 20:06:01 2008
+Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Analysis & Synthesis Source Files Read
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2006 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                               ;
++-----------------------------+----------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Sun Nov 16 20:06:01 2008            ;
+; Quartus II Version          ; 6.0 Build 202 06/20/2006 SP 1 SJ Web Edition ;
+; Revision Name               ; drawBackground                               ;
+; Top-level Entity Name       ; drawBackground                               ;
+; Family                      ; Cyclone II                                   ;
++-----------------------------+----------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                             ; Setting            ; Default Value      ;
++--------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                             ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                              ; drawBackground     ; drawBackground     ;
+; Family name                                                        ; Cyclone II         ; Stratix            ;
+; Use smart compilation                                              ; Off                ; Off                ;
+; Restructure Multiplexers                                           ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                ; Off                ; Off                ;
+; Preserve fewer node names                                          ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                          ; Off                ; Off                ;
+; Verilog Version                                                    ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                       ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                           ; Auto               ; Auto               ;
+; Extract Verilog State Machines                                     ; On                 ; On                 ;
+; Extract VHDL State Machines                                        ; On                 ; On                 ;
+; Add Pass-Through Logic to Inferred RAMs                            ; On                 ; On                 ;
+; DSP Block Balancing                                                ; Auto               ; Auto               ;
+; Maximum DSP Block Usage                                            ; Unlimited          ; Unlimited          ;
+; NOT Gate Push-Back                                                 ; On                 ; On                 ;
+; Power-Up Don't Care                                                ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                       ; Off                ; Off                ;
+; Remove Duplicate Registers                                         ; On                 ; On                 ;
+; Ignore CARRY Buffers                                               ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                             ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                              ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                          ; Off                ; Off                ;
+; Ignore LCELL Buffers                                               ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                     ; Off                ; Off                ;
+; Optimization Technique -- Cyclone II                               ; Balanced           ; Balanced           ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II ; 70                 ; 70                 ;
+; Auto Carry Chains                                                  ; On                 ; On                 ;
+; Auto Open-Drain Pins                                               ; On                 ; On                 ;
+; Remove Duplicate Logic                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                              ; Off                ; Off                ;
+; Perform gate-level register retiming                               ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax             ; On                 ; On                 ;
+; Auto ROM Replacement                                               ; On                 ; On                 ;
+; Auto RAM Replacement                                               ; On                 ; On                 ;
+; Auto Shift Register Replacement                                    ; On                 ; On                 ;
+; Auto Clock Enable Replacement                                      ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                  ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                             ; Off                ; Off                ;
+; Auto Resource Sharing                                              ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                 ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                      ; Off                ; Off                ;
+; Maximum Number of M4K Memory Blocks                                ; Unlimited          ; Unlimited          ;
+; Ignore translate_off and translate_on Synthesis Directives         ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                 ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                   ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                       ; Normal compilation ; Normal compilation ;
+; HDL message level                                                  ; Level2             ; Level2             ;
++--------------------------------------------------------------------+--------------------+--------------------+
+
+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                        ;
++----------------------------------+-----------------+-----------+------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type ; File Name with Absolute Path ;
++----------------------------------+-----------------+-----------+------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Analysis & Synthesis
+    Info: Version 6.0 Build 202 06/20/2006 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sun Nov 16 20:05:55 2008
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off drawBackground -c drawBackground
+Info: Found 1 design units, including 1 entities, in source file tileset.v
+    Info: Found entity 1: tileset
+Info: Found 1 design units, including 1 entities, in source file ../drawTileMichael/nBitRegister.v
+    Info: Found entity 1: nBitRegister
+Info: Found 1 design units, including 1 entities, in source file ../drawTileMichael/addy.v
+    Info: Found entity 1: addy
+Info: Found 1 design units, including 1 entities, in source file ../drawTileMichael/drawTile.v
+    Info: Found entity 1: drawTile
+Info: Found 1 design units, including 1 entities, in source file ../drawTileMichael/memCount.v
+    Info: Found entity 1: memCount
+Info: Found 1 design units, including 1 entities, in source file ../drawTileMichael/nBitAddSub.v
+    Info: Found entity 1: AddSubNbit
+Info: Found 1 design units, including 1 entities, in source file ../drawTileMichael/addx.v
+    Info: Found entity 1: addx
+Info: Found 1 design units, including 1 entities, in source file level1.v
+    Info: Found entity 1: level1
+Info: Found 1 design units, including 1 entities, in source file counter4b.v
+    Info: Found entity 1: counter4b
+Info: Found 1 design units, including 1 entities, in source file tile1.v
+    Info: Found entity 1: tile1
+Info: Found 1 design units, including 1 entities, in source file counter5b.v
+    Info: Found entity 1: counter5b
+Info: Found 1 design units, including 1 entities, in source file tile0.v
+    Info: Found entity 1: tile0
+Info: Found 1 design units, including 1 entities, in source file counter3b.v
+    Info: Found entity 1: counter3b
+Info: Found 1 design units, including 1 entities, in source file drawBackground.v
+    Info: Found entity 1: drawBackground
+Error (10137): Verilog HDL Procedural Assignment error at drawBackground.v(186): object "draw" on left-hand side of assignment must have a variable data type File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 186
+Error (10137): Verilog HDL Procedural Assignment error at drawBackground.v(187): object "draw" on left-hand side of assignment must have a variable data type File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 187
+Error (10137): Verilog HDL Procedural Assignment error at drawBackground.v(188): object "draw" on left-hand side of assignment must have a variable data type File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 188
+Error (10137): Verilog HDL Procedural Assignment error at drawBackground.v(189): object "draw" on left-hand side of assignment must have a variable data type File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 189
+Error (10137): Verilog HDL Procedural Assignment error at drawBackground.v(190): object "draw" on left-hand side of assignment must have a variable data type File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 190
+Error (10137): Verilog HDL Procedural Assignment error at drawBackground.v(191): object "draw" on left-hand side of assignment must have a variable data type File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 191
+Error (10161): Verilog HDL error at drawBackground.v(191): object "tile0_out" is not declared File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 191
+Error (10137): Verilog HDL Procedural Assignment error at drawBackground.v(192): object "draw" on left-hand side of assignment must have a variable data type File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 192
+Error (10161): Verilog HDL error at drawBackground.v(192): object "tile1_out" is not declared File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 192
+Error (10137): Verilog HDL Procedural Assignment error at drawBackground.v(193): object "draw" on left-hand side of assignment must have a variable data type File: Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.v Line: 193
+Error: Quartus II Analysis & Synthesis was unsuccessful. 10 errors, 0 warnings
+    Error: Processing ended: Sun Nov 16 20:06:00 2008
+    Error: Elapsed time: 00:00:06
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in Z:/c++/fpga2dsidescroller/project/drawBackground/drawBackground.map.smsg.
+
+

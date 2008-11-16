@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="main_state_machine">
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|drawBackground:draw_background|counter4b:draw_countery|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_3oi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_3oi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_4oi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|drawBackground:draw_background|lpm_mult:Mult0" CBX_FILE_NAME="mult_mv01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|drawBackground:draw_background|level1:level_mem|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_q7d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|drawBackground:draw_background|tile0:grass_tile|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_30d1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|drawBackground:draw_background|tile1:sky_tile|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_had1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|vga_adapter:VGA|altsyncram:VideoMemory" CBX_FILE_NAME="altsyncram_mvh1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|counter32b:position_counter|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_kpi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|main_state_machine|drawBackground:draw_background|counter3b:draw_counterx|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_2oi.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

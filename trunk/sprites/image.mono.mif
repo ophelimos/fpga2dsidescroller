@@ -1,0 +1,16 @@
+Depth = 64;
+Width = 1;
+Address_radix=dec;
+Data_radix=dec;
+Content
+BEGIN
+	[0..63] : 0;
+	56 :;
+	48 :;
+	40 :;
+	32 :;
+	24 :;
+	16 :;
+	8 :;
+	0 :;
+End;

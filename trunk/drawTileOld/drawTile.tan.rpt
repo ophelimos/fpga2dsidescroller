@@ -1,0 +1,361 @@
+Classic Timing Analyzer report for drawTile
+Sat Nov 29 16:39:41 2008
+Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'clock'
+  6. tsu
+  7. tco
+  8. tpd
+  9. th
+ 10. Timing Analyzer INI Usage
+ 11. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                                                                                    ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                                                        ; To                                                                                          ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 0.661 ns                         ; draw                                                                                        ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.230 ns                         ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; y_D[0]                                                                                      ; clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 5.946 ns                         ; draw                                                                                        ; y_D[0]                                                                                      ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -0.021 ns                        ; draw                                                                                        ; y_Q[0]~reg0                                                                                 ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A   ; None          ; 339.56 MHz ( period = 2.945 ns ) ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                                                             ;                                                                                             ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------+----------+--------------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                                                                                                                                                           ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                        ; To                                                                                          ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 339.56 MHz ( period = 2.945 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.731 ns                ;
+; N/A   ; 339.56 MHz ( period = 2.945 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.731 ns                ;
+; N/A   ; 339.56 MHz ( period = 2.945 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.731 ns                ;
+; N/A   ; 339.56 MHz ( period = 2.945 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.731 ns                ;
+; N/A   ; 340.48 MHz ( period = 2.937 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.725 ns                ;
+; N/A   ; 340.48 MHz ( period = 2.937 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.725 ns                ;
+; N/A   ; 340.48 MHz ( period = 2.937 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.725 ns                ;
+; N/A   ; 340.48 MHz ( period = 2.937 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.725 ns                ;
+; N/A   ; 341.18 MHz ( period = 2.931 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.717 ns                ;
+; N/A   ; 341.18 MHz ( period = 2.931 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.717 ns                ;
+; N/A   ; 341.18 MHz ( period = 2.931 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.717 ns                ;
+; N/A   ; 341.18 MHz ( period = 2.931 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.717 ns                ;
+; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.692 ns                ;
+; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.692 ns                ;
+; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.692 ns                ;
+; N/A   ; 344.35 MHz ( period = 2.904 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.692 ns                ;
+; N/A   ; 351.86 MHz ( period = 2.842 ns )               ; y_Q[0]~reg0                                                                                 ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.630 ns                ;
+; N/A   ; 351.86 MHz ( period = 2.842 ns )               ; y_Q[0]~reg0                                                                                 ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.630 ns                ;
+; N/A   ; 351.86 MHz ( period = 2.842 ns )               ; y_Q[0]~reg0                                                                                 ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.630 ns                ;
+; N/A   ; 351.86 MHz ( period = 2.842 ns )               ; y_Q[0]~reg0                                                                                 ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.630 ns                ;
+; N/A   ; 352.61 MHz ( period = 2.836 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 352.61 MHz ( period = 2.836 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 352.61 MHz ( period = 2.836 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 352.61 MHz ( period = 2.836 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 356.00 MHz ( period = 2.809 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.593 ns                ;
+; N/A   ; 356.00 MHz ( period = 2.809 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.593 ns                ;
+; N/A   ; 356.00 MHz ( period = 2.809 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.593 ns                ;
+; N/A   ; 357.02 MHz ( period = 2.801 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.587 ns                ;
+; N/A   ; 357.02 MHz ( period = 2.801 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.587 ns                ;
+; N/A   ; 357.02 MHz ( period = 2.801 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.587 ns                ;
+; N/A   ; 357.78 MHz ( period = 2.795 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.579 ns                ;
+; N/A   ; 357.78 MHz ( period = 2.795 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.579 ns                ;
+; N/A   ; 357.78 MHz ( period = 2.795 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.579 ns                ;
+; N/A   ; 361.27 MHz ( period = 2.768 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.554 ns                ;
+; N/A   ; 361.27 MHz ( period = 2.768 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.554 ns                ;
+; N/A   ; 361.27 MHz ( period = 2.768 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.554 ns                ;
+; N/A   ; 369.55 MHz ( period = 2.706 ns )               ; y_Q[0]~reg0                                                                                 ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.492 ns                ;
+; N/A   ; 369.55 MHz ( period = 2.706 ns )               ; y_Q[0]~reg0                                                                                 ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.492 ns                ;
+; N/A   ; 369.55 MHz ( period = 2.706 ns )               ; y_Q[0]~reg0                                                                                 ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.492 ns                ;
+; N/A   ; 370.37 MHz ( period = 2.700 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.484 ns                ;
+; N/A   ; 370.37 MHz ( period = 2.700 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.484 ns                ;
+; N/A   ; 370.37 MHz ( period = 2.700 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.484 ns                ;
+; N/A   ; 380.81 MHz ( period = 2.626 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.414 ns                ;
+; N/A   ; 380.81 MHz ( period = 2.626 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.414 ns                ;
+; N/A   ; 380.81 MHz ( period = 2.626 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.414 ns                ;
+; N/A   ; 380.81 MHz ( period = 2.626 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.414 ns                ;
+; N/A   ; 387.90 MHz ( period = 2.578 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.364 ns                ;
+; N/A   ; 387.90 MHz ( period = 2.578 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.364 ns                ;
+; N/A   ; 387.90 MHz ( period = 2.578 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.364 ns                ;
+; N/A   ; 387.90 MHz ( period = 2.578 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.364 ns                ;
+; N/A   ; 394.48 MHz ( period = 2.535 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.319 ns                ;
+; N/A   ; 395.73 MHz ( period = 2.527 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.313 ns                ;
+; N/A   ; 396.67 MHz ( period = 2.521 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.305 ns                ;
+; N/A   ; 400.96 MHz ( period = 2.494 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.280 ns                ;
+; N/A   ; 401.61 MHz ( period = 2.490 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.276 ns                ;
+; N/A   ; 401.61 MHz ( period = 2.490 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.276 ns                ;
+; N/A   ; 401.61 MHz ( period = 2.490 ns )               ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.276 ns                ;
+; N/A   ; 407.17 MHz ( period = 2.456 ns )               ; y_Q[1]~reg0                                                                                 ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.244 ns                ;
+; N/A   ; 407.17 MHz ( period = 2.456 ns )               ; y_Q[1]~reg0                                                                                 ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 2.244 ns                ;
+; N/A   ; 407.17 MHz ( period = 2.456 ns )               ; y_Q[1]~reg0                                                                                 ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.244 ns                ;
+; N/A   ; 407.17 MHz ( period = 2.456 ns )               ; y_Q[1]~reg0                                                                                 ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.244 ns                ;
+; N/A   ; 409.50 MHz ( period = 2.442 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.226 ns                ;
+; N/A   ; 409.50 MHz ( period = 2.442 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.226 ns                ;
+; N/A   ; 409.50 MHz ( period = 2.442 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.226 ns                ;
+; N/A   ; 411.18 MHz ( period = 2.432 ns )               ; y_Q[0]~reg0                                                                                 ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.218 ns                ;
+; N/A   ; 412.20 MHz ( period = 2.426 ns )               ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.210 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; y_Q[1]~reg0                                                                                 ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 2.106 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; y_Q[1]~reg0                                                                                 ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 2.106 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; y_Q[1]~reg0                                                                                 ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 2.106 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.002 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.952 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; y_Q[1]~reg0                                                                                 ; y_Q[0]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.832 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; y_Q[0]~reg0                                                                                 ; y_Q[1]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.268 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; y_Q[1]~reg0                                                                                 ; y_Q[1]~reg0                                                                                 ; clock      ; clock    ; None                        ; None                      ; 0.407 ns                ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                                               ;
++-------+--------------+------------+------+---------------------------------------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From ; To                                                                                          ; To Clock ;
++-------+--------------+------------+------+---------------------------------------------------------------------------------------------+----------+
+; N/A   ; None         ; 0.661 ns   ; draw ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock    ;
+; N/A   ; None         ; 0.661 ns   ; draw ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock    ;
+; N/A   ; None         ; 0.661 ns   ; draw ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock    ;
+; N/A   ; None         ; 0.661 ns   ; draw ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock    ;
+; N/A   ; None         ; 0.525 ns   ; draw ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock    ;
+; N/A   ; None         ; 0.525 ns   ; draw ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock    ;
+; N/A   ; None         ; 0.525 ns   ; draw ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock    ;
+; N/A   ; None         ; 0.251 ns   ; draw ; y_Q[0]~reg0                                                                                 ; clock    ;
++-------+--------------+------------+------+---------------------------------------------------------------------------------------------+----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                      ;
++-------+--------------+------------+---------------------------------------------------------------------------------------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                                                        ; To        ; From Clock ;
++-------+--------------+------------+---------------------------------------------------------------------------------------------+-----------+------------+
+; N/A   ; None         ; 8.230 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 8.222 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 8.216 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 8.215 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; plot      ; clock      ;
+; N/A   ; None         ; 8.207 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; plot      ; clock      ;
+; N/A   ; None         ; 8.201 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; plot      ; clock      ;
+; N/A   ; None         ; 8.189 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 8.174 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; plot      ; clock      ;
+; N/A   ; None         ; 8.127 ns   ; y_Q[0]~reg0                                                                                 ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 8.121 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 8.112 ns   ; y_Q[0]~reg0                                                                                 ; plot      ; clock      ;
+; N/A   ; None         ; 8.106 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; plot      ; clock      ;
+; N/A   ; None         ; 7.979 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; drawDone  ; clock      ;
+; N/A   ; None         ; 7.971 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; drawDone  ; clock      ;
+; N/A   ; None         ; 7.965 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; drawDone  ; clock      ;
+; N/A   ; None         ; 7.938 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; drawDone  ; clock      ;
+; N/A   ; None         ; 7.911 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 7.896 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; plot      ; clock      ;
+; N/A   ; None         ; 7.876 ns   ; y_Q[0]~reg0                                                                                 ; drawDone  ; clock      ;
+; N/A   ; None         ; 7.870 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; drawDone  ; clock      ;
+; N/A   ; None         ; 7.863 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 7.848 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; plot      ; clock      ;
+; N/A   ; None         ; 7.741 ns   ; y_Q[1]~reg0                                                                                 ; y_D[0]    ; clock      ;
+; N/A   ; None         ; 7.726 ns   ; y_Q[1]~reg0                                                                                 ; plot      ; clock      ;
+; N/A   ; None         ; 7.709 ns   ; y_Q[0]~reg0                                                                                 ; y_D[1]    ; clock      ;
+; N/A   ; None         ; 7.660 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; drawDone  ; clock      ;
+; N/A   ; None         ; 7.612 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; drawDone  ; clock      ;
+; N/A   ; None         ; 7.490 ns   ; y_Q[1]~reg0                                                                                 ; drawDone  ; clock      ;
+; N/A   ; None         ; 6.851 ns   ; y_Q[0]~reg0                                                                                 ; y_Q[0]    ; clock      ;
+; N/A   ; None         ; 6.848 ns   ; y_Q[1]~reg0                                                                                 ; y_D[1]    ; clock      ;
+; N/A   ; None         ; 6.594 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; draw_x[1] ; clock      ;
+; N/A   ; None         ; 6.582 ns   ; y_Q[1]~reg0                                                                                 ; y_Q[1]    ; clock      ;
+; N/A   ; None         ; 6.573 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; draw_y[1] ; clock      ;
+; N/A   ; None         ; 6.379 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; draw_y[3] ; clock      ;
+; N/A   ; None         ; 6.356 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; draw_x[0] ; clock      ;
+; N/A   ; None         ; 6.350 ns   ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; draw_x[2] ; clock      ;
+; N/A   ; None         ; 6.342 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; draw_y[0] ; clock      ;
+; N/A   ; None         ; 6.339 ns   ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; draw_y[2] ; clock      ;
++-------+--------------+------------+---------------------------------------------------------------------------------------------+-----------+------------+
+
+
++---------------------------------------------------------------+
+; tpd                                                           ;
++-------+-------------------+-----------------+------+----------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From ; To       ;
++-------+-------------------+-----------------+------+----------+
+; N/A   ; None              ; 5.946 ns        ; draw ; y_D[0]   ;
+; N/A   ; None              ; 5.930 ns        ; draw ; plot     ;
+; N/A   ; None              ; 5.695 ns        ; draw ; drawDone ;
++-------+-------------------+-----------------+------+----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                                                      ;
++---------------+-------------+-----------+------+---------------------------------------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From ; To                                                                                          ; To Clock ;
++---------------+-------------+-----------+------+---------------------------------------------------------------------------------------------+----------+
+; N/A           ; None        ; -0.021 ns ; draw ; y_Q[0]~reg0                                                                                 ; clock    ;
+; N/A           ; None        ; -0.283 ns ; draw ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2] ; clock    ;
+; N/A           ; None        ; -0.283 ns ; draw ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1] ; clock    ;
+; N/A           ; None        ; -0.283 ns ; draw ; counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0] ; clock    ;
+; N/A           ; None        ; -0.419 ns ; draw ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0] ; clock    ;
+; N/A           ; None        ; -0.419 ns ; draw ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3] ; clock    ;
+; N/A           ; None        ; -0.419 ns ; draw ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2] ; clock    ;
+; N/A           ; None        ; -0.419 ns ; draw ; counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1] ; clock    ;
++---------------+-------------+-----------+------+---------------------------------------------------------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Timing Analyzer INI Usage                                                                       ;
++----------------------+--------------------------------------------------------------------------+
+; Option               ; Usage                                                                    ;
++----------------------+--------------------------------------------------------------------------+
+; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
+; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
++----------------------+--------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+    Info: Processing started: Sat Nov 29 16:39:38 2008
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off drawTile -c drawTile --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Info: Clock "clock" has Internal fmax of 339.56 MHz between source register "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]" and destination register "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0]" (period= 2.945 ns)
+    Info: + Longest register to register delay is 2.731 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X35_Y35_N15; Fanout = 3; REG Node = 'counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]'
+        Info: 2: + IC(0.473 ns) + CELL(0.420 ns) = 0.893 ns; Loc. = LCCOMB_X34_Y35_N18; Fanout = 1; COMB Node = 'Mux0~193'
+        Info: 3: + IC(0.241 ns) + CELL(0.150 ns) = 1.284 ns; Loc. = LCCOMB_X34_Y35_N0; Fanout = 3; COMB Node = 'Mux0~194'
+        Info: 4: + IC(0.254 ns) + CELL(0.150 ns) = 1.688 ns; Loc. = LCCOMB_X34_Y35_N14; Fanout = 9; COMB Node = 'Mux0~195'
+        Info: 5: + IC(0.383 ns) + CELL(0.660 ns) = 2.731 ns; Loc. = LCFF_X35_Y35_N9; Fanout = 4; REG Node = 'counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0]'
+        Info: Total cell delay = 1.380 ns ( 50.53 % )
+        Info: Total interconnect delay = 1.351 ns ( 49.47 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clock" to destination register is 2.671 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 9; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(1.017 ns) + CELL(0.537 ns) = 2.671 ns; Loc. = LCFF_X35_Y35_N9; Fanout = 4; REG Node = 'counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0]'
+            Info: Total cell delay = 1.536 ns ( 57.51 % )
+            Info: Total interconnect delay = 1.135 ns ( 42.49 % )
+        Info: - Longest clock path from clock "clock" to source register is 2.671 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 9; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(1.017 ns) + CELL(0.537 ns) = 2.671 ns; Loc. = LCFF_X35_Y35_N15; Fanout = 3; REG Node = 'counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]'
+            Info: Total cell delay = 1.536 ns ( 57.51 % )
+            Info: Total interconnect delay = 1.135 ns ( 42.49 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0]" (data pin = "draw", clock pin = "clock") is 0.661 ns
+    Info: + Longest pin to register delay is 3.368 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_C13; Fanout = 3; PIN Node = 'draw'
+        Info: 2: + IC(0.908 ns) + CELL(0.438 ns) = 2.325 ns; Loc. = LCCOMB_X34_Y35_N14; Fanout = 9; COMB Node = 'Mux0~195'
+        Info: 3: + IC(0.383 ns) + CELL(0.660 ns) = 3.368 ns; Loc. = LCFF_X35_Y35_N9; Fanout = 4; REG Node = 'counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0]'
+        Info: Total cell delay = 2.077 ns ( 61.67 % )
+        Info: Total interconnect delay = 1.291 ns ( 38.33 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 2.671 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 9; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.017 ns) + CELL(0.537 ns) = 2.671 ns; Loc. = LCFF_X35_Y35_N9; Fanout = 4; REG Node = 'counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0]'
+        Info: Total cell delay = 1.536 ns ( 57.51 % )
+        Info: Total interconnect delay = 1.135 ns ( 42.49 % )
+Info: tco from clock "clock" to destination pin "y_D[0]" through register "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]" is 8.230 ns
+    Info: + Longest clock path from clock "clock" to source register is 2.671 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 9; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.017 ns) + CELL(0.537 ns) = 2.671 ns; Loc. = LCFF_X35_Y35_N15; Fanout = 3; REG Node = 'counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]'
+        Info: Total cell delay = 1.536 ns ( 57.51 % )
+        Info: Total interconnect delay = 1.135 ns ( 42.49 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 5.309 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X35_Y35_N15; Fanout = 3; REG Node = 'counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]'
+        Info: 2: + IC(0.473 ns) + CELL(0.420 ns) = 0.893 ns; Loc. = LCCOMB_X34_Y35_N18; Fanout = 1; COMB Node = 'Mux0~193'
+        Info: 3: + IC(0.241 ns) + CELL(0.150 ns) = 1.284 ns; Loc. = LCCOMB_X34_Y35_N0; Fanout = 3; COMB Node = 'Mux0~194'
+        Info: 4: + IC(0.254 ns) + CELL(0.150 ns) = 1.688 ns; Loc. = LCCOMB_X34_Y35_N14; Fanout = 9; COMB Node = 'Mux0~195'
+        Info: 5: + IC(0.813 ns) + CELL(2.808 ns) = 5.309 ns; Loc. = PIN_F13; Fanout = 0; PIN Node = 'y_D[0]'
+        Info: Total cell delay = 3.528 ns ( 66.45 % )
+        Info: Total interconnect delay = 1.781 ns ( 33.55 % )
+Info: Longest tpd from source pin "draw" to destination pin "y_D[0]" is 5.946 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_C13; Fanout = 3; PIN Node = 'draw'
+    Info: 2: + IC(0.908 ns) + CELL(0.438 ns) = 2.325 ns; Loc. = LCCOMB_X34_Y35_N14; Fanout = 9; COMB Node = 'Mux0~195'
+    Info: 3: + IC(0.813 ns) + CELL(2.808 ns) = 5.946 ns; Loc. = PIN_F13; Fanout = 0; PIN Node = 'y_D[0]'
+    Info: Total cell delay = 4.225 ns ( 71.06 % )
+    Info: Total interconnect delay = 1.721 ns ( 28.94 % )
+Info: th for register "y_Q[0]~reg0" (data pin = "draw", clock pin = "clock") is -0.021 ns
+    Info: + Longest clock path from clock "clock" to destination register is 2.669 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 9; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(1.015 ns) + CELL(0.537 ns) = 2.669 ns; Loc. = LCFF_X34_Y35_N17; Fanout = 7; REG Node = 'y_Q[0]~reg0'
+        Info: Total cell delay = 1.536 ns ( 57.55 % )
+        Info: Total interconnect delay = 1.133 ns ( 42.45 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 2.956 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_C13; Fanout = 3; PIN Node = 'draw'
+        Info: 2: + IC(0.908 ns) + CELL(0.438 ns) = 2.325 ns; Loc. = LCCOMB_X34_Y35_N14; Fanout = 9; COMB Node = 'Mux0~195'
+        Info: 3: + IC(0.272 ns) + CELL(0.275 ns) = 2.872 ns; Loc. = LCCOMB_X34_Y35_N16; Fanout = 1; COMB Node = 'Mux0~195_wirecell'
+        Info: 4: + IC(0.000 ns) + CELL(0.084 ns) = 2.956 ns; Loc. = LCFF_X34_Y35_N17; Fanout = 7; REG Node = 'y_Q[0]~reg0'
+        Info: Total cell delay = 1.776 ns ( 60.08 % )
+        Info: Total interconnect delay = 1.180 ns ( 39.92 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Allocated 112 megabytes of memory during processing
+    Info: Processing ended: Sat Nov 29 16:39:41 2008
+    Info: Elapsed time: 00:00:03
+
+
