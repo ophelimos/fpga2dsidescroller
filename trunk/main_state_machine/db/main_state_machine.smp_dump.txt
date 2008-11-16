@@ -1,5 +1,0 @@
-
-State Machine - |main_state_machine|main_Q
-Name main_Q.DOSTUFF 
-main_Q.000 0 
-main_Q.DOSTUFF 1 

@@ -1,10 +1,10 @@
 Tile Encoding
 
-0000 sky_tile.mif --- white
+0000 sky_tile.mif --- black
 0001 ground_tile.mif --- blue
 0010 platform_left_tile.mif --- green
-0011 platform_middle_tile.mif --- yellow
+0011 platform_middle_tile.mif --- light blue
 0100 platform_right_tile.mif --- red
 0101 mushroom_tile.mif --- purple
-0110 plant_tile.mif --- orange
-0111 trunk_tile.mif --- black
+0110 plant_tile.mif --- yellow
+0111 trunk_tile.mif --- white

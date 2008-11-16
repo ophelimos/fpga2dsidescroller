@@ -147,7 +147,7 @@ module drawTile (Xin, Yin, TileSel, Enable, Clock, Resetn, DataIn, Address, X, Y
 	addx XoutAdder(1'b1, Q_Xoff, Xin, X);
 	
 	addy YoutAdder(1'b1, Q_Yoff, Yin, Y);
-	
+
 	// memory address tile-offset counter
 	
 	wire [6:0] D_AdrsOff, Q_AdrsOff;

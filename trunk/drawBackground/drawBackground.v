@@ -30,13 +30,14 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	
 	// Signals
 	wire [14:0] level_address;
-	wire tile_code;
+	// We agreed on 4-bit, but 3-bit works for now
+	wire [2:0] tile_code;
 	
 	// Instance declaration
 	level1 level_mem (
 	.address(level_address),
 	.clock(clock),
-	.data(1'bx),
+	.data(3'bx),
 	.wren(1'b0),
 	.q(tile_code));
 	
@@ -78,7 +79,7 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	
 	reg tile_cnt_en_x, tile_cnt_reset_x;
 	wire [4:0] tile_x;
-	
+        	
 	counter5b tile_counterx(
 	.clock(clock),
 	.cnt_en(tile_cnt_en_x),
@@ -132,6 +133,7 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	assign done = done_output;
 	reg [(color_depth - 1):0] color_output;
 	assign color = color_output;
+   reg draw, drawDone;
 	
 	// PickTile state flipflops
 	reg [2:0] p_Q, p_D;
@@ -145,7 +147,7 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	
 	// PickTile State Machine
 	// Picks which tile to draw at which location by reading from a tilemap
-	parameter WAIT_PT = 0, READ_PT = 1, DRAW_PT_0 = 2, DRAW_PT_1 = 3, CHECK_PT = 4, INCREMENT_PT = 5, DROP_PT = 6; //states
+	parameter WAIT_PT = 0, READ_PT = 1, DRAW_PT = 2, CHECK_PT = 4, INCREMENT_PT = 5, DROP_PT = 6; //states
 	always @ (*)
 	begin: picktile_state_table
 		case (p_Q)
@@ -183,30 +185,29 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	always @ (*)
 	begin: picktile_datapath
 		case (p_D)
-			WAIT_PT: 		begin done_output = 1'b1; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b1; draw = 1'b0; color_output = 3'bx; end
-			CHECK_PT: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; color_output = 3'bx; end
-			INCREMENT_PT:	begin done_output = 1'b0; tile_cnt_en_x = 1'b1; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; color_output = 3'bx; end
-			READ_PT:		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; color_output = 3'bx; end
-			DROP_PT:		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b1; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b0; draw = 1'b0; color_output = 3'bx; end
-			DRAW_PT_0: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b1; color_output = tile0_out; end
-			DRAW_PT_1: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b1; color_output = tile1_out; end
-			default: 		begin done_output = 1'bx; tile_cnt_en_x = 1'bx; tile_cnt_en_y = 1'bx; tile_cnt_reset_x = 1'bx; tile_cnt_reset_y = 1'bx; draw = 1'bx; color_output = 3'bx; end
+			WAIT_PT: 		begin done_output = 1'b1; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b1; draw = 1'b0; end
+			READ_PT:		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
+			DRAW_PT: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b1; end
+			CHECK_PT: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
+			INCREMENT_PT:	begin done_output = 1'b0; tile_cnt_en_x = 1'b1; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
+			DROP_PT:		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b1; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
+			default: 		begin done_output = 1'bx; tile_cnt_en_x = 1'bx; tile_cnt_en_y = 1'bx; tile_cnt_reset_x = 1'bx; tile_cnt_reset_y = 1'bx; draw = 1'bx; end
 		endcase
 	end
 	
 	// drawTile instantiation
 	
-	wire draw, drawDone;
-	
 	drawTile drawTileInst1 (
+        // Inputs
 	.Xin(tile_x * 8), 
 	.Yin(tile_y * 8),
 	.TileSel(tile_code), 
 	.Enable(draw), 
 	.Clock(clock), 
 	.Resetn(resetn), 
-	.DataIn(color_output), 
-	.Address(tile_address), 
+	.DataIn(color_output),
+        // Outputs
+	.Address(tile_address),
 	.X(x), 
 	.Y(y), 
 	.Color(color), 

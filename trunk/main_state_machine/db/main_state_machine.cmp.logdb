@@ -1,3 +1,0 @@
-v1
-DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,drawBackground:draw_background|lpm_mult:Mult0|mult_mv01:auto_generated|mac_out2,
-PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,drawBackground:draw_background|lpm_mult:Mult0|mult_mv01:auto_generated|mac_mult1,
