@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Nov 29 16:38:39 2008
+Quartus II Version : 7.1 Build 178 06/25/2007 SP 1 SJ Full Version
+Revision Name : drawTile
+Top-level Entity Name : drawTile
+Family : Cyclone II
+Total logic elements : 16
+    Total combinational functions : 16
+    Dedicated logic registers : 9
+Total registers : 9
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

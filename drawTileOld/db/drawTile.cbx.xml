@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="drawTile">
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawTile|counter3b:draw_counterx|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_2oi.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawTile|counter4b:draw_countery|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_3oi.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

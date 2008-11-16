@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="drawTile">
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawTile|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_big.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawTile|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_aig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_llh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_big.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawTile|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_aig.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component" CBX_FILE_NAME="add_sub_aig.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
