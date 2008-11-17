@@ -147,14 +147,16 @@ module drawTile (Xin, Yin, TileSel, Enable, Clock, Resetn, DataIn, Address, X, Y
 	addx XoutAdder(1'b1, Q_Xoff, Xin, X);
 	
 	addy YoutAdder(1'b1, Q_Yoff, Yin, Y);
-	
+
 	// memory address tile-offset counter
 	
 	wire [6:0] D_AdrsOff, Q_AdrsOff;
+	wire EnableMemCounter;
 	
 	addy AddressOffsetCounter (1'b1, Q_AdrsOff, 7'b1, D_AdrsOff);	// increment address by one
 	
-	nBitRegister AddressReg (D_AdrsOff, Clock, Q_AdrsOff, ~ResetY, EnableX);	// enabled by enableX and reset by ResetY
+	or (EnableMemCounter, EnableX, EnableY);
+	nBitRegister AddressReg (D_AdrsOff, Clock, Q_AdrsOff, ~ResetY, EnableMemCounter);	// enabled by (enableX | enableY) and reset by ResetY
 	defparam AddressReg.n = 7;
 	
 	// tile selection multiplier

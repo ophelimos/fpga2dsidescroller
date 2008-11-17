@@ -456,6 +456,13 @@ set_location_assignment PIN_V24 -to GPIO_1[32]
 set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
+set_global_assignment -name VERILOG_FILE ../drawTileMichael/addx.v
+set_global_assignment -name VERILOG_FILE ../drawTileMichael/addy.v
+set_global_assignment -name VERILOG_FILE ../drawTileMichael/drawTile.v
+set_global_assignment -name VERILOG_FILE ../drawTileMichael/memCount.v
+set_global_assignment -name VERILOG_FILE ../drawTileMichael/nBitAddSub.v
+set_global_assignment -name VERILOG_FILE ../drawTileMichael/nBitRegister.v
+set_global_assignment -name VERILOG_FILE ../drawBackground/tileset.v
 set_global_assignment -name VERILOG_FILE ../drawBackground/tile1.v
 set_global_assignment -name VERILOG_FILE ../drawBackground/counter4b.v
 set_global_assignment -name VERILOG_FILE ../drawBackground/counter5b.v
