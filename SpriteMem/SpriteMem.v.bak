@@ -1,0 +1,10 @@
+module SpriteMem(MemSel, Address, DataOut, Clock, Resetn, Width, Height, AnimSteps);
+	input Clock, Resetn;
+	input [2:0] MemSel;				// enable for 'external' memory (2:0 allows for 8 memories)
+	input [15:0] Address;			// really wide memory address line - for 64*64 sprites with 16 animation steps
+	output [8:0] DataOut;			// color received from memory
+	output [5:0] Width, Height;
+	output [2:0] AnimSteps;
+
+endmodule
+
