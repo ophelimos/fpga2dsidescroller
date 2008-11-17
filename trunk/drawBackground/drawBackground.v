@@ -1,4 +1,4 @@
-module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, p_Q, p_D, y_Q, y_D);
+module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_offset, enable, plot, done, p_Q, p_D, y_Q, y_D);
 	//------------------------------------------
 	// Parameters
 	//------------------------------------------
@@ -11,9 +11,11 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	input [(tilemap_length / 15):0] x_offset; // In tiles
 	input enable;
 	input resetn;
+	input [2:0] tile_code;
 	//------------------------------------------
 	// Outputs
 	//------------------------------------------
+	output [14:0] level_address;
 	output [7:0] x;
 	output [6:0] y;
 	output [(color_depth - 1):0] color;
@@ -25,44 +27,12 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	output [2:0] y_Q;
 	
 	//------------------------------------------
-	// Level Memory
-	//------------------------------------------
-	
-	// Signals
-	wire [14:0] level_address;
-	// We agreed on 4-bit, but 3-bit works for now
-	wire [2:0] tile_code;
-	
-	// Instance declaration
-	level1 level_mem (
-	.address(level_address),
-	.clock(clock),
-	.data(3'bx),
-	.wren(1'b0),
-	.q(tile_code));
-	
-	//------------------------------------------
 	// Tile Memory
 	//------------------------------------------
 	
 	// Signals
-	wire [9:0] tile_address;
-	wire [(color_depth - 1):0] tileset0_out;
-	
-	// Instance declaration
-/*	tile0 grass_tile (
-	.address(tile_address),
-	.clock(clock),
-	.data(3'bx),
-	.wren(1'b0),
-	.q(tile0_out));
-	
-	tile1 sky_tile (
-	.address(tile_address),
-	.clock(clock),
-	.data(3'bx),
-	.wren(1'b0),
-	.q(tile1_out));*/
+	wire [7:0] tile_address;
+	wire [8:0] tileset0_out;
 	
 	tileset tileset0 (
 	.address(tile_address),
@@ -131,9 +101,8 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	// Signals -- always reg
 	reg done_output;
 	assign done = done_output;
-	reg [(color_depth - 1):0] color_output;
-	assign color = color_output;
-   reg draw, drawDone;
+	reg draw;
+	wire drawDone;
 	
 	// PickTile state flipflops
 	reg [2:0] p_Q, p_D;
@@ -153,30 +122,15 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 		case (p_Q)
  			WAIT_PT: if (enable) p_D <= READ_PT;
  			else p_D <= WAIT_PT;
- 			READ_PT: if (tile_code == 0) p_D <= DRAW_PT_0;
- 			else /*(tile_code == 1)*/ p_D <= DRAW_PT_1;
- 			DRAW_PT_0: if (drawDone == 1) p_D <= CHECK_PT;
- 			else p_D <= DRAW_PT_0;
- 			DRAW_PT_1: if (drawDone == 1) p_D <= CHECK_PT;
- 			else p_D <= DRAW_PT_1;
+ 			READ_PT: p_D <= DRAW_PT;
+ 			DRAW_PT: if (drawDone == 1) p_D <= CHECK_PT;
+ 			else p_D <= DRAW_PT;
 			// Stop at 19, because we draw before we check
  			CHECK_PT: if (tile_x == 19) p_D <= DROP_PT;
  			else p_D <= INCREMENT_PT;
  			INCREMENT_PT: p_D <= READ_PT;
  			DROP_PT: if (tile_y == 15) p_D <= WAIT_PT;
  			else p_D <= READ_PT;
-/*                  WAIT_PT: if (enable) p_D <= READ_PT;
-                  else p_D <= WAIT_PT;
-                  INCREMENT_PT: if (tile_x == 20) p_D <= DROP_PT;
-                  else p_D <= READ_PT;
-                  READ_PT: if (tile_code == 0) p_D <= DRAW_PT_0;
-                  else p_D <= DRAW_PT_1;
-                  DROP_PT: if (tile_y == 15) p_D <= WAIT_PT;
-                  else p_D <= READ_PT;
-                  DRAW_PT_0: if (drawDone == 1) p_D <= INCREMENT_PT;
-                  else p_D <= DRAW_PT_0;
-                  DRAW_PT_1: if (drawDone == 1) p_D <= INCREMENT_PT;
-                  else p_D <= DRAW_PT_1;*/
 			default: p_D <= 'bx;
 		endcase
 	end
@@ -205,7 +159,7 @@ module drawBackground(resetn, clock, color, x, y, x_offset, enable, plot, done, 
 	.Enable(draw), 
 	.Clock(clock), 
 	.Resetn(resetn), 
-	.DataIn(color_output),
+	.DataIn(tileset0_out),
         // Outputs
 	.Address(tile_address),
 	.X(x), 
