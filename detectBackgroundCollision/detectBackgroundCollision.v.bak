@@ -134,13 +134,13 @@ always @(*)
      begin: detectBackgroundCollision_datapath
 	case (dbc_D)
 	WAIT_DBC: 			begin done_output = 1'b1; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end
-	READ_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = (x_location + 1) + ( (y_location + 0) * tilemap_length); end 
+	READ_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'b; end 
 	SET_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b1; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end 
-	READ_RIGHT_DBC: 	begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = (x_location - 1) + ( (y_location + 0) * tilemap_length); end 
+	READ_RIGHT_DBC: 	begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end 
 	SET_RIGHT_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b1; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end 
-	READ_UP_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = (x_location + 0) + ( (y_location + 1) * tilemap_length); end
+	READ_UP_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end
 	SET_UP_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b1; down_enable = 1'b0; memory_address = 'bx; end
-	READ_DOWN_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = (x_location + 0) + ( (y_location - 1) * tilemap_length); end
+	READ_DOWN_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end
 	SET_DOWN_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b1; memory_address = 'bx; end
 	default: 			begin done_output = 1'bx; left_enable = 1'bx; right_enable = 1'bx; up_enable = 1'bx; down_enable = 1'bx; memory_address = 'bx; end
 	endcase
