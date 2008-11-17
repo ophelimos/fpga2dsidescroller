@@ -1,4 +1,4 @@
-module detectBackgroundCollision(resetn, clock, enable, x_location, y_location, memory_input, memory_address, left, right, up, down);
+module detectBackgroundCollision(resetn, clock, enable, x_location, y_location, memory_input, memory_address, left, right, up, down, done);
    //------------------------------------------
    // Parameters
    //------------------------------------------
@@ -20,6 +20,7 @@ module detectBackgroundCollision(resetn, clock, enable, x_location, y_location, 
    output                          right;
    output                          up;
    output                          down;
+output done;
 
    //------------------------------------------
    // Output Flipflops
@@ -98,6 +99,8 @@ always @(*)
    // Signals -- always reg
    reg                                   done_output;
    assign done = done_output;
+	reg [14:0] memory_address_output;
+	assign memory_address = memory_address_output;
    
    // detectBackgroundCollision state flipflops
    reg [3:0]                             dbc_Q, dbc_D;
@@ -115,7 +118,7 @@ always @(*)
    always @ (*)
      begin: detectBackgroundCollision_state_table
 	case (dbc_Q)
- 	  WAIT_DBC: if (enable) dbc_D <= READ_DBC;
+ 	  WAIT_DBC: if (enable) dbc_D <= READ_LEFT_DBC;
  	  else dbc_D <= WAIT_DBC;
  	  READ_LEFT_DBC: dbc_D <= SET_LEFT_DBC;
  	  SET_LEFT_DBC: dbc_D <= READ_RIGHT_DBC;
@@ -133,16 +136,16 @@ always @(*)
    always @ (*)
      begin: detectBackgroundCollision_datapath
 	case (dbc_D)
-	WAIT_DBC: 			begin done_output = 1'b1; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end
-	READ_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = (x_location + 1) + ( (y_location + 0) * tilemap_length); end 
-	SET_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b1; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end 
-	READ_RIGHT_DBC: 	begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = (x_location - 1) + ( (y_location + 0) * tilemap_length); end 
-	SET_RIGHT_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b1; up_enable = 1'b0; down_enable = 1'b0; memory_address = 'bx; end 
-	READ_UP_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = (x_location + 0) + ( (y_location + 1) * tilemap_length); end
-	SET_UP_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b1; down_enable = 1'b0; memory_address = 'bx; end
-	READ_DOWN_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address = (x_location + 0) + ( (y_location - 1) * tilemap_length); end
-	SET_DOWN_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b1; memory_address = 'bx; end
-	default: 			begin done_output = 1'bx; left_enable = 1'bx; right_enable = 1'bx; up_enable = 1'bx; down_enable = 1'bx; memory_address = 'bx; end
+		WAIT_DBC: 			begin done_output = 1'b1; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = 'bx; end
+		READ_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = (x_location + 1) + ( (y_location + 0) * tilemap_length); end 
+		SET_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b1; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = 'bx; end 
+		READ_RIGHT_DBC: 	begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = (x_location - 1) + ( (y_location + 0) * tilemap_length); end 
+		SET_RIGHT_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b1; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = 'bx; end 
+		READ_UP_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = (x_location + 0) + ( (y_location + 1) * tilemap_length); end
+		SET_UP_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b1; down_enable = 1'b0; memory_address_output = 'bx; end
+		READ_DOWN_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = (x_location + 0) + ( (y_location - 1) * tilemap_length); end
+		SET_DOWN_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b1; memory_address_output = 'bx; end
+		default: 			begin done_output = 1'bx; left_enable = 1'bx; right_enable = 1'bx; up_enable = 1'bx; down_enable = 1'bx; memory_address_output = 'bx; end
 	endcase
      end
 
