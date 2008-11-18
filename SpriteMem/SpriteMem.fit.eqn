@@ -1,0 +1,1590 @@
+-- Copyright (C) 1991-2008 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--L7_q_a[0] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[0] at M4K_X26_Y32
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[0]_PORT_A_data_in = A1L48;
+L7_q_a[0]_PORT_A_data_in_reg = DFFE(L7_q_a[0]_PORT_A_data_in, L7_q_a[0]_clock_0, , , );
+L7_q_a[0]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[0]_PORT_A_address_reg = DFFE(L7_q_a[0]_PORT_A_address, L7_q_a[0]_clock_0, , , );
+L7_q_a[0]_PORT_A_write_enable = GND;
+L7_q_a[0]_PORT_A_write_enable_reg = DFFE(L7_q_a[0]_PORT_A_write_enable, L7_q_a[0]_clock_0, , , );
+L7_q_a[0]_clock_0 = GLOBAL(A1L19);
+L7_q_a[0]_PORT_A_data_out = MEMORY(L7_q_a[0]_PORT_A_data_in_reg, , L7_q_a[0]_PORT_A_address_reg, , L7_q_a[0]_PORT_A_write_enable_reg, , , , L7_q_a[0]_clock_0, , , , , );
+L7_q_a[0] = L7_q_a[0]_PORT_A_data_out[0];
+
+
+--L6_q_a[0] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[0] at M4K_X26_Y26
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[0]_PORT_A_data_in = A1L48;
+L6_q_a[0]_PORT_A_data_in_reg = DFFE(L6_q_a[0]_PORT_A_data_in, L6_q_a[0]_clock_0, , , );
+L6_q_a[0]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[0]_PORT_A_address_reg = DFFE(L6_q_a[0]_PORT_A_address, L6_q_a[0]_clock_0, , , );
+L6_q_a[0]_PORT_A_write_enable = GND;
+L6_q_a[0]_PORT_A_write_enable_reg = DFFE(L6_q_a[0]_PORT_A_write_enable, L6_q_a[0]_clock_0, , , );
+L6_q_a[0]_clock_0 = GLOBAL(A1L19);
+L6_q_a[0]_PORT_A_data_out = MEMORY(L6_q_a[0]_PORT_A_data_in_reg, , L6_q_a[0]_PORT_A_address_reg, , L6_q_a[0]_PORT_A_write_enable_reg, , , , L6_q_a[0]_clock_0, , , , , );
+L6_q_a[0] = L6_q_a[0]_PORT_A_data_out[0];
+
+
+--L5_q_a[0] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[0] at M4K_X13_Y22
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[0]_PORT_A_data_in = A1L48;
+L5_q_a[0]_PORT_A_data_in_reg = DFFE(L5_q_a[0]_PORT_A_data_in, L5_q_a[0]_clock_0, , , );
+L5_q_a[0]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[0]_PORT_A_address_reg = DFFE(L5_q_a[0]_PORT_A_address, L5_q_a[0]_clock_0, , , );
+L5_q_a[0]_PORT_A_write_enable = GND;
+L5_q_a[0]_PORT_A_write_enable_reg = DFFE(L5_q_a[0]_PORT_A_write_enable, L5_q_a[0]_clock_0, , , );
+L5_q_a[0]_clock_0 = GLOBAL(A1L19);
+L5_q_a[0]_PORT_A_data_out = MEMORY(L5_q_a[0]_PORT_A_data_in_reg, , L5_q_a[0]_PORT_A_address_reg, , L5_q_a[0]_PORT_A_write_enable_reg, , , , L5_q_a[0]_clock_0, , , , , );
+L5_q_a[0] = L5_q_a[0]_PORT_A_data_out[0];
+
+
+--L8_q_a[0] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[0] at M4K_X26_Y25
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[0]_PORT_A_data_in = A1L48;
+L8_q_a[0]_PORT_A_data_in_reg = DFFE(L8_q_a[0]_PORT_A_data_in, L8_q_a[0]_clock_0, , , );
+L8_q_a[0]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[0]_PORT_A_address_reg = DFFE(L8_q_a[0]_PORT_A_address, L8_q_a[0]_clock_0, , , );
+L8_q_a[0]_PORT_A_write_enable = GND;
+L8_q_a[0]_PORT_A_write_enable_reg = DFFE(L8_q_a[0]_PORT_A_write_enable, L8_q_a[0]_clock_0, , , );
+L8_q_a[0]_clock_0 = GLOBAL(A1L19);
+L8_q_a[0]_PORT_A_data_out = MEMORY(L8_q_a[0]_PORT_A_data_in_reg, , L8_q_a[0]_PORT_A_address_reg, , L8_q_a[0]_PORT_A_write_enable_reg, , , , L8_q_a[0]_clock_0, , , , , );
+L8_q_a[0] = L8_q_a[0]_PORT_A_data_out[0];
+
+
+--L2_q_a[0] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[0] at M4K_X52_Y32
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[0]_PORT_A_data_in = A1L48;
+L2_q_a[0]_PORT_A_data_in_reg = DFFE(L2_q_a[0]_PORT_A_data_in, L2_q_a[0]_clock_0, , , );
+L2_q_a[0]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[0]_PORT_A_address_reg = DFFE(L2_q_a[0]_PORT_A_address, L2_q_a[0]_clock_0, , , );
+L2_q_a[0]_PORT_A_write_enable = GND;
+L2_q_a[0]_PORT_A_write_enable_reg = DFFE(L2_q_a[0]_PORT_A_write_enable, L2_q_a[0]_clock_0, , , );
+L2_q_a[0]_clock_0 = GLOBAL(A1L19);
+L2_q_a[0]_PORT_A_data_out = MEMORY(L2_q_a[0]_PORT_A_data_in_reg, , L2_q_a[0]_PORT_A_address_reg, , L2_q_a[0]_PORT_A_write_enable_reg, , , , L2_q_a[0]_clock_0, , , , , );
+L2_q_a[0] = L2_q_a[0]_PORT_A_data_out[0];
+
+
+--L3_q_a[0] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[0] at M4K_X13_Y20
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[0]_PORT_A_data_in = A1L48;
+L3_q_a[0]_PORT_A_data_in_reg = DFFE(L3_q_a[0]_PORT_A_data_in, L3_q_a[0]_clock_0, , , );
+L3_q_a[0]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[0]_PORT_A_address_reg = DFFE(L3_q_a[0]_PORT_A_address, L3_q_a[0]_clock_0, , , );
+L3_q_a[0]_PORT_A_write_enable = GND;
+L3_q_a[0]_PORT_A_write_enable_reg = DFFE(L3_q_a[0]_PORT_A_write_enable, L3_q_a[0]_clock_0, , , );
+L3_q_a[0]_clock_0 = GLOBAL(A1L19);
+L3_q_a[0]_PORT_A_data_out = MEMORY(L3_q_a[0]_PORT_A_data_in_reg, , L3_q_a[0]_PORT_A_address_reg, , L3_q_a[0]_PORT_A_write_enable_reg, , , , L3_q_a[0]_clock_0, , , , , );
+L3_q_a[0] = L3_q_a[0]_PORT_A_data_out[0];
+
+
+--L1_q_a[0] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[0] at M4K_X26_Y23
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[0]_PORT_A_data_in = A1L48;
+L1_q_a[0]_PORT_A_data_in_reg = DFFE(L1_q_a[0]_PORT_A_data_in, L1_q_a[0]_clock_0, , , );
+L1_q_a[0]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[0]_PORT_A_address_reg = DFFE(L1_q_a[0]_PORT_A_address, L1_q_a[0]_clock_0, , , );
+L1_q_a[0]_PORT_A_write_enable = GND;
+L1_q_a[0]_PORT_A_write_enable_reg = DFFE(L1_q_a[0]_PORT_A_write_enable, L1_q_a[0]_clock_0, , , );
+L1_q_a[0]_clock_0 = GLOBAL(A1L19);
+L1_q_a[0]_PORT_A_data_out = MEMORY(L1_q_a[0]_PORT_A_data_in_reg, , L1_q_a[0]_PORT_A_address_reg, , L1_q_a[0]_PORT_A_write_enable_reg, , , , L1_q_a[0]_clock_0, , , , , );
+L1_q_a[0] = L1_q_a[0]_PORT_A_data_out[0];
+
+
+--L4_q_a[0] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[0] at M4K_X26_Y20
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[0]_PORT_A_data_in = A1L48;
+L4_q_a[0]_PORT_A_data_in_reg = DFFE(L4_q_a[0]_PORT_A_data_in, L4_q_a[0]_clock_0, , , );
+L4_q_a[0]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[0]_PORT_A_address_reg = DFFE(L4_q_a[0]_PORT_A_address, L4_q_a[0]_clock_0, , , );
+L4_q_a[0]_PORT_A_write_enable = GND;
+L4_q_a[0]_PORT_A_write_enable_reg = DFFE(L4_q_a[0]_PORT_A_write_enable, L4_q_a[0]_clock_0, , , );
+L4_q_a[0]_clock_0 = GLOBAL(A1L19);
+L4_q_a[0]_PORT_A_data_out = MEMORY(L4_q_a[0]_PORT_A_data_in_reg, , L4_q_a[0]_PORT_A_address_reg, , L4_q_a[0]_PORT_A_write_enable_reg, , , , L4_q_a[0]_clock_0, , , , , );
+L4_q_a[0] = L4_q_a[0]_PORT_A_data_out[0];
+
+
+--L7_q_a[1] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[1] at M4K_X52_Y24
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[1]_PORT_A_data_in = A1L48;
+L7_q_a[1]_PORT_A_data_in_reg = DFFE(L7_q_a[1]_PORT_A_data_in, L7_q_a[1]_clock_0, , , );
+L7_q_a[1]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[1]_PORT_A_address_reg = DFFE(L7_q_a[1]_PORT_A_address, L7_q_a[1]_clock_0, , , );
+L7_q_a[1]_PORT_A_write_enable = GND;
+L7_q_a[1]_PORT_A_write_enable_reg = DFFE(L7_q_a[1]_PORT_A_write_enable, L7_q_a[1]_clock_0, , , );
+L7_q_a[1]_clock_0 = GLOBAL(A1L19);
+L7_q_a[1]_PORT_A_data_out = MEMORY(L7_q_a[1]_PORT_A_data_in_reg, , L7_q_a[1]_PORT_A_address_reg, , L7_q_a[1]_PORT_A_write_enable_reg, , , , L7_q_a[1]_clock_0, , , , , );
+L7_q_a[1] = L7_q_a[1]_PORT_A_data_out[0];
+
+
+--L6_q_a[1] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[1] at M4K_X26_Y35
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[1]_PORT_A_data_in = A1L48;
+L6_q_a[1]_PORT_A_data_in_reg = DFFE(L6_q_a[1]_PORT_A_data_in, L6_q_a[1]_clock_0, , , );
+L6_q_a[1]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[1]_PORT_A_address_reg = DFFE(L6_q_a[1]_PORT_A_address, L6_q_a[1]_clock_0, , , );
+L6_q_a[1]_PORT_A_write_enable = GND;
+L6_q_a[1]_PORT_A_write_enable_reg = DFFE(L6_q_a[1]_PORT_A_write_enable, L6_q_a[1]_clock_0, , , );
+L6_q_a[1]_clock_0 = GLOBAL(A1L19);
+L6_q_a[1]_PORT_A_data_out = MEMORY(L6_q_a[1]_PORT_A_data_in_reg, , L6_q_a[1]_PORT_A_address_reg, , L6_q_a[1]_PORT_A_write_enable_reg, , , , L6_q_a[1]_clock_0, , , , , );
+L6_q_a[1] = L6_q_a[1]_PORT_A_data_out[0];
+
+
+--L5_q_a[1] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[1] at M4K_X26_Y33
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[1]_PORT_A_data_in = A1L48;
+L5_q_a[1]_PORT_A_data_in_reg = DFFE(L5_q_a[1]_PORT_A_data_in, L5_q_a[1]_clock_0, , , );
+L5_q_a[1]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[1]_PORT_A_address_reg = DFFE(L5_q_a[1]_PORT_A_address, L5_q_a[1]_clock_0, , , );
+L5_q_a[1]_PORT_A_write_enable = GND;
+L5_q_a[1]_PORT_A_write_enable_reg = DFFE(L5_q_a[1]_PORT_A_write_enable, L5_q_a[1]_clock_0, , , );
+L5_q_a[1]_clock_0 = GLOBAL(A1L19);
+L5_q_a[1]_PORT_A_data_out = MEMORY(L5_q_a[1]_PORT_A_data_in_reg, , L5_q_a[1]_PORT_A_address_reg, , L5_q_a[1]_PORT_A_write_enable_reg, , , , L5_q_a[1]_clock_0, , , , , );
+L5_q_a[1] = L5_q_a[1]_PORT_A_data_out[0];
+
+
+--L8_q_a[1] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[1] at M4K_X26_Y29
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[1]_PORT_A_data_in = A1L48;
+L8_q_a[1]_PORT_A_data_in_reg = DFFE(L8_q_a[1]_PORT_A_data_in, L8_q_a[1]_clock_0, , , );
+L8_q_a[1]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[1]_PORT_A_address_reg = DFFE(L8_q_a[1]_PORT_A_address, L8_q_a[1]_clock_0, , , );
+L8_q_a[1]_PORT_A_write_enable = GND;
+L8_q_a[1]_PORT_A_write_enable_reg = DFFE(L8_q_a[1]_PORT_A_write_enable, L8_q_a[1]_clock_0, , , );
+L8_q_a[1]_clock_0 = GLOBAL(A1L19);
+L8_q_a[1]_PORT_A_data_out = MEMORY(L8_q_a[1]_PORT_A_data_in_reg, , L8_q_a[1]_PORT_A_address_reg, , L8_q_a[1]_PORT_A_write_enable_reg, , , , L8_q_a[1]_clock_0, , , , , );
+L8_q_a[1] = L8_q_a[1]_PORT_A_data_out[0];
+
+
+--L2_q_a[1] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[1] at M4K_X26_Y27
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[1]_PORT_A_data_in = A1L48;
+L2_q_a[1]_PORT_A_data_in_reg = DFFE(L2_q_a[1]_PORT_A_data_in, L2_q_a[1]_clock_0, , , );
+L2_q_a[1]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[1]_PORT_A_address_reg = DFFE(L2_q_a[1]_PORT_A_address, L2_q_a[1]_clock_0, , , );
+L2_q_a[1]_PORT_A_write_enable = GND;
+L2_q_a[1]_PORT_A_write_enable_reg = DFFE(L2_q_a[1]_PORT_A_write_enable, L2_q_a[1]_clock_0, , , );
+L2_q_a[1]_clock_0 = GLOBAL(A1L19);
+L2_q_a[1]_PORT_A_data_out = MEMORY(L2_q_a[1]_PORT_A_data_in_reg, , L2_q_a[1]_PORT_A_address_reg, , L2_q_a[1]_PORT_A_write_enable_reg, , , , L2_q_a[1]_clock_0, , , , , );
+L2_q_a[1] = L2_q_a[1]_PORT_A_data_out[0];
+
+
+--L3_q_a[1] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[1] at M4K_X13_Y35
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[1]_PORT_A_data_in = A1L48;
+L3_q_a[1]_PORT_A_data_in_reg = DFFE(L3_q_a[1]_PORT_A_data_in, L3_q_a[1]_clock_0, , , );
+L3_q_a[1]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[1]_PORT_A_address_reg = DFFE(L3_q_a[1]_PORT_A_address, L3_q_a[1]_clock_0, , , );
+L3_q_a[1]_PORT_A_write_enable = GND;
+L3_q_a[1]_PORT_A_write_enable_reg = DFFE(L3_q_a[1]_PORT_A_write_enable, L3_q_a[1]_clock_0, , , );
+L3_q_a[1]_clock_0 = GLOBAL(A1L19);
+L3_q_a[1]_PORT_A_data_out = MEMORY(L3_q_a[1]_PORT_A_data_in_reg, , L3_q_a[1]_PORT_A_address_reg, , L3_q_a[1]_PORT_A_write_enable_reg, , , , L3_q_a[1]_clock_0, , , , , );
+L3_q_a[1] = L3_q_a[1]_PORT_A_data_out[0];
+
+
+--L1_q_a[1] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[1] at M4K_X26_Y30
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[1]_PORT_A_data_in = A1L48;
+L1_q_a[1]_PORT_A_data_in_reg = DFFE(L1_q_a[1]_PORT_A_data_in, L1_q_a[1]_clock_0, , , );
+L1_q_a[1]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[1]_PORT_A_address_reg = DFFE(L1_q_a[1]_PORT_A_address, L1_q_a[1]_clock_0, , , );
+L1_q_a[1]_PORT_A_write_enable = GND;
+L1_q_a[1]_PORT_A_write_enable_reg = DFFE(L1_q_a[1]_PORT_A_write_enable, L1_q_a[1]_clock_0, , , );
+L1_q_a[1]_clock_0 = GLOBAL(A1L19);
+L1_q_a[1]_PORT_A_data_out = MEMORY(L1_q_a[1]_PORT_A_data_in_reg, , L1_q_a[1]_PORT_A_address_reg, , L1_q_a[1]_PORT_A_write_enable_reg, , , , L1_q_a[1]_clock_0, , , , , );
+L1_q_a[1] = L1_q_a[1]_PORT_A_data_out[0];
+
+
+--L4_q_a[1] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[1] at M4K_X13_Y27
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[1]_PORT_A_data_in = A1L48;
+L4_q_a[1]_PORT_A_data_in_reg = DFFE(L4_q_a[1]_PORT_A_data_in, L4_q_a[1]_clock_0, , , );
+L4_q_a[1]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[1]_PORT_A_address_reg = DFFE(L4_q_a[1]_PORT_A_address, L4_q_a[1]_clock_0, , , );
+L4_q_a[1]_PORT_A_write_enable = GND;
+L4_q_a[1]_PORT_A_write_enable_reg = DFFE(L4_q_a[1]_PORT_A_write_enable, L4_q_a[1]_clock_0, , , );
+L4_q_a[1]_clock_0 = GLOBAL(A1L19);
+L4_q_a[1]_PORT_A_data_out = MEMORY(L4_q_a[1]_PORT_A_data_in_reg, , L4_q_a[1]_PORT_A_address_reg, , L4_q_a[1]_PORT_A_write_enable_reg, , , , L4_q_a[1]_clock_0, , , , , );
+L4_q_a[1] = L4_q_a[1]_PORT_A_data_out[0];
+
+
+--L7_q_a[2] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[2] at M4K_X13_Y6
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[2]_PORT_A_data_in = A1L48;
+L7_q_a[2]_PORT_A_data_in_reg = DFFE(L7_q_a[2]_PORT_A_data_in, L7_q_a[2]_clock_0, , , );
+L7_q_a[2]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[2]_PORT_A_address_reg = DFFE(L7_q_a[2]_PORT_A_address, L7_q_a[2]_clock_0, , , );
+L7_q_a[2]_PORT_A_write_enable = GND;
+L7_q_a[2]_PORT_A_write_enable_reg = DFFE(L7_q_a[2]_PORT_A_write_enable, L7_q_a[2]_clock_0, , , );
+L7_q_a[2]_clock_0 = GLOBAL(A1L19);
+L7_q_a[2]_PORT_A_data_out = MEMORY(L7_q_a[2]_PORT_A_data_in_reg, , L7_q_a[2]_PORT_A_address_reg, , L7_q_a[2]_PORT_A_write_enable_reg, , , , L7_q_a[2]_clock_0, , , , , );
+L7_q_a[2] = L7_q_a[2]_PORT_A_data_out[0];
+
+
+--L6_q_a[2] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[2] at M4K_X26_Y28
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[2]_PORT_A_data_in = A1L48;
+L6_q_a[2]_PORT_A_data_in_reg = DFFE(L6_q_a[2]_PORT_A_data_in, L6_q_a[2]_clock_0, , , );
+L6_q_a[2]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[2]_PORT_A_address_reg = DFFE(L6_q_a[2]_PORT_A_address, L6_q_a[2]_clock_0, , , );
+L6_q_a[2]_PORT_A_write_enable = GND;
+L6_q_a[2]_PORT_A_write_enable_reg = DFFE(L6_q_a[2]_PORT_A_write_enable, L6_q_a[2]_clock_0, , , );
+L6_q_a[2]_clock_0 = GLOBAL(A1L19);
+L6_q_a[2]_PORT_A_data_out = MEMORY(L6_q_a[2]_PORT_A_data_in_reg, , L6_q_a[2]_PORT_A_address_reg, , L6_q_a[2]_PORT_A_write_enable_reg, , , , L6_q_a[2]_clock_0, , , , , );
+L6_q_a[2] = L6_q_a[2]_PORT_A_data_out[0];
+
+
+--L5_q_a[2] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[2] at M4K_X26_Y8
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[2]_PORT_A_data_in = A1L48;
+L5_q_a[2]_PORT_A_data_in_reg = DFFE(L5_q_a[2]_PORT_A_data_in, L5_q_a[2]_clock_0, , , );
+L5_q_a[2]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[2]_PORT_A_address_reg = DFFE(L5_q_a[2]_PORT_A_address, L5_q_a[2]_clock_0, , , );
+L5_q_a[2]_PORT_A_write_enable = GND;
+L5_q_a[2]_PORT_A_write_enable_reg = DFFE(L5_q_a[2]_PORT_A_write_enable, L5_q_a[2]_clock_0, , , );
+L5_q_a[2]_clock_0 = GLOBAL(A1L19);
+L5_q_a[2]_PORT_A_data_out = MEMORY(L5_q_a[2]_PORT_A_data_in_reg, , L5_q_a[2]_PORT_A_address_reg, , L5_q_a[2]_PORT_A_write_enable_reg, , , , L5_q_a[2]_clock_0, , , , , );
+L5_q_a[2] = L5_q_a[2]_PORT_A_data_out[0];
+
+
+--L8_q_a[2] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[2] at M4K_X26_Y11
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[2]_PORT_A_data_in = A1L48;
+L8_q_a[2]_PORT_A_data_in_reg = DFFE(L8_q_a[2]_PORT_A_data_in, L8_q_a[2]_clock_0, , , );
+L8_q_a[2]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[2]_PORT_A_address_reg = DFFE(L8_q_a[2]_PORT_A_address, L8_q_a[2]_clock_0, , , );
+L8_q_a[2]_PORT_A_write_enable = GND;
+L8_q_a[2]_PORT_A_write_enable_reg = DFFE(L8_q_a[2]_PORT_A_write_enable, L8_q_a[2]_clock_0, , , );
+L8_q_a[2]_clock_0 = GLOBAL(A1L19);
+L8_q_a[2]_PORT_A_data_out = MEMORY(L8_q_a[2]_PORT_A_data_in_reg, , L8_q_a[2]_PORT_A_address_reg, , L8_q_a[2]_PORT_A_write_enable_reg, , , , L8_q_a[2]_clock_0, , , , , );
+L8_q_a[2] = L8_q_a[2]_PORT_A_data_out[0];
+
+
+--L2_q_a[2] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[2] at M4K_X13_Y19
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[2]_PORT_A_data_in = A1L48;
+L2_q_a[2]_PORT_A_data_in_reg = DFFE(L2_q_a[2]_PORT_A_data_in, L2_q_a[2]_clock_0, , , );
+L2_q_a[2]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[2]_PORT_A_address_reg = DFFE(L2_q_a[2]_PORT_A_address, L2_q_a[2]_clock_0, , , );
+L2_q_a[2]_PORT_A_write_enable = GND;
+L2_q_a[2]_PORT_A_write_enable_reg = DFFE(L2_q_a[2]_PORT_A_write_enable, L2_q_a[2]_clock_0, , , );
+L2_q_a[2]_clock_0 = GLOBAL(A1L19);
+L2_q_a[2]_PORT_A_data_out = MEMORY(L2_q_a[2]_PORT_A_data_in_reg, , L2_q_a[2]_PORT_A_address_reg, , L2_q_a[2]_PORT_A_write_enable_reg, , , , L2_q_a[2]_clock_0, , , , , );
+L2_q_a[2] = L2_q_a[2]_PORT_A_data_out[0];
+
+
+--L3_q_a[2] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[2] at M4K_X13_Y28
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[2]_PORT_A_data_in = A1L48;
+L3_q_a[2]_PORT_A_data_in_reg = DFFE(L3_q_a[2]_PORT_A_data_in, L3_q_a[2]_clock_0, , , );
+L3_q_a[2]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[2]_PORT_A_address_reg = DFFE(L3_q_a[2]_PORT_A_address, L3_q_a[2]_clock_0, , , );
+L3_q_a[2]_PORT_A_write_enable = GND;
+L3_q_a[2]_PORT_A_write_enable_reg = DFFE(L3_q_a[2]_PORT_A_write_enable, L3_q_a[2]_clock_0, , , );
+L3_q_a[2]_clock_0 = GLOBAL(A1L19);
+L3_q_a[2]_PORT_A_data_out = MEMORY(L3_q_a[2]_PORT_A_data_in_reg, , L3_q_a[2]_PORT_A_address_reg, , L3_q_a[2]_PORT_A_write_enable_reg, , , , L3_q_a[2]_clock_0, , , , , );
+L3_q_a[2] = L3_q_a[2]_PORT_A_data_out[0];
+
+
+--L1_q_a[2] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[2] at M4K_X52_Y27
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[2]_PORT_A_data_in = A1L48;
+L1_q_a[2]_PORT_A_data_in_reg = DFFE(L1_q_a[2]_PORT_A_data_in, L1_q_a[2]_clock_0, , , );
+L1_q_a[2]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[2]_PORT_A_address_reg = DFFE(L1_q_a[2]_PORT_A_address, L1_q_a[2]_clock_0, , , );
+L1_q_a[2]_PORT_A_write_enable = GND;
+L1_q_a[2]_PORT_A_write_enable_reg = DFFE(L1_q_a[2]_PORT_A_write_enable, L1_q_a[2]_clock_0, , , );
+L1_q_a[2]_clock_0 = GLOBAL(A1L19);
+L1_q_a[2]_PORT_A_data_out = MEMORY(L1_q_a[2]_PORT_A_data_in_reg, , L1_q_a[2]_PORT_A_address_reg, , L1_q_a[2]_PORT_A_write_enable_reg, , , , L1_q_a[2]_clock_0, , , , , );
+L1_q_a[2] = L1_q_a[2]_PORT_A_data_out[0];
+
+
+--L4_q_a[2] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[2] at M4K_X26_Y31
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[2]_PORT_A_data_in = A1L48;
+L4_q_a[2]_PORT_A_data_in_reg = DFFE(L4_q_a[2]_PORT_A_data_in, L4_q_a[2]_clock_0, , , );
+L4_q_a[2]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[2]_PORT_A_address_reg = DFFE(L4_q_a[2]_PORT_A_address, L4_q_a[2]_clock_0, , , );
+L4_q_a[2]_PORT_A_write_enable = GND;
+L4_q_a[2]_PORT_A_write_enable_reg = DFFE(L4_q_a[2]_PORT_A_write_enable, L4_q_a[2]_clock_0, , , );
+L4_q_a[2]_clock_0 = GLOBAL(A1L19);
+L4_q_a[2]_PORT_A_data_out = MEMORY(L4_q_a[2]_PORT_A_data_in_reg, , L4_q_a[2]_PORT_A_address_reg, , L4_q_a[2]_PORT_A_write_enable_reg, , , , L4_q_a[2]_clock_0, , , , , );
+L4_q_a[2] = L4_q_a[2]_PORT_A_data_out[0];
+
+
+--L7_q_a[3] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[3] at M4K_X26_Y2
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[3]_PORT_A_data_in = A1L48;
+L7_q_a[3]_PORT_A_data_in_reg = DFFE(L7_q_a[3]_PORT_A_data_in, L7_q_a[3]_clock_0, , , );
+L7_q_a[3]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[3]_PORT_A_address_reg = DFFE(L7_q_a[3]_PORT_A_address, L7_q_a[3]_clock_0, , , );
+L7_q_a[3]_PORT_A_write_enable = GND;
+L7_q_a[3]_PORT_A_write_enable_reg = DFFE(L7_q_a[3]_PORT_A_write_enable, L7_q_a[3]_clock_0, , , );
+L7_q_a[3]_clock_0 = GLOBAL(A1L19);
+L7_q_a[3]_PORT_A_data_out = MEMORY(L7_q_a[3]_PORT_A_data_in_reg, , L7_q_a[3]_PORT_A_address_reg, , L7_q_a[3]_PORT_A_write_enable_reg, , , , L7_q_a[3]_clock_0, , , , , );
+L7_q_a[3] = L7_q_a[3]_PORT_A_data_out[0];
+
+
+--L6_q_a[3] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[3] at M4K_X13_Y31
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[3]_PORT_A_data_in = A1L48;
+L6_q_a[3]_PORT_A_data_in_reg = DFFE(L6_q_a[3]_PORT_A_data_in, L6_q_a[3]_clock_0, , , );
+L6_q_a[3]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[3]_PORT_A_address_reg = DFFE(L6_q_a[3]_PORT_A_address, L6_q_a[3]_clock_0, , , );
+L6_q_a[3]_PORT_A_write_enable = GND;
+L6_q_a[3]_PORT_A_write_enable_reg = DFFE(L6_q_a[3]_PORT_A_write_enable, L6_q_a[3]_clock_0, , , );
+L6_q_a[3]_clock_0 = GLOBAL(A1L19);
+L6_q_a[3]_PORT_A_data_out = MEMORY(L6_q_a[3]_PORT_A_data_in_reg, , L6_q_a[3]_PORT_A_address_reg, , L6_q_a[3]_PORT_A_write_enable_reg, , , , L6_q_a[3]_clock_0, , , , , );
+L6_q_a[3] = L6_q_a[3]_PORT_A_data_out[0];
+
+
+--L5_q_a[3] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[3] at M4K_X13_Y32
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[3]_PORT_A_data_in = A1L48;
+L5_q_a[3]_PORT_A_data_in_reg = DFFE(L5_q_a[3]_PORT_A_data_in, L5_q_a[3]_clock_0, , , );
+L5_q_a[3]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[3]_PORT_A_address_reg = DFFE(L5_q_a[3]_PORT_A_address, L5_q_a[3]_clock_0, , , );
+L5_q_a[3]_PORT_A_write_enable = GND;
+L5_q_a[3]_PORT_A_write_enable_reg = DFFE(L5_q_a[3]_PORT_A_write_enable, L5_q_a[3]_clock_0, , , );
+L5_q_a[3]_clock_0 = GLOBAL(A1L19);
+L5_q_a[3]_PORT_A_data_out = MEMORY(L5_q_a[3]_PORT_A_data_in_reg, , L5_q_a[3]_PORT_A_address_reg, , L5_q_a[3]_PORT_A_write_enable_reg, , , , L5_q_a[3]_clock_0, , , , , );
+L5_q_a[3] = L5_q_a[3]_PORT_A_data_out[0];
+
+
+--L8_q_a[3] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[3] at M4K_X13_Y14
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[3]_PORT_A_data_in = A1L48;
+L8_q_a[3]_PORT_A_data_in_reg = DFFE(L8_q_a[3]_PORT_A_data_in, L8_q_a[3]_clock_0, , , );
+L8_q_a[3]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[3]_PORT_A_address_reg = DFFE(L8_q_a[3]_PORT_A_address, L8_q_a[3]_clock_0, , , );
+L8_q_a[3]_PORT_A_write_enable = GND;
+L8_q_a[3]_PORT_A_write_enable_reg = DFFE(L8_q_a[3]_PORT_A_write_enable, L8_q_a[3]_clock_0, , , );
+L8_q_a[3]_clock_0 = GLOBAL(A1L19);
+L8_q_a[3]_PORT_A_data_out = MEMORY(L8_q_a[3]_PORT_A_data_in_reg, , L8_q_a[3]_PORT_A_address_reg, , L8_q_a[3]_PORT_A_write_enable_reg, , , , L8_q_a[3]_clock_0, , , , , );
+L8_q_a[3] = L8_q_a[3]_PORT_A_data_out[0];
+
+
+--L2_q_a[3] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[3] at M4K_X13_Y8
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[3]_PORT_A_data_in = A1L48;
+L2_q_a[3]_PORT_A_data_in_reg = DFFE(L2_q_a[3]_PORT_A_data_in, L2_q_a[3]_clock_0, , , );
+L2_q_a[3]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[3]_PORT_A_address_reg = DFFE(L2_q_a[3]_PORT_A_address, L2_q_a[3]_clock_0, , , );
+L2_q_a[3]_PORT_A_write_enable = GND;
+L2_q_a[3]_PORT_A_write_enable_reg = DFFE(L2_q_a[3]_PORT_A_write_enable, L2_q_a[3]_clock_0, , , );
+L2_q_a[3]_clock_0 = GLOBAL(A1L19);
+L2_q_a[3]_PORT_A_data_out = MEMORY(L2_q_a[3]_PORT_A_data_in_reg, , L2_q_a[3]_PORT_A_address_reg, , L2_q_a[3]_PORT_A_write_enable_reg, , , , L2_q_a[3]_clock_0, , , , , );
+L2_q_a[3] = L2_q_a[3]_PORT_A_data_out[0];
+
+
+--L3_q_a[3] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[3] at M4K_X13_Y2
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[3]_PORT_A_data_in = A1L48;
+L3_q_a[3]_PORT_A_data_in_reg = DFFE(L3_q_a[3]_PORT_A_data_in, L3_q_a[3]_clock_0, , , );
+L3_q_a[3]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[3]_PORT_A_address_reg = DFFE(L3_q_a[3]_PORT_A_address, L3_q_a[3]_clock_0, , , );
+L3_q_a[3]_PORT_A_write_enable = GND;
+L3_q_a[3]_PORT_A_write_enable_reg = DFFE(L3_q_a[3]_PORT_A_write_enable, L3_q_a[3]_clock_0, , , );
+L3_q_a[3]_clock_0 = GLOBAL(A1L19);
+L3_q_a[3]_PORT_A_data_out = MEMORY(L3_q_a[3]_PORT_A_data_in_reg, , L3_q_a[3]_PORT_A_address_reg, , L3_q_a[3]_PORT_A_write_enable_reg, , , , L3_q_a[3]_clock_0, , , , , );
+L3_q_a[3] = L3_q_a[3]_PORT_A_data_out[0];
+
+
+--L1_q_a[3] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[3] at M4K_X13_Y7
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[3]_PORT_A_data_in = A1L48;
+L1_q_a[3]_PORT_A_data_in_reg = DFFE(L1_q_a[3]_PORT_A_data_in, L1_q_a[3]_clock_0, , , );
+L1_q_a[3]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[3]_PORT_A_address_reg = DFFE(L1_q_a[3]_PORT_A_address, L1_q_a[3]_clock_0, , , );
+L1_q_a[3]_PORT_A_write_enable = GND;
+L1_q_a[3]_PORT_A_write_enable_reg = DFFE(L1_q_a[3]_PORT_A_write_enable, L1_q_a[3]_clock_0, , , );
+L1_q_a[3]_clock_0 = GLOBAL(A1L19);
+L1_q_a[3]_PORT_A_data_out = MEMORY(L1_q_a[3]_PORT_A_data_in_reg, , L1_q_a[3]_PORT_A_address_reg, , L1_q_a[3]_PORT_A_write_enable_reg, , , , L1_q_a[3]_clock_0, , , , , );
+L1_q_a[3] = L1_q_a[3]_PORT_A_data_out[0];
+
+
+--L4_q_a[3] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[3] at M4K_X26_Y14
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[3]_PORT_A_data_in = A1L48;
+L4_q_a[3]_PORT_A_data_in_reg = DFFE(L4_q_a[3]_PORT_A_data_in, L4_q_a[3]_clock_0, , , );
+L4_q_a[3]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[3]_PORT_A_address_reg = DFFE(L4_q_a[3]_PORT_A_address, L4_q_a[3]_clock_0, , , );
+L4_q_a[3]_PORT_A_write_enable = GND;
+L4_q_a[3]_PORT_A_write_enable_reg = DFFE(L4_q_a[3]_PORT_A_write_enable, L4_q_a[3]_clock_0, , , );
+L4_q_a[3]_clock_0 = GLOBAL(A1L19);
+L4_q_a[3]_PORT_A_data_out = MEMORY(L4_q_a[3]_PORT_A_data_in_reg, , L4_q_a[3]_PORT_A_address_reg, , L4_q_a[3]_PORT_A_write_enable_reg, , , , L4_q_a[3]_clock_0, , , , , );
+L4_q_a[3] = L4_q_a[3]_PORT_A_data_out[0];
+
+
+--L7_q_a[4] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[4] at M4K_X26_Y19
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[4]_PORT_A_data_in = A1L48;
+L7_q_a[4]_PORT_A_data_in_reg = DFFE(L7_q_a[4]_PORT_A_data_in, L7_q_a[4]_clock_0, , , );
+L7_q_a[4]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[4]_PORT_A_address_reg = DFFE(L7_q_a[4]_PORT_A_address, L7_q_a[4]_clock_0, , , );
+L7_q_a[4]_PORT_A_write_enable = GND;
+L7_q_a[4]_PORT_A_write_enable_reg = DFFE(L7_q_a[4]_PORT_A_write_enable, L7_q_a[4]_clock_0, , , );
+L7_q_a[4]_clock_0 = GLOBAL(A1L19);
+L7_q_a[4]_PORT_A_data_out = MEMORY(L7_q_a[4]_PORT_A_data_in_reg, , L7_q_a[4]_PORT_A_address_reg, , L7_q_a[4]_PORT_A_write_enable_reg, , , , L7_q_a[4]_clock_0, , , , , );
+L7_q_a[4] = L7_q_a[4]_PORT_A_data_out[0];
+
+
+--L6_q_a[4] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[4] at M4K_X13_Y11
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[4]_PORT_A_data_in = A1L48;
+L6_q_a[4]_PORT_A_data_in_reg = DFFE(L6_q_a[4]_PORT_A_data_in, L6_q_a[4]_clock_0, , , );
+L6_q_a[4]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[4]_PORT_A_address_reg = DFFE(L6_q_a[4]_PORT_A_address, L6_q_a[4]_clock_0, , , );
+L6_q_a[4]_PORT_A_write_enable = GND;
+L6_q_a[4]_PORT_A_write_enable_reg = DFFE(L6_q_a[4]_PORT_A_write_enable, L6_q_a[4]_clock_0, , , );
+L6_q_a[4]_clock_0 = GLOBAL(A1L19);
+L6_q_a[4]_PORT_A_data_out = MEMORY(L6_q_a[4]_PORT_A_data_in_reg, , L6_q_a[4]_PORT_A_address_reg, , L6_q_a[4]_PORT_A_write_enable_reg, , , , L6_q_a[4]_clock_0, , , , , );
+L6_q_a[4] = L6_q_a[4]_PORT_A_data_out[0];
+
+
+--L5_q_a[4] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[4] at M4K_X52_Y22
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[4]_PORT_A_data_in = A1L48;
+L5_q_a[4]_PORT_A_data_in_reg = DFFE(L5_q_a[4]_PORT_A_data_in, L5_q_a[4]_clock_0, , , );
+L5_q_a[4]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[4]_PORT_A_address_reg = DFFE(L5_q_a[4]_PORT_A_address, L5_q_a[4]_clock_0, , , );
+L5_q_a[4]_PORT_A_write_enable = GND;
+L5_q_a[4]_PORT_A_write_enable_reg = DFFE(L5_q_a[4]_PORT_A_write_enable, L5_q_a[4]_clock_0, , , );
+L5_q_a[4]_clock_0 = GLOBAL(A1L19);
+L5_q_a[4]_PORT_A_data_out = MEMORY(L5_q_a[4]_PORT_A_data_in_reg, , L5_q_a[4]_PORT_A_address_reg, , L5_q_a[4]_PORT_A_write_enable_reg, , , , L5_q_a[4]_clock_0, , , , , );
+L5_q_a[4] = L5_q_a[4]_PORT_A_data_out[0];
+
+
+--L8_q_a[4] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[4] at M4K_X26_Y15
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[4]_PORT_A_data_in = A1L48;
+L8_q_a[4]_PORT_A_data_in_reg = DFFE(L8_q_a[4]_PORT_A_data_in, L8_q_a[4]_clock_0, , , );
+L8_q_a[4]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[4]_PORT_A_address_reg = DFFE(L8_q_a[4]_PORT_A_address, L8_q_a[4]_clock_0, , , );
+L8_q_a[4]_PORT_A_write_enable = GND;
+L8_q_a[4]_PORT_A_write_enable_reg = DFFE(L8_q_a[4]_PORT_A_write_enable, L8_q_a[4]_clock_0, , , );
+L8_q_a[4]_clock_0 = GLOBAL(A1L19);
+L8_q_a[4]_PORT_A_data_out = MEMORY(L8_q_a[4]_PORT_A_data_in_reg, , L8_q_a[4]_PORT_A_address_reg, , L8_q_a[4]_PORT_A_write_enable_reg, , , , L8_q_a[4]_clock_0, , , , , );
+L8_q_a[4] = L8_q_a[4]_PORT_A_data_out[0];
+
+
+--L2_q_a[4] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[4] at M4K_X26_Y16
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[4]_PORT_A_data_in = A1L48;
+L2_q_a[4]_PORT_A_data_in_reg = DFFE(L2_q_a[4]_PORT_A_data_in, L2_q_a[4]_clock_0, , , );
+L2_q_a[4]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[4]_PORT_A_address_reg = DFFE(L2_q_a[4]_PORT_A_address, L2_q_a[4]_clock_0, , , );
+L2_q_a[4]_PORT_A_write_enable = GND;
+L2_q_a[4]_PORT_A_write_enable_reg = DFFE(L2_q_a[4]_PORT_A_write_enable, L2_q_a[4]_clock_0, , , );
+L2_q_a[4]_clock_0 = GLOBAL(A1L19);
+L2_q_a[4]_PORT_A_data_out = MEMORY(L2_q_a[4]_PORT_A_data_in_reg, , L2_q_a[4]_PORT_A_address_reg, , L2_q_a[4]_PORT_A_write_enable_reg, , , , L2_q_a[4]_clock_0, , , , , );
+L2_q_a[4] = L2_q_a[4]_PORT_A_data_out[0];
+
+
+--L3_q_a[4] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[4] at M4K_X26_Y10
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[4]_PORT_A_data_in = A1L48;
+L3_q_a[4]_PORT_A_data_in_reg = DFFE(L3_q_a[4]_PORT_A_data_in, L3_q_a[4]_clock_0, , , );
+L3_q_a[4]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[4]_PORT_A_address_reg = DFFE(L3_q_a[4]_PORT_A_address, L3_q_a[4]_clock_0, , , );
+L3_q_a[4]_PORT_A_write_enable = GND;
+L3_q_a[4]_PORT_A_write_enable_reg = DFFE(L3_q_a[4]_PORT_A_write_enable, L3_q_a[4]_clock_0, , , );
+L3_q_a[4]_clock_0 = GLOBAL(A1L19);
+L3_q_a[4]_PORT_A_data_out = MEMORY(L3_q_a[4]_PORT_A_data_in_reg, , L3_q_a[4]_PORT_A_address_reg, , L3_q_a[4]_PORT_A_write_enable_reg, , , , L3_q_a[4]_clock_0, , , , , );
+L3_q_a[4] = L3_q_a[4]_PORT_A_data_out[0];
+
+
+--L1_q_a[4] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[4] at M4K_X13_Y26
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[4]_PORT_A_data_in = A1L48;
+L1_q_a[4]_PORT_A_data_in_reg = DFFE(L1_q_a[4]_PORT_A_data_in, L1_q_a[4]_clock_0, , , );
+L1_q_a[4]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[4]_PORT_A_address_reg = DFFE(L1_q_a[4]_PORT_A_address, L1_q_a[4]_clock_0, , , );
+L1_q_a[4]_PORT_A_write_enable = GND;
+L1_q_a[4]_PORT_A_write_enable_reg = DFFE(L1_q_a[4]_PORT_A_write_enable, L1_q_a[4]_clock_0, , , );
+L1_q_a[4]_clock_0 = GLOBAL(A1L19);
+L1_q_a[4]_PORT_A_data_out = MEMORY(L1_q_a[4]_PORT_A_data_in_reg, , L1_q_a[4]_PORT_A_address_reg, , L1_q_a[4]_PORT_A_write_enable_reg, , , , L1_q_a[4]_clock_0, , , , , );
+L1_q_a[4] = L1_q_a[4]_PORT_A_data_out[0];
+
+
+--L4_q_a[4] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[4] at M4K_X13_Y18
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[4]_PORT_A_data_in = A1L48;
+L4_q_a[4]_PORT_A_data_in_reg = DFFE(L4_q_a[4]_PORT_A_data_in, L4_q_a[4]_clock_0, , , );
+L4_q_a[4]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[4]_PORT_A_address_reg = DFFE(L4_q_a[4]_PORT_A_address, L4_q_a[4]_clock_0, , , );
+L4_q_a[4]_PORT_A_write_enable = GND;
+L4_q_a[4]_PORT_A_write_enable_reg = DFFE(L4_q_a[4]_PORT_A_write_enable, L4_q_a[4]_clock_0, , , );
+L4_q_a[4]_clock_0 = GLOBAL(A1L19);
+L4_q_a[4]_PORT_A_data_out = MEMORY(L4_q_a[4]_PORT_A_data_in_reg, , L4_q_a[4]_PORT_A_address_reg, , L4_q_a[4]_PORT_A_write_enable_reg, , , , L4_q_a[4]_clock_0, , , , , );
+L4_q_a[4] = L4_q_a[4]_PORT_A_data_out[0];
+
+
+--L7_q_a[5] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[5] at M4K_X13_Y4
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[5]_PORT_A_data_in = A1L48;
+L7_q_a[5]_PORT_A_data_in_reg = DFFE(L7_q_a[5]_PORT_A_data_in, L7_q_a[5]_clock_0, , , );
+L7_q_a[5]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[5]_PORT_A_address_reg = DFFE(L7_q_a[5]_PORT_A_address, L7_q_a[5]_clock_0, , , );
+L7_q_a[5]_PORT_A_write_enable = GND;
+L7_q_a[5]_PORT_A_write_enable_reg = DFFE(L7_q_a[5]_PORT_A_write_enable, L7_q_a[5]_clock_0, , , );
+L7_q_a[5]_clock_0 = GLOBAL(A1L19);
+L7_q_a[5]_PORT_A_data_out = MEMORY(L7_q_a[5]_PORT_A_data_in_reg, , L7_q_a[5]_PORT_A_address_reg, , L7_q_a[5]_PORT_A_write_enable_reg, , , , L7_q_a[5]_clock_0, , , , , );
+L7_q_a[5] = L7_q_a[5]_PORT_A_data_out[0];
+
+
+--L6_q_a[5] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[5] at M4K_X26_Y22
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[5]_PORT_A_data_in = A1L48;
+L6_q_a[5]_PORT_A_data_in_reg = DFFE(L6_q_a[5]_PORT_A_data_in, L6_q_a[5]_clock_0, , , );
+L6_q_a[5]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[5]_PORT_A_address_reg = DFFE(L6_q_a[5]_PORT_A_address, L6_q_a[5]_clock_0, , , );
+L6_q_a[5]_PORT_A_write_enable = GND;
+L6_q_a[5]_PORT_A_write_enable_reg = DFFE(L6_q_a[5]_PORT_A_write_enable, L6_q_a[5]_clock_0, , , );
+L6_q_a[5]_clock_0 = GLOBAL(A1L19);
+L6_q_a[5]_PORT_A_data_out = MEMORY(L6_q_a[5]_PORT_A_data_in_reg, , L6_q_a[5]_PORT_A_address_reg, , L6_q_a[5]_PORT_A_write_enable_reg, , , , L6_q_a[5]_clock_0, , , , , );
+L6_q_a[5] = L6_q_a[5]_PORT_A_data_out[0];
+
+
+--L5_q_a[5] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[5] at M4K_X13_Y30
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[5]_PORT_A_data_in = A1L48;
+L5_q_a[5]_PORT_A_data_in_reg = DFFE(L5_q_a[5]_PORT_A_data_in, L5_q_a[5]_clock_0, , , );
+L5_q_a[5]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[5]_PORT_A_address_reg = DFFE(L5_q_a[5]_PORT_A_address, L5_q_a[5]_clock_0, , , );
+L5_q_a[5]_PORT_A_write_enable = GND;
+L5_q_a[5]_PORT_A_write_enable_reg = DFFE(L5_q_a[5]_PORT_A_write_enable, L5_q_a[5]_clock_0, , , );
+L5_q_a[5]_clock_0 = GLOBAL(A1L19);
+L5_q_a[5]_PORT_A_data_out = MEMORY(L5_q_a[5]_PORT_A_data_in_reg, , L5_q_a[5]_PORT_A_address_reg, , L5_q_a[5]_PORT_A_write_enable_reg, , , , L5_q_a[5]_clock_0, , , , , );
+L5_q_a[5] = L5_q_a[5]_PORT_A_data_out[0];
+
+
+--L8_q_a[5] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[5] at M4K_X26_Y12
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[5]_PORT_A_data_in = A1L48;
+L8_q_a[5]_PORT_A_data_in_reg = DFFE(L8_q_a[5]_PORT_A_data_in, L8_q_a[5]_clock_0, , , );
+L8_q_a[5]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[5]_PORT_A_address_reg = DFFE(L8_q_a[5]_PORT_A_address, L8_q_a[5]_clock_0, , , );
+L8_q_a[5]_PORT_A_write_enable = GND;
+L8_q_a[5]_PORT_A_write_enable_reg = DFFE(L8_q_a[5]_PORT_A_write_enable, L8_q_a[5]_clock_0, , , );
+L8_q_a[5]_clock_0 = GLOBAL(A1L19);
+L8_q_a[5]_PORT_A_data_out = MEMORY(L8_q_a[5]_PORT_A_data_in_reg, , L8_q_a[5]_PORT_A_address_reg, , L8_q_a[5]_PORT_A_write_enable_reg, , , , L8_q_a[5]_clock_0, , , , , );
+L8_q_a[5] = L8_q_a[5]_PORT_A_data_out[0];
+
+
+--L2_q_a[5] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[5] at M4K_X13_Y25
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[5]_PORT_A_data_in = A1L48;
+L2_q_a[5]_PORT_A_data_in_reg = DFFE(L2_q_a[5]_PORT_A_data_in, L2_q_a[5]_clock_0, , , );
+L2_q_a[5]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[5]_PORT_A_address_reg = DFFE(L2_q_a[5]_PORT_A_address, L2_q_a[5]_clock_0, , , );
+L2_q_a[5]_PORT_A_write_enable = GND;
+L2_q_a[5]_PORT_A_write_enable_reg = DFFE(L2_q_a[5]_PORT_A_write_enable, L2_q_a[5]_clock_0, , , );
+L2_q_a[5]_clock_0 = GLOBAL(A1L19);
+L2_q_a[5]_PORT_A_data_out = MEMORY(L2_q_a[5]_PORT_A_data_in_reg, , L2_q_a[5]_PORT_A_address_reg, , L2_q_a[5]_PORT_A_write_enable_reg, , , , L2_q_a[5]_clock_0, , , , , );
+L2_q_a[5] = L2_q_a[5]_PORT_A_data_out[0];
+
+
+--L3_q_a[5] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[5] at M4K_X13_Y12
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[5]_PORT_A_data_in = A1L48;
+L3_q_a[5]_PORT_A_data_in_reg = DFFE(L3_q_a[5]_PORT_A_data_in, L3_q_a[5]_clock_0, , , );
+L3_q_a[5]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[5]_PORT_A_address_reg = DFFE(L3_q_a[5]_PORT_A_address, L3_q_a[5]_clock_0, , , );
+L3_q_a[5]_PORT_A_write_enable = GND;
+L3_q_a[5]_PORT_A_write_enable_reg = DFFE(L3_q_a[5]_PORT_A_write_enable, L3_q_a[5]_clock_0, , , );
+L3_q_a[5]_clock_0 = GLOBAL(A1L19);
+L3_q_a[5]_PORT_A_data_out = MEMORY(L3_q_a[5]_PORT_A_data_in_reg, , L3_q_a[5]_PORT_A_address_reg, , L3_q_a[5]_PORT_A_write_enable_reg, , , , L3_q_a[5]_clock_0, , , , , );
+L3_q_a[5] = L3_q_a[5]_PORT_A_data_out[0];
+
+
+--L1_q_a[5] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[5] at M4K_X26_Y9
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[5]_PORT_A_data_in = A1L48;
+L1_q_a[5]_PORT_A_data_in_reg = DFFE(L1_q_a[5]_PORT_A_data_in, L1_q_a[5]_clock_0, , , );
+L1_q_a[5]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[5]_PORT_A_address_reg = DFFE(L1_q_a[5]_PORT_A_address, L1_q_a[5]_clock_0, , , );
+L1_q_a[5]_PORT_A_write_enable = GND;
+L1_q_a[5]_PORT_A_write_enable_reg = DFFE(L1_q_a[5]_PORT_A_write_enable, L1_q_a[5]_clock_0, , , );
+L1_q_a[5]_clock_0 = GLOBAL(A1L19);
+L1_q_a[5]_PORT_A_data_out = MEMORY(L1_q_a[5]_PORT_A_data_in_reg, , L1_q_a[5]_PORT_A_address_reg, , L1_q_a[5]_PORT_A_write_enable_reg, , , , L1_q_a[5]_clock_0, , , , , );
+L1_q_a[5] = L1_q_a[5]_PORT_A_data_out[0];
+
+
+--L4_q_a[5] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[5] at M4K_X13_Y23
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[5]_PORT_A_data_in = A1L48;
+L4_q_a[5]_PORT_A_data_in_reg = DFFE(L4_q_a[5]_PORT_A_data_in, L4_q_a[5]_clock_0, , , );
+L4_q_a[5]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[5]_PORT_A_address_reg = DFFE(L4_q_a[5]_PORT_A_address, L4_q_a[5]_clock_0, , , );
+L4_q_a[5]_PORT_A_write_enable = GND;
+L4_q_a[5]_PORT_A_write_enable_reg = DFFE(L4_q_a[5]_PORT_A_write_enable, L4_q_a[5]_clock_0, , , );
+L4_q_a[5]_clock_0 = GLOBAL(A1L19);
+L4_q_a[5]_PORT_A_data_out = MEMORY(L4_q_a[5]_PORT_A_data_in_reg, , L4_q_a[5]_PORT_A_address_reg, , L4_q_a[5]_PORT_A_write_enable_reg, , , , L4_q_a[5]_clock_0, , , , , );
+L4_q_a[5] = L4_q_a[5]_PORT_A_data_out[0];
+
+
+--L7_q_a[6] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[6] at M4K_X13_Y24
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[6]_PORT_A_data_in = A1L48;
+L7_q_a[6]_PORT_A_data_in_reg = DFFE(L7_q_a[6]_PORT_A_data_in, L7_q_a[6]_clock_0, , , );
+L7_q_a[6]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[6]_PORT_A_address_reg = DFFE(L7_q_a[6]_PORT_A_address, L7_q_a[6]_clock_0, , , );
+L7_q_a[6]_PORT_A_write_enable = GND;
+L7_q_a[6]_PORT_A_write_enable_reg = DFFE(L7_q_a[6]_PORT_A_write_enable, L7_q_a[6]_clock_0, , , );
+L7_q_a[6]_clock_0 = GLOBAL(A1L19);
+L7_q_a[6]_PORT_A_data_out = MEMORY(L7_q_a[6]_PORT_A_data_in_reg, , L7_q_a[6]_PORT_A_address_reg, , L7_q_a[6]_PORT_A_write_enable_reg, , , , L7_q_a[6]_clock_0, , , , , );
+L7_q_a[6] = L7_q_a[6]_PORT_A_data_out[0];
+
+
+--L6_q_a[6] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[6] at M4K_X13_Y3
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[6]_PORT_A_data_in = A1L48;
+L6_q_a[6]_PORT_A_data_in_reg = DFFE(L6_q_a[6]_PORT_A_data_in, L6_q_a[6]_clock_0, , , );
+L6_q_a[6]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[6]_PORT_A_address_reg = DFFE(L6_q_a[6]_PORT_A_address, L6_q_a[6]_clock_0, , , );
+L6_q_a[6]_PORT_A_write_enable = GND;
+L6_q_a[6]_PORT_A_write_enable_reg = DFFE(L6_q_a[6]_PORT_A_write_enable, L6_q_a[6]_clock_0, , , );
+L6_q_a[6]_clock_0 = GLOBAL(A1L19);
+L6_q_a[6]_PORT_A_data_out = MEMORY(L6_q_a[6]_PORT_A_data_in_reg, , L6_q_a[6]_PORT_A_address_reg, , L6_q_a[6]_PORT_A_write_enable_reg, , , , L6_q_a[6]_clock_0, , , , , );
+L6_q_a[6] = L6_q_a[6]_PORT_A_data_out[0];
+
+
+--L5_q_a[6] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[6] at M4K_X13_Y29
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[6]_PORT_A_data_in = A1L48;
+L5_q_a[6]_PORT_A_data_in_reg = DFFE(L5_q_a[6]_PORT_A_data_in, L5_q_a[6]_clock_0, , , );
+L5_q_a[6]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[6]_PORT_A_address_reg = DFFE(L5_q_a[6]_PORT_A_address, L5_q_a[6]_clock_0, , , );
+L5_q_a[6]_PORT_A_write_enable = GND;
+L5_q_a[6]_PORT_A_write_enable_reg = DFFE(L5_q_a[6]_PORT_A_write_enable, L5_q_a[6]_clock_0, , , );
+L5_q_a[6]_clock_0 = GLOBAL(A1L19);
+L5_q_a[6]_PORT_A_data_out = MEMORY(L5_q_a[6]_PORT_A_data_in_reg, , L5_q_a[6]_PORT_A_address_reg, , L5_q_a[6]_PORT_A_write_enable_reg, , , , L5_q_a[6]_clock_0, , , , , );
+L5_q_a[6] = L5_q_a[6]_PORT_A_data_out[0];
+
+
+--L8_q_a[6] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[6] at M4K_X13_Y15
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[6]_PORT_A_data_in = A1L48;
+L8_q_a[6]_PORT_A_data_in_reg = DFFE(L8_q_a[6]_PORT_A_data_in, L8_q_a[6]_clock_0, , , );
+L8_q_a[6]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[6]_PORT_A_address_reg = DFFE(L8_q_a[6]_PORT_A_address, L8_q_a[6]_clock_0, , , );
+L8_q_a[6]_PORT_A_write_enable = GND;
+L8_q_a[6]_PORT_A_write_enable_reg = DFFE(L8_q_a[6]_PORT_A_write_enable, L8_q_a[6]_clock_0, , , );
+L8_q_a[6]_clock_0 = GLOBAL(A1L19);
+L8_q_a[6]_PORT_A_data_out = MEMORY(L8_q_a[6]_PORT_A_data_in_reg, , L8_q_a[6]_PORT_A_address_reg, , L8_q_a[6]_PORT_A_write_enable_reg, , , , L8_q_a[6]_clock_0, , , , , );
+L8_q_a[6] = L8_q_a[6]_PORT_A_data_out[0];
+
+
+--L2_q_a[6] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[6] at M4K_X13_Y16
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[6]_PORT_A_data_in = A1L48;
+L2_q_a[6]_PORT_A_data_in_reg = DFFE(L2_q_a[6]_PORT_A_data_in, L2_q_a[6]_clock_0, , , );
+L2_q_a[6]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[6]_PORT_A_address_reg = DFFE(L2_q_a[6]_PORT_A_address, L2_q_a[6]_clock_0, , , );
+L2_q_a[6]_PORT_A_write_enable = GND;
+L2_q_a[6]_PORT_A_write_enable_reg = DFFE(L2_q_a[6]_PORT_A_write_enable, L2_q_a[6]_clock_0, , , );
+L2_q_a[6]_clock_0 = GLOBAL(A1L19);
+L2_q_a[6]_PORT_A_data_out = MEMORY(L2_q_a[6]_PORT_A_data_in_reg, , L2_q_a[6]_PORT_A_address_reg, , L2_q_a[6]_PORT_A_write_enable_reg, , , , L2_q_a[6]_clock_0, , , , , );
+L2_q_a[6] = L2_q_a[6]_PORT_A_data_out[0];
+
+
+--L3_q_a[6] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[6] at M4K_X26_Y13
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[6]_PORT_A_data_in = A1L48;
+L3_q_a[6]_PORT_A_data_in_reg = DFFE(L3_q_a[6]_PORT_A_data_in, L3_q_a[6]_clock_0, , , );
+L3_q_a[6]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[6]_PORT_A_address_reg = DFFE(L3_q_a[6]_PORT_A_address, L3_q_a[6]_clock_0, , , );
+L3_q_a[6]_PORT_A_write_enable = GND;
+L3_q_a[6]_PORT_A_write_enable_reg = DFFE(L3_q_a[6]_PORT_A_write_enable, L3_q_a[6]_clock_0, , , );
+L3_q_a[6]_clock_0 = GLOBAL(A1L19);
+L3_q_a[6]_PORT_A_data_out = MEMORY(L3_q_a[6]_PORT_A_data_in_reg, , L3_q_a[6]_PORT_A_address_reg, , L3_q_a[6]_PORT_A_write_enable_reg, , , , L3_q_a[6]_clock_0, , , , , );
+L3_q_a[6] = L3_q_a[6]_PORT_A_data_out[0];
+
+
+--L1_q_a[6] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[6] at M4K_X26_Y21
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[6]_PORT_A_data_in = A1L48;
+L1_q_a[6]_PORT_A_data_in_reg = DFFE(L1_q_a[6]_PORT_A_data_in, L1_q_a[6]_clock_0, , , );
+L1_q_a[6]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[6]_PORT_A_address_reg = DFFE(L1_q_a[6]_PORT_A_address, L1_q_a[6]_clock_0, , , );
+L1_q_a[6]_PORT_A_write_enable = GND;
+L1_q_a[6]_PORT_A_write_enable_reg = DFFE(L1_q_a[6]_PORT_A_write_enable, L1_q_a[6]_clock_0, , , );
+L1_q_a[6]_clock_0 = GLOBAL(A1L19);
+L1_q_a[6]_PORT_A_data_out = MEMORY(L1_q_a[6]_PORT_A_data_in_reg, , L1_q_a[6]_PORT_A_address_reg, , L1_q_a[6]_PORT_A_write_enable_reg, , , , L1_q_a[6]_clock_0, , , , , );
+L1_q_a[6] = L1_q_a[6]_PORT_A_data_out[0];
+
+
+--L4_q_a[6] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[6] at M4K_X13_Y9
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[6]_PORT_A_data_in = A1L48;
+L4_q_a[6]_PORT_A_data_in_reg = DFFE(L4_q_a[6]_PORT_A_data_in, L4_q_a[6]_clock_0, , , );
+L4_q_a[6]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[6]_PORT_A_address_reg = DFFE(L4_q_a[6]_PORT_A_address, L4_q_a[6]_clock_0, , , );
+L4_q_a[6]_PORT_A_write_enable = GND;
+L4_q_a[6]_PORT_A_write_enable_reg = DFFE(L4_q_a[6]_PORT_A_write_enable, L4_q_a[6]_clock_0, , , );
+L4_q_a[6]_clock_0 = GLOBAL(A1L19);
+L4_q_a[6]_PORT_A_data_out = MEMORY(L4_q_a[6]_PORT_A_data_in_reg, , L4_q_a[6]_PORT_A_address_reg, , L4_q_a[6]_PORT_A_write_enable_reg, , , , L4_q_a[6]_clock_0, , , , , );
+L4_q_a[6] = L4_q_a[6]_PORT_A_data_out[0];
+
+
+--L7_q_a[7] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[7] at M4K_X26_Y17
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[7]_PORT_A_data_in = A1L48;
+L7_q_a[7]_PORT_A_data_in_reg = DFFE(L7_q_a[7]_PORT_A_data_in, L7_q_a[7]_clock_0, , , );
+L7_q_a[7]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[7]_PORT_A_address_reg = DFFE(L7_q_a[7]_PORT_A_address, L7_q_a[7]_clock_0, , , );
+L7_q_a[7]_PORT_A_write_enable = GND;
+L7_q_a[7]_PORT_A_write_enable_reg = DFFE(L7_q_a[7]_PORT_A_write_enable, L7_q_a[7]_clock_0, , , );
+L7_q_a[7]_clock_0 = GLOBAL(A1L19);
+L7_q_a[7]_PORT_A_data_out = MEMORY(L7_q_a[7]_PORT_A_data_in_reg, , L7_q_a[7]_PORT_A_address_reg, , L7_q_a[7]_PORT_A_write_enable_reg, , , , L7_q_a[7]_clock_0, , , , , );
+L7_q_a[7] = L7_q_a[7]_PORT_A_data_out[0];
+
+
+--L6_q_a[7] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[7] at M4K_X13_Y10
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[7]_PORT_A_data_in = A1L48;
+L6_q_a[7]_PORT_A_data_in_reg = DFFE(L6_q_a[7]_PORT_A_data_in, L6_q_a[7]_clock_0, , , );
+L6_q_a[7]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[7]_PORT_A_address_reg = DFFE(L6_q_a[7]_PORT_A_address, L6_q_a[7]_clock_0, , , );
+L6_q_a[7]_PORT_A_write_enable = GND;
+L6_q_a[7]_PORT_A_write_enable_reg = DFFE(L6_q_a[7]_PORT_A_write_enable, L6_q_a[7]_clock_0, , , );
+L6_q_a[7]_clock_0 = GLOBAL(A1L19);
+L6_q_a[7]_PORT_A_data_out = MEMORY(L6_q_a[7]_PORT_A_data_in_reg, , L6_q_a[7]_PORT_A_address_reg, , L6_q_a[7]_PORT_A_write_enable_reg, , , , L6_q_a[7]_clock_0, , , , , );
+L6_q_a[7] = L6_q_a[7]_PORT_A_data_out[0];
+
+
+--L5_q_a[7] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[7] at M4K_X13_Y13
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[7]_PORT_A_data_in = A1L48;
+L5_q_a[7]_PORT_A_data_in_reg = DFFE(L5_q_a[7]_PORT_A_data_in, L5_q_a[7]_clock_0, , , );
+L5_q_a[7]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[7]_PORT_A_address_reg = DFFE(L5_q_a[7]_PORT_A_address, L5_q_a[7]_clock_0, , , );
+L5_q_a[7]_PORT_A_write_enable = GND;
+L5_q_a[7]_PORT_A_write_enable_reg = DFFE(L5_q_a[7]_PORT_A_write_enable, L5_q_a[7]_clock_0, , , );
+L5_q_a[7]_clock_0 = GLOBAL(A1L19);
+L5_q_a[7]_PORT_A_data_out = MEMORY(L5_q_a[7]_PORT_A_data_in_reg, , L5_q_a[7]_PORT_A_address_reg, , L5_q_a[7]_PORT_A_write_enable_reg, , , , L5_q_a[7]_clock_0, , , , , );
+L5_q_a[7] = L5_q_a[7]_PORT_A_data_out[0];
+
+
+--L8_q_a[7] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[7] at M4K_X13_Y21
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[7]_PORT_A_data_in = A1L48;
+L8_q_a[7]_PORT_A_data_in_reg = DFFE(L8_q_a[7]_PORT_A_data_in, L8_q_a[7]_clock_0, , , );
+L8_q_a[7]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[7]_PORT_A_address_reg = DFFE(L8_q_a[7]_PORT_A_address, L8_q_a[7]_clock_0, , , );
+L8_q_a[7]_PORT_A_write_enable = GND;
+L8_q_a[7]_PORT_A_write_enable_reg = DFFE(L8_q_a[7]_PORT_A_write_enable, L8_q_a[7]_clock_0, , , );
+L8_q_a[7]_clock_0 = GLOBAL(A1L19);
+L8_q_a[7]_PORT_A_data_out = MEMORY(L8_q_a[7]_PORT_A_data_in_reg, , L8_q_a[7]_PORT_A_address_reg, , L8_q_a[7]_PORT_A_write_enable_reg, , , , L8_q_a[7]_clock_0, , , , , );
+L8_q_a[7] = L8_q_a[7]_PORT_A_data_out[0];
+
+
+--L2_q_a[7] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[7] at M4K_X13_Y34
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[7]_PORT_A_data_in = A1L48;
+L2_q_a[7]_PORT_A_data_in_reg = DFFE(L2_q_a[7]_PORT_A_data_in, L2_q_a[7]_clock_0, , , );
+L2_q_a[7]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[7]_PORT_A_address_reg = DFFE(L2_q_a[7]_PORT_A_address, L2_q_a[7]_clock_0, , , );
+L2_q_a[7]_PORT_A_write_enable = GND;
+L2_q_a[7]_PORT_A_write_enable_reg = DFFE(L2_q_a[7]_PORT_A_write_enable, L2_q_a[7]_clock_0, , , );
+L2_q_a[7]_clock_0 = GLOBAL(A1L19);
+L2_q_a[7]_PORT_A_data_out = MEMORY(L2_q_a[7]_PORT_A_data_in_reg, , L2_q_a[7]_PORT_A_address_reg, , L2_q_a[7]_PORT_A_write_enable_reg, , , , L2_q_a[7]_clock_0, , , , , );
+L2_q_a[7] = L2_q_a[7]_PORT_A_data_out[0];
+
+
+--L3_q_a[7] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[7] at M4K_X13_Y5
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[7]_PORT_A_data_in = A1L48;
+L3_q_a[7]_PORT_A_data_in_reg = DFFE(L3_q_a[7]_PORT_A_data_in, L3_q_a[7]_clock_0, , , );
+L3_q_a[7]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[7]_PORT_A_address_reg = DFFE(L3_q_a[7]_PORT_A_address, L3_q_a[7]_clock_0, , , );
+L3_q_a[7]_PORT_A_write_enable = GND;
+L3_q_a[7]_PORT_A_write_enable_reg = DFFE(L3_q_a[7]_PORT_A_write_enable, L3_q_a[7]_clock_0, , , );
+L3_q_a[7]_clock_0 = GLOBAL(A1L19);
+L3_q_a[7]_PORT_A_data_out = MEMORY(L3_q_a[7]_PORT_A_data_in_reg, , L3_q_a[7]_PORT_A_address_reg, , L3_q_a[7]_PORT_A_write_enable_reg, , , , L3_q_a[7]_clock_0, , , , , );
+L3_q_a[7] = L3_q_a[7]_PORT_A_data_out[0];
+
+
+--L1_q_a[7] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[7] at M4K_X13_Y33
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[7]_PORT_A_data_in = A1L48;
+L1_q_a[7]_PORT_A_data_in_reg = DFFE(L1_q_a[7]_PORT_A_data_in, L1_q_a[7]_clock_0, , , );
+L1_q_a[7]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[7]_PORT_A_address_reg = DFFE(L1_q_a[7]_PORT_A_address, L1_q_a[7]_clock_0, , , );
+L1_q_a[7]_PORT_A_write_enable = GND;
+L1_q_a[7]_PORT_A_write_enable_reg = DFFE(L1_q_a[7]_PORT_A_write_enable, L1_q_a[7]_clock_0, , , );
+L1_q_a[7]_clock_0 = GLOBAL(A1L19);
+L1_q_a[7]_PORT_A_data_out = MEMORY(L1_q_a[7]_PORT_A_data_in_reg, , L1_q_a[7]_PORT_A_address_reg, , L1_q_a[7]_PORT_A_write_enable_reg, , , , L1_q_a[7]_clock_0, , , , , );
+L1_q_a[7] = L1_q_a[7]_PORT_A_data_out[0];
+
+
+--L4_q_a[7] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[7] at M4K_X26_Y34
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[7]_PORT_A_data_in = A1L48;
+L4_q_a[7]_PORT_A_data_in_reg = DFFE(L4_q_a[7]_PORT_A_data_in, L4_q_a[7]_clock_0, , , );
+L4_q_a[7]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[7]_PORT_A_address_reg = DFFE(L4_q_a[7]_PORT_A_address, L4_q_a[7]_clock_0, , , );
+L4_q_a[7]_PORT_A_write_enable = GND;
+L4_q_a[7]_PORT_A_write_enable_reg = DFFE(L4_q_a[7]_PORT_A_write_enable, L4_q_a[7]_clock_0, , , );
+L4_q_a[7]_clock_0 = GLOBAL(A1L19);
+L4_q_a[7]_PORT_A_data_out = MEMORY(L4_q_a[7]_PORT_A_data_in_reg, , L4_q_a[7]_PORT_A_address_reg, , L4_q_a[7]_PORT_A_write_enable_reg, , , , L4_q_a[7]_clock_0, , , , , );
+L4_q_a[7] = L4_q_a[7]_PORT_A_data_out[0];
+
+
+--L7_q_a[8] is SpriteRAM:sprite_memory[6].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[8] at M4K_X26_Y4
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L7_q_a[8]_PORT_A_data_in = A1L48;
+L7_q_a[8]_PORT_A_data_in_reg = DFFE(L7_q_a[8]_PORT_A_data_in, L7_q_a[8]_clock_0, , , );
+L7_q_a[8]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L7_q_a[8]_PORT_A_address_reg = DFFE(L7_q_a[8]_PORT_A_address, L7_q_a[8]_clock_0, , , );
+L7_q_a[8]_PORT_A_write_enable = GND;
+L7_q_a[8]_PORT_A_write_enable_reg = DFFE(L7_q_a[8]_PORT_A_write_enable, L7_q_a[8]_clock_0, , , );
+L7_q_a[8]_clock_0 = GLOBAL(A1L19);
+L7_q_a[8]_PORT_A_data_out = MEMORY(L7_q_a[8]_PORT_A_data_in_reg, , L7_q_a[8]_PORT_A_address_reg, , L7_q_a[8]_PORT_A_write_enable_reg, , , , L7_q_a[8]_clock_0, , , , , );
+L7_q_a[8] = L7_q_a[8]_PORT_A_data_out[0];
+
+
+--L6_q_a[8] is SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[8] at M4K_X26_Y5
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L6_q_a[8]_PORT_A_data_in = A1L48;
+L6_q_a[8]_PORT_A_data_in_reg = DFFE(L6_q_a[8]_PORT_A_data_in, L6_q_a[8]_clock_0, , , );
+L6_q_a[8]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L6_q_a[8]_PORT_A_address_reg = DFFE(L6_q_a[8]_PORT_A_address, L6_q_a[8]_clock_0, , , );
+L6_q_a[8]_PORT_A_write_enable = GND;
+L6_q_a[8]_PORT_A_write_enable_reg = DFFE(L6_q_a[8]_PORT_A_write_enable, L6_q_a[8]_clock_0, , , );
+L6_q_a[8]_clock_0 = GLOBAL(A1L19);
+L6_q_a[8]_PORT_A_data_out = MEMORY(L6_q_a[8]_PORT_A_data_in_reg, , L6_q_a[8]_PORT_A_address_reg, , L6_q_a[8]_PORT_A_write_enable_reg, , , , L6_q_a[8]_clock_0, , , , , );
+L6_q_a[8] = L6_q_a[8]_PORT_A_data_out[0];
+
+
+--L5_q_a[8] is SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[8] at M4K_X26_Y7
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L5_q_a[8]_PORT_A_data_in = A1L48;
+L5_q_a[8]_PORT_A_data_in_reg = DFFE(L5_q_a[8]_PORT_A_data_in, L5_q_a[8]_clock_0, , , );
+L5_q_a[8]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L5_q_a[8]_PORT_A_address_reg = DFFE(L5_q_a[8]_PORT_A_address, L5_q_a[8]_clock_0, , , );
+L5_q_a[8]_PORT_A_write_enable = GND;
+L5_q_a[8]_PORT_A_write_enable_reg = DFFE(L5_q_a[8]_PORT_A_write_enable, L5_q_a[8]_clock_0, , , );
+L5_q_a[8]_clock_0 = GLOBAL(A1L19);
+L5_q_a[8]_PORT_A_data_out = MEMORY(L5_q_a[8]_PORT_A_data_in_reg, , L5_q_a[8]_PORT_A_address_reg, , L5_q_a[8]_PORT_A_write_enable_reg, , , , L5_q_a[8]_clock_0, , , , , );
+L5_q_a[8] = L5_q_a[8]_PORT_A_data_out[0];
+
+
+--L8_q_a[8] is SpriteRAM:sprite_memory[7].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[8] at M4K_X26_Y24
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L8_q_a[8]_PORT_A_data_in = A1L48;
+L8_q_a[8]_PORT_A_data_in_reg = DFFE(L8_q_a[8]_PORT_A_data_in, L8_q_a[8]_clock_0, , , );
+L8_q_a[8]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L8_q_a[8]_PORT_A_address_reg = DFFE(L8_q_a[8]_PORT_A_address, L8_q_a[8]_clock_0, , , );
+L8_q_a[8]_PORT_A_write_enable = GND;
+L8_q_a[8]_PORT_A_write_enable_reg = DFFE(L8_q_a[8]_PORT_A_write_enable, L8_q_a[8]_clock_0, , , );
+L8_q_a[8]_clock_0 = GLOBAL(A1L19);
+L8_q_a[8]_PORT_A_data_out = MEMORY(L8_q_a[8]_PORT_A_data_in_reg, , L8_q_a[8]_PORT_A_address_reg, , L8_q_a[8]_PORT_A_write_enable_reg, , , , L8_q_a[8]_clock_0, , , , , );
+L8_q_a[8] = L8_q_a[8]_PORT_A_data_out[0];
+
+
+--L2_q_a[8] is SpriteRAM:sprite_memory[1].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[8] at M4K_X52_Y19
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L2_q_a[8]_PORT_A_data_in = A1L48;
+L2_q_a[8]_PORT_A_data_in_reg = DFFE(L2_q_a[8]_PORT_A_data_in, L2_q_a[8]_clock_0, , , );
+L2_q_a[8]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L2_q_a[8]_PORT_A_address_reg = DFFE(L2_q_a[8]_PORT_A_address, L2_q_a[8]_clock_0, , , );
+L2_q_a[8]_PORT_A_write_enable = GND;
+L2_q_a[8]_PORT_A_write_enable_reg = DFFE(L2_q_a[8]_PORT_A_write_enable, L2_q_a[8]_clock_0, , , );
+L2_q_a[8]_clock_0 = GLOBAL(A1L19);
+L2_q_a[8]_PORT_A_data_out = MEMORY(L2_q_a[8]_PORT_A_data_in_reg, , L2_q_a[8]_PORT_A_address_reg, , L2_q_a[8]_PORT_A_write_enable_reg, , , , L2_q_a[8]_clock_0, , , , , );
+L2_q_a[8] = L2_q_a[8]_PORT_A_data_out[0];
+
+
+--L3_q_a[8] is SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[8] at M4K_X26_Y6
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L3_q_a[8]_PORT_A_data_in = A1L48;
+L3_q_a[8]_PORT_A_data_in_reg = DFFE(L3_q_a[8]_PORT_A_data_in, L3_q_a[8]_clock_0, , , );
+L3_q_a[8]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L3_q_a[8]_PORT_A_address_reg = DFFE(L3_q_a[8]_PORT_A_address, L3_q_a[8]_clock_0, , , );
+L3_q_a[8]_PORT_A_write_enable = GND;
+L3_q_a[8]_PORT_A_write_enable_reg = DFFE(L3_q_a[8]_PORT_A_write_enable, L3_q_a[8]_clock_0, , , );
+L3_q_a[8]_clock_0 = GLOBAL(A1L19);
+L3_q_a[8]_PORT_A_data_out = MEMORY(L3_q_a[8]_PORT_A_data_in_reg, , L3_q_a[8]_PORT_A_address_reg, , L3_q_a[8]_PORT_A_write_enable_reg, , , , L3_q_a[8]_clock_0, , , , , );
+L3_q_a[8] = L3_q_a[8]_PORT_A_data_out[0];
+
+
+--L1_q_a[8] is SpriteRAM:sprite_memory[0].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[8] at M4K_X26_Y3
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L1_q_a[8]_PORT_A_data_in = A1L48;
+L1_q_a[8]_PORT_A_data_in_reg = DFFE(L1_q_a[8]_PORT_A_data_in, L1_q_a[8]_clock_0, , , );
+L1_q_a[8]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L1_q_a[8]_PORT_A_address_reg = DFFE(L1_q_a[8]_PORT_A_address, L1_q_a[8]_clock_0, , , );
+L1_q_a[8]_PORT_A_write_enable = GND;
+L1_q_a[8]_PORT_A_write_enable_reg = DFFE(L1_q_a[8]_PORT_A_write_enable, L1_q_a[8]_clock_0, , , );
+L1_q_a[8]_clock_0 = GLOBAL(A1L19);
+L1_q_a[8]_PORT_A_data_out = MEMORY(L1_q_a[8]_PORT_A_data_in_reg, , L1_q_a[8]_PORT_A_address_reg, , L1_q_a[8]_PORT_A_write_enable_reg, , , , L1_q_a[8]_clock_0, , , , , );
+L1_q_a[8] = L1_q_a[8]_PORT_A_data_out[0];
+
+
+--L4_q_a[8] is SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|q_a[8] at M4K_X26_Y18
+--RAM Block Operation Mode: Single Port
+--Port A Depth: 4096, Port A Width: 1
+--Port A Logical Depth: 4096, Port A Logical Width: 9
+--Port A Input: Registered, Port A Output: Un-registered
+L4_q_a[8]_PORT_A_data_in = A1L48;
+L4_q_a[8]_PORT_A_data_in_reg = DFFE(L4_q_a[8]_PORT_A_data_in, L4_q_a[8]_clock_0, , , );
+L4_q_a[8]_PORT_A_address = BUS(Address[0], Address[1], Address[2], Address[3], Address[4], Address[5], Address[6], Address[7], Address[8], Address[9], Address[10], Address[11]);
+L4_q_a[8]_PORT_A_address_reg = DFFE(L4_q_a[8]_PORT_A_address, L4_q_a[8]_clock_0, , , );
+L4_q_a[8]_PORT_A_write_enable = GND;
+L4_q_a[8]_PORT_A_write_enable_reg = DFFE(L4_q_a[8]_PORT_A_write_enable, L4_q_a[8]_clock_0, , , );
+L4_q_a[8]_clock_0 = GLOBAL(A1L19);
+L4_q_a[8]_PORT_A_data_out = MEMORY(L4_q_a[8]_PORT_A_data_in_reg, , L4_q_a[8]_PORT_A_address_reg, , L4_q_a[8]_PORT_A_write_enable_reg, , , , L4_q_a[8]_clock_0, , , , , );
+L4_q_a[8] = L4_q_a[8]_PORT_A_data_out[0];
+
+
+--H1L1 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1026 at LCCOMB_X24_Y27_N8
+H1L1 = MemSel[0] & (L6_q_a[0] # MemSel[1]) # !MemSel[0] & L5_q_a[0] & (!MemSel[1]);
+
+
+--H1L2 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1027 at LCCOMB_X24_Y27_N18
+H1L2 = H1L1 & (L8_q_a[0] # !MemSel[1]) # !H1L1 & (L7_q_a[0] & MemSel[1]);
+
+
+--H1L3 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1028 at LCCOMB_X24_Y27_N20
+H1L3 = MemSel[0] & (MemSel[1]) # !MemSel[0] & (MemSel[1] & (L3_q_a[0]) # !MemSel[1] & L1_q_a[0]);
+
+
+--H1L4 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1029 at LCCOMB_X24_Y27_N30
+H1L4 = H1L3 & (L4_q_a[0] # !MemSel[0]) # !H1L3 & MemSel[0] & L2_q_a[0];
+
+
+--H1L5 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1030 at LCCOMB_X24_Y27_N0
+H1L5 = MemSel[2] & H1L2 # !MemSel[2] & (H1L4);
+
+
+--H1L6 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1031 at LCCOMB_X24_Y27_N26
+H1L6 = MemSel[0] & (L6_q_a[1] # MemSel[1]) # !MemSel[0] & (L5_q_a[1] & !MemSel[1]);
+
+
+--H1L7 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1032 at LCCOMB_X24_Y27_N28
+H1L7 = H1L6 & (L8_q_a[1] # !MemSel[1]) # !H1L6 & (L7_q_a[1] & MemSel[1]);
+
+
+--H1L8 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1033 at LCCOMB_X24_Y27_N14
+H1L8 = MemSel[0] & (MemSel[1]) # !MemSel[0] & (MemSel[1] & L3_q_a[1] # !MemSel[1] & (L1_q_a[1]));
+
+
+--H1L9 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1034 at LCCOMB_X24_Y27_N16
+H1L9 = MemSel[0] & (H1L8 & (L4_q_a[1]) # !H1L8 & L2_q_a[1]) # !MemSel[0] & (H1L8);
+
+
+--H1L10 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1035 at LCCOMB_X24_Y27_N2
+H1L10 = MemSel[2] & (H1L7) # !MemSel[2] & H1L9;
+
+
+--H1L11 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1036 at LCCOMB_X24_Y27_N12
+H1L11 = MemSel[0] & (L6_q_a[2] # MemSel[1]) # !MemSel[0] & (L5_q_a[2] & !MemSel[1]);
+
+
+--H1L12 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1037 at LCCOMB_X24_Y27_N22
+H1L12 = H1L11 & (L8_q_a[2] # !MemSel[1]) # !H1L11 & (L7_q_a[2] & MemSel[1]);
+
+
+--H1L13 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1038 at LCCOMB_X24_Y27_N24
+H1L13 = MemSel[0] & (MemSel[1]) # !MemSel[0] & (MemSel[1] & (L3_q_a[2]) # !MemSel[1] & L1_q_a[2]);
+
+
+--H1L14 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1039 at LCCOMB_X24_Y27_N10
+H1L14 = H1L13 & (L4_q_a[2] # !MemSel[0]) # !H1L13 & MemSel[0] & L2_q_a[2];
+
+
+--H1L15 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1040 at LCCOMB_X24_Y27_N4
+H1L15 = MemSel[2] & (H1L12) # !MemSel[2] & H1L14;
+
+
+--H1L16 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1041 at LCCOMB_X24_Y27_N6
+H1L16 = MemSel[0] & (L6_q_a[3] # MemSel[1]) # !MemSel[0] & L5_q_a[3] & (!MemSel[1]);
+
+
+--H1L17 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1042 at LCCOMB_X25_Y18_N0
+H1L17 = MemSel[1] & (H1L16 & (L8_q_a[3]) # !H1L16 & L7_q_a[3]) # !MemSel[1] & (H1L16);
+
+
+--H1L18 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1043 at LCCOMB_X25_Y18_N10
+H1L18 = MemSel[0] & (MemSel[1]) # !MemSel[0] & (MemSel[1] & (L3_q_a[3]) # !MemSel[1] & L1_q_a[3]);
+
+
+--H1L19 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1044 at LCCOMB_X25_Y18_N12
+H1L19 = H1L18 & (L4_q_a[3] # !MemSel[0]) # !H1L18 & L2_q_a[3] & MemSel[0];
+
+
+--H1L20 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1045 at LCCOMB_X25_Y18_N30
+H1L20 = MemSel[2] & (H1L17) # !MemSel[2] & H1L19;
+
+
+--H1L21 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1046 at LCCOMB_X25_Y18_N24
+H1L21 = MemSel[1] & MemSel[0] # !MemSel[1] & (MemSel[0] & L6_q_a[4] # !MemSel[0] & (L5_q_a[4]));
+
+
+--H1L22 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1047 at LCCOMB_X25_Y18_N26
+H1L22 = H1L21 & (L8_q_a[4] # !MemSel[1]) # !H1L21 & L7_q_a[4] & MemSel[1];
+
+
+--H1L23 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1048 at LCCOMB_X25_Y18_N28
+H1L23 = MemSel[0] & (MemSel[1]) # !MemSel[0] & (MemSel[1] & L3_q_a[4] # !MemSel[1] & (L1_q_a[4]));
+
+
+--H1L24 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1049 at LCCOMB_X25_Y18_N14
+H1L24 = MemSel[0] & (H1L23 & (L4_q_a[4]) # !H1L23 & L2_q_a[4]) # !MemSel[0] & (H1L23);
+
+
+--H1L25 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1050 at LCCOMB_X25_Y18_N8
+H1L25 = MemSel[2] & (H1L22) # !MemSel[2] & H1L24;
+
+
+--H1L26 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1051 at LCCOMB_X25_Y18_N18
+H1L26 = MemSel[0] & (L6_q_a[5] # MemSel[1]) # !MemSel[0] & (!MemSel[1] & L5_q_a[5]);
+
+
+--H1L27 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1052 at LCCOMB_X25_Y18_N20
+H1L27 = MemSel[1] & (H1L26 & L8_q_a[5] # !H1L26 & (L7_q_a[5])) # !MemSel[1] & H1L26;
+
+
+--H1L28 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1053 at LCCOMB_X16_Y21_N24
+H1L28 = MemSel[0] & (MemSel[1]) # !MemSel[0] & (MemSel[1] & (L3_q_a[5]) # !MemSel[1] & L1_q_a[5]);
+
+
+--H1L29 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1054 at LCCOMB_X16_Y21_N18
+H1L29 = H1L28 & (L4_q_a[5] # !MemSel[0]) # !H1L28 & (L2_q_a[5] & MemSel[0]);
+
+
+--H1L30 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1055 at LCCOMB_X16_Y21_N12
+H1L30 = MemSel[2] & (H1L27) # !MemSel[2] & H1L29;
+
+
+--H1L31 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1056 at LCCOMB_X16_Y21_N30
+H1L31 = MemSel[1] & (MemSel[0]) # !MemSel[1] & (MemSel[0] & L6_q_a[6] # !MemSel[0] & (L5_q_a[6]));
+
+
+--H1L32 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1057 at LCCOMB_X16_Y21_N8
+H1L32 = H1L31 & (L8_q_a[6] # !MemSel[1]) # !H1L31 & (L7_q_a[6] & MemSel[1]);
+
+
+--H1L33 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1058 at LCCOMB_X16_Y21_N2
+H1L33 = MemSel[0] & (MemSel[1]) # !MemSel[0] & (MemSel[1] & (L3_q_a[6]) # !MemSel[1] & L1_q_a[6]);
+
+
+--H1L34 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1059 at LCCOMB_X16_Y21_N20
+H1L34 = MemSel[0] & (H1L33 & (L4_q_a[6]) # !H1L33 & L2_q_a[6]) # !MemSel[0] & (H1L33);
+
+
+--H1L35 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1060 at LCCOMB_X16_Y21_N6
+H1L35 = MemSel[2] & H1L32 # !MemSel[2] & (H1L34);
+
+
+--H1L36 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1061 at LCCOMB_X16_Y21_N0
+H1L36 = MemSel[1] & (MemSel[0]) # !MemSel[1] & (MemSel[0] & L6_q_a[7] # !MemSel[0] & (L5_q_a[7]));
+
+
+--H1L37 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1062 at LCCOMB_X16_Y21_N10
+H1L37 = H1L36 & (L8_q_a[7] # !MemSel[1]) # !H1L36 & L7_q_a[7] & (MemSel[1]);
+
+
+--H1L38 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1063 at LCCOMB_X16_Y21_N28
+H1L38 = MemSel[1] & (L3_q_a[7] # MemSel[0]) # !MemSel[1] & L1_q_a[7] & (!MemSel[0]);
+
+
+--H1L39 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1064 at LCCOMB_X16_Y21_N22
+H1L39 = MemSel[0] & (H1L38 & (L4_q_a[7]) # !H1L38 & L2_q_a[7]) # !MemSel[0] & H1L38;
+
+
+--H1L40 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1065 at LCCOMB_X16_Y21_N16
+H1L40 = MemSel[2] & H1L37 # !MemSel[2] & (H1L39);
+
+
+--H1L41 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1066 at LCCOMB_X25_Y18_N22
+H1L41 = MemSel[0] & (MemSel[1] # L6_q_a[8]) # !MemSel[0] & L5_q_a[8] & !MemSel[1];
+
+
+--H1L42 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1067 at LCCOMB_X25_Y18_N16
+H1L42 = H1L41 & (L8_q_a[8] # !MemSel[1]) # !H1L41 & (MemSel[1] & L7_q_a[8]);
+
+
+--H1L43 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1068 at LCCOMB_X25_Y18_N2
+H1L43 = MemSel[1] & (MemSel[0] # L3_q_a[8]) # !MemSel[1] & !MemSel[0] & (L1_q_a[8]);
+
+
+--H1L44 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1069 at LCCOMB_X25_Y18_N4
+H1L44 = MemSel[0] & (H1L43 & (L4_q_a[8]) # !H1L43 & L2_q_a[8]) # !MemSel[0] & (H1L43);
+
+
+--H1L45 is DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component|mux_5nc:auto_generated|_~1070 at LCCOMB_X25_Y18_N6
+H1L45 = MemSel[2] & H1L42 # !MemSel[2] & (H1L44);
+
+
+--A1L48 is ~GND at LCCOMB_X22_Y16_N16
+A1L48 = GND;
+
+
+--DataOut[0] is DataOut[0] at PIN_D11
+--operation mode is output
+
+DataOut[0] = OUTPUT(H1L5);
+
+
+--DataOut[1] is DataOut[1] at PIN_J14
+--operation mode is output
+
+DataOut[1] = OUTPUT(H1L10);
+
+
+--DataOut[2] is DataOut[2] at PIN_J13
+--operation mode is output
+
+DataOut[2] = OUTPUT(H1L15);
+
+
+--DataOut[3] is DataOut[3] at PIN_M5
+--operation mode is output
+
+DataOut[3] = OUTPUT(H1L20);
+
+
+--DataOut[4] is DataOut[4] at PIN_AE10
+--operation mode is output
+
+DataOut[4] = OUTPUT(H1L25);
+
+
+--DataOut[5] is DataOut[5] at PIN_AF7
+--operation mode is output
+
+DataOut[5] = OUTPUT(H1L30);
+
+
+--DataOut[6] is DataOut[6] at PIN_R3
+--operation mode is output
+
+DataOut[6] = OUTPUT(H1L35);
+
+
+--DataOut[7] is DataOut[7] at PIN_A9
+--operation mode is output
+
+DataOut[7] = OUTPUT(H1L40);
+
+
+--DataOut[8] is DataOut[8] at PIN_G12
+--operation mode is output
+
+DataOut[8] = OUTPUT(H1L45);
+
+
+--Resetn is Resetn at PIN_C13
+--operation mode is input
+
+Resetn = INPUT();
+
+
+--Width[0] is Width[0] at PIN_AF17
+--operation mode is output
+
+Width[0] = OUTPUT(GND);
+
+
+--Width[1] is Width[1] at PIN_AD10
+--operation mode is output
+
+Width[1] = OUTPUT(GND);
+
+
+--Width[2] is Width[2] at PIN_Y11
+--operation mode is output
+
+Width[2] = OUTPUT(GND);
+
+
+--Width[3] is Width[3] at PIN_C2
+--operation mode is output
+
+Width[3] = OUTPUT(GND);
+
+
+--Width[4] is Width[4] at PIN_AC22
+--operation mode is output
+
+Width[4] = OUTPUT(VCC);
+
+
+--Height[0] is Height[0] at PIN_AB24
+--operation mode is output
+
+Height[0] = OUTPUT(GND);
+
+
+--Height[1] is Height[1] at PIN_AA13
+--operation mode is output
+
+Height[1] = OUTPUT(GND);
+
+
+--Height[2] is Height[2] at PIN_D10
+--operation mode is output
+
+Height[2] = OUTPUT(GND);
+
+
+--Height[3] is Height[3] at PIN_K3
+--operation mode is output
+
+Height[3] = OUTPUT(GND);
+
+
+--Height[4] is Height[4] at PIN_V11
+--operation mode is output
+
+Height[4] = OUTPUT(VCC);
+
+
+--AnimSteps[0] is AnimSteps[0] at PIN_A6
+--operation mode is output
+
+AnimSteps[0] = OUTPUT(GND);
+
+
+--AnimSteps[1] is AnimSteps[1] at PIN_B17
+--operation mode is output
+
+AnimSteps[1] = OUTPUT(GND);
+
+
+--AnimSteps[2] is AnimSteps[2] at PIN_G26
+--operation mode is output
+
+AnimSteps[2] = OUTPUT(GND);
+
+
+--MemSel[1] is MemSel[1] at PIN_D13
+--operation mode is input
+
+MemSel[1] = INPUT();
+
+
+--MemSel[0] is MemSel[0] at PIN_F11
+--operation mode is input
+
+MemSel[0] = INPUT();
+
+
+--MemSel[2] is MemSel[2] at PIN_B10
+--operation mode is input
+
+MemSel[2] = INPUT();
+
+
+--Clock is Clock at PIN_P2
+--operation mode is input
+
+Clock = INPUT();
+
+
+--Address[0] is Address[0] at PIN_D12
+--operation mode is input
+
+Address[0] = INPUT();
+
+
+--Address[1] is Address[1] at PIN_J11
+--operation mode is input
+
+Address[1] = INPUT();
+
+
+--Address[2] is Address[2] at PIN_C10
+--operation mode is input
+
+Address[2] = INPUT();
+
+
+--Address[3] is Address[3] at PIN_E15
+--operation mode is input
+
+Address[3] = INPUT();
+
+
+--Address[4] is Address[4] at PIN_AD17
+--operation mode is input
+
+Address[4] = INPUT();
+
+
+--Address[5] is Address[5] at PIN_D8
+--operation mode is input
+
+Address[5] = INPUT();
+
+
+--Address[6] is Address[6] at PIN_B18
+--operation mode is input
+
+Address[6] = INPUT();
+
+
+--Address[7] is Address[7] at PIN_W11
+--operation mode is input
+
+Address[7] = INPUT();
+
+
+--Address[8] is Address[8] at PIN_A8
+--operation mode is input
+
+Address[8] = INPUT();
+
+
+--Address[9] is Address[9] at PIN_B16
+--operation mode is input
+
+Address[9] = INPUT();
+
+
+--Address[10] is Address[10] at PIN_AA10
+--operation mode is input
+
+Address[10] = INPUT();
+
+
+--Address[11] is Address[11] at PIN_G11
+--operation mode is input
+
+Address[11] = INPUT();
+
+
+
+
+
+--A1L19 is Clock~clkctrl at CLKCTRL_G3
+A1L19 = cycloneii_clkctrl(.INCLK[0] = Clock) WITH (clock_type = "Global Clock");
+
+

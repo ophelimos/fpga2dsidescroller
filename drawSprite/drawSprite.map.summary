@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Sun Nov 16 17:59:58 2008
+Analysis & Synthesis Status : Successful - Mon Nov 17 16:29:56 2008
 Quartus II Version : 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition
 Revision Name : drawSprite
 Top-level Entity Name : drawSprite
 Family : Cyclone II
-Total logic elements : 134
-    Total combinational functions : 134
+Total logic elements : 117
+    Total combinational functions : 117
     Dedicated logic registers : 20
 Total registers : 20
-Total pins : 90
+Total pins : 84
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 2

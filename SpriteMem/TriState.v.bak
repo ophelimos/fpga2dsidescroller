@@ -1,4 +1,4 @@
-module NBitTristate ();
+module NBitTristate (in, oe, out);
 	parameter n;
 	input [n-1:0] in;		// input
 	input oe;				// output enable

@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.213 ns
-From           : Height[0]
-To             : Q.INC_Y
+Actual Time    : 5.965 ns
+From           : Address[6]
+To             : SpriteRAM:sprite_memory[2].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|ram_block1a3~porta_address_reg6
 From Clock     : --
 To Clock       : Clock
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.707 ns
-From           : nBitRegister:YOffsetReg|Q[1]
-To             : Address[8]
+Actual Time    : 15.381 ns
+From           : SpriteRAM:sprite_memory[4].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|ram_block1a5~porta_address_reg11
+To             : DataOut[5]
 From Clock     : Clock
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 21.174 ns
-From           : AnimStep[1]
-To             : Address[8]
+Actual Time    : 14.305 ns
+From           : MemSel[0]
+To             : DataOut[5]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.984 ns
-From           : Resetn
-To             : Q.IDLE
+Actual Time    : -2.926 ns
+From           : Address[0]
+To             : SpriteRAM:sprite_memory[5].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|ram_block1a1~porta_address_reg0
 From Clock     : --
 To Clock       : Clock
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'Clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 260.01 MHz ( period = 3.846 ns )
-From           : Q.INC_Y
-To             : nBitRegister:YOffsetReg|Q[5]
+Actual Time    : Restricted to 200.00 MHz ( period = 5.000 ns )
+From           : SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|ram_block1a8~porta_datain_reg0
+To             : SpriteRAM:sprite_memory[3].MEM0|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|ram_block1a8~porta_memory_reg0
 From Clock     : Clock
 To Clock       : Clock
 Failed Paths   : 0

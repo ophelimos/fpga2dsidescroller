@@ -7,7 +7,7 @@ module NBitTristate (in, oe, out);
 	genvar i;
 	generate
 		for (i=0; i < n ; i=i+1)
-		begin
+		begin: tristate_buf
 			Tristate (in[i], oe, out[i]);
 		end
 	endgenerate
