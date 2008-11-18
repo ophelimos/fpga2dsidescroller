@@ -1,5 +1,5 @@
 Flow report for main_state_machine
-Tue Nov 18 09:04:45 2008
+Tue Nov 18 12:54:17 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 18 09:04:44 2008         ;
+; Flow Status                        ; Successful - Tue Nov 18 12:54:17 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; main_state_machine                            ;
 ; Top-level Entity Name              ; main_state_machine                            ;
@@ -45,14 +45,14 @@ applicable agreement for further details.
 ; Device                             ; EP2C35F672C6                                  ;
 ; Timing Models                      ; Final                                         ;
 ; Met timing requirements            ; N/A                                           ;
-; Total logic elements               ; 292                                           ;
-;     Total combinational functions  ; 292                                           ;
-;     Dedicated logic registers      ; 104                                           ;
-; Total registers                    ; 104                                           ;
+; Total logic elements               ; 351                                           ;
+;     Total combinational functions  ; 351                                           ;
+;     Dedicated logic registers      ; 130                                           ;
+; Total registers                    ; 130                                           ;
 ; Total pins                         ; 67                                            ;
 ; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 187,410                                       ;
-; Embedded Multiplier 9-bit elements ; 1                                             ;
+; Total memory bits                  ; 274,320                                       ;
+; Embedded Multiplier 9-bit elements ; 2                                             ;
 ; Total PLLs                         ; 1                                             ;
 +------------------------------------+-----------------------------------------------+
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/18/2008 09:04:16 ;
+; Start date & time ; 11/18/2008 12:54:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main_state_machine  ;
 +-------------------+---------------------+
@@ -82,8 +82,8 @@ applicable agreement for further details.
 +----------------------+--------------+
 ; Module Name          ; Elapsed Time ;
 +----------------------+--------------+
-; Analysis & Synthesis ; 00:00:29     ;
-; Total                ; 00:00:29     ;
+; Analysis & Synthesis ; 00:00:15     ;
+; Total                ; 00:00:15     ;
 +----------------------+--------------+
 
 

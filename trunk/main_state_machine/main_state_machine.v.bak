@@ -97,7 +97,7 @@ module main_state_machine
 	SpriteRAM character_mem (
 	.address(character_address),
 	.clock(CLOCK_50),
-	.data('bx),
+	.data(9'bx),
 	.wren(1'b0),
 	.q(char_color));
 	
@@ -188,14 +188,49 @@ module main_state_machine
 	
 	// Character x position counter - 32bit
 	
-	reg  x_position_cnt_enable, x_position_cnt_reset;
+	reg x_position_cnt_enable;
+	reg  x_position_cnt_reset;
 	wire [31:0] x_position;
 	
 	counter32b x_position_counter(
 	.clock(CLOCK_50),
-	.cnt_en(x_position_cnt_enable & ~KEY[3]),
+	.cnt_en(x_position_cnt_enable),
 	.sclr(x_position_cnt_reset),
 	.q(x_position));
+	
+	// Time counter - 1/60 second
+	
+	// 60 fps = 833_333 clocks which needs 20 bits
+	reg time_cnt_reset;
+	reg time_cnt_enable;
+	wire [19:0] time_out;
+	
+	counter20b count60fps (
+		.clock(CLOCK_50),
+		.cnt_en(time_cnt_enable),
+		.sclr(time_cnt_reset),
+		.q(time_out));
+	
+	// Make the time counter reset appropriately
+	always @(*)
+		if (time_out == 833_333)
+				time_cnt_enable = 1'b0;
+		else
+				time_cnt_enable = 1'b1;
+				
+	
+	// Counter enable logic
+	always @(*)
+		if ( (x_movement_enable == 1) && (time_cnt_enable == 0) && (KEY[3] == 0))
+			begin
+				x_position_cnt_enable = 1'b1;
+				time_cnt_reset = 1'b1;
+			end
+		else
+			begin
+				x_position_cnt_enable = 1'b0;
+				time_cnt_reset = 1'b0;
+			end
 	
 	//------------------------------------------
 	// Main State Machine
@@ -218,6 +253,7 @@ module main_state_machine
 	assign color = color_out;
 	reg writeEn_out;
 	assign writeEn = writeEn_out;
+	reg  x_movement_enable;
 	
 	// Main State flipflops
 	reg [2:0] main_Q, main_D /*synthesis keep*/; 
@@ -252,7 +288,7 @@ module main_state_machine
 	begin: main_datapath
 		case (main_D)
 			DRAW_BACKGROUND: 
-				begin 	x_position_cnt_enable = 0; 
+				begin 	x_movement_enable = 0; 
 						draw_background_enable_out = 1;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
@@ -263,7 +299,7 @@ module main_state_machine
 						writeEn_out = writeEn_background;
 				end
 			DRAW_CHARACTER:
-				begin 	x_position_cnt_enable = 0; 
+				begin 	x_movement_enable = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 1;
 						draw_enemies_enable_out = 0;
@@ -274,7 +310,7 @@ module main_state_machine
 						writeEn_out = writeEn_character;
 				end
 			DRAW_ENEMIES:
-				begin 	x_position_cnt_enable = 0; 
+				begin 	x_movement_enable = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 1;
@@ -285,7 +321,7 @@ module main_state_machine
 						writeEn_out = writeEn_background;
 				end
 			DETECT_COLLISIONS:
-				begin 	x_position_cnt_enable = 0; 
+				begin 	x_movement_enable = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
@@ -296,7 +332,7 @@ module main_state_machine
 						writeEn_out = writeEn_background;
 				end
 			MOVEMENT:
-				begin 	x_position_cnt_enable = 1; 
+				begin 	x_movement_enable = 1; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
@@ -307,7 +343,7 @@ module main_state_machine
 						writeEn_out = writeEn_background;
 				end
 			default: 
-				begin 	x_position_cnt_enable = 1'bx; 
+				begin 	x_movement_enable = 1'bx; 
 						draw_background_enable_out = 1'bx;
 						draw_character_enable_out = 1'bx;
 						draw_enemies_enable_out = 1'bx;
