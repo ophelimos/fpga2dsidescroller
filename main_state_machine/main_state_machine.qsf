@@ -456,6 +456,7 @@ set_location_assignment PIN_V24 -to GPIO_1[32]
 set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
+set_global_assignment -name VERILOG_FILE counter20b.v
 set_global_assignment -name VERILOG_FILE ../drawSprite/drawSprite.v
 set_global_assignment -name VERILOG_FILE ../SpriteMem/W_H_Mux.v
 set_global_assignment -name VERILOG_FILE ../SpriteMem/DataOut_Mux.v
