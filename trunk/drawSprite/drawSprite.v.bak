@@ -1,4 +1,4 @@
-module drawsprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Resetn, Clock, MemSel, Address, Xout, Yout, Color, Done, VGA_Draw);
+module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Resetn, Clock, MemSel, Address, Xout, Yout, Color, Done, VGA_Draw);
 	input [7:0] Xin;
 	input [6:0] Yin;
 	input [5:0] Width, Height;

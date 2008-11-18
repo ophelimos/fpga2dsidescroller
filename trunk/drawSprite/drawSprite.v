@@ -1,13 +1,13 @@
 module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Resetn, Clock, MemSel, Address, Xout, Yout, Color, Done, VGA_Draw);
 	input [7:0] Xin;
 	input [6:0] Yin;
-	input [5:0] Width, Height;
+	input [4:0] Width, Height;
 	input Enable, Clock, Resetn;
 	input [2:0] AnimStep;			// which tile to draw based on the current animation step
 	input [8:0] DataIn;				// color received from memory
 	input [2:0]	Sprite;				// analogue to MemSel, chooses which memory to draw from (should be same width)
 	output [2:0] MemSel;			// enable for 'external' memory (2:0 allows for 8 memories)
-	output [15:0] Address;			// really wide memory address line - for 64*64 sprites with 16 animation steps
+	output [11:0] Address;			// really wide memory address line - for 32*32 sprites with 4 animation steps
 	output [7:0] Xout;				// vga output
 	output [6:0] Yout;				//		"
 	output [8:0] Color;				//		"
