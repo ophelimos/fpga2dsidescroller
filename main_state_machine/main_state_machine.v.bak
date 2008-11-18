@@ -78,8 +78,8 @@ module main_state_machine
 	
 	// Signals
 	wire [14:0] level_address;
-	// We agreed on 4-bit, but 3-bit works for now
-	wire [2:0] tile_code;
+	// 4-bit
+	wire [3:0] tile_code;
 	
 	// Instance declaration
 	level1 level_mem (
@@ -93,13 +93,19 @@ module main_state_machine
 	
 	wire [11:0] character_address;
 	wire [8:0] char_color;
+	wire [2:0] CharAnimSteps;	// the total number of animation frames (this value is received from memory)
 	
-	SpriteRAM character_mem (
-	.address(character_address),
-	.clock(CLOCK_50),
-	.data(9'bx),
-	.wren(1'b0),
-	.q(char_color));
+	// Sprite Memory
+	// contains 8 sprite memory blocks
+	SpriteMem character_mem(
+		.MemSel(SpriteSelect), 
+		.Address(character_address), 
+		.DataOut(char_color), 
+		.Clock(CLOCK_50), 
+		.Resetn(resetn), 
+		.Width(SpriteWidth), 	// gets width of SpriteSelect sprite
+		.Height(SpriteHeight), 	// " height
+		.AnimSteps(CharAnimSteps));	// " number of animation frames
 	
 	//------------------------------------------
 	// DrawBackground instantiation
@@ -116,7 +122,7 @@ module main_state_machine
 	.clock(CLOCK_50),
 	.color(color_background),
 	.level_address(level_address),
-	.tile_code(tile_code),
+	.tile_code(tile_code),			// input - which tile to draw
 	.x(x_background),
 	.y(y_background),
 	.plot(writeEn_background),
@@ -129,31 +135,29 @@ module main_state_machine
 	//------------------------------------------
 	
 	wire draw_character_done;
-	wire [7:0] x_character;
-	wire [6:0] y_character;
-	wire [8:0] color_character;
-	wire writeEn_character;
+	wire [7:0] x_character;			// x position on screen (pixel)
+	wire [6:0] y_character;			// y position on screen (pixel)
+	wire [8:0] color_character;		// color output
+	wire writeEn_character;			// 'plot' signal
 	
-	// I don't know what these do, and they're not currently
-	// connected to anything
-	wire [2:0] AnimStep;
-	assign AnimStep = 3'b0;
-	wire [2:0] Sprite;
-	assign Sprite = 3'b0;
-	wire [2:0] MemSel;
+	wire [2:0] SpriteSelect;	// choose which sprite we want to work with (draw)
+	assign SpriteSelect = 3'b0;
+	wire [2:0] AnimStep;		// animation 'frame' we are on (default 0)
+	assign AnimStep = 3'b0;	
+	wire [4:0] SpriteHeight, SpriteWidth;	// width and height of the selected sprite
 	
 	drawSprite draw_character(
 	.Xin(x_position), 
 	.Yin(y_position), 
-	.Sprite(Sprite), 
+	.Sprite(SpriteSelect), 
 	.AnimStep(AnimStep), 
-	.Width(5'b0), 
-	.Height(5'b0), 
+	.Width(SpriteWidth), 
+	.Height(SpriteHeight), 
 	.DataIn(char_color), 
 	.Enable(draw_character_enable), 
 	.Resetn(resetn), 
 	.Clock(CLOCK_50), 
-	.MemSel(MemSel), 
+	.MemSel(SpriteSelect), 
 	.Address(character_address), 
 	.Xout(x_character), 
 	.Yout(y_character), 
@@ -198,6 +202,10 @@ module main_state_machine
 	.sclr(x_position_cnt_reset),
 	.q(x_position));
 	
+	// Character y position (fixed for now)
+	wire [6:0] y_position;
+	assign y_position = 7'd60;	// just below center on the screen (in pixels)
+	
 	// Time counter - 1/60 second
 	
 	// 60 fps = 833_333 clocks which needs 20 bits
@@ -238,12 +246,16 @@ module main_state_machine
 	
 	// Signals -- always reg
 	reg draw_background_enable_out;
+	wire draw_background_enable;
 	assign draw_background_enable = draw_background_enable_out;
 	reg draw_character_enable_out;
+	wire draw_character_enable;
 	assign draw_character_enable = draw_character_enable_out;
 	reg draw_enemies_enable_out;
+	wire draw_enemies_enable;
 	assign draw_enemies_enable = draw_enemies_enable_out;
 	reg detect_collisions_enable_out;
+	wire detect_collisions_enable;
 	assign detect_collisions_enable = detect_collisions_enable_out;
 	reg [7:0] x_out;
 	assign x = x_out;
@@ -351,7 +363,7 @@ module main_state_machine
 						x_out = 'bx; 
 						y_out = 'bx; 
 						color_out = 'bx; 
-						writeEn_out = 'bx;
+						writeEn_out = 1'bx;
 				end
 			endcase
 	end

@@ -1,6 +1,6 @@
 Analysis & Synthesis report for drawBackground
-Tue Nov 18 12:16:47 2008
-Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+Tue Nov 18 15:21:48 2008
+Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -13,42 +13,39 @@ Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
   5. Analysis & Synthesis Resource Usage Summary
   6. Analysis & Synthesis Resource Utilization by Entity
   7. Analysis & Synthesis RAM Summary
-  8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |drawBackground|drawTile:tile_drawing_module|Q
- 10. Registers Protected by Synthesis
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated
- 14. Source assignments for tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated
- 15. Source assignments for counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 16. Source assignments for counter4b:tile_countery|lpm_counter:lpm_counter_component
- 17. Source assignments for drawTile:tile_drawing_module
- 18. Parameter Settings for User Entity Instance: Top-level Entity: |drawBackground
- 19. Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component
- 20. Parameter Settings for User Entity Instance: tileset:tileset0|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 22. Parameter Settings for User Entity Instance: counter4b:tile_countery|lpm_counter:lpm_counter_component
- 23. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module
- 24. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
- 25. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:XOffsetReg
- 26. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
- 27. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:YOffsetReg
- 28. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
- 29. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
- 30. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
- 31. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:AddressReg
- 32. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
- 33. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 34. lpm_mult Parameter Settings by Entity Instance
- 35. Analysis & Synthesis Messages
- 36. Analysis & Synthesis Suppressed Messages
+  8. State Machine - |drawBackground|drawTile:tile_drawing_module|Q
+  9. Registers Protected by Synthesis
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Source assignments for tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated
+ 13. Source assignments for counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 14. Source assignments for counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 15. Source assignments for drawTile:tile_drawing_module
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |drawBackground
+ 17. Parameter Settings for User Entity Instance: tileset:tileset0|altsyncram:altsyncram_component
+ 18. Parameter Settings for User Entity Instance: counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 19. Parameter Settings for User Entity Instance: counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 20. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module
+ 21. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
+ 22. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:XOffsetReg
+ 23. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
+ 24. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:YOffsetReg
+ 25. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
+ 26. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
+ 27. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
+ 28. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:AddressReg
+ 29. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
+ 30. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 31. lpm_mult Parameter Settings by Entity Instance
+ 32. Analysis & Synthesis Equations
+ 33. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2007 Altera Corporation
+Copyright (C) 1991-2008 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -64,145 +61,161 @@ applicable agreement for further details.
 
 
 
-+------------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                       ;
-+------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 18 12:16:47 2008         ;
-; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
-; Revision Name                      ; drawBackground                                ;
-; Top-level Entity Name              ; drawBackground                                ;
-; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 120                                           ;
-;     Total combinational functions  ; 120                                           ;
-;     Dedicated logic registers      ; 42                                            ;
-; Total registers                    ; 42                                            ;
-; Total pins                         ; 64                                            ;
-; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 99,216                                        ;
-; Embedded Multiplier 9-bit elements ; 2                                             ;
-; Total PLLs                         ; 0                                             ;
-+------------------------------------+-----------------------------------------------+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++------------------------------------+----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Nov 18 15:21:48 2008        ;
+; Quartus II Version                 ; 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition ;
+; Revision Name                      ; drawBackground                               ;
+; Top-level Entity Name              ; drawBackground                               ;
+; Family                             ; Cyclone II                                   ;
+; Total logic elements               ; 106                                          ;
+;     Total combinational functions  ; 106                                          ;
+;     Dedicated logic registers      ; 39                                           ;
+; Total registers                    ; 39                                           ;
+; Total pins                         ; 65                                           ;
+; Total virtual pins                 ; 0                                            ;
+; Total memory bits                  ; 9,216                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                            ;
+; Total PLLs                         ; 0                                            ;
++------------------------------------+----------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                            ;
-+--------------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                         ; Setting            ; Default Value      ;
-+--------------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                         ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                          ; drawBackground     ; drawBackground     ;
-; Family name                                                                    ; Cyclone II         ; Stratix            ;
-; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
-; Preserve fewer node names                                                      ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
-; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
-; State Machine Processing                                                       ; Auto               ; Auto               ;
-; Safe State Machine                                                             ; Off                ; Off                ;
-; Extract Verilog State Machines                                                 ; On                 ; On                 ;
-; Extract VHDL State Machines                                                    ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
-; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
-; DSP Block Balancing                                                            ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                             ; On                 ; On                 ;
-; Power-Up Don't Care                                                            ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
-; Remove Duplicate Registers                                                     ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
-; Optimization Technique -- Cyclone II/Cyclone III                               ; Balanced           ; Balanced           ;
-; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
-; Auto Carry Chains                                                              ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
-; Perform gate-level register retiming                                           ; Off                ; Off                ;
-; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
-; Auto ROM Replacement                                                           ; On                 ; On                 ;
-; Auto RAM Replacement                                                           ; On                 ; On                 ;
-; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
-; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
-; Auto RAM to Logic Cell Conversion                                              ; Off                ; Off                ;
-; Auto Resource Sharing                                                          ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                             ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                             ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                                  ; Off                ; Off                ;
-; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
-; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
-; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
-; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
-; HDL message level                                                              ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
-; Clock MUX Protection                                                           ; On                 ; On                 ;
-; Use smart compilation                                                          ; Off                ; Off                ;
-+--------------------------------------------------------------------------------+--------------------+--------------------+
++--------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                          ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Option                                                       ; Setting            ; Default Value      ;
++--------------------------------------------------------------+--------------------+--------------------+
+; Device                                                       ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                        ; drawBackground     ; drawBackground     ;
+; Family name                                                  ; Cyclone II         ; Stratix II         ;
+; Use smart compilation                                        ; Off                ; Off                ;
+; Maximum processors allowed for parallel compilation          ; 1                  ; 1                  ;
+; Restructure Multiplexers                                     ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
+; Preserve fewer node names                                    ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
+; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                     ; Auto               ; Auto               ;
+; Safe State Machine                                           ; Off                ; Off                ;
+; Extract Verilog State Machines                               ; On                 ; On                 ;
+; Extract VHDL State Machines                                  ; On                 ; On                 ;
+; Ignore Verilog initial constructs                            ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
+; Parallel Synthesis                                           ; Off                ; Off                ;
+; DSP Block Balancing                                          ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                           ; On                 ; On                 ;
+; Power-Up Don't Care                                          ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
+; Remove Duplicate Registers                                   ; On                 ; On                 ;
+; Ignore CARRY Buffers                                         ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
+; Ignore LCELL Buffers                                         ; Off                ; Off                ;
+; Ignore SOFT Buffers                                          ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
+; Optimization Technique                                       ; Balanced           ; Balanced           ;
+; Carry Chain Length                                           ; 70                 ; 70                 ;
+; Auto Carry Chains                                            ; On                 ; On                 ;
+; Auto Open-Drain Pins                                         ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
+; Perform gate-level register retiming                         ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax       ; On                 ; On                 ;
+; Auto ROM Replacement                                         ; On                 ; On                 ;
+; Auto RAM Replacement                                         ; On                 ; On                 ;
+; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                ; On                 ; On                 ;
+; Strict RAM Replacement                                       ; Off                ; Off                ;
+; Allow Synchronous Control Signals                            ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
+; Auto Resource Sharing                                        ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
+; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
+; HDL message level                                            ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
+; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
+; Clock MUX Protection                                         ; On                 ; On                 ;
+; Block Design Naming                                          ; Auto               ; Auto               ;
+; SDC constraint protection                                    ; Off                ; Off                ;
+; Synthesis Effort                                             ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
++--------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+-----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
-; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ;
-+-----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
-; tileset.v                         ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/tileset.v               ;
-; ../drawTileMichael/nBitRegister.v ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/nBitRegister.v         ;
-; ../drawTileMichael/addy.v         ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/addy.v                 ;
-; ../drawTileMichael/drawTile.v     ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/drawTile.v             ;
-; ../drawTileMichael/memCount.v     ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/memCount.v             ;
-; ../drawTileMichael/addx.v         ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/addx.v                 ;
-; level1.v                          ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/level1.v                ;
-; counter4b.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/counter4b.v             ;
-; counter5b.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/counter5b.v             ;
-; drawBackground.v                  ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/drawBackground.v        ;
-; altsyncram.tdf                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf          ;
-; stratix_ram_block.inc             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_ram_block.inc   ;
-; lpm_mux.inc                       ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.inc             ;
-; lpm_decode.inc                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_decode.inc          ;
-; aglobal71.inc                     ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/aglobal71.inc           ;
-; a_rdenreg.inc                     ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/a_rdenreg.inc           ;
-; altrom.inc                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altrom.inc              ;
-; altram.inc                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc              ;
-; altdpram.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc            ;
-; altqpram.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc            ;
-; db/altsyncram_8691.tdf            ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/altsyncram_8691.tdf  ;
-; db/decode_9oa.tdf                 ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/decode_9oa.tdf       ;
-; db/mux_kib.tdf                    ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/mux_kib.tdf          ;
-; db/altsyncram_tu81.tdf            ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/altsyncram_tu81.tdf  ;
-; lpm_counter.tdf                   ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf         ;
-; lpm_constant.inc                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc        ;
-; lpm_add_sub.inc                   ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc         ;
-; cmpconst.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cmpconst.inc            ;
-; lpm_compare.inc                   ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_compare.inc         ;
-; lpm_counter.inc                   ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.inc         ;
-; dffeea.inc                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/dffeea.inc              ;
-; alt_synch_counter.inc             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter.inc   ;
-; alt_synch_counter_f.inc           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter_f.inc ;
-; alt_counter_f10ke.inc             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_f10ke.inc   ;
-; alt_counter_stratix.inc           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_stratix.inc ;
-; db/cntr_4oi.tdf                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/cntr_4oi.tdf         ;
-; db/cntr_3oi.tdf                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/cntr_3oi.tdf         ;
-; lpm_add_sub.tdf                   ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;
-; addcore.inc                       ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc             ;
-; look_add.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc            ;
-; bypassff.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/bypassff.inc            ;
-; altshift.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altshift.inc            ;
-; alt_stratix_add_sub.inc           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;
-; alt_mercury_add_sub.inc           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_mercury_add_sub.inc ;
-; db/add_sub_big.tdf                ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/add_sub_big.tdf      ;
-; db/add_sub_aig.tdf                ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/add_sub_aig.tdf      ;
-; db/add_sub_llh.tdf                ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/add_sub_llh.tdf      ;
-; lpm_mult.tdf                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf            ;
-; multcore.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/multcore.inc            ;
-; db/mult_6111.tdf                  ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/mult_6111.tdf        ;
-+-----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                       ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path  ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                                            ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
+; tileset.v                         ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/tileset.v              ;
+; ../drawTileMichael/nBitRegister.v ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawTileMichael/nBitRegister.v        ;
+; ../drawTileMichael/addy.v         ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawTileMichael/addy.v                ;
+; ../drawTileMichael/drawTile.v     ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawTileMichael/drawTile.v            ;
+; ../drawTileMichael/memCount.v     ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawTileMichael/memCount.v            ;
+; ../drawTileMichael/addx.v         ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawTileMichael/addx.v                ;
+; counter4b.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/counter4b.v            ;
+; counter5b.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/counter5b.v            ;
+; drawBackground.v                  ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/drawBackground.v       ;
+; altsyncram.tdf                    ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/altsyncram.tdf                                                                          ;
+; stratix_ram_block.inc             ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                   ;
+; lpm_mux.inc                       ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_mux.inc                                                                             ;
+; lpm_decode.inc                    ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_decode.inc                                                                          ;
+; aglobal80.inc                     ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/aglobal80.inc                                                                           ;
+; a_rdenreg.inc                     ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                           ;
+; altrom.inc                        ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/altrom.inc                                                                              ;
+; altram.inc                        ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/altram.inc                                                                              ;
+; altdpram.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/altdpram.inc                                                                            ;
+; altqpram.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/altqpram.inc                                                                            ;
+; db/altsyncram_tu81.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/db/altsyncram_tu81.tdf ;
+; lpm_counter.tdf                   ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                         ;
+; lpm_constant.inc                  ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_constant.inc                                                                        ;
+; lpm_add_sub.inc                   ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                         ;
+; cmpconst.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/cmpconst.inc                                                                            ;
+; lpm_compare.inc                   ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_compare.inc                                                                         ;
+; lpm_counter.inc                   ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_counter.inc                                                                         ;
+; dffeea.inc                        ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/dffeea.inc                                                                              ;
+; alt_synch_counter.inc             ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_synch_counter.inc                                                                   ;
+; alt_synch_counter_f.inc           ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_synch_counter_f.inc                                                                 ;
+; alt_counter_f10ke.inc             ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_counter_f10ke.inc                                                                   ;
+; alt_counter_stratix.inc           ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                 ;
+; db/cntr_4oi.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/db/cntr_4oi.tdf        ;
+; db/cntr_3oi.tdf                   ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/db/cntr_3oi.tdf        ;
+; lpm_add_sub.tdf                   ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                                         ;
+; addcore.inc                       ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/addcore.inc                                                                             ;
+; look_add.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/look_add.inc                                                                            ;
+; bypassff.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/bypassff.inc                                                                            ;
+; altshift.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/altshift.inc                                                                            ;
+; alt_stratix_add_sub.inc           ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                                                 ;
+; alt_mercury_add_sub.inc           ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_mercury_add_sub.inc                                                                 ;
+; db/add_sub_big.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/db/add_sub_big.tdf     ;
+; db/add_sub_aig.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/db/add_sub_aig.tdf     ;
+; db/add_sub_llh.tdf                ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/db/add_sub_llh.tdf     ;
+; lpm_mult.tdf                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_mult.tdf                                                                            ;
+; multcore.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/multcore.inc                                                                            ;
+; multcore.tdf                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/multcore.tdf                                                                            ;
+; csa_add.inc                       ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/csa_add.inc                                                                             ;
+; mpar_add.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/mpar_add.inc                                                                            ;
+; muleabz.inc                       ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/muleabz.inc                                                                             ;
+; mul_lfrg.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/mul_lfrg.inc                                                                            ;
+; mul_boothc.inc                    ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/mul_boothc.inc                                                                          ;
+; alt_ded_mult.inc                  ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_ded_mult.inc                                                                        ;
+; alt_ded_mult_y.inc                ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                                                      ;
+; dffpipe.inc                       ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/dffpipe.inc                                                                             ;
+; mpar_add.tdf                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/mpar_add.tdf                                                                            ;
+; altshift.tdf                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/altshift.tdf                                                                            ;
++-----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -210,29 +223,28 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 120   ;
+; Estimated Total logic elements              ; 106   ;
 ;                                             ;       ;
-; Total combinational functions               ; 120   ;
+; Total combinational functions               ; 106   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 28    ;
-;     -- 3 input functions                    ; 37    ;
+;     -- 4 input functions                    ; 20    ;
+;     -- 3 input functions                    ; 31    ;
 ;     -- <=2 input functions                  ; 55    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 63    ;
+;     -- normal mode                          ; 49    ;
 ;     -- arithmetic mode                      ; 57    ;
 ;                                             ;       ;
-; Total registers                             ; 42    ;
-;     -- Dedicated logic registers            ; 42    ;
+; Total registers                             ; 39    ;
+;     -- Dedicated logic registers            ; 39    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 64    ;
-; Total memory bits                           ; 99216 ;
-; Embedded Multiplier 9-bit elements          ; 2     ;
+; I/O pins                                    ; 65    ;
+; Total memory bits                           ; 9216  ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 75    ;
-; Total fan-out                               ; 945   ;
-; Average fan-out                             ; 3.62  ;
+; Maximum fan-out                             ; 48    ;
+; Total fan-out                               ; 548   ;
+; Average fan-out                             ; 2.50  ;
 +---------------------------------------------+-------+
 
 
@@ -241,7 +253,7 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |drawBackground                              ; 120 (33)          ; 42 (3)       ; 99216       ; 2            ; 0       ; 1         ; 64   ; 0            ; |drawBackground                                                                                                                   ; work         ;
+; |drawBackground                              ; 106 (33)          ; 39 (3)       ; 9216        ; 0            ; 0       ; 0         ; 65   ; 0            ; |drawBackground                                                                                                                   ; work         ;
 ;    |counter4b:tile_countery|                 ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery                                                                                           ; work         ;
 ;       |lpm_counter:lpm_counter_component|    ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery|lpm_counter:lpm_counter_component                                                         ; work         ;
 ;          |cntr_3oi:auto_generated|           ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                                 ; work         ;
@@ -261,13 +273,8 @@ applicable agreement for further details.
 ;       |nBitRegister:AddressReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|nBitRegister:AddressReg                                                              ; work         ;
 ;       |nBitRegister:XOffsetReg|              ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|nBitRegister:XOffsetReg                                                              ; work         ;
 ;       |nBitRegister:YOffsetReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|nBitRegister:YOffsetReg                                                              ; work         ;
-;    |level1:level_mem|                        ; 23 (0)            ; 3 (0)        ; 90000       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem                                                                                                  ; work         ;
-;       |altsyncram:altsyncram_component|      ; 23 (0)            ; 3 (0)        ; 90000       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component                                                                  ; work         ;
-;          |altsyncram_8691:auto_generated|    ; 23 (0)            ; 3 (3)        ; 90000       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated                                   ; work         ;
-;             |decode_9oa:deep_decode|         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|decode_9oa:deep_decode            ; work         ;
-;             |mux_kib:mux2|                   ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|mux_kib:mux2                      ; work         ;
-;    |lpm_mult:Mult0|                          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0                                                                                                    ; work         ;
-;       |mult_6111:auto_generated|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0|mult_6111:auto_generated                                                                           ; work         ;
+;    |lpm_mult:Mult0|                          ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0                                                                                                    ; work         ;
+;       |multcore:mult_core|                   ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0|multcore:mult_core                                                                                 ; work         ;
 ;    |tileset:tileset0|                        ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0                                                                                                  ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component                                                                  ; work         ;
 ;          |altsyncram_tu81:auto_generated|    ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated                                   ; work         ;
@@ -275,46 +282,27 @@ applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                        ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------+
-; Name                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                      ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------+
-; level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 30000        ; 3            ; --           ; --           ; 90000 ; ../levels/whitelevel.mif ;
-; tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1024         ; 9            ; --           ; --           ; 9216  ; ../sprites/tileset.mif   ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary        ;
-+---------------------------------------+-------------+
-; Statistic                             ; Number Used ;
-+---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 1           ;
-; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 2           ;
-; Signed Embedded Multipliers           ; 0           ;
-; Unsigned Embedded Multipliers         ; 1           ;
-; Mixed Sign Embedded Multipliers       ; 0           ;
-; Variable Sign Embedded Multipliers    ; 0           ;
-; Dedicated Input Shift Register Chains ; 0           ;
-+---------------------------------------+-------------+
-Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                     ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------+
+; Name                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                    ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------+
+; tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1024         ; 9            ; --           ; --           ; 9216 ; ../sprites/tileset.mif ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------+
 
 
 Encoding Type:  One-Hot
 +----------------------------------------------------------------+
 ; State Machine - |drawBackground|drawTile:tile_drawing_module|Q ;
-+---------+--------+--------+---------+-------+------------------+
-; Name    ; Q.IDLE ; Q.DRAW ; Q.INC_X ; Q.000 ; Q.INC_Y          ;
-+---------+--------+--------+---------+-------+------------------+
-; Q.000   ; 0      ; 0      ; 0       ; 0     ; 0                ;
-; Q.INC_X ; 0      ; 0      ; 1       ; 1     ; 0                ;
-; Q.DRAW  ; 0      ; 1      ; 0       ; 1     ; 0                ;
-; Q.IDLE  ; 1      ; 0      ; 0       ; 1     ; 0                ;
-; Q.INC_Y ; 0      ; 0      ; 0       ; 1     ; 1                ;
-+---------+--------+--------+---------+-------+------------------+
++---------+---------+--------+--------+-------+------------------+
+; Name    ; Q.INC_X ; Q.DRAW ; Q.IDLE ; Q.000 ; Q.INC_Y          ;
++---------+---------+--------+--------+-------+------------------+
+; Q.000   ; 0       ; 0      ; 0      ; 0     ; 0                ;
+; Q.IDLE  ; 0       ; 0      ; 1      ; 1     ; 0                ;
+; Q.DRAW  ; 0       ; 1      ; 0      ; 1     ; 0                ;
+; Q.INC_X ; 1       ; 0      ; 0      ; 1     ; 0                ;
+; Q.INC_Y ; 0       ; 0      ; 0      ; 1     ; 1                ;
++---------+---------+--------+--------+-------+------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -335,8 +323,8 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; tile_drawing_module/Q~19              ; Lost fanout        ;
-; tile_drawing_module/Q~20              ; Lost fanout        ;
+; drawTile:tile_drawing_module|Q~19     ; Lost fanout        ;
+; drawTile:tile_drawing_module|Q~20     ; Lost fanout        ;
 ; Total Number of Removed Registers = 2 ;                    ;
 +---------------------------------------+--------------------+
 
@@ -346,7 +334,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 42    ;
+; Total registers                              ; 39    ;
 ; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 3     ;
@@ -354,15 +342,6 @@ Encoding Type:  One-Hot
 ; Number of registers using Clock Enable       ; 9     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------+
-; Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated ;
-+---------------------------------+--------------------+------+------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                       ;
-+---------------------------------+--------------------+------+------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
-+---------------------------------+--------------------+------+------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------+
@@ -401,19 +380,19 @@ Encoding Type:  One-Hot
 +------------------------------+-------+------+---------+
 ; Assignment                   ; Value ; From ; To      ;
 +------------------------------+-------+------+---------+
-; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_Y ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW  ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.IDLE  ;
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.000   ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.IDLE  ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW  ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_Y ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE  ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.DRAW  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.DRAW  ;
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_X ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_X ;
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_Y ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_Y ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.DRAW  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.DRAW  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE  ;
 +------------------------------+-------+------+---------+
 
 
@@ -423,7 +402,7 @@ Encoding Type:  One-Hot
 ; Parameter Name ; Value ; Type                                                  ;
 +----------------+-------+-------------------------------------------------------+
 ; tilemap_length ; 2000  ; Signed Integer                                        ;
-; color_depth    ; 9     ; Signed Integer                                        ;
+; color_depth    ; 1001  ; Unsigned Binary                                       ;
 ; WAIT_PT        ; 000   ; Unsigned Binary                                       ;
 ; READ_PT        ; 001   ; Unsigned Binary                                       ;
 ; DRAW_PT        ; 010   ; Unsigned Binary                                       ;
@@ -431,65 +410,6 @@ Encoding Type:  One-Hot
 ; INCREMENT_PT   ; 100   ; Unsigned Binary                                       ;
 ; DROP_PT        ; 101   ; Unsigned Binary                                       ;
 +----------------+-------+-------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component ;
-+------------------------------------+--------------------------+-------------------------------+
-; Parameter Name                     ; Value                    ; Type                          ;
-+------------------------------------+--------------------------+-------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                        ; Untyped                       ;
-; AUTO_CARRY_CHAINS                  ; ON                       ; AUTO_CARRY                    ;
-; IGNORE_CARRY_BUFFERS               ; OFF                      ; IGNORE_CARRY                  ;
-; AUTO_CASCADE_CHAINS                ; ON                       ; AUTO_CASCADE                  ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                      ; IGNORE_CASCADE                ;
-; WIDTH_BYTEENA                      ; 1                        ; Untyped                       ;
-; OPERATION_MODE                     ; ROM                      ; Untyped                       ;
-; WIDTH_A                            ; 3                        ; Signed Integer                ;
-; WIDTHAD_A                          ; 15                       ; Signed Integer                ;
-; NUMWORDS_A                         ; 30000                    ; Signed Integer                ;
-; OUTDATA_REG_A                      ; UNREGISTERED             ; Untyped                       ;
-; ADDRESS_ACLR_A                     ; NONE                     ; Untyped                       ;
-; OUTDATA_ACLR_A                     ; NONE                     ; Untyped                       ;
-; WRCONTROL_ACLR_A                   ; NONE                     ; Untyped                       ;
-; INDATA_ACLR_A                      ; NONE                     ; Untyped                       ;
-; BYTEENA_ACLR_A                     ; NONE                     ; Untyped                       ;
-; WIDTH_B                            ; 1                        ; Untyped                       ;
-; WIDTHAD_B                          ; 1                        ; Untyped                       ;
-; NUMWORDS_B                         ; 1                        ; Untyped                       ;
-; INDATA_REG_B                       ; CLOCK1                   ; Untyped                       ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                   ; Untyped                       ;
-; RDCONTROL_REG_B                    ; CLOCK1                   ; Untyped                       ;
-; ADDRESS_REG_B                      ; CLOCK1                   ; Untyped                       ;
-; OUTDATA_REG_B                      ; UNREGISTERED             ; Untyped                       ;
-; BYTEENA_REG_B                      ; CLOCK1                   ; Untyped                       ;
-; INDATA_ACLR_B                      ; NONE                     ; Untyped                       ;
-; WRCONTROL_ACLR_B                   ; NONE                     ; Untyped                       ;
-; ADDRESS_ACLR_B                     ; NONE                     ; Untyped                       ;
-; OUTDATA_ACLR_B                     ; NONE                     ; Untyped                       ;
-; RDCONTROL_ACLR_B                   ; NONE                     ; Untyped                       ;
-; BYTEENA_ACLR_B                     ; NONE                     ; Untyped                       ;
-; WIDTH_BYTEENA_A                    ; 1                        ; Signed Integer                ;
-; WIDTH_BYTEENA_B                    ; 1                        ; Untyped                       ;
-; RAM_BLOCK_TYPE                     ; AUTO                     ; Untyped                       ;
-; BYTE_SIZE                          ; 8                        ; Untyped                       ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                ; Untyped                       ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ     ; Untyped                       ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ     ; Untyped                       ;
-; INIT_FILE                          ; ../levels/whitelevel.mif ; Untyped                       ;
-; INIT_FILE_LAYOUT                   ; PORT_A                   ; Untyped                       ;
-; MAXIMUM_DEPTH                      ; 0                        ; Untyped                       ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                   ; Untyped                       ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                   ; Untyped                       ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                   ; Untyped                       ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                   ; Untyped                       ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN          ; Untyped                       ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN          ; Untyped                       ;
-; ENABLE_ECC                         ; FALSE                    ; Untyped                       ;
-; DEVICE_FAMILY                      ; Cyclone II               ; Untyped                       ;
-; CBXI_PARAMETER                     ; altsyncram_8691          ; Untyped                       ;
-+------------------------------------+--------------------------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -845,7 +765,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_6111  ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING    ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
@@ -873,13 +793,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------+
 
 
++--------------------------------+
+; Analysis & Synthesis Equations ;
++--------------------------------+
+The equations can be found in C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/drawBackground/drawBackground.map.eqn.
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
-    Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Tue Nov 18 12:16:38 2008
+    Info: Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
+    Info: Processing started: Tue Nov 18 15:21:43 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off drawBackground -c drawBackground
 Info: Found 1 design units, including 1 entities, in source file tileset.v
     Info: Found entity 1: tileset
@@ -910,48 +836,59 @@ Info: Found 1 design units, including 1 entities, in source file counter3b.v
 Info: Found 1 design units, including 1 entities, in source file drawBackground.v
     Info: Found entity 1: drawBackground
 Info: Elaborating entity "drawBackground" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(98): truncated value with size 32 to match size of target (15)
-Info: Elaborating entity "level1" for hierarchy "level1:level_mem"
-Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf
-    Info: Found entity 1: altsyncram
-Info: Elaborating entity "altsyncram" for hierarchy "level1:level_mem|altsyncram:altsyncram_component"
-Info: Elaborated megafunction instantiation "level1:level_mem|altsyncram:altsyncram_component"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_8691.tdf
-    Info: Found entity 1: altsyncram_8691
-Info: Elaborating entity "altsyncram_8691" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated"
-Info: Found 1 design units, including 1 entities, in source file db/decode_9oa.tdf
-    Info: Found entity 1: decode_9oa
-Info: Elaborating entity "decode_9oa" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|decode_9oa:deep_decode"
-Info: Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
-    Info: Found entity 1: mux_kib
-Info: Elaborating entity "mux_kib" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|mux_kib:mux2"
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(100): truncated value with size 32 to match size of target (15)
 Info: Elaborating entity "tileset" for hierarchy "tileset:tileset0"
 Info: Elaborating entity "altsyncram" for hierarchy "tileset:tileset0|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "tileset:tileset0|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "tileset:tileset0|altsyncram:altsyncram_component" with the following parameter:
+    Info: Parameter "clock_enable_input_a" = "BYPASS"
+    Info: Parameter "clock_enable_output_a" = "BYPASS"
+    Info: Parameter "init_file" = "../sprites/tileset.mif"
+    Info: Parameter "intended_device_family" = "Cyclone II"
+    Info: Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info: Parameter "lpm_type" = "altsyncram"
+    Info: Parameter "numwords_a" = "1024"
+    Info: Parameter "operation_mode" = "ROM"
+    Info: Parameter "outdata_aclr_a" = "NONE"
+    Info: Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info: Parameter "widthad_a" = "10"
+    Info: Parameter "width_a" = "9"
+    Info: Parameter "width_byteena_a" = "1"
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_tu81.tdf
     Info: Found entity 1: altsyncram_tu81
 Info: Elaborating entity "altsyncram_tu81" for hierarchy "tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated"
 Info: Elaborating entity "counter5b" for hierarchy "counter5b:tile_counterx"
-Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf
-    Info: Found entity 1: lpm_counter
 Info: Elaborating entity "lpm_counter" for hierarchy "counter5b:tile_counterx|lpm_counter:lpm_counter_component"
 Info: Elaborated megafunction instantiation "counter5b:tile_counterx|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "counter5b:tile_counterx|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "5"
 Info: Found 1 design units, including 1 entities, in source file db/cntr_4oi.tdf
     Info: Found entity 1: cntr_4oi
 Info: Elaborating entity "cntr_4oi" for hierarchy "counter5b:tile_counterx|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated"
 Info: Elaborating entity "counter4b" for hierarchy "counter4b:tile_countery"
 Info: Elaborating entity "lpm_counter" for hierarchy "counter4b:tile_countery|lpm_counter:lpm_counter_component"
 Info: Elaborated megafunction instantiation "counter4b:tile_countery|lpm_counter:lpm_counter_component"
+Info: Instantiated megafunction "counter4b:tile_countery|lpm_counter:lpm_counter_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UP"
+    Info: Parameter "lpm_port_updown" = "PORT_UNUSED"
+    Info: Parameter "lpm_type" = "LPM_COUNTER"
+    Info: Parameter "lpm_width" = "4"
 Info: Found 1 design units, including 1 entities, in source file db/cntr_3oi.tdf
     Info: Found entity 1: cntr_3oi
 Info: Elaborating entity "cntr_3oi" for hierarchy "counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated"
 Info: Elaborating entity "drawTile" for hierarchy "drawTile:tile_drawing_module"
-Warning (10230): Verilog HDL assignment warning at drawTile.v(166): truncated value with size 32 to match size of target (10)
 Info: Elaborating entity "addx" for hierarchy "drawTile:tile_drawing_module|addx:XoffAdder"
-Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf
-    Info: Found entity 1: lpm_add_sub
 Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component"
 Info: Elaborated megafunction instantiation "drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UNUSED"
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info: Parameter "lpm_width" = "8"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_big.tdf
     Info: Found entity 1: add_sub_big
 Info: Elaborating entity "add_sub_big" for hierarchy "drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated"
@@ -959,6 +896,12 @@ Info: Elaborating entity "nBitRegister" for hierarchy "drawTile:tile_drawing_mod
 Info: Elaborating entity "addy" for hierarchy "drawTile:tile_drawing_module|addy:YoffAdder"
 Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component"
 Info: Elaborated megafunction instantiation "drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "UNUSED"
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info: Parameter "lpm_width" = "7"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_aig.tdf
     Info: Found entity 1: add_sub_aig
 Info: Elaborating entity "add_sub_aig" for hierarchy "drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated"
@@ -966,51 +909,59 @@ Info: Elaborating entity "nBitRegister" for hierarchy "drawTile:tile_drawing_mod
 Info: Elaborating entity "memCount" for hierarchy "drawTile:tile_drawing_module|memCount:AddressCounter"
 Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component"
 Info: Elaborated megafunction instantiation "drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component"
+Info: Instantiated megafunction "drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component" with the following parameter:
+    Info: Parameter "lpm_direction" = "ADD"
+    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
+    Info: Parameter "lpm_representation" = "UNSIGNED"
+    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
+    Info: Parameter "lpm_width" = "10"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_llh.tdf
     Info: Found entity 1: add_sub_llh
 Info: Elaborating entity "add_sub_llh" for hierarchy "drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated"
-Warning: Port "ordered port 0" on the entity instantiation of "AddressCounter" is connected to a signal of width 7. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
-Warning: Port "TileSel" on the entity instantiation of "tile_drawing_module" is connected to a signal of width 3. The formal width of the signal in the module is 4.  Extra bits will be driven by GND.
-Warning: Port "Xin" on the entity instantiation of "tile_drawing_module" is connected to a signal of width 32. The formal width of the signal in the module is 8.  Extra bits will be ignored.
-Warning: Port "Yin" on the entity instantiation of "tile_drawing_module" is connected to a signal of width 32. The formal width of the signal in the module is 7.  Extra bits will be ignored.
+Warning (12010): Port "ordered port 0" on the entity instantiation of "AddressCounter" is connected to a signal of width 7. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
 Info: State machine "|drawBackground|drawTile:tile_drawing_module|Q" contains 5 states
 Info: Selected Auto state machine encoding method for state machine "|drawBackground|drawTile:tile_drawing_module|Q"
 Info: Encoding result for state machine "|drawBackground|drawTile:tile_drawing_module|Q"
     Info: Completed encoding using 5 state bits
-        Info: Encoded state bit "drawTile:tile_drawing_module|Q.IDLE"
-        Info: Encoded state bit "drawTile:tile_drawing_module|Q.DRAW"
         Info: Encoded state bit "drawTile:tile_drawing_module|Q.INC_X"
+        Info: Encoded state bit "drawTile:tile_drawing_module|Q.DRAW"
+        Info: Encoded state bit "drawTile:tile_drawing_module|Q.IDLE"
         Info: Encoded state bit "drawTile:tile_drawing_module|Q.000"
         Info: Encoded state bit "drawTile:tile_drawing_module|Q.INC_Y"
     Info: State "|drawBackground|drawTile:tile_drawing_module|Q.000" uses code string "00000"
-    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.INC_X" uses code string "00110"
+    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.IDLE" uses code string "00110"
     Info: State "|drawBackground|drawTile:tile_drawing_module|Q.DRAW" uses code string "01010"
-    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.IDLE" uses code string "10010"
+    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.INC_X" uses code string "10010"
     Info: State "|drawBackground|drawTile:tile_drawing_module|Q.INC_Y" uses code string "00011"
-Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf
-    Info: Found entity 1: lpm_mult
+Info: Inferred 1 megafunctions from design logic
+    Info: Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0"
 Info: Elaborated megafunction instantiation "lpm_mult:Mult0"
-Info: Found 1 design units, including 1 entities, in source file db/mult_6111.tdf
-    Info: Found entity 1: mult_6111
+Info: Instantiated megafunction "lpm_mult:Mult0" with the following parameter:
+    Info: Parameter "LPM_WIDTHA" = "4"
+    Info: Parameter "LPM_WIDTHB" = "11"
+    Info: Parameter "LPM_WIDTHP" = "15"
+    Info: Parameter "LPM_WIDTHR" = "15"
+    Info: Parameter "LPM_WIDTHS" = "1"
+    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info: Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info: Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info: Parameter "MAXIMIZE_SPEED" = "6"
+    Info: Parameter "DEDICATED_MULTIPLIER_CIRCUITRY" = "AUTO"
+Info: Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "lpm_mult:Mult0"
+Info: Elaborated megafunction instantiation "lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "lpm_mult:Mult0"
 Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
-    Info: Register "tile_drawing_module/Q~19" lost all its fanouts during netlist optimizations.
-    Info: Register "tile_drawing_module/Q~20" lost all its fanouts during netlist optimizations.
-Info: Implemented 226 device resources after synthesis - the final resource count might be different
-    Info: Implemented 14 input pins
-    Info: Implemented 50 output pins
-    Info: Implemented 127 logic cells
-    Info: Implemented 33 RAM segments
-    Info: Implemented 2 DSP elements
-Info: Generated suppressed messages file W:/quartus/fpga2dsidescroller/drawBackground/drawBackground.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Allocated 144 megabytes of memory during processing
-    Info: Processing ended: Tue Nov 18 12:16:47 2008
-    Info: Elapsed time: 00:00:09
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in W:/quartus/fpga2dsidescroller/drawBackground/drawBackground.map.smsg.
+    Info: Register "drawTile:tile_drawing_module|Q~19" lost all its fanouts during netlist optimizations.
+    Info: Register "drawTile:tile_drawing_module|Q~20" lost all its fanouts during netlist optimizations.
+Info: Implemented 184 device resources after synthesis - the final resource count might be different
+    Info: Implemented 18 input pins
+    Info: Implemented 47 output pins
+    Info: Implemented 110 logic cells
+    Info: Implemented 9 RAM segments
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 189 megabytes
+    Info: Processing ended: Tue Nov 18 15:21:48 2008
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

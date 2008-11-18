@@ -3,7 +3,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	// Parameters
 	//------------------------------------------
 	parameter tilemap_length = 2000; // In tiles
-	parameter color_depth = 9;
+	parameter color_depth = 4'd9;
 	//------------------------------------------
 	// Inputs
 	//------------------------------------------
@@ -11,7 +11,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	input [10:0] x_offset; // log2(tilemap_length) - 1
 	input enable;
 	input resetn;
-	input [2:0] tile_code; // debug
+	input [3:0] tile_code; // debug
 	//------------------------------------------
 	// Outputs
 	//------------------------------------------
@@ -78,9 +78,11 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	.q(tile_y));
 
 	// Actual x and y value calculations
-//	assign x = (tile_x * 8) + draw_x;
-//	assign y = (tile_y * 8) + draw_y;
+	assign x = (tile_x * 8) + draw_x;
+	assign y = (tile_y * 8) + draw_y;
 	
+	assign tile_address = (draw_x + (draw_y * 4'd8));
+
 	// Memory address calculations
 	// Pixel Dimensions:
 			// The screen is 160 pixels in the x-direction, by 120 pixels in the y-direction (160x120)
@@ -96,7 +98,6 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 		// Level size: 2000 tiles in the x, 15 tiles in the y
 		// Therefore, each y-increase should increase the memory pointer by 2000
 	assign level_address = 0 + x_offset + tile_x + (tile_y * tilemap_length);
-//	assign tile_address = (draw_x + (draw_y * 4'd8)) + 1;
 	
 	//------------------------------------------
 	// PickTile State Machine
@@ -120,7 +121,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	
 	// PickTile State Machine
 	// Picks which tile to draw at which location by reading from a tilemap
-	parameter WAIT_PT = 3'b000, READ_PT = 3'b001, DRAW_PT = 3'b010, CHECK_PT = 3'b011, INCREMENT_PT = 3'b100, DROP_PT = 3'b101; //states
+	parameter WAIT_PT = 3'd0, READ_PT = 3'd1, DRAW_PT = 3'd2, CHECK_PT = 3'd3, INCREMENT_PT = 3'd4, DROP_PT = 3'd5; //states
 	always @ (*)
 	begin: picktile_state_table
 		case (p_Q)
@@ -135,7 +136,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
  			INCREMENT_PT: p_D <= READ_PT;
  			DROP_PT: if (tile_y == 15) p_D <= WAIT_PT;
  			else p_D <= READ_PT;
-			default: p_D <= 3'bx;
+			default: p_D <= WAIT_PT;
 		endcase
 	end
 	
@@ -155,10 +156,15 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	
 	// drawTile instantiation
 	
+	wire [7:0] tile_x_input;
+	wire [6:0] tile_y_input;
+	assign tile_x_input = tile_x * 4'd8;
+	assign tile_y_input = tile_y * 4'd8;
+	
 	drawTile tile_drawing_module (
         // Inputs
-	.Xin(tile_x * 8), 
-	.Yin(tile_y * 8),
+	.Xin(tile_x_input), 
+	.Yin(tile_y_input),
 	.TileSel(tile_code), 
 	.Enable(draw), 
 	.Clock(clock), 
