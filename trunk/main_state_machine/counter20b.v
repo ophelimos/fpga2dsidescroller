@@ -4,7 +4,7 @@
 // MODULE: lpm_counter 
 
 // ============================================================
-// File Name: counter3b.v
+// File Name: counter20b.v
 // Megafunction Name(s):
 // 			lpm_counter
 //
@@ -36,7 +36,7 @@
 // synopsys translate_off
 `timescale 1 ps / 1 ps
 // synopsys translate_on
-module counter3b (
+module counter20b (
 	clock,
 	cnt_en,
 	sclr,
@@ -45,10 +45,10 @@ module counter3b (
 	input	  clock;
 	input	  cnt_en;
 	input	  sclr;
-	output	[2:0]  q;
+	output	[19:0]  q;
 
-	wire [2:0] sub_wire0;
-	wire [2:0] q = sub_wire0[2:0];
+	wire [19:0] sub_wire0;
+	wire [19:0] q = sub_wire0[19:0];
 
 	lpm_counter	lpm_counter_component (
 				.sclr (sclr),
@@ -61,7 +61,7 @@ module counter3b (
 				.cin (1'b1),
 				.clk_en (1'b1),
 				.cout (),
-				.data ({3{1'b0}}),
+				.data ({20{1'b0}}),
 				.eq (),
 				.sload (1'b0),
 				.sset (1'b0),
@@ -70,7 +70,7 @@ module counter3b (
 		lpm_counter_component.lpm_direction = "UP",
 		lpm_counter_component.lpm_port_updown = "PORT_UNUSED",
 		lpm_counter_component.lpm_type = "LPM_COUNTER",
-		lpm_counter_component.lpm_width = 3;
+		lpm_counter_component.lpm_width = 20;
 
 
 endmodule
@@ -95,26 +95,26 @@ endmodule
 // Retrieval info: PRIVATE: SSET NUMERIC "0"
 // Retrieval info: PRIVATE: SSET_ALL1 NUMERIC "1"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
-// Retrieval info: PRIVATE: nBit NUMERIC "3"
+// Retrieval info: PRIVATE: nBit NUMERIC "20"
 // Retrieval info: CONSTANT: LPM_DIRECTION STRING "UP"
 // Retrieval info: CONSTANT: LPM_PORT_UPDOWN STRING "PORT_UNUSED"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_COUNTER"
-// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "3"
+// Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "20"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT NODEFVAL clock
 // Retrieval info: USED_PORT: cnt_en 0 0 0 0 INPUT NODEFVAL cnt_en
-// Retrieval info: USED_PORT: q 0 0 3 0 OUTPUT NODEFVAL q[2..0]
+// Retrieval info: USED_PORT: q 0 0 20 0 OUTPUT NODEFVAL q[19..0]
 // Retrieval info: USED_PORT: sclr 0 0 0 0 INPUT NODEFVAL sclr
 // Retrieval info: CONNECT: @clock 0 0 0 0 clock 0 0 0 0
-// Retrieval info: CONNECT: q 0 0 3 0 @q 0 0 3 0
+// Retrieval info: CONNECT: q 0 0 20 0 @q 0 0 20 0
 // Retrieval info: CONNECT: @cnt_en 0 0 0 0 cnt_en 0 0 0 0
 // Retrieval info: CONNECT: @sclr 0 0 0 0 sclr 0 0 0 0
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
-// Retrieval info: GEN_FILE: TYPE_NORMAL counter3b.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL counter3b.inc FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL counter3b.cmp FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL counter3b.bsf FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL counter3b_inst.v FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL counter3b_bb.v TRUE
-// Retrieval info: GEN_FILE: TYPE_NORMAL counter3b_waveforms.html FALSE
-// Retrieval info: GEN_FILE: TYPE_NORMAL counter3b_wave*.jpg FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL counter20b.v TRUE
+// Retrieval info: GEN_FILE: TYPE_NORMAL counter20b.inc FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL counter20b.cmp FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL counter20b.bsf FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL counter20b_inst.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL counter20b_bb.v FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL counter20b_waveforms.html FALSE
+// Retrieval info: GEN_FILE: TYPE_NORMAL counter20b_wave*.jpg FALSE
 // Retrieval info: LIB_FILE: lpm

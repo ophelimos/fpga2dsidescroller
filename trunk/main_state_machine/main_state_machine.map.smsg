@@ -1,13 +1,5 @@
-Warning (10273): Verilog HDL warning at drawBackground.v(138): extended using "x" or "z"
-Warning (10273): Verilog HDL warning at main_state_machine.v(100): extended using "x" or "z"
-Warning (10273): Verilog HDL warning at main_state_machine.v(351): extended using "x" or "z"
-Warning (10273): Verilog HDL warning at main_state_machine.v(352): extended using "x" or "z"
-Warning (10273): Verilog HDL warning at main_state_machine.v(353): extended using "x" or "z"
-Warning (10236): Verilog HDL Implicit Net warning at main_state_machine.v(124): created implicit net for "draw_background_enable"
-Warning (10236): Verilog HDL Implicit Net warning at main_state_machine.v(147): created implicit net for "y_position"
-Warning (10236): Verilog HDL Implicit Net warning at main_state_machine.v(153): created implicit net for "draw_character_enable"
-Warning (10236): Verilog HDL Implicit Net warning at main_state_machine.v(161): created implicit net for "done_character"
-Warning (10236): Verilog HDL Implicit Net warning at main_state_machine.v(245): created implicit net for "draw_enemies_enable"
-Warning (10236): Verilog HDL Implicit Net warning at main_state_machine.v(247): created implicit net for "detect_collisions_enable"
-Info (10281): Verilog HDL Declaration information at main_state_machine.v(125): object "draw_background" differs only in case from object "DRAW_BACKGROUND" in the same scope
-Info (10281): Verilog HDL Declaration information at main_state_machine.v(162): object "draw_character" differs only in case from object "DRAW_CHARACTER" in the same scope
+Warning (10273): Verilog HDL warning at main_state_machine.v(363): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at main_state_machine.v(364): extended using "x" or "z"
+Warning (10273): Verilog HDL warning at main_state_machine.v(365): extended using "x" or "z"
+Info (10281): Verilog HDL Declaration information at main_state_machine.v(131): object "draw_background" differs only in case from object "DRAW_BACKGROUND" in the same scope
+Info (10281): Verilog HDL Declaration information at main_state_machine.v(166): object "draw_character" differs only in case from object "DRAW_CHARACTER" in the same scope

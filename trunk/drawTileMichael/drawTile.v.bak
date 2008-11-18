@@ -163,7 +163,7 @@ module drawTile (Xin, Yin, TileSel, Enable, Clock, Resetn, DataIn, Address, X, Y
 	reg [9:0] TileSel_Offset;
 	always @(TileSel)
 	begin
-		TileSel_Offset <= TileSel * 64;
+		TileSel_Offset <= TileSel * 6'd64;
 	end
 	
 	// memory address tile-offset + tile selection counter

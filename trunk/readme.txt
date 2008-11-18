@@ -14,7 +14,10 @@ why ? Because every project needs a readme :)
 ----------------------------------
 
 
---- detectCollision has not been tested
+- detectCollision has not been tested
 
+- make level1 level_mem() 4-bit wide (in main_state_machine)
+
+- 
 
 

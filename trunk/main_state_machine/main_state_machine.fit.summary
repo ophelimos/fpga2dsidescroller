@@ -1,16 +1,16 @@
-Fitter Status : Successful - Tue Nov 18 08:51:51 2008
-Quartus II Version : 7.1 Build 178 06/25/2007 SP 1 SJ Full Version
+Fitter Status : Successful - Tue Nov 18 15:28:48 2008
+Quartus II Version : 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition
 Revision Name : main_state_machine
 Top-level Entity Name : main_state_machine
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 258 / 33,216 ( < 1 % )
-    Total combinational functions : 255 / 33,216 ( < 1 % )
-    Dedicated logic registers : 83 / 33,216 ( < 1 % )
-Total registers : 83
+Total logic elements : 382 / 33,216 ( 1 % )
+    Total combinational functions : 379 / 33,216 ( 1 % )
+    Dedicated logic registers : 130 / 33,216 ( < 1 % )
+Total registers : 130
 Total pins : 67 / 475 ( 14 % )
 Total virtual pins : 0
-Total memory bits : 187,392 / 483,840 ( 39 % )
-Embedded Multiplier 9-bit elements : 1 / 70 ( 1 % )
+Total memory bits : 308,880 / 483,840 ( 64 % )
+Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )
 Total PLLs : 1 / 4 ( 25 % )
