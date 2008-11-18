@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_state_machine
-Mon Nov 17 16:43:53 2008
+Tue Nov 18 09:04:45 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -15,52 +15,62 @@ Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
   7. Analysis & Synthesis RAM Summary
   8. Analysis & Synthesis DSP Block Usage Summary
   9. State Machine - |main_state_machine|main_Q
- 10. State Machine - |main_state_machine|drawBackground:draw_background|p_Q
+ 10. State Machine - |main_state_machine|drawSprite:draw_character|Q
  11. State Machine - |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|Q
  12. Registers Protected by Synthesis
- 13. Logic Cells Representing Combinational Loops
- 14. Registers Removed During Synthesis
- 15. General Register Statistics
+ 13. Registers Removed During Synthesis
+ 14. General Register Statistics
+ 15. Source assignments for Top-level Entity: |main_state_machine
  16. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated
  17. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1
- 18. Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated
- 19. Source assignments for drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated
- 20. Source assignments for drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 21. Source assignments for drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
- 22. Source assignments for drawBackground:draw_background|counter3b:draw_counterx|lpm_counter:lpm_counter_component
- 23. Source assignments for drawBackground:draw_background|counter4b:draw_countery|lpm_counter:lpm_counter_component
- 24. Source assignments for drawBackground:draw_background|drawTile:drawTileInst1
- 25. Source assignments for counter32b:x_position_counter|lpm_counter:lpm_counter_component
- 26. Parameter Settings for User Entity Instance: Top-level Entity: |main_state_machine
- 27. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 28. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 29. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 30. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 31. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 32. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 33. Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component
- 34. Parameter Settings for User Entity Instance: drawBackground:draw_background
- 35. Parameter Settings for User Entity Instance: drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component
- 36. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 37. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
- 38. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter3b:draw_counterx|lpm_counter:lpm_counter_component
- 39. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter4b:draw_countery|lpm_counter:lpm_counter_component
- 40. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1
- 41. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
- 42. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|nBitRegister:XOffsetReg
- 43. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
- 44. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|nBitRegister:YOffsetReg
- 45. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
- 46. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
- 47. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
- 48. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|nBitRegister:AddressReg
- 49. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
- 50. Parameter Settings for User Entity Instance: counter32b:x_position_counter|lpm_counter:lpm_counter_component
- 51. Parameter Settings for Inferred Entity Instance: drawBackground:draw_background|lpm_mult:Mult0
- 52. lpm_mult Parameter Settings by Entity Instance
- 53. Analysis & Synthesis INI Usage
- 54. Analysis & Synthesis Messages
- 55. Analysis & Synthesis Suppressed Messages
+ 18. Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated
+ 19. Source assignments for SpriteRAM:character_mem|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated
+ 20. Source assignments for drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated
+ 21. Source assignments for drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 22. Source assignments for drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 23. Source assignments for drawBackground:draw_background|counter3b:draw_counterx|lpm_counter:lpm_counter_component
+ 24. Source assignments for drawBackground:draw_background|counter4b:draw_countery|lpm_counter:lpm_counter_component
+ 25. Source assignments for drawBackground:draw_background|drawTile:drawTileInst1
+ 26. Source assignments for drawSprite:draw_character
+ 27. Source assignments for counter32b:x_position_counter|lpm_counter:lpm_counter_component
+ 28. Parameter Settings for User Entity Instance: Top-level Entity: |main_state_machine
+ 29. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 30. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 31. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 32. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 33. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 34. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 35. Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component
+ 36. Parameter Settings for User Entity Instance: SpriteRAM:character_mem|altsyncram:altsyncram_component
+ 37. Parameter Settings for User Entity Instance: drawBackground:draw_background
+ 38. Parameter Settings for User Entity Instance: drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component
+ 39. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 40. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 41. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter3b:draw_counterx|lpm_counter:lpm_counter_component
+ 42. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter4b:draw_countery|lpm_counter:lpm_counter_component
+ 43. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1
+ 44. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
+ 45. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|nBitRegister:XOffsetReg
+ 46. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
+ 47. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|nBitRegister:YOffsetReg
+ 48. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
+ 49. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
+ 50. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
+ 51. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|nBitRegister:AddressReg
+ 52. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
+ 53. Parameter Settings for User Entity Instance: drawSprite:draw_character
+ 54. Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
+ 55. Parameter Settings for User Entity Instance: drawSprite:draw_character|nBitRegister:XOffsetReg
+ 56. Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
+ 57. Parameter Settings for User Entity Instance: drawSprite:draw_character|nBitRegister:YOffsetReg
+ 58. Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
+ 59. Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
+ 60. Parameter Settings for User Entity Instance: counter32b:x_position_counter|lpm_counter:lpm_counter_component
+ 61. Parameter Settings for Inferred Entity Instance: drawBackground:draw_background|lpm_mult:Mult0
+ 62. lpm_mult Parameter Settings by Entity Instance
+ 63. Analysis & Synthesis INI Usage
+ 64. Analysis & Synthesis Messages
+ 65. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -86,18 +96,18 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 17 16:43:53 2008         ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 18 09:04:44 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; main_state_machine                            ;
 ; Top-level Entity Name              ; main_state_machine                            ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 222                                           ;
-;     Total combinational functions  ; 222                                           ;
-;     Dedicated logic registers      ; 86                                            ;
-; Total registers                    ; 86                                            ;
+; Total logic elements               ; 292                                           ;
+;     Total combinational functions  ; 292                                           ;
+;     Dedicated logic registers      ; 104                                           ;
+; Total registers                    ; 104                                           ;
 ; Total pins                         ; 67                                            ;
 ; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 183,296                                       ;
+; Total memory bits                  ; 187,410                                       ;
 ; Embedded Multiplier 9-bit elements ; 1                                             ;
 ; Total PLLs                         ; 1                                             ;
 +------------------------------------+-----------------------------------------------+
@@ -171,6 +181,8 @@ applicable agreement for further details.
 +--------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+
 ; File Name with User-Entered Path     ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                          ;
 +--------------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------+
+; ../drawSprite/drawSprite.v           ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawSprite/drawSprite.v                                 ;
+; ../SpriteMem/SpriteRAM.v             ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/SpriteMem/SpriteRAM.v                                   ;
 ; ../drawTileMichael/addx.v            ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/addx.v                                  ;
 ; ../drawTileMichael/addy.v            ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/addy.v                                  ;
 ; ../drawTileMichael/drawTile.v        ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/drawTile.v                              ;
@@ -206,10 +218,11 @@ applicable agreement for further details.
 ; stratix_pll.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_pll.inc                          ;
 ; stratixii_pll.inc                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratixii_pll.inc                        ;
 ; cycloneii_pll.inc                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cycloneii_pll.inc                        ;
-; db/altsyncram_17e1.tdf               ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/main_state_machine/db/altsyncram_17e1.tdf               ;
+; db/altsyncram_7391.tdf               ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/main_state_machine/db/altsyncram_7391.tdf               ;
 ; db/decode_9oa.tdf                    ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/main_state_machine/db/decode_9oa.tdf                    ;
 ; db/mux_kib.tdf                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/main_state_machine/db/mux_kib.tdf                       ;
-; db/altsyncram_dvd1.tdf               ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/main_state_machine/db/altsyncram_dvd1.tdf               ;
+; db/altsyncram_gvd1.tdf               ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/main_state_machine/db/altsyncram_gvd1.tdf               ;
+; db/altsyncram_tu81.tdf               ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/main_state_machine/db/altsyncram_tu81.tdf               ;
 ; lpm_counter.tdf                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf                          ;
 ; lpm_constant.inc                     ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc                         ;
 ; lpm_add_sub.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc                          ;
@@ -246,30 +259,30 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 222      ;
+; Estimated Total logic elements              ; 292      ;
 ;                                             ;          ;
-; Total combinational functions               ; 222      ;
+; Total combinational functions               ; 292      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 52       ;
-;     -- 3 input functions                    ; 65       ;
-;     -- <=2 input functions                  ; 105      ;
+;     -- 4 input functions                    ; 61       ;
+;     -- 3 input functions                    ; 101      ;
+;     -- <=2 input functions                  ; 130      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 116      ;
-;     -- arithmetic mode                      ; 106      ;
+;     -- normal mode                          ; 165      ;
+;     -- arithmetic mode                      ; 127      ;
 ;                                             ;          ;
-; Total registers                             ; 86       ;
-;     -- Dedicated logic registers            ; 86       ;
+; Total registers                             ; 104      ;
+;     -- Dedicated logic registers            ; 104      ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
 ; I/O pins                                    ; 67       ;
-; Total memory bits                           ; 183296   ;
+; Total memory bits                           ; 187410   ;
 ; Embedded Multiplier 9-bit elements          ; 1        ;
 ; Total PLLs                                  ; 1        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 109      ;
-; Total fan-out                               ; 2354     ;
-; Average fan-out                             ; 5.42     ;
+; Maximum fan-out                             ; 139      ;
+; Total fan-out                               ; 2622     ;
+; Average fan-out                             ; 4.93     ;
 +---------------------------------------------+----------+
 
 
@@ -278,24 +291,27 @@ applicable agreement for further details.
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                            ; Library Name ;
 +---------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |main_state_machine                                     ; 222 (4)           ; 86 (5)       ; 183296      ; 1            ; 1       ; 0         ; 67   ; 0            ; |main_state_machine                                                                                                                                            ; work         ;
-;    |counter32b:x_position_counter|                      ; 7 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter32b:x_position_counter                                                                                                              ; work         ;
-;       |lpm_counter:lpm_counter_component|               ; 7 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter32b:x_position_counter|lpm_counter:lpm_counter_component                                                                            ; work         ;
-;          |cntr_kpi:auto_generated|                      ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter32b:x_position_counter|lpm_counter:lpm_counter_component|cntr_kpi:auto_generated                                                    ; work         ;
-;    |drawBackground:draw_background|                     ; 90 (29)           ; 42 (6)       ; 2304        ; 1            ; 1       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background                                                                                                             ; work         ;
-;       |counter4b:tile_countery|                         ; 4 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery                                                                                     ; work         ;
-;          |lpm_counter:lpm_counter_component|            ; 4 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component                                                   ; work         ;
-;             |cntr_3oi:auto_generated|                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                           ; work         ;
+; |main_state_machine                                     ; 292 (27)          ; 104 (5)      ; 187410      ; 1            ; 1       ; 0         ; 67   ; 0            ; |main_state_machine                                                                                                                                            ; work         ;
+;    |SpriteRAM:character_mem|                            ; 0 (0)             ; 0 (0)        ; 18          ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteRAM:character_mem                                                                                                                    ; work         ;
+;       |altsyncram:altsyncram_component|                 ; 0 (0)             ; 0 (0)        ; 18          ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteRAM:character_mem|altsyncram:altsyncram_component                                                                                    ; work         ;
+;          |altsyncram_gvd1:auto_generated|               ; 0 (0)             ; 0 (0)        ; 18          ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteRAM:character_mem|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated                                                     ; work         ;
+;    |counter32b:x_position_counter|                      ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter32b:x_position_counter                                                                                                              ; work         ;
+;       |lpm_counter:lpm_counter_component|               ; 8 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter32b:x_position_counter|lpm_counter:lpm_counter_component                                                                            ; work         ;
+;          |cntr_kpi:auto_generated|                      ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter32b:x_position_counter|lpm_counter:lpm_counter_component|cntr_kpi:auto_generated                                                    ; work         ;
+;    |drawBackground:draw_background|                     ; 100 (29)          ; 39 (3)       ; 2304        ; 1            ; 1       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background                                                                                                             ; work         ;
+;       |counter4b:tile_countery|                         ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery                                                                                     ; work         ;
+;          |lpm_counter:lpm_counter_component|            ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component                                                   ; work         ;
+;             |cntr_3oi:auto_generated|                   ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                           ; work         ;
 ;       |counter5b:tile_counterx|                         ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx                                                                                     ; work         ;
 ;          |lpm_counter:lpm_counter_component|            ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component                                                   ; work         ;
 ;             |cntr_4oi:auto_generated|                   ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated                           ; work         ;
-;       |drawTile:drawTileInst1|                          ; 51 (17)           ; 27 (5)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1                                                                                      ; work         ;
-;          |addx:XoutAdder|                               ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addx:XoutAdder                                                                       ; work         ;
-;             |lpm_add_sub:lpm_add_sub_component|         ; 6 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
-;                |add_sub_big:auto_generated|             ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated          ; work         ;
-;          |addy:YoutAdder|                               ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addy:YoutAdder                                                                       ; work         ;
-;             |lpm_add_sub:lpm_add_sub_component|         ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
-;                |add_sub_aig:auto_generated|             ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated          ; work         ;
+;       |drawTile:drawTileInst1|                          ; 60 (17)           ; 27 (5)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1                                                                                      ; work         ;
+;          |addx:XoutAdder|                               ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addx:XoutAdder                                                                       ; work         ;
+;             |lpm_add_sub:lpm_add_sub_component|         ; 11 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
+;                |add_sub_big:auto_generated|             ; 11 (11)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated          ; work         ;
+;          |addy:YoutAdder|                               ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addy:YoutAdder                                                                       ; work         ;
+;             |lpm_add_sub:lpm_add_sub_component|         ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
+;                |add_sub_aig:auto_generated|             ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated          ; work         ;
 ;          |memCount:AddressCounter|                      ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|memCount:AddressCounter                                                              ; work         ;
 ;             |lpm_add_sub:lpm_add_sub_component|         ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component                            ; work         ;
 ;                |add_sub_llh:auto_generated|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated ; work         ;
@@ -306,10 +322,16 @@ applicable agreement for further details.
 ;          |mult_mv01:auto_generated|                     ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|lpm_mult:Mult0|mult_mv01:auto_generated                                                                     ; work         ;
 ;       |tileset:tileset0|                                ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0                                                                                            ; work         ;
 ;          |altsyncram:altsyncram_component|              ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component                                                            ; work         ;
-;             |altsyncram_dvd1:auto_generated|            ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated                             ; work         ;
-;    |level1:level_mem|                                   ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem                                                                                                                           ; work         ;
-;       |altsyncram:altsyncram_component|                 ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem|altsyncram:altsyncram_component                                                                                           ; work         ;
-;          |altsyncram_17e1:auto_generated|               ; 0 (0)             ; 0 (0)        ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated                                                            ; work         ;
+;             |altsyncram_tu81:auto_generated|            ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated                             ; work         ;
+;    |drawSprite:draw_character|                          ; 36 (13)           ; 20 (5)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character                                                                                                                  ; work         ;
+;       |addx:XoutAdder|                                  ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder                                                                                                   ; work         ;
+;          |lpm_add_sub:lpm_add_sub_component|            ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                                                 ; work         ;
+;             |add_sub_big:auto_generated|                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated                                      ; work         ;
+;       |nBitRegister:XOffsetReg|                         ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|nBitRegister:XOffsetReg                                                                                          ; work         ;
+;       |nBitRegister:YOffsetReg|                         ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|nBitRegister:YOffsetReg                                                                                          ; work         ;
+;    |level1:level_mem|                                   ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem                                                                                                                           ; work         ;
+;       |altsyncram:altsyncram_component|                 ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem|altsyncram:altsyncram_component                                                                                           ; work         ;
+;          |altsyncram_7391:auto_generated|               ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated                                                            ; work         ;
 ;    |vga_adapter:VGA|                                    ; 121 (2)           ; 32 (0)       ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|vga_adapter:VGA                                                                                                                            ; work         ;
 ;       |altsyncram:VideoMemory|                          ; 42 (0)            ; 6 (0)        ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|vga_adapter:VGA|altsyncram:VideoMemory                                                                                                     ; work         ;
 ;          |altsyncram_p3g1:auto_generated|               ; 42 (0)            ; 6 (0)        ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated                                                                      ; work         ;
@@ -332,8 +354,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------------------+
 ; Name                                                                                                                      ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                     ;
 +---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------------------+
-; drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port    ; 256          ; 9            ; --           ; --           ; 2304   ; ../sprites/tileset.mif  ;
-; level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ALTSYNCRAM                                ; AUTO ; Single Port    ; 32768        ; 3            ; --           ; --           ; 98304  ; ../levels/testlevel.mif ;
+; SpriteRAM:character_mem|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|ALTSYNCRAM                         ; AUTO ; Single Port    ; 4096         ; 9            ; --           ; --           ; 36864  ; None                    ;
+; drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM ; AUTO ; ROM            ; 1024         ; 9            ; --           ; --           ; 9216   ; ../sprites/tileset.mif  ;
+; level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ALTSYNCRAM                                ; AUTO ; ROM            ; 30000        ; 3            ; --           ; --           ; 90000  ; ../levels/testlevel.mif ;
 ; vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1|ALTSYNCRAM              ; AUTO ; True Dual Port ; 19200        ; 9            ; 19200        ; 9            ; 172800 ; display.mif             ;
 +---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------+-------------------------+
 
@@ -371,18 +394,17 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------+
-; State Machine - |main_state_machine|drawBackground:draw_background|p_Q                                 ;
-+------------------+-------------+-------------+-------------+--------------+------------------+---------+
-; Name             ; p_Q.DROP_PT ; p_Q.READ_PT ; p_Q.DRAW_PT ; p_Q.CHECK_PT ; p_Q.INCREMENT_PT ; p_Q.000 ;
-+------------------+-------------+-------------+-------------+--------------+------------------+---------+
-; p_Q.000          ; 0           ; 0           ; 0           ; 0            ; 0                ; 0       ;
-; p_Q.INCREMENT_PT ; 0           ; 0           ; 0           ; 0            ; 1                ; 1       ;
-; p_Q.CHECK_PT     ; 0           ; 0           ; 0           ; 1            ; 0                ; 1       ;
-; p_Q.DRAW_PT      ; 0           ; 0           ; 1           ; 0            ; 0                ; 1       ;
-; p_Q.READ_PT      ; 0           ; 1           ; 0           ; 0            ; 0                ; 1       ;
-; p_Q.DROP_PT      ; 1           ; 0           ; 0           ; 0            ; 0                ; 1       ;
-+------------------+-------------+-------------+-------------+--------------+------------------+---------+
++-----------------------------------------------------------------+
+; State Machine - |main_state_machine|drawSprite:draw_character|Q ;
++---------+--------+--------+---------+-------+-------------------+
+; Name    ; Q.IDLE ; Q.DRAW ; Q.INC_X ; Q.000 ; Q.INC_Y           ;
++---------+--------+--------+---------+-------+-------------------+
+; Q.000   ; 0      ; 0      ; 0       ; 0     ; 0                 ;
+; Q.INC_X ; 0      ; 0      ; 1       ; 1     ; 0                 ;
+; Q.DRAW  ; 0      ; 1      ; 0       ; 1     ; 0                 ;
+; Q.IDLE  ; 1      ; 0      ; 0       ; 1     ; 0                 ;
+; Q.INC_Y ; 0      ; 0      ; 0       ; 1     ; 1                 ;
++---------+--------+--------+---------+-------+-------------------+
 
 
 Encoding Type:  One-Hot
@@ -404,43 +426,41 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 ; Register Name                                                 ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
 +---------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
-; drawBackground:draw_background|drawTile:drawTileInst1|Q.DRAW  ; yes                                                              ; yes                                        ;
-; drawBackground:draw_background|drawTile:drawTileInst1|Q.INC_Y ; yes                                                              ; yes                                        ;
+; main_Q.DETECT_COLLISIONS                                      ; yes                                                              ; yes                                        ;
+; main_Q.DRAW_CHARACTER                                         ; yes                                                              ; yes                                        ;
+; main_Q.DRAW_ENEMIES                                           ; yes                                                              ; yes                                        ;
+; main_Q.MOVEMENT                                               ; yes                                                              ; yes                                        ;
 ; drawBackground:draw_background|drawTile:drawTileInst1|Q.IDLE  ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:drawTileInst1|Q.DRAW  ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.DRAW                              ; yes                                                              ; yes                                        ;
+; main_Q.000                                                    ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:drawTileInst1|Q.INC_Y ; yes                                                              ; yes                                        ;
 ; drawBackground:draw_background|drawTile:drawTileInst1|Q.000   ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.INC_Y                             ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.000                               ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.IDLE                              ; yes                                                              ; yes                                        ;
 ; drawBackground:draw_background|drawTile:drawTileInst1|Q.INC_X ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.INC_X                             ; yes                                                              ; yes                                        ;
 +---------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
-+------------------------------------------------------------+
-; Logic Cells Representing Combinational Loops               ;
-+--------------------------------------------------------+---+
-; Logic Cell Name                                        ;   ;
-+--------------------------------------------------------+---+
-; drawBackground:draw_background|Selector1~0             ;   ;
-; Number of logic cells representing combinational loops ; 1 ;
-+--------------------------------------------------------+---+
-Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                     ;
-+---------------------------------------------------------------------------------+--------------------------------------+
-; Register name                                                                   ; Reason for Removal                   ;
-+---------------------------------------------------------------------------------+--------------------------------------+
-; draw_background/draw_countery/lpm_counter_component/auto_generated/safe_q[0..3] ; Stuck at GND due to stuck port clock ;
-; draw_background/draw_counterx/lpm_counter_component/auto_generated/safe_q[0..2] ; Stuck at GND due to stuck port clock ;
-; level_mem/altsyncram_component/auto_generated/address_reg_a[0..2]               ; Stuck at GND due to stuck port clock ;
-; x_position_counter/lpm_counter_component/auto_generated/safe_q[7..31]           ; Lost fanout                          ;
-; main_Q~14                                                                       ; Lost fanout                          ;
-; main_Q~15                                                                       ; Lost fanout                          ;
-; draw_background/p_Q~14                                                          ; Lost fanout                          ;
-; draw_background/p_Q~15                                                          ; Lost fanout                          ;
-; draw_background/p_Q~16                                                          ; Lost fanout                          ;
-; draw_background/drawTileInst1/Q~19                                              ; Lost fanout                          ;
-; draw_background/drawTileInst1/Q~20                                              ; Lost fanout                          ;
-; Total Number of Removed Registers = 42                                          ;                                      ;
-+---------------------------------------------------------------------------------+--------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                       ;
++---------------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                                   ; Reason for Removal                     ;
++---------------------------------------------------------------------------------+----------------------------------------+
+; draw_background/draw_countery/lpm_counter_component/auto_generated/safe_q[0..3] ; Stuck at GND due to stuck port clock   ;
+; draw_background/draw_counterx/lpm_counter_component/auto_generated/safe_q[0..2] ; Stuck at GND due to stuck port clock   ;
+; level_mem/altsyncram_component/auto_generated/address_reg_a[0..2]               ; Stuck at GND due to stuck port data_in ;
+; x_position_counter/lpm_counter_component/auto_generated/safe_q[8..31]           ; Lost fanout                            ;
+; main_Q~14                                                                       ; Lost fanout                            ;
+; main_Q~15                                                                       ; Lost fanout                            ;
+; draw_character/Q~19                                                             ; Lost fanout                            ;
+; draw_character/Q~20                                                             ; Lost fanout                            ;
+; draw_background/drawTileInst1/Q~19                                              ; Lost fanout                            ;
+; draw_background/drawTileInst1/Q~20                                              ; Lost fanout                            ;
+; Total Number of Removed Registers = 40                                          ;                                        ;
++---------------------------------------------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -448,14 +468,37 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 86    ;
-; Number of registers using Synchronous Clear  ; 22    ;
+; Total registers                              ; 104   ;
+; Number of registers using Synchronous Clear  ; 37    ;
 ; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 31    ;
+; Number of registers using Asynchronous Clear ; 28    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Clock Enable       ; 17    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------+
+; Source assignments for Top-level Entity: |main_state_machine           ;
++------------------------------+-------+------+--------------------------+
+; Assignment                   ; Value ; From ; To                       ;
++------------------------------+-------+------+--------------------------+
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.MOVEMENT          ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DETECT_COLLISIONS ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DRAW_ENEMIES      ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DRAW_CHARACTER    ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.000               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.MOVEMENT          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.MOVEMENT          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DETECT_COLLISIONS ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DETECT_COLLISIONS ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_ENEMIES      ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_ENEMIES      ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_BACKGROUND   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_BACKGROUND   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_CHARACTER    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_CHARACTER    ;
++------------------------------+-------+------+--------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -477,7 +520,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 
 
 +--------------------------------------------------------------------------------------------------------+
-; Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated ;
+; Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                       ;
 +---------------------------------+--------------------+------+------------------------------------------+
@@ -485,8 +528,17 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +---------------------------------+--------------------+------+------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------------------+
+; Source assignments for SpriteRAM:character_mem|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                              ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                               ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated ;
+; Source assignments for drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                                      ;
 +---------------------------------+--------------------+------+-------------------------------------------------------------------------+
@@ -557,6 +609,27 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE                         ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE                         ;
 +------------------------------+-------+------+--------------------------------+
+
+
++-------------------------------------------------------+
+; Source assignments for drawSprite:draw_character      ;
++------------------------------+-------+------+---------+
+; Assignment                   ; Value ; From ; To      ;
++------------------------------+-------+------+---------+
+; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_Y ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW  ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.IDLE  ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.000   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_X ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_X ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_Y ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_Y ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.DRAW  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.DRAW  ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE  ;
++------------------------------+-------+------+---------+
 
 
 +----------------------------------------------------------------------------------------+
@@ -1066,10 +1139,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                ; ON                      ; AUTO_CASCADE                   ;
 ; IGNORE_CASCADE_BUFFERS             ; OFF                     ; IGNORE_CASCADE                 ;
 ; WIDTH_BYTEENA                      ; 1                       ; Untyped                        ;
-; OPERATION_MODE                     ; SINGLE_PORT             ; Untyped                        ;
+; OPERATION_MODE                     ; ROM                     ; Untyped                        ;
 ; WIDTH_A                            ; 3                       ; Signed Integer                 ;
 ; WIDTHAD_A                          ; 15                      ; Signed Integer                 ;
-; NUMWORDS_A                         ; 32768                   ; Signed Integer                 ;
+; NUMWORDS_A                         ; 30000                   ; Signed Integer                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED            ; Untyped                        ;
 ; ADDRESS_ACLR_A                     ; NONE                    ; Untyped                        ;
 ; OUTDATA_ACLR_A                     ; NONE                    ; Untyped                        ;
@@ -1109,8 +1182,67 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN         ; Untyped                        ;
 ; ENABLE_ECC                         ; FALSE                   ; Untyped                        ;
 ; DEVICE_FAMILY                      ; Cyclone II              ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_17e1         ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_7391         ; Untyped                        ;
 +------------------------------------+-------------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: SpriteRAM:character_mem|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                     ;
++------------------------------------+----------------------+------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                  ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                               ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                             ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                             ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                           ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                  ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                                  ;
+; WIDTH_A                            ; 9                    ; Signed Integer                           ;
+; WIDTHAD_A                          ; 12                   ; Signed Integer                           ;
+; NUMWORDS_A                         ; 4096                 ; Signed Integer                           ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                  ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                  ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                  ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                  ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                  ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                  ;
+; WIDTH_B                            ; 1                    ; Untyped                                  ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                  ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                  ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                  ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                  ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                  ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                  ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                  ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                  ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                  ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                  ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                  ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                  ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                  ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                  ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                           ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                  ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                  ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                  ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                  ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                  ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                  ;
+; INIT_FILE                          ; sprite_ram_mif_0.mif ; Untyped                                  ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                  ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                  ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                  ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                  ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                  ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                  ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                  ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                  ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                  ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                  ;
+; CBXI_PARAMETER                     ; altsyncram_gvd1      ; Untyped                                  ;
++------------------------------------+----------------------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -1142,10 +1274,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE                                                   ;
 ; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE                                                 ;
 ; WIDTH_BYTEENA                      ; 1                      ; Untyped                                                        ;
-; OPERATION_MODE                     ; SINGLE_PORT            ; Untyped                                                        ;
+; OPERATION_MODE                     ; ROM                    ; Untyped                                                        ;
 ; WIDTH_A                            ; 9                      ; Signed Integer                                                 ;
-; WIDTHAD_A                          ; 8                      ; Signed Integer                                                 ;
-; NUMWORDS_A                         ; 256                    ; Signed Integer                                                 ;
+; WIDTHAD_A                          ; 10                     ; Signed Integer                                                 ;
+; NUMWORDS_A                         ; 1024                   ; Signed Integer                                                 ;
 ; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                                                        ;
 ; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                                                        ;
 ; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                                                        ;
@@ -1185,7 +1317,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                                                        ;
 ; ENABLE_ECC                         ; FALSE                  ; Untyped                                                        ;
 ; DEVICE_FAMILY                      ; Cyclone II             ; Untyped                                                        ;
-; CBXI_PARAMETER                     ; altsyncram_dvd1        ; Untyped                                                        ;
+; CBXI_PARAMETER                     ; altsyncram_tu81        ; Untyped                                                        ;
 +------------------------------------+------------------------+----------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1510,6 +1642,152 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawSprite:draw_character ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; START          ; 000   ; Unsigned Binary                               ;
+; IDLE           ; 001   ; Unsigned Binary                               ;
+; DRAW           ; 010   ; Unsigned Binary                               ;
+; INC_X          ; 011   ; Unsigned Binary                               ;
+; INC_Y          ; 100   ; Unsigned Binary                               ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                             ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8           ; Signed Integer                                                                   ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                          ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                          ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                          ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                          ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                               ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                          ;
+; USE_WYS                ; OFF         ; Untyped                                                                          ;
+; STYLE                  ; FAST        ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; add_sub_big ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                   ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawSprite:draw_character|nBitRegister:XOffsetReg ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                             ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 7           ; Signed Integer                                                                   ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                          ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                          ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                          ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                          ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                               ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                          ;
+; USE_WYS                ; OFF         ; Untyped                                                                          ;
+; STYLE                  ; FAST        ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                   ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawSprite:draw_character|nBitRegister:YOffsetReg ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                             ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8           ; Signed Integer                                                                   ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                          ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                          ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                          ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                          ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                               ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                          ;
+; USE_WYS                ; OFF         ; Untyped                                                                          ;
+; STYLE                  ; FAST        ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; add_sub_big ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                   ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                             ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 7           ; Signed Integer                                                                   ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                          ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                          ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                          ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                          ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                          ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                          ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                          ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                          ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                          ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                               ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                          ;
+; USE_WYS                ; OFF         ; Untyped                                                                          ;
+; STYLE                  ; FAST        ; Untyped                                                                          ;
+; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                                          ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                       ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                     ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                     ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                   ;
++------------------------+-------------+----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +--------------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: counter32b:x_position_counter|lpm_counter:lpm_counter_component ;
 +------------------------+-------------+-----------------------------------------------------------------------+
@@ -1608,8 +1886,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 17 16:43:28 2008
+    Info: Processing started: Tue Nov 18 09:04:14 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main_state_machine -c main_state_machine
+Info: Found 1 design units, including 1 entities, in source file ../drawSprite/drawSprite.v
+    Info: Found entity 1: drawSprite
+Info: Found 1 design units, including 1 entities, in source file ../SpriteMem/W_H_Mux.v
+    Info: Found entity 1: W_H_Mux
+Info: Found 1 design units, including 1 entities, in source file ../SpriteMem/DataOut_Mux.v
+    Info: Found entity 1: DataOut_Mux
+Info: Found 1 design units, including 1 entities, in source file ../SpriteMem/SpriteMem.v
+    Info: Found entity 1: SpriteMem
+Info: Found 1 design units, including 1 entities, in source file ../SpriteMem/SpriteRAM.v
+    Info: Found entity 1: SpriteRAM
+Info: Found 2 design units, including 2 entities, in source file ../SpriteMem/TriState.v
+    Info: Found entity 1: NBitTristate
+    Info: Found entity 2: Tristate
+Info: Found 1 design units, including 1 entities, in source file ../SpriteMem/TristateRegBlock.v
+    Info: Found entity 1: TristateRegBlock
+Info: Found 1 design units, including 1 entities, in source file ../SpriteMem/AStep_Mux.v
+    Info: Found entity 1: AStep_Mux
 Info: Found 1 design units, including 1 entities, in source file ../drawTileMichael/addx.v
     Info: Found entity 1: addx
 Info: Found 1 design units, including 1 entities, in source file ../drawTileMichael/addy.v
@@ -1653,20 +1948,12 @@ Info: Found 1 design units, including 1 entities, in source file ../drawBackgrou
 Info: Found 1 design units, including 1 entities, in source file main_state_machine.v
     Info: Found entity 1: main_state_machine
 Info: Elaborating entity "main_state_machine" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(158): object "draw_character_enable" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(160): object "draw_enemies_enable" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(162): object "detect_collisions_enable" assigned a value but never read
-Warning (10240): Verilog HDL Always Construct warning at main_state_machine.v(185): inferring latch(es) for variable "main_D", which holds its previous value in one or more paths through the always construct
-Warning (10230): Verilog HDL assignment warning at main_state_machine.v(264): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at main_state_machine.v(265): truncated value with size 32 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at main_state_machine.v(266): truncated value with size 32 to match size of target (9)
-Warning (10230): Verilog HDL assignment warning at main_state_machine.v(267): truncated value with size 32 to match size of target (1)
-Warning (10034): Output port "LEDR[17]" at main_state_machine.v(29) has no driver
-Warning (10034): Output port "LEDR[16]" at main_state_machine.v(29) has no driver
-Warning (10034): Output port "LEDR[15]" at main_state_machine.v(29) has no driver
-Warning (10034): Output port "LEDR[14]" at main_state_machine.v(29) has no driver
-Warning (10034): Output port "LEDR[13]" at main_state_machine.v(29) has no driver
-Warning (10034): Output port "LEDR[12]" at main_state_machine.v(29) has no driver
+Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(210): object "draw_enemies_enable" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(212): object "detect_collisions_enable" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at main_state_machine.v(315): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at main_state_machine.v(316): truncated value with size 32 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at main_state_machine.v(317): truncated value with size 32 to match size of target (9)
+Warning (10230): Verilog HDL assignment warning at main_state_machine.v(318): truncated value with size 32 to match size of target (1)
 Warning (10034): Output port "LEDR[11]" at main_state_machine.v(29) has no driver
 Warning (10034): Output port "LEDR[10]" at main_state_machine.v(29) has no driver
 Warning (10034): Output port "LEDR[9]" at main_state_machine.v(29) has no driver
@@ -1676,9 +1963,6 @@ Warning (10034): Output port "LEDR[6]" at main_state_machine.v(29) has no driver
 Warning (10034): Output port "LEDR[5]" at main_state_machine.v(29) has no driver
 Warning (10034): Output port "LEDR[4]" at main_state_machine.v(29) has no driver
 Warning (10034): Output port "LEDR[3]" at main_state_machine.v(29) has no driver
-Warning (10034): Output port "LEDR[2]" at main_state_machine.v(29) has no driver
-Warning (10034): Output port "LEDR[1]" at main_state_machine.v(29) has no driver
-Warning (10034): Output port "LEDR[0]" at main_state_machine.v(29) has no driver
 Warning (10034): Output port "LEDG[7]" at main_state_machine.v(30) has no driver
 Warning (10034): Output port "LEDG[6]" at main_state_machine.v(30) has no driver
 Warning (10034): Output port "LEDG[5]" at main_state_machine.v(30) has no driver
@@ -1686,12 +1970,6 @@ Warning (10034): Output port "LEDG[4]" at main_state_machine.v(30) has no driver
 Warning (10034): Output port "LEDG[3]" at main_state_machine.v(30) has no driver
 Warning (10034): Output port "LEDG[2]" at main_state_machine.v(30) has no driver
 Warning (10034): Output port "LEDG[1]" at main_state_machine.v(30) has no driver
-Warning (10034): Output port "LEDG[0]" at main_state_machine.v(30) has no driver
-Info (10041): Inferred latch for "main_D.DRAW_CHARACTER" at main_state_machine.v(185)
-Info (10041): Inferred latch for "main_D.DRAW_BACKGROUND" at main_state_machine.v(185)
-Info (10041): Inferred latch for "main_D.DRAW_ENEMIES" at main_state_machine.v(185)
-Info (10041): Inferred latch for "main_D.DETECT_COLLISIONS" at main_state_machine.v(185)
-Info (10041): Inferred latch for "main_D.MOVEMENT" at main_state_machine.v(185)
 Info: Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA"
 Info: Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf
@@ -1721,24 +1999,41 @@ Info: Elaborating entity "vga_controller" for hierarchy "vga_adapter:VGA|vga_con
 Info: Elaborating entity "level1" for hierarchy "level1:level_mem"
 Info: Elaborating entity "altsyncram" for hierarchy "level1:level_mem|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "level1:level_mem|altsyncram:altsyncram_component"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_17e1.tdf
-    Info: Found entity 1: altsyncram_17e1
-Info: Elaborating entity "altsyncram_17e1" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_7391.tdf
+    Info: Found entity 1: altsyncram_7391
+Info: Elaborating entity "altsyncram_7391" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated"
 Info: Found 1 design units, including 1 entities, in source file db/decode_9oa.tdf
     Info: Found entity 1: decode_9oa
-Info: Elaborating entity "decode_9oa" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|decode_9oa:decode3"
-Info: Elaborating entity "decode_9oa" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|decode_9oa:deep_decode"
+Info: Elaborating entity "decode_9oa" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|decode_9oa:deep_decode"
 Info: Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
     Info: Found entity 1: mux_kib
-Info: Elaborating entity "mux_kib" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|mux_kib:mux2"
+Info: Elaborating entity "mux_kib" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|mux_kib:mux2"
+Info: Elaborating entity "SpriteRAM" for hierarchy "SpriteRAM:character_mem"
+Info: Elaborating entity "altsyncram" for hierarchy "SpriteRAM:character_mem|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "SpriteRAM:character_mem|altsyncram:altsyncram_component"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_gvd1.tdf
+    Info: Found entity 1: altsyncram_gvd1
+Info: Elaborating entity "altsyncram_gvd1" for hierarchy "SpriteRAM:character_mem|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated"
+Critical Warning: Can't find Memory Initialization File or Hexadecimal (Intel-Format) File W:/quartus/fpga2dsidescroller/main_state_machine/sprite_ram_mif_0.mif -- setting all initial values to 0
 Info: Elaborating entity "drawBackground" for hierarchy "drawBackground:draw_background"
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(94): truncated value with size 32 to match size of target (15)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(105): truncated value with size 32 to match size of target (15)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(134): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(135): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(136): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(137): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(138): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(140): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(141): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(142): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(143): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(144): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(145): truncated value with size 32 to match size of target (3)
 Info: Elaborating entity "tileset" for hierarchy "drawBackground:draw_background|tileset:tileset0"
 Info: Elaborating entity "altsyncram" for hierarchy "drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_dvd1.tdf
-    Info: Found entity 1: altsyncram_dvd1
-Info: Elaborating entity "altsyncram_dvd1" for hierarchy "drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_tu81.tdf
+    Info: Found entity 1: altsyncram_tu81
+Info: Elaborating entity "altsyncram_tu81" for hierarchy "drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated"
 Info: Elaborating entity "counter5b" for hierarchy "drawBackground:draw_background|counter5b:tile_counterx"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf
     Info: Found entity 1: lpm_counter
@@ -1783,18 +2078,25 @@ Info: Elaborated megafunction instantiation "drawBackground:draw_background|draw
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_llh.tdf
     Info: Found entity 1: add_sub_llh
 Info: Elaborating entity "add_sub_llh" for hierarchy "drawBackground:draw_background|drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated"
+Info: Elaborating entity "drawSprite" for hierarchy "drawSprite:draw_character"
 Info: Elaborating entity "counter32b" for hierarchy "counter32b:x_position_counter"
 Info: Elaborating entity "lpm_counter" for hierarchy "counter32b:x_position_counter|lpm_counter:lpm_counter_component"
 Info: Elaborated megafunction instantiation "counter32b:x_position_counter|lpm_counter:lpm_counter_component"
 Info: Found 1 design units, including 1 entities, in source file db/cntr_kpi.tdf
     Info: Found entity 1: cntr_kpi
 Info: Elaborating entity "cntr_kpi" for hierarchy "counter32b:x_position_counter|lpm_counter:lpm_counter_component|cntr_kpi:auto_generated"
+Warning: Port "Address" on the entity instantiation of "draw_character" is connected to a signal of width 1. The formal width of the signal in the module is 12.  Extra bits will be left dangling without any fanout logic.
+Warning: Port "AnimStep" on the entity instantiation of "draw_character" is connected to a signal of width 4. The formal width of the signal in the module is 3.  Extra bits will be ignored.
+Warning: Port "Xin" on the entity instantiation of "draw_character" is connected to a signal of width 32. The formal width of the signal in the module is 8.  Extra bits will be ignored.
+Warning: Port "Yin" on the entity instantiation of "draw_character" is connected to a signal of width 1. The formal width of the signal in the module is 7.  Extra bits will be driven by GND.
 Warning: Port "ordered port 0" on the entity instantiation of "AddressCounter" is connected to a signal of width 7. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
 Warning: Port "Address" on the entity instantiation of "drawTileInst1" is connected to a signal of width 8. The formal width of the signal in the module is 10.  Extra bits will be left dangling without any fanout logic.
 Warning: Port "TileSel" on the entity instantiation of "drawTileInst1" is connected to a signal of width 3. The formal width of the signal in the module is 4.  Extra bits will be driven by GND.
 Warning: Port "Xin" on the entity instantiation of "drawTileInst1" is connected to a signal of width 32. The formal width of the signal in the module is 8.  Extra bits will be ignored.
 Warning: Port "Yin" on the entity instantiation of "drawTileInst1" is connected to a signal of width 32. The formal width of the signal in the module is 7.  Extra bits will be ignored.
+Warning: Port "address" on the entity instantiation of "tileset0" is connected to a signal of width 8. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
 Warning: Port "x_offset" on the entity instantiation of "draw_background" is connected to a signal of width 32. The formal width of the signal in the module is 7.  Extra bits will be ignored.
+Warning: Port "data" on the entity instantiation of "character_mem" is connected to a signal of width 32. The formal width of the signal in the module is 9.  Extra bits will be ignored.
 Warning: No clock transition on "drawBackground:draw_background|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]" register due to stuck clock or clock enable
 Warning: No clock transition on "drawBackground:draw_background|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2]" register due to stuck clock or clock enable
 Warning: No clock transition on "drawBackground:draw_background|counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1]" register due to stuck clock or clock enable
@@ -1802,42 +2104,36 @@ Warning: No clock transition on "drawBackground:draw_background|counter4b:draw_c
 Warning: No clock transition on "drawBackground:draw_background|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2]" register due to stuck clock or clock enable
 Warning: No clock transition on "drawBackground:draw_background|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1]" register due to stuck clock or clock enable
 Warning: No clock transition on "drawBackground:draw_background|counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0]" register due to stuck clock or clock enable
-Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|address_reg_a[2]" register due to stuck clock or clock enable
-Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|address_reg_a[2]" with stuck clock port to stuck value GND
-Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|address_reg_a[1]" register due to stuck clock or clock enable
-Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|address_reg_a[1]" with stuck clock port to stuck value GND
-Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|address_reg_a[0]" register due to stuck clock or clock enable
-Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|address_reg_a[0]" with stuck clock port to stuck value GND
+Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[2]" with stuck data_in port to stuck value GND
+Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[1]" with stuck data_in port to stuck value GND
+Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[0]" with stuck data_in port to stuck value GND
 Warning: Synthesized away the following node(s):
     Warning: Synthesized away the following RAM node(s):
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a3"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a4"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a5"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a6"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a7"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a8"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a9"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a10"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a11"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a12"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a13"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a14"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a15"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a16"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a17"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a18"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a19"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a20"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a21"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a22"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a23"
-Info: Ignored 12 buffer(s)
-    Info: Ignored 12 SOFT buffer(s)
-Warning: Synthesized away the following node(s):
-    Warning: Synthesized away the following RAM node(s):
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a2"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a3"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a4"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a5"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a6"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a7"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a8"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a9"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a10"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a11"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a12"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a13"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a14"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a15"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a16"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a17"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a18"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a19"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a20"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a21"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a22"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a23"
+Info: Ignored 9 buffer(s)
+    Info: Ignored 9 SOFT buffer(s)
 Info: State machine "|main_state_machine|main_Q" contains 5 states
-Info: State machine "|main_state_machine|drawBackground:draw_background|p_Q" contains 6 states
+Info: State machine "|main_state_machine|drawSprite:draw_character|Q" contains 5 states
 Info: State machine "|main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|Q" contains 5 states
 Info: Selected Auto state machine encoding method for state machine "|main_state_machine|main_Q"
 Info: Encoding result for state machine "|main_state_machine|main_Q"
@@ -1852,21 +2148,19 @@ Info: Encoding result for state machine "|main_state_machine|main_Q"
     Info: State "|main_state_machine|main_Q.DRAW_ENEMIES" uses code string "01010"
     Info: State "|main_state_machine|main_Q.DRAW_CHARACTER" uses code string "10010"
     Info: State "|main_state_machine|main_Q.MOVEMENT" uses code string "00011"
-Info: Selected Auto state machine encoding method for state machine "|main_state_machine|drawBackground:draw_background|p_Q"
-Info: Encoding result for state machine "|main_state_machine|drawBackground:draw_background|p_Q"
-    Info: Completed encoding using 6 state bits
-        Info: Encoded state bit "drawBackground:draw_background|p_Q.DROP_PT"
-        Info: Encoded state bit "drawBackground:draw_background|p_Q.READ_PT"
-        Info: Encoded state bit "drawBackground:draw_background|p_Q.DRAW_PT"
-        Info: Encoded state bit "drawBackground:draw_background|p_Q.CHECK_PT"
-        Info: Encoded state bit "drawBackground:draw_background|p_Q.INCREMENT_PT"
-        Info: Encoded state bit "drawBackground:draw_background|p_Q.000"
-    Info: State "|main_state_machine|drawBackground:draw_background|p_Q.000" uses code string "000000"
-    Info: State "|main_state_machine|drawBackground:draw_background|p_Q.INCREMENT_PT" uses code string "000011"
-    Info: State "|main_state_machine|drawBackground:draw_background|p_Q.CHECK_PT" uses code string "000101"
-    Info: State "|main_state_machine|drawBackground:draw_background|p_Q.DRAW_PT" uses code string "001001"
-    Info: State "|main_state_machine|drawBackground:draw_background|p_Q.READ_PT" uses code string "010001"
-    Info: State "|main_state_machine|drawBackground:draw_background|p_Q.DROP_PT" uses code string "100001"
+Info: Selected Auto state machine encoding method for state machine "|main_state_machine|drawSprite:draw_character|Q"
+Info: Encoding result for state machine "|main_state_machine|drawSprite:draw_character|Q"
+    Info: Completed encoding using 5 state bits
+        Info: Encoded state bit "drawSprite:draw_character|Q.IDLE"
+        Info: Encoded state bit "drawSprite:draw_character|Q.DRAW"
+        Info: Encoded state bit "drawSprite:draw_character|Q.INC_X"
+        Info: Encoded state bit "drawSprite:draw_character|Q.000"
+        Info: Encoded state bit "drawSprite:draw_character|Q.INC_Y"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.000" uses code string "00000"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.INC_X" uses code string "00110"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.DRAW" uses code string "01010"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.IDLE" uses code string "10010"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.INC_Y" uses code string "00011"
 Info: Selected Auto state machine encoding method for state machine "|main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|Q"
 Info: Encoding result for state machine "|main_state_machine|drawBackground:draw_background|drawTile:drawTileInst1|Q"
     Info: Completed encoding using 5 state bits
@@ -1890,9 +2184,6 @@ Warning: Output pins are stuck at VCC or GND
     Warning: Pin "VGA_R[0]" stuck at GND
     Warning: Pin "VGA_G[0]" stuck at GND
     Warning: Pin "VGA_B[0]" stuck at GND
-    Warning: Pin "LEDR[0]" stuck at GND
-    Warning: Pin "LEDR[1]" stuck at GND
-    Warning: Pin "LEDR[2]" stuck at GND
     Warning: Pin "LEDR[3]" stuck at GND
     Warning: Pin "LEDR[4]" stuck at GND
     Warning: Pin "LEDR[5]" stuck at GND
@@ -1902,13 +2193,6 @@ Warning: Output pins are stuck at VCC or GND
     Warning: Pin "LEDR[9]" stuck at GND
     Warning: Pin "LEDR[10]" stuck at GND
     Warning: Pin "LEDR[11]" stuck at GND
-    Warning: Pin "LEDR[12]" stuck at GND
-    Warning: Pin "LEDR[13]" stuck at GND
-    Warning: Pin "LEDR[14]" stuck at GND
-    Warning: Pin "LEDR[15]" stuck at GND
-    Warning: Pin "LEDR[16]" stuck at GND
-    Warning: Pin "LEDR[17]" stuck at GND
-    Warning: Pin "LEDG[0]" stuck at GND
     Warning: Pin "LEDG[1]" stuck at GND
     Warning: Pin "LEDG[2]" stuck at GND
     Warning: Pin "LEDG[3]" stuck at GND
@@ -1916,7 +2200,7 @@ Warning: Output pins are stuck at VCC or GND
     Warning: Pin "LEDG[5]" stuck at GND
     Warning: Pin "LEDG[6]" stuck at GND
     Warning: Pin "LEDG[7]" stuck at GND
-Info: 32 registers lost all their fanouts during netlist optimizations. The first 32 are displayed below.
+Info: 30 registers lost all their fanouts during netlist optimizations. The first 30 are displayed below.
     Info: Register "x_position_counter/lpm_counter_component/auto_generated/safe_q[31]" lost all its fanouts during netlist optimizations.
     Info: Register "x_position_counter/lpm_counter_component/auto_generated/safe_q[30]" lost all its fanouts during netlist optimizations.
     Info: Register "x_position_counter/lpm_counter_component/auto_generated/safe_q[29]" lost all its fanouts during netlist optimizations.
@@ -1941,32 +2225,36 @@ Info: 32 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "x_position_counter/lpm_counter_component/auto_generated/safe_q[10]" lost all its fanouts during netlist optimizations.
     Info: Register "x_position_counter/lpm_counter_component/auto_generated/safe_q[9]" lost all its fanouts during netlist optimizations.
     Info: Register "x_position_counter/lpm_counter_component/auto_generated/safe_q[8]" lost all its fanouts during netlist optimizations.
-    Info: Register "x_position_counter/lpm_counter_component/auto_generated/safe_q[7]" lost all its fanouts during netlist optimizations.
     Info: Register "main_Q~14" lost all its fanouts during netlist optimizations.
     Info: Register "main_Q~15" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_background/p_Q~14" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_background/p_Q~15" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_background/p_Q~16" lost all its fanouts during netlist optimizations.
+    Info: Register "draw_character/Q~19" lost all its fanouts during netlist optimizations.
+    Info: Register "draw_character/Q~20" lost all its fanouts during netlist optimizations.
     Info: Register "draw_background/drawTileInst1/Q~19" lost all its fanouts during netlist optimizations.
     Info: Register "draw_background/drawTileInst1/Q~20" lost all its fanouts during netlist optimizations.
+Info: Removed 11 MSB VCC or GND address nodes from RAM block "SpriteRAM:character_mem|altsyncram:altsyncram_component|altsyncram_gvd1:auto_generated|ALTSYNCRAM"
+Info: Removed 2 MSB VCC or GND address nodes from RAM block "drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM"
+Info: Found the following redundant logic cells in design
+    Info: Logic cell "main_D.DETECT_COLLISIONS"
+    Info: Logic cell "main_D.DRAW_ENEMIES"
+    Info: Logic cell "main_D.MOVEMENT"
+    Info: Logic cell "drawSprite:draw_character|D.INC_Y"
+    Info: Logic cell "drawSprite:draw_character|D.INC_X"
 Info: Generated suppressed messages file W:/quartus/fpga2dsidescroller/main_state_machine/main_state_machine.map.smsg
-Warning: WYSIWYG primitive "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a0" has port clk0 that is stuck at GND
-Warning: WYSIWYG primitive "level1:level_mem|altsyncram:altsyncram_component|altsyncram_17e1:auto_generated|ram_block1a1" has port clk0 that is stuck at GND
 Warning: Design contains 3 input pin(s) that do not drive logic
     Warning: No output dependent on input pin "KEY[0]"
     Warning: No output dependent on input pin "KEY[1]"
     Warning: No output dependent on input pin "KEY[2]"
-Info: Implemented 361 device resources after synthesis - the final resource count might be different
+Info: Implemented 446 device resources after synthesis - the final resource count might be different
     Info: Implemented 6 input pins
     Info: Implemented 61 output pins
-    Info: Implemented 236 logic cells
-    Info: Implemented 56 RAM segments
+    Info: Implemented 311 logic cells
+    Info: Implemented 66 RAM segments
     Info: Implemented 1 ClockLock PLLs
     Info: Implemented 1 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 119 warnings
-    Info: Allocated 146 megabytes of memory during processing
-    Info: Processing ended: Mon Nov 17 16:43:53 2008
-    Info: Elapsed time: 00:00:25
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 107 warnings
+    Info: Allocated 147 megabytes of memory during processing
+    Info: Processing ended: Tue Nov 18 09:04:45 2008
+    Info: Elapsed time: 00:00:31
 
 
 +------------------------------------------+

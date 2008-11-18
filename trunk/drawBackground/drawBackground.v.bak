@@ -1,4 +1,4 @@
-module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_offset, enable, plot, done, p_Q, p_D, y_Q, y_D);
+module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_offset, enable, plot, done, p_Q, p_D);
 	//------------------------------------------
 	// Parameters
 	//------------------------------------------
@@ -11,7 +11,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	input [(tilemap_length / 15):0] x_offset; // In tiles
 	input enable;
 	input resetn;
-	input [2:0] tile_code;
+	output [2:0] tile_code; // debug
 	//------------------------------------------
 	// Outputs
 	//------------------------------------------
@@ -23,9 +23,22 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	output done;
 	output [2:0] p_Q;
 	output [2:0] p_D;
-	output [2:0] y_D;
-	output [2:0] y_Q;
 	
+	//------------------------------------------
+	// Level Memory // debug
+	//------------------------------------------
+/*	
+	// Signals
+	wire [14:0] level_address;
+	// We agreed on 4-bit, but 3-bit works for now
+	wire [2:0] tile_code;
+	
+	// Instance declaration
+	level1 level_mem (
+	.address(level_address),
+	.clock(CLOCK_50),
+	.q(tile_code));
+*/	
 	//------------------------------------------
 	// Tile Memory
 	//------------------------------------------
@@ -37,8 +50,6 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	tileset tileset0 (
 	.address(tile_address),
 	.clock(clock),
-	.data(9'bx),
-	.wren(1'b0),
 	.q(tileset0_out));
 	
 	//------------------------------------------

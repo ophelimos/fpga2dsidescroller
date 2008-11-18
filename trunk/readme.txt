@@ -14,11 +14,7 @@ why ? Because every project needs a readme :)
 ----------------------------------
 
 
---- DrawSprite ---
+--- detectCollision has not been tested
 
-- memory needs to be initialized externally.
- that is, the rom is not included in the module
- to allow some parts, like the sprite width/height
- registers to be read by other parts of the system
 
 

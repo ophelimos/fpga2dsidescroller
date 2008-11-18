@@ -1,5 +1,5 @@
 Analysis & Synthesis report for drawBackground
-Mon Nov 17 16:53:02 2008
+Mon Nov 17 19:12:21 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -18,33 +18,35 @@ Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
  10. Registers Protected by Synthesis
  11. Registers Removed During Synthesis
  12. General Register Statistics
- 13. Source assignments for tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated
- 14. Source assignments for counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 15. Source assignments for counter4b:tile_countery|lpm_counter:lpm_counter_component
- 16. Source assignments for counter3b:draw_counterx|lpm_counter:lpm_counter_component
- 17. Source assignments for counter4b:draw_countery|lpm_counter:lpm_counter_component
- 18. Source assignments for drawTile:drawTileInst1
- 19. Parameter Settings for User Entity Instance: Top-level Entity: |drawBackground
- 20. Parameter Settings for User Entity Instance: tileset:tileset0|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 22. Parameter Settings for User Entity Instance: counter4b:tile_countery|lpm_counter:lpm_counter_component
- 23. Parameter Settings for User Entity Instance: counter3b:draw_counterx|lpm_counter:lpm_counter_component
- 24. Parameter Settings for User Entity Instance: counter4b:draw_countery|lpm_counter:lpm_counter_component
- 25. Parameter Settings for User Entity Instance: drawTile:drawTileInst1
- 26. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
- 27. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:XOffsetReg
- 28. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
- 29. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:YOffsetReg
- 30. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
- 31. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
- 32. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
- 33. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:AddressReg
- 34. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
- 35. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 36. lpm_mult Parameter Settings by Entity Instance
- 37. Analysis & Synthesis INI Usage
- 38. Analysis & Synthesis Messages
- 39. Analysis & Synthesis Suppressed Messages
+ 13. Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated
+ 14. Source assignments for tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated
+ 15. Source assignments for counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 16. Source assignments for counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 17. Source assignments for counter3b:draw_counterx|lpm_counter:lpm_counter_component
+ 18. Source assignments for counter4b:draw_countery|lpm_counter:lpm_counter_component
+ 19. Source assignments for drawTile:drawTileInst1
+ 20. Parameter Settings for User Entity Instance: Top-level Entity: |drawBackground
+ 21. Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: tileset:tileset0|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 24. Parameter Settings for User Entity Instance: counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 25. Parameter Settings for User Entity Instance: counter3b:draw_counterx|lpm_counter:lpm_counter_component
+ 26. Parameter Settings for User Entity Instance: counter4b:draw_countery|lpm_counter:lpm_counter_component
+ 27. Parameter Settings for User Entity Instance: drawTile:drawTileInst1
+ 28. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
+ 29. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:XOffsetReg
+ 30. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
+ 31. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:YOffsetReg
+ 32. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
+ 33. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
+ 34. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
+ 35. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:AddressReg
+ 36. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
+ 37. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 38. lpm_mult Parameter Settings by Entity Instance
+ 39. Analysis & Synthesis INI Usage
+ 40. Analysis & Synthesis Messages
+ 41. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -70,7 +72,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 17 16:53:02 2008         ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 17 19:12:20 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; drawBackground                                ;
 ; Top-level Entity Name              ; drawBackground                                ;
@@ -79,9 +81,9 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 93                                            ;
 ;     Dedicated logic registers      ; 39                                            ;
 ; Total registers                    ; 39                                            ;
-; Total pins                         ; 66                                            ;
+; Total pins                         ; 60                                            ;
 ; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 2,304                                         ;
+; Total memory bits                  ; 14,592                                        ;
 ; Embedded Multiplier 9-bit elements ; 1                                             ;
 ; Total PLLs                         ; 0                                             ;
 +------------------------------------+-----------------------------------------------+
@@ -161,6 +163,7 @@ applicable agreement for further details.
 ; ../drawTileMichael/drawTile.v     ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/drawTile.v             ;
 ; ../drawTileMichael/memCount.v     ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/memCount.v             ;
 ; ../drawTileMichael/addx.v         ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/addx.v                 ;
+; level1.v                          ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/level1.v                ;
 ; counter4b.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/counter4b.v             ;
 ; counter5b.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/counter5b.v             ;
 ; counter3b.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/counter3b.v             ;
@@ -175,7 +178,10 @@ applicable agreement for further details.
 ; altram.inc                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc              ;
 ; altdpram.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc            ;
 ; altqpram.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc            ;
-; db/altsyncram_dvd1.tdf            ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/altsyncram_dvd1.tdf  ;
+; db/altsyncram_7391.tdf            ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/altsyncram_7391.tdf  ;
+; db/decode_9oa.tdf                 ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/decode_9oa.tdf       ;
+; db/mux_kib.tdf                    ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/mux_kib.tdf          ;
+; db/altsyncram_tu81.tdf            ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/altsyncram_tu81.tdf  ;
 ; lpm_counter.tdf                   ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf         ;
 ; lpm_constant.inc                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc        ;
 ; lpm_add_sub.inc                   ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc         ;
@@ -227,13 +233,13 @@ applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 39    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 66    ;
-; Total memory bits                           ; 2304  ;
+; I/O pins                                    ; 60    ;
+; Total memory bits                           ; 14592 ;
 ; Embedded Multiplier 9-bit elements          ; 1     ;
 ; Maximum fan-out node                        ; clock ;
 ; Maximum fan-out                             ; 48    ;
-; Total fan-out                               ; 497   ;
-; Average fan-out                             ; 2.38  ;
+; Total fan-out                               ; 527   ;
+; Average fan-out                             ; 2.56  ;
 +---------------------------------------------+-------+
 
 
@@ -242,7 +248,7 @@ applicable agreement for further details.
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |drawBackground                              ; 93 (32)           ; 39 (3)       ; 2304        ; 1            ; 1       ; 0         ; 66   ; 0            ; |drawBackground                                                                                                             ; work         ;
+; |drawBackground                              ; 93 (32)           ; 39 (3)       ; 14592       ; 1            ; 1       ; 0         ; 60   ; 0            ; |drawBackground                                                                                                             ; work         ;
 ;    |counter4b:tile_countery|                 ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery                                                                                     ; work         ;
 ;       |lpm_counter:lpm_counter_component|    ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery|lpm_counter:lpm_counter_component                                                   ; work         ;
 ;          |cntr_3oi:auto_generated|           ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                           ; work         ;
@@ -262,22 +268,26 @@ applicable agreement for further details.
 ;       |nBitRegister:AddressReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|nBitRegister:AddressReg                                                              ; work         ;
 ;       |nBitRegister:XOffsetReg|              ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|nBitRegister:XOffsetReg                                                              ; work         ;
 ;       |nBitRegister:YOffsetReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|nBitRegister:YOffsetReg                                                              ; work         ;
+;    |level1:level_mem|                        ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem                                                                                            ; work         ;
+;       |altsyncram:altsyncram_component|      ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component                                                            ; work         ;
+;          |altsyncram_7391:auto_generated|    ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated                             ; work         ;
 ;    |lpm_mult:Mult0|                          ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0                                                                                              ; work         ;
 ;       |mult_mv01:auto_generated|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0|mult_mv01:auto_generated                                                                     ; work         ;
 ;    |tileset:tileset0|                        ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0                                                                                            ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component                                                            ; work         ;
-;          |altsyncram_dvd1:auto_generated|    ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated                             ; work         ;
+;          |altsyncram_tu81:auto_generated|    ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated                             ; work         ;
 +----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                            ;
-+--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------------------------+
-; Name                                                                                       ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                    ;
-+--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------------------------+
-; tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 9            ; --           ; --           ; 2304 ; ../sprites/tileset.mif ;
-+--------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                       ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-------------------------+
+; Name                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                     ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-------------------------+
+; level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 30000        ; 3            ; --           ; --           ; 90000 ; ../levels/testlevel.mif ;
+; tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1024         ; 9            ; --           ; --           ; 9216  ; ../sprites/tileset.mif  ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-------------------------+
 
 
 +-----------------------------------------------------+
@@ -325,17 +335,18 @@ Encoding Type:  One-Hot
 +--------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                     ;
-+-----------------------------------------------------------------+--------------------------------------+
-; Register name                                                   ; Reason for Removal                   ;
-+-----------------------------------------------------------------+--------------------------------------+
-; draw_countery/lpm_counter_component/auto_generated/safe_q[0..3] ; Stuck at GND due to stuck port clock ;
-; draw_counterx/lpm_counter_component/auto_generated/safe_q[0..2] ; Stuck at GND due to stuck port clock ;
-; drawTileInst1/Q~19                                              ; Lost fanout                          ;
-; drawTileInst1/Q~20                                              ; Lost fanout                          ;
-; Total Number of Removed Registers = 9                           ;                                      ;
-+-----------------------------------------------------------------+--------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++-------------------------------------------------------------------+--------------------------------------+
+; Register name                                                     ; Reason for Removal                   ;
++-------------------------------------------------------------------+--------------------------------------+
+; draw_countery/lpm_counter_component/auto_generated/safe_q[0..3]   ; Stuck at GND due to stuck port clock ;
+; draw_counterx/lpm_counter_component/auto_generated/safe_q[0..2]   ; Stuck at GND due to stuck port clock ;
+; level_mem/altsyncram_component/auto_generated/address_reg_a[0..2] ; Stuck at GND due to stuck port clock ;
+; drawTileInst1/Q~19                                                ; Lost fanout                          ;
+; drawTileInst1/Q~20                                                ; Lost fanout                          ;
+; Total Number of Removed Registers = 12                            ;                                      ;
++-------------------------------------------------------------------+--------------------------------------+
 
 
 +------------------------------------------------------+
@@ -354,7 +365,16 @@ Encoding Type:  One-Hot
 
 
 +--------------------------------------------------------------------------------------------------------+
-; Source assignments for tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated ;
+; Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                       ;
++---------------------------------+--------------------+------+------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
++---------------------------------+--------------------+------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Source assignments for tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                       ;
 +---------------------------------+--------------------+------+------------------------------------------+
@@ -445,6 +465,65 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component ;
++------------------------------------+-------------------------+--------------------------------+
+; Parameter Name                     ; Value                   ; Type                           ;
++------------------------------------+-------------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                       ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                      ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                     ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                      ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                     ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                       ; Untyped                        ;
+; OPERATION_MODE                     ; ROM                     ; Untyped                        ;
+; WIDTH_A                            ; 3                       ; Signed Integer                 ;
+; WIDTHAD_A                          ; 15                      ; Signed Integer                 ;
+; NUMWORDS_A                         ; 30000                   ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; UNREGISTERED            ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                    ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                    ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                    ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                    ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                    ; Untyped                        ;
+; WIDTH_B                            ; 1                       ; Untyped                        ;
+; WIDTHAD_B                          ; 1                       ; Untyped                        ;
+; NUMWORDS_B                         ; 1                       ; Untyped                        ;
+; INDATA_REG_B                       ; CLOCK1                  ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                  ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1                  ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1                  ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED            ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1                  ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                    ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                    ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                    ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                    ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                    ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                    ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                       ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                       ; Untyped                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                    ; Untyped                        ;
+; BYTE_SIZE                          ; 8                       ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE               ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ    ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ    ; Untyped                        ;
+; INIT_FILE                          ; ../levels/testlevel.mif ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                  ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                       ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                  ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                  ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                  ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                  ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN         ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN         ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                   ; Untyped                        ;
+; DEVICE_FAMILY                      ; Cyclone II              ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_7391         ; Untyped                        ;
++------------------------------------+-------------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: tileset:tileset0|altsyncram:altsyncram_component ;
 +------------------------------------+------------------------+---------------------------------+
 ; Parameter Name                     ; Value                  ; Type                            ;
@@ -455,10 +534,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE                    ;
 ; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE                  ;
 ; WIDTH_BYTEENA                      ; 1                      ; Untyped                         ;
-; OPERATION_MODE                     ; SINGLE_PORT            ; Untyped                         ;
+; OPERATION_MODE                     ; ROM                    ; Untyped                         ;
 ; WIDTH_A                            ; 9                      ; Signed Integer                  ;
-; WIDTHAD_A                          ; 8                      ; Signed Integer                  ;
-; NUMWORDS_A                         ; 256                    ; Signed Integer                  ;
+; WIDTHAD_A                          ; 10                     ; Signed Integer                  ;
+; NUMWORDS_A                         ; 1024                   ; Signed Integer                  ;
 ; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                         ;
 ; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                         ;
 ; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                         ;
@@ -498,7 +577,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                         ;
 ; ENABLE_ECC                         ; FALSE                  ; Untyped                         ;
 ; DEVICE_FAMILY                      ; Cyclone II             ; Untyped                         ;
-; CBXI_PARAMETER                     ; altsyncram_dvd1        ; Untyped                         ;
+; CBXI_PARAMETER                     ; altsyncram_tu81        ; Untyped                         ;
 +------------------------------------+------------------------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -894,7 +973,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 17 16:52:47 2008
+    Info: Processing started: Mon Nov 17 19:12:03 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off drawBackground -c drawBackground
 Info: Found 1 design units, including 1 entities, in source file tileset.v
     Info: Found entity 1: tileset
@@ -925,33 +1004,38 @@ Info: Found 1 design units, including 1 entities, in source file counter3b.v
 Info: Found 1 design units, including 1 entities, in source file drawBackground.v
     Info: Found entity 1: drawBackground
 Info: Elaborating entity "drawBackground" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(94): truncated value with size 32 to match size of target (15)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(123): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(124): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(125): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(126): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(127): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(129): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(130): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(131): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(132): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(133): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(105): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at drawBackground.v(134): truncated value with size 32 to match size of target (3)
-Warning (10034): Output port "y_D[2]" at drawBackground.v(26) has no driver
-Warning (10034): Output port "y_D[1]" at drawBackground.v(26) has no driver
-Warning (10034): Output port "y_D[0]" at drawBackground.v(26) has no driver
-Warning (10034): Output port "y_Q[2]" at drawBackground.v(27) has no driver
-Warning (10034): Output port "y_Q[1]" at drawBackground.v(27) has no driver
-Warning (10034): Output port "y_Q[0]" at drawBackground.v(27) has no driver
-Info: Elaborating entity "tileset" for hierarchy "tileset:tileset0"
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(135): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(136): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(137): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(138): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(140): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(141): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(142): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(143): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(144): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(145): truncated value with size 32 to match size of target (3)
+Info: Elaborating entity "level1" for hierarchy "level1:level_mem"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf
     Info: Found entity 1: altsyncram
+Info: Elaborating entity "altsyncram" for hierarchy "level1:level_mem|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "level1:level_mem|altsyncram:altsyncram_component"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_7391.tdf
+    Info: Found entity 1: altsyncram_7391
+Info: Elaborating entity "altsyncram_7391" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/decode_9oa.tdf
+    Info: Found entity 1: decode_9oa
+Info: Elaborating entity "decode_9oa" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|decode_9oa:deep_decode"
+Info: Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
+    Info: Found entity 1: mux_kib
+Info: Elaborating entity "mux_kib" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|mux_kib:mux2"
+Info: Elaborating entity "tileset" for hierarchy "tileset:tileset0"
 Info: Elaborating entity "altsyncram" for hierarchy "tileset:tileset0|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "tileset:tileset0|altsyncram:altsyncram_component"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_dvd1.tdf
-    Info: Found entity 1: altsyncram_dvd1
-Info: Elaborating entity "altsyncram_dvd1" for hierarchy "tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated"
-Warning: Memory depth value (256) in design file differs from memory depth value (1024) in Memory Initialization File -- truncated remaining initial content value to fit RAM
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_tu81.tdf
+    Info: Found entity 1: altsyncram_tu81
+Info: Elaborating entity "altsyncram_tu81" for hierarchy "tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated"
 Info: Elaborating entity "counter5b" for hierarchy "counter5b:tile_counterx"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf
     Info: Found entity 1: lpm_counter
@@ -1001,6 +1085,7 @@ Warning: Port "Address" on the entity instantiation of "drawTileInst1" is connec
 Warning: Port "TileSel" on the entity instantiation of "drawTileInst1" is connected to a signal of width 3. The formal width of the signal in the module is 4.  Extra bits will be driven by GND.
 Warning: Port "Xin" on the entity instantiation of "drawTileInst1" is connected to a signal of width 32. The formal width of the signal in the module is 8.  Extra bits will be ignored.
 Warning: Port "Yin" on the entity instantiation of "drawTileInst1" is connected to a signal of width 32. The formal width of the signal in the module is 7.  Extra bits will be ignored.
+Warning: Port "address" on the entity instantiation of "tileset0" is connected to a signal of width 8. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
 Warning: No clock transition on "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]" register due to stuck clock or clock enable
 Warning: No clock transition on "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2]" register due to stuck clock or clock enable
 Warning: No clock transition on "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1]" register due to stuck clock or clock enable
@@ -1008,8 +1093,35 @@ Warning: No clock transition on "counter4b:draw_countery|lpm_counter:lpm_counter
 Warning: No clock transition on "counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2]" register due to stuck clock or clock enable
 Warning: No clock transition on "counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1]" register due to stuck clock or clock enable
 Warning: No clock transition on "counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0]" register due to stuck clock or clock enable
-Info: Ignored 9 buffer(s)
-    Info: Ignored 9 SOFT buffer(s)
+Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[2]" register due to stuck clock or clock enable
+Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[2]" with stuck clock port to stuck value GND
+Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[1]" register due to stuck clock or clock enable
+Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[1]" with stuck clock port to stuck value GND
+Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[0]" register due to stuck clock or clock enable
+Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[0]" with stuck clock port to stuck value GND
+Warning: Synthesized away the following node(s):
+    Warning: Synthesized away the following RAM node(s):
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a3"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a4"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a5"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a6"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a7"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a8"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a9"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a10"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a11"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a12"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a13"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a14"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a15"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a16"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a17"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a18"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a19"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a20"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a21"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a22"
+        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a23"
 Info: State machine "|drawBackground|drawTile:drawTileInst1|Q" contains 5 states
 Info: Selected Auto state machine encoding method for state machine "|drawBackground|drawTile:drawTileInst1|Q"
 Info: Encoding result for state machine "|drawBackground|drawTile:drawTileInst1|Q"
@@ -1033,28 +1145,24 @@ Warning: Output pins are stuck at VCC or GND
     Warning: Pin "level_address[12]" stuck at GND
     Warning: Pin "level_address[13]" stuck at GND
     Warning: Pin "level_address[14]" stuck at GND
-    Warning: Pin "y_Q[0]" stuck at GND
-    Warning: Pin "y_Q[1]" stuck at GND
-    Warning: Pin "y_Q[2]" stuck at GND
-    Warning: Pin "y_D[0]" stuck at GND
-    Warning: Pin "y_D[1]" stuck at GND
-    Warning: Pin "y_D[2]" stuck at GND
 Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
     Info: Register "drawTileInst1/Q~19" lost all its fanouts during netlist optimizations.
     Info: Register "drawTileInst1/Q~20" lost all its fanouts during netlist optimizations.
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning: No output dependent on input pin "tile_code[2]"
-Info: Implemented 172 device resources after synthesis - the final resource count might be different
-    Info: Implemented 13 input pins
-    Info: Implemented 53 output pins
+Info: Removed 2 MSB VCC or GND address nodes from RAM block "tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM"
+Warning: WYSIWYG primitive "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a0" has port clk0 that is stuck at GND
+Warning: WYSIWYG primitive "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a1" has port clk0 that is stuck at GND
+Warning: WYSIWYG primitive "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a2" has port clk0 that is stuck at GND
+Info: Implemented 169 device resources after synthesis - the final resource count might be different
+    Info: Implemented 10 input pins
+    Info: Implemented 50 output pins
     Info: Implemented 96 logic cells
-    Info: Implemented 9 RAM segments
+    Info: Implemented 12 RAM segments
     Info: Implemented 1 DSP elements
 Info: Generated suppressed messages file W:/quartus/fpga2dsidescroller/drawBackground/drawBackground.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 44 warnings
-    Info: Allocated 141 megabytes of memory during processing
-    Info: Processing ended: Mon Nov 17 16:53:02 2008
-    Info: Elapsed time: 00:00:15
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Allocated 143 megabytes of memory during processing
+    Info: Processing ended: Mon Nov 17 19:12:21 2008
+    Info: Elapsed time: 00:00:18
 
 
 +------------------------------------------+
