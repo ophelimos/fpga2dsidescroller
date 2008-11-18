@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.876 ns
-From           : enable
-To             : counter5b:tile_counterx|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated|safe_q[4]
+Actual Time    : 10.253 ns
+From           : x_offset[0]
+To             : level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|ram_block1a23~porta_address_reg10
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 12.961 ns
-From           : counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2]
-To             : level_address[7]
+Actual Time    : 13.854 ns
+From           : counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1]
+To             : level_address[11]
 From Clock     : clock
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 14.312 ns
-From           : x_offset[1]
-To             : level_address[7]
+Actual Time    : 15.373 ns
+From           : x_offset[0]
+To             : level_address[5]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -0.633 ns
+Actual Time    : 0.155 ns
 From           : resetn
-To             : drawTile:drawTileInst1|Q.IDLE
+To             : drawTile:tile_drawing_module|Q.INC_X
 From Clock     : --
 To Clock       : clock
 Failed Paths   : 0
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 200.00 MHz ( period = 5.000 ns )
-From           : tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated|ram_block1a0~porta_datain_reg8
-To             : tileset:tileset0|altsyncram:altsyncram_component|altsyncram_dvd1:auto_generated|ram_block1a8~porta_memory_reg0
+Actual Time    : 106.76 MHz ( period = 9.367 ns )
+From           : counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1]
+To             : level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|ram_block1a23~porta_address_reg10
 From Clock     : clock
 To Clock       : clock
 Failed Paths   : 0

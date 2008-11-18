@@ -1,5 +1,5 @@
 Analysis & Synthesis report for drawBackground
-Mon Nov 17 19:12:21 2008
+Tue Nov 18 12:16:47 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -14,39 +14,34 @@ Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
   6. Analysis & Synthesis Resource Utilization by Entity
   7. Analysis & Synthesis RAM Summary
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. State Machine - |drawBackground|drawTile:drawTileInst1|Q
+  9. State Machine - |drawBackground|drawTile:tile_drawing_module|Q
  10. Registers Protected by Synthesis
  11. Registers Removed During Synthesis
  12. General Register Statistics
- 13. Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated
+ 13. Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated
  14. Source assignments for tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated
  15. Source assignments for counter5b:tile_counterx|lpm_counter:lpm_counter_component
  16. Source assignments for counter4b:tile_countery|lpm_counter:lpm_counter_component
- 17. Source assignments for counter3b:draw_counterx|lpm_counter:lpm_counter_component
- 18. Source assignments for counter4b:draw_countery|lpm_counter:lpm_counter_component
- 19. Source assignments for drawTile:drawTileInst1
- 20. Parameter Settings for User Entity Instance: Top-level Entity: |drawBackground
- 21. Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: tileset:tileset0|altsyncram:altsyncram_component
- 23. Parameter Settings for User Entity Instance: counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 24. Parameter Settings for User Entity Instance: counter4b:tile_countery|lpm_counter:lpm_counter_component
- 25. Parameter Settings for User Entity Instance: counter3b:draw_counterx|lpm_counter:lpm_counter_component
- 26. Parameter Settings for User Entity Instance: counter4b:draw_countery|lpm_counter:lpm_counter_component
- 27. Parameter Settings for User Entity Instance: drawTile:drawTileInst1
- 28. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
- 29. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:XOffsetReg
- 30. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
- 31. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:YOffsetReg
- 32. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
- 33. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
- 34. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
- 35. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:AddressReg
- 36. Parameter Settings for User Entity Instance: drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
- 37. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 38. lpm_mult Parameter Settings by Entity Instance
- 39. Analysis & Synthesis INI Usage
- 40. Analysis & Synthesis Messages
- 41. Analysis & Synthesis Suppressed Messages
+ 17. Source assignments for drawTile:tile_drawing_module
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |drawBackground
+ 19. Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: tileset:tileset0|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 22. Parameter Settings for User Entity Instance: counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 23. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module
+ 24. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
+ 25. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:XOffsetReg
+ 26. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
+ 27. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:YOffsetReg
+ 28. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
+ 29. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
+ 30. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
+ 31. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:AddressReg
+ 32. Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
+ 33. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 34. lpm_mult Parameter Settings by Entity Instance
+ 35. Analysis & Synthesis Messages
+ 36. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -72,19 +67,19 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 17 19:12:20 2008         ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 18 12:16:47 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; drawBackground                                ;
 ; Top-level Entity Name              ; drawBackground                                ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 93                                            ;
-;     Total combinational functions  ; 93                                            ;
-;     Dedicated logic registers      ; 39                                            ;
-; Total registers                    ; 39                                            ;
-; Total pins                         ; 60                                            ;
+; Total logic elements               ; 120                                           ;
+;     Total combinational functions  ; 120                                           ;
+;     Dedicated logic registers      ; 42                                            ;
+; Total registers                    ; 42                                            ;
+; Total pins                         ; 64                                            ;
 ; Total virtual pins                 ; 0                                             ;
-; Total memory bits                  ; 14,592                                        ;
-; Embedded Multiplier 9-bit elements ; 1                                             ;
+; Total memory bits                  ; 99,216                                        ;
+; Embedded Multiplier 9-bit elements ; 2                                             ;
 ; Total PLLs                         ; 0                                             ;
 +------------------------------------+-----------------------------------------------+
 
@@ -166,7 +161,6 @@ applicable agreement for further details.
 ; level1.v                          ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/level1.v                ;
 ; counter4b.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/counter4b.v             ;
 ; counter5b.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/counter5b.v             ;
-; counter3b.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/counter3b.v             ;
 ; drawBackground.v                  ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawBackground/drawBackground.v        ;
 ; altsyncram.tdf                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf          ;
 ; stratix_ram_block.inc             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_ram_block.inc   ;
@@ -178,7 +172,7 @@ applicable agreement for further details.
 ; altram.inc                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc              ;
 ; altdpram.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc            ;
 ; altqpram.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc            ;
-; db/altsyncram_7391.tdf            ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/altsyncram_7391.tdf  ;
+; db/altsyncram_8691.tdf            ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/altsyncram_8691.tdf  ;
 ; db/decode_9oa.tdf                 ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/decode_9oa.tdf       ;
 ; db/mux_kib.tdf                    ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/mux_kib.tdf          ;
 ; db/altsyncram_tu81.tdf            ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/altsyncram_tu81.tdf  ;
@@ -195,7 +189,6 @@ applicable agreement for further details.
 ; alt_counter_stratix.inc           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_stratix.inc ;
 ; db/cntr_4oi.tdf                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/cntr_4oi.tdf         ;
 ; db/cntr_3oi.tdf                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/cntr_3oi.tdf         ;
-; db/cntr_2oi.tdf                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/cntr_2oi.tdf         ;
 ; lpm_add_sub.tdf                   ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;
 ; addcore.inc                       ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc             ;
 ; look_add.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc            ;
@@ -208,7 +201,7 @@ applicable agreement for further details.
 ; db/add_sub_llh.tdf                ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/add_sub_llh.tdf      ;
 ; lpm_mult.tdf                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf            ;
 ; multcore.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/multcore.inc            ;
-; db/mult_mv01.tdf                  ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/mult_mv01.tdf        ;
+; db/mult_6111.tdf                  ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawBackground/db/mult_6111.tdf        ;
 +-----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
 
 
@@ -217,77 +210,79 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 93    ;
+; Estimated Total logic elements              ; 120   ;
 ;                                             ;       ;
-; Total combinational functions               ; 93    ;
+; Total combinational functions               ; 120   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 13    ;
-;     -- 3 input functions                    ; 28    ;
-;     -- <=2 input functions                  ; 52    ;
+;     -- 4 input functions                    ; 28    ;
+;     -- 3 input functions                    ; 37    ;
+;     -- <=2 input functions                  ; 55    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 43    ;
-;     -- arithmetic mode                      ; 50    ;
+;     -- normal mode                          ; 63    ;
+;     -- arithmetic mode                      ; 57    ;
 ;                                             ;       ;
-; Total registers                             ; 39    ;
-;     -- Dedicated logic registers            ; 39    ;
+; Total registers                             ; 42    ;
+;     -- Dedicated logic registers            ; 42    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 60    ;
-; Total memory bits                           ; 14592 ;
-; Embedded Multiplier 9-bit elements          ; 1     ;
+; I/O pins                                    ; 64    ;
+; Total memory bits                           ; 99216 ;
+; Embedded Multiplier 9-bit elements          ; 2     ;
 ; Maximum fan-out node                        ; clock ;
-; Maximum fan-out                             ; 48    ;
-; Total fan-out                               ; 527   ;
-; Average fan-out                             ; 2.56  ;
+; Maximum fan-out                             ; 75    ;
+; Total fan-out                               ; 945   ;
+; Average fan-out                             ; 3.62  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                   ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                         ; Library Name ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
-; |drawBackground                              ; 93 (32)           ; 39 (3)       ; 14592       ; 1            ; 1       ; 0         ; 60   ; 0            ; |drawBackground                                                                                                             ; work         ;
-;    |counter4b:tile_countery|                 ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery                                                                                     ; work         ;
-;       |lpm_counter:lpm_counter_component|    ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery|lpm_counter:lpm_counter_component                                                   ; work         ;
-;          |cntr_3oi:auto_generated|           ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                           ; work         ;
-;    |counter5b:tile_counterx|                 ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter5b:tile_counterx                                                                                     ; work         ;
-;       |lpm_counter:lpm_counter_component|    ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter5b:tile_counterx|lpm_counter:lpm_counter_component                                                   ; work         ;
-;          |cntr_4oi:auto_generated|           ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter5b:tile_counterx|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated                           ; work         ;
-;    |drawTile:drawTileInst1|                  ; 50 (17)           ; 27 (5)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1                                                                                      ; work         ;
-;       |addx:XoutAdder|                       ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|addx:XoutAdder                                                                       ; work         ;
-;          |lpm_add_sub:lpm_add_sub_component| ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
-;             |add_sub_big:auto_generated|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated          ; work         ;
-;       |addy:YoutAdder|                       ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|addy:YoutAdder                                                                       ; work         ;
-;          |lpm_add_sub:lpm_add_sub_component| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
-;             |add_sub_aig:auto_generated|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated          ; work         ;
-;       |memCount:AddressCounter|              ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|memCount:AddressCounter                                                              ; work         ;
-;          |lpm_add_sub:lpm_add_sub_component| ; 2 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component                            ; work         ;
-;             |add_sub_llh:auto_generated|     ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated ; work         ;
-;       |nBitRegister:AddressReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|nBitRegister:AddressReg                                                              ; work         ;
-;       |nBitRegister:XOffsetReg|              ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|nBitRegister:XOffsetReg                                                              ; work         ;
-;       |nBitRegister:YOffsetReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:drawTileInst1|nBitRegister:YOffsetReg                                                              ; work         ;
-;    |level1:level_mem|                        ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem                                                                                            ; work         ;
-;       |altsyncram:altsyncram_component|      ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component                                                            ; work         ;
-;          |altsyncram_7391:auto_generated|    ; 0 (0)             ; 0 (0)        ; 12288       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated                             ; work         ;
-;    |lpm_mult:Mult0|                          ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0                                                                                              ; work         ;
-;       |mult_mv01:auto_generated|             ; 0 (0)             ; 0 (0)        ; 0           ; 1            ; 1       ; 0         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0|mult_mv01:auto_generated                                                                     ; work         ;
-;    |tileset:tileset0|                        ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0                                                                                            ; work         ;
-;       |altsyncram:altsyncram_component|      ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component                                                            ; work         ;
-;          |altsyncram_tu81:auto_generated|    ; 0 (0)             ; 0 (0)        ; 2304        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated                             ; work         ;
-+----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                               ; Library Name ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |drawBackground                              ; 120 (33)          ; 42 (3)       ; 99216       ; 2            ; 0       ; 1         ; 64   ; 0            ; |drawBackground                                                                                                                   ; work         ;
+;    |counter4b:tile_countery|                 ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery                                                                                           ; work         ;
+;       |lpm_counter:lpm_counter_component|    ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery|lpm_counter:lpm_counter_component                                                         ; work         ;
+;          |cntr_3oi:auto_generated|           ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                                 ; work         ;
+;    |counter5b:tile_counterx|                 ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter5b:tile_counterx                                                                                           ; work         ;
+;       |lpm_counter:lpm_counter_component|    ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter5b:tile_counterx|lpm_counter:lpm_counter_component                                                         ; work         ;
+;          |cntr_4oi:auto_generated|           ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|counter5b:tile_counterx|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated                                 ; work         ;
+;    |drawTile:tile_drawing_module|            ; 53 (18)           ; 27 (5)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module                                                                                      ; work         ;
+;       |addx:XoutAdder|                       ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|addx:XoutAdder                                                                       ; work         ;
+;          |lpm_add_sub:lpm_add_sub_component| ; 5 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
+;             |add_sub_big:auto_generated|     ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated          ; work         ;
+;       |addy:YoutAdder|                       ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|addy:YoutAdder                                                                       ; work         ;
+;          |lpm_add_sub:lpm_add_sub_component| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
+;             |add_sub_aig:auto_generated|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated          ; work         ;
+;       |memCount:AddressCounter|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|memCount:AddressCounter                                                              ; work         ;
+;          |lpm_add_sub:lpm_add_sub_component| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component                            ; work         ;
+;             |add_sub_llh:auto_generated|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated ; work         ;
+;       |nBitRegister:AddressReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|nBitRegister:AddressReg                                                              ; work         ;
+;       |nBitRegister:XOffsetReg|              ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|nBitRegister:XOffsetReg                                                              ; work         ;
+;       |nBitRegister:YOffsetReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|drawTile:tile_drawing_module|nBitRegister:YOffsetReg                                                              ; work         ;
+;    |level1:level_mem|                        ; 23 (0)            ; 3 (0)        ; 90000       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem                                                                                                  ; work         ;
+;       |altsyncram:altsyncram_component|      ; 23 (0)            ; 3 (0)        ; 90000       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component                                                                  ; work         ;
+;          |altsyncram_8691:auto_generated|    ; 23 (0)            ; 3 (3)        ; 90000       ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated                                   ; work         ;
+;             |decode_9oa:deep_decode|         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|decode_9oa:deep_decode            ; work         ;
+;             |mux_kib:mux2|                   ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|mux_kib:mux2                      ; work         ;
+;    |lpm_mult:Mult0|                          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0                                                                                                    ; work         ;
+;       |mult_6111:auto_generated|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |drawBackground|lpm_mult:Mult0|mult_6111:auto_generated                                                                           ; work         ;
+;    |tileset:tileset0|                        ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0                                                                                                  ; work         ;
+;       |altsyncram:altsyncram_component|      ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component                                                                  ; work         ;
+;          |altsyncram_tu81:auto_generated|    ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawBackground|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated                                   ; work         ;
++----------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                       ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-------------------------+
-; Name                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                     ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-------------------------+
-; level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 30000        ; 3            ; --           ; --           ; 90000 ; ../levels/testlevel.mif ;
-; tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1024         ; 9            ; --           ; --           ; 9216  ; ../sprites/tileset.mif  ;
-+--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+-------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                        ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------+
+; Name                                                                                       ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                      ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------+
+; level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 30000        ; 3            ; --           ; --           ; 90000 ; ../levels/whitelevel.mif ;
+; tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 1024         ; 9            ; --           ; --           ; 9216  ; ../sprites/tileset.mif   ;
++--------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+-------+--------------------------+
 
 
 +-----------------------------------------------------+
@@ -295,10 +290,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------+-------------+
 ; Statistic                             ; Number Used ;
 +---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 1           ;
-; Simple Multipliers (18-bit)           ; 0           ;
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 1           ;
 ; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 1           ;
+; Embedded Multiplier 9-bit elements    ; 2           ;
 ; Signed Embedded Multipliers           ; 0           ;
 ; Unsigned Embedded Multipliers         ; 1           ;
 ; Mixed Sign Embedded Multipliers       ; 0           ;
@@ -309,44 +304,41 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 Encoding Type:  One-Hot
-+----------------------------------------------------------+
-; State Machine - |drawBackground|drawTile:drawTileInst1|Q ;
-+---------+--------+--------+---------+-------+------------+
-; Name    ; Q.IDLE ; Q.DRAW ; Q.INC_X ; Q.000 ; Q.INC_Y    ;
-+---------+--------+--------+---------+-------+------------+
-; Q.000   ; 0      ; 0      ; 0       ; 0     ; 0          ;
-; Q.INC_X ; 0      ; 0      ; 1       ; 1     ; 0          ;
-; Q.DRAW  ; 0      ; 1      ; 0       ; 1     ; 0          ;
-; Q.IDLE  ; 1      ; 0      ; 0       ; 1     ; 0          ;
-; Q.INC_Y ; 0      ; 0      ; 0       ; 1     ; 1          ;
-+---------+--------+--------+---------+-------+------------+
++----------------------------------------------------------------+
+; State Machine - |drawBackground|drawTile:tile_drawing_module|Q ;
++---------+--------+--------+---------+-------+------------------+
+; Name    ; Q.IDLE ; Q.DRAW ; Q.INC_X ; Q.000 ; Q.INC_Y          ;
++---------+--------+--------+---------+-------+------------------+
+; Q.000   ; 0      ; 0      ; 0       ; 0     ; 0                ;
+; Q.INC_X ; 0      ; 0      ; 1       ; 1     ; 0                ;
+; Q.DRAW  ; 0      ; 1      ; 0       ; 1     ; 0                ;
+; Q.IDLE  ; 1      ; 0      ; 0       ; 1     ; 0                ;
+; Q.INC_Y ; 0      ; 0      ; 0       ; 1     ; 1                ;
++---------+--------+--------+---------+-------+------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Protected by Synthesis                                                                                                               ;
-+--------------------------------+------------------------------------------------------------------+--------------------------------------------+
-; Register Name                  ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
-+--------------------------------+------------------------------------------------------------------+--------------------------------------------+
-; drawTile:drawTileInst1|Q.DRAW  ; yes                                                              ; yes                                        ;
-; drawTile:drawTileInst1|Q.IDLE  ; yes                                                              ; yes                                        ;
-; drawTile:drawTileInst1|Q.INC_X ; yes                                                              ; yes                                        ;
-; drawTile:drawTileInst1|Q.INC_Y ; yes                                                              ; yes                                        ;
-; drawTile:drawTileInst1|Q.000   ; yes                                                              ; yes                                        ;
-+--------------------------------+------------------------------------------------------------------+--------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                     ;
++--------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                        ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++--------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; drawTile:tile_drawing_module|Q.DRAW  ; yes                                                              ; yes                                        ;
+; drawTile:tile_drawing_module|Q.IDLE  ; yes                                                              ; yes                                        ;
+; drawTile:tile_drawing_module|Q.INC_X ; yes                                                              ; yes                                        ;
+; drawTile:tile_drawing_module|Q.INC_Y ; yes                                                              ; yes                                        ;
+; drawTile:tile_drawing_module|Q.000   ; yes                                                              ; yes                                        ;
++--------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                       ;
-+-------------------------------------------------------------------+--------------------------------------+
-; Register name                                                     ; Reason for Removal                   ;
-+-------------------------------------------------------------------+--------------------------------------+
-; draw_countery/lpm_counter_component/auto_generated/safe_q[0..3]   ; Stuck at GND due to stuck port clock ;
-; draw_counterx/lpm_counter_component/auto_generated/safe_q[0..2]   ; Stuck at GND due to stuck port clock ;
-; level_mem/altsyncram_component/auto_generated/address_reg_a[0..2] ; Stuck at GND due to stuck port clock ;
-; drawTileInst1/Q~19                                                ; Lost fanout                          ;
-; drawTileInst1/Q~20                                                ; Lost fanout                          ;
-; Total Number of Removed Registers = 12                            ;                                      ;
-+-------------------------------------------------------------------+--------------------------------------+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; tile_drawing_module/Q~19              ; Lost fanout        ;
+; tile_drawing_module/Q~20              ; Lost fanout        ;
+; Total Number of Removed Registers = 2 ;                    ;
++---------------------------------------+--------------------+
 
 
 +------------------------------------------------------+
@@ -354,7 +346,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 39    ;
+; Total registers                              ; 42    ;
 ; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 9     ;
 ; Number of registers using Asynchronous Clear ; 3     ;
@@ -365,7 +357,7 @@ Encoding Type:  One-Hot
 
 
 +--------------------------------------------------------------------------------------------------------+
-; Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated ;
+; Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated ;
 +---------------------------------+--------------------+------+------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                       ;
 +---------------------------------+--------------------+------+------------------------------------------+
@@ -404,30 +396,8 @@ Encoding Type:  One-Hot
 +---------------------------+-------+------+---------------------------------------+
 
 
-+----------------------------------------------------------------------------------+
-; Source assignments for counter3b:draw_counterx|lpm_counter:lpm_counter_component ;
-+---------------------------+-------+------+---------------------------------------+
-; Assignment                ; Value ; From ; To                                    ;
-+---------------------------+-------+------+---------------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                     ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                     ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                     ;
-+---------------------------+-------+------+---------------------------------------+
-
-
-+----------------------------------------------------------------------------------+
-; Source assignments for counter4b:draw_countery|lpm_counter:lpm_counter_component ;
-+---------------------------+-------+------+---------------------------------------+
-; Assignment                ; Value ; From ; To                                    ;
-+---------------------------+-------+------+---------------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                     ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                     ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                     ;
-+---------------------------+-------+------+---------------------------------------+
-
-
 +-------------------------------------------------------+
-; Source assignments for drawTile:drawTileInst1         ;
+; Source assignments for drawTile:tile_drawing_module   ;
 +------------------------------+-------+------+---------+
 ; Assignment                   ; Value ; From ; To      ;
 +------------------------------+-------+------+---------+
@@ -452,74 +422,74 @@ Encoding Type:  One-Hot
 +----------------+-------+-------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                  ;
 +----------------+-------+-------------------------------------------------------+
-; tilemap_length ; 100   ; Signed Integer                                        ;
+; tilemap_length ; 2000  ; Signed Integer                                        ;
 ; color_depth    ; 9     ; Signed Integer                                        ;
-; WAIT_PT        ; 0     ; Signed Integer                                        ;
-; READ_PT        ; 1     ; Signed Integer                                        ;
-; DRAW_PT        ; 2     ; Signed Integer                                        ;
-; CHECK_PT       ; 4     ; Signed Integer                                        ;
-; INCREMENT_PT   ; 5     ; Signed Integer                                        ;
-; DROP_PT        ; 6     ; Signed Integer                                        ;
+; WAIT_PT        ; 000   ; Unsigned Binary                                       ;
+; READ_PT        ; 001   ; Unsigned Binary                                       ;
+; DRAW_PT        ; 010   ; Unsigned Binary                                       ;
+; CHECK_PT       ; 011   ; Unsigned Binary                                       ;
+; INCREMENT_PT   ; 100   ; Unsigned Binary                                       ;
+; DROP_PT        ; 101   ; Unsigned Binary                                       ;
 +----------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-----------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component ;
-+------------------------------------+-------------------------+--------------------------------+
-; Parameter Name                     ; Value                   ; Type                           ;
-+------------------------------------+-------------------------+--------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                       ; Untyped                        ;
-; AUTO_CARRY_CHAINS                  ; ON                      ; AUTO_CARRY                     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                     ; IGNORE_CARRY                   ;
-; AUTO_CASCADE_CHAINS                ; ON                      ; AUTO_CASCADE                   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                     ; IGNORE_CASCADE                 ;
-; WIDTH_BYTEENA                      ; 1                       ; Untyped                        ;
-; OPERATION_MODE                     ; ROM                     ; Untyped                        ;
-; WIDTH_A                            ; 3                       ; Signed Integer                 ;
-; WIDTHAD_A                          ; 15                      ; Signed Integer                 ;
-; NUMWORDS_A                         ; 30000                   ; Signed Integer                 ;
-; OUTDATA_REG_A                      ; UNREGISTERED            ; Untyped                        ;
-; ADDRESS_ACLR_A                     ; NONE                    ; Untyped                        ;
-; OUTDATA_ACLR_A                     ; NONE                    ; Untyped                        ;
-; WRCONTROL_ACLR_A                   ; NONE                    ; Untyped                        ;
-; INDATA_ACLR_A                      ; NONE                    ; Untyped                        ;
-; BYTEENA_ACLR_A                     ; NONE                    ; Untyped                        ;
-; WIDTH_B                            ; 1                       ; Untyped                        ;
-; WIDTHAD_B                          ; 1                       ; Untyped                        ;
-; NUMWORDS_B                         ; 1                       ; Untyped                        ;
-; INDATA_REG_B                       ; CLOCK1                  ; Untyped                        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                  ; Untyped                        ;
-; RDCONTROL_REG_B                    ; CLOCK1                  ; Untyped                        ;
-; ADDRESS_REG_B                      ; CLOCK1                  ; Untyped                        ;
-; OUTDATA_REG_B                      ; UNREGISTERED            ; Untyped                        ;
-; BYTEENA_REG_B                      ; CLOCK1                  ; Untyped                        ;
-; INDATA_ACLR_B                      ; NONE                    ; Untyped                        ;
-; WRCONTROL_ACLR_B                   ; NONE                    ; Untyped                        ;
-; ADDRESS_ACLR_B                     ; NONE                    ; Untyped                        ;
-; OUTDATA_ACLR_B                     ; NONE                    ; Untyped                        ;
-; RDCONTROL_ACLR_B                   ; NONE                    ; Untyped                        ;
-; BYTEENA_ACLR_B                     ; NONE                    ; Untyped                        ;
-; WIDTH_BYTEENA_A                    ; 1                       ; Signed Integer                 ;
-; WIDTH_BYTEENA_B                    ; 1                       ; Untyped                        ;
-; RAM_BLOCK_TYPE                     ; AUTO                    ; Untyped                        ;
-; BYTE_SIZE                          ; 8                       ; Untyped                        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE               ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ    ; Untyped                        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ    ; Untyped                        ;
-; INIT_FILE                          ; ../levels/testlevel.mif ; Untyped                        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                  ; Untyped                        ;
-; MAXIMUM_DEPTH                      ; 0                       ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                  ; Untyped                        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                  ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                  ; Untyped                        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                  ; Untyped                        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN         ; Untyped                        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN         ; Untyped                        ;
-; ENABLE_ECC                         ; FALSE                   ; Untyped                        ;
-; DEVICE_FAMILY                      ; Cyclone II              ; Untyped                        ;
-; CBXI_PARAMETER                     ; altsyncram_7391         ; Untyped                        ;
-+------------------------------------+-------------------------+--------------------------------+
++------------------------------------+--------------------------+-------------------------------+
+; Parameter Name                     ; Value                    ; Type                          ;
++------------------------------------+--------------------------+-------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                        ; Untyped                       ;
+; AUTO_CARRY_CHAINS                  ; ON                       ; AUTO_CARRY                    ;
+; IGNORE_CARRY_BUFFERS               ; OFF                      ; IGNORE_CARRY                  ;
+; AUTO_CASCADE_CHAINS                ; ON                       ; AUTO_CASCADE                  ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                      ; IGNORE_CASCADE                ;
+; WIDTH_BYTEENA                      ; 1                        ; Untyped                       ;
+; OPERATION_MODE                     ; ROM                      ; Untyped                       ;
+; WIDTH_A                            ; 3                        ; Signed Integer                ;
+; WIDTHAD_A                          ; 15                       ; Signed Integer                ;
+; NUMWORDS_A                         ; 30000                    ; Signed Integer                ;
+; OUTDATA_REG_A                      ; UNREGISTERED             ; Untyped                       ;
+; ADDRESS_ACLR_A                     ; NONE                     ; Untyped                       ;
+; OUTDATA_ACLR_A                     ; NONE                     ; Untyped                       ;
+; WRCONTROL_ACLR_A                   ; NONE                     ; Untyped                       ;
+; INDATA_ACLR_A                      ; NONE                     ; Untyped                       ;
+; BYTEENA_ACLR_A                     ; NONE                     ; Untyped                       ;
+; WIDTH_B                            ; 1                        ; Untyped                       ;
+; WIDTHAD_B                          ; 1                        ; Untyped                       ;
+; NUMWORDS_B                         ; 1                        ; Untyped                       ;
+; INDATA_REG_B                       ; CLOCK1                   ; Untyped                       ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                   ; Untyped                       ;
+; RDCONTROL_REG_B                    ; CLOCK1                   ; Untyped                       ;
+; ADDRESS_REG_B                      ; CLOCK1                   ; Untyped                       ;
+; OUTDATA_REG_B                      ; UNREGISTERED             ; Untyped                       ;
+; BYTEENA_REG_B                      ; CLOCK1                   ; Untyped                       ;
+; INDATA_ACLR_B                      ; NONE                     ; Untyped                       ;
+; WRCONTROL_ACLR_B                   ; NONE                     ; Untyped                       ;
+; ADDRESS_ACLR_B                     ; NONE                     ; Untyped                       ;
+; OUTDATA_ACLR_B                     ; NONE                     ; Untyped                       ;
+; RDCONTROL_ACLR_B                   ; NONE                     ; Untyped                       ;
+; BYTEENA_ACLR_B                     ; NONE                     ; Untyped                       ;
+; WIDTH_BYTEENA_A                    ; 1                        ; Signed Integer                ;
+; WIDTH_BYTEENA_B                    ; 1                        ; Untyped                       ;
+; RAM_BLOCK_TYPE                     ; AUTO                     ; Untyped                       ;
+; BYTE_SIZE                          ; 8                        ; Untyped                       ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ     ; Untyped                       ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ     ; Untyped                       ;
+; INIT_FILE                          ; ../levels/whitelevel.mif ; Untyped                       ;
+; INIT_FILE_LAYOUT                   ; PORT_A                   ; Untyped                       ;
+; MAXIMUM_DEPTH                      ; 0                        ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                   ; Untyped                       ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                   ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                   ; Untyped                       ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                   ; Untyped                       ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN          ; Untyped                       ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN          ; Untyped                       ;
+; ENABLE_ECC                         ; FALSE                    ; Untyped                       ;
+; DEVICE_FAMILY                      ; Cyclone II               ; Untyped                       ;
+; CBXI_PARAMETER                     ; altsyncram_8691          ; Untyped                       ;
++------------------------------------+--------------------------+-------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -636,269 +606,215 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: counter3b:draw_counterx|lpm_counter:lpm_counter_component ;
-+------------------------+-------------+-----------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                            ;
-+------------------------+-------------+-----------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                    ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                  ;
-; LPM_WIDTH              ; 3           ; Signed Integer                                                  ;
-; LPM_DIRECTION          ; UP          ; Untyped                                                         ;
-; LPM_MODULUS            ; 0           ; Untyped                                                         ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                         ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                         ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                         ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                         ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                         ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                              ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                              ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                         ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                         ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                         ;
-; CBXI_PARAMETER         ; cntr_2oi    ; Untyped                                                         ;
-+------------------------+-------------+-----------------------------------------------------------------+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; START          ; 000   ; Unsigned Binary                                  ;
+; IDLE           ; 001   ; Unsigned Binary                                  ;
+; DRAW           ; 010   ; Unsigned Binary                                  ;
+; INC_X          ; 011   ; Unsigned Binary                                  ;
+; INC_Y          ; 100   ; Unsigned Binary                                  ;
++----------------+-------+--------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: counter4b:draw_countery|lpm_counter:lpm_counter_component ;
-+------------------------+-------------+-----------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                            ;
-+------------------------+-------------+-----------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                    ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                  ;
-; LPM_WIDTH              ; 4           ; Signed Integer                                                  ;
-; LPM_DIRECTION          ; UP          ; Untyped                                                         ;
-; LPM_MODULUS            ; 0           ; Untyped                                                         ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                         ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                         ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                         ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                         ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                         ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                              ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                              ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                         ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                         ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                         ;
-; CBXI_PARAMETER         ; cntr_3oi    ; Untyped                                                         ;
-+------------------------+-------------+-----------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8           ; Signed Integer                                                                      ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                             ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                             ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                             ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                             ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                             ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                             ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                             ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                             ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                             ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                             ;
+; USE_WYS                ; OFF         ; Untyped                                                                             ;
+; STYLE                  ; FAST        ; Untyped                                                                             ;
+; CBXI_PARAMETER         ; add_sub_big ; Untyped                                                                             ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                      ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1 ;
-+----------------+-------+--------------------------------------------+
-; Parameter Name ; Value ; Type                                       ;
-+----------------+-------+--------------------------------------------+
-; START          ; 000   ; Unsigned Binary                            ;
-; IDLE           ; 001   ; Unsigned Binary                            ;
-; DRAW           ; 010   ; Unsigned Binary                            ;
-; INC_X          ; 011   ; Unsigned Binary                            ;
-; INC_Y          ; 100   ; Unsigned Binary                            ;
-+----------------+-------+--------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:XOffsetReg ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; n              ; 8     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                          ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
-; LPM_WIDTH              ; 8           ; Signed Integer                                                                ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                       ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                       ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                       ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                                       ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                       ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                       ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                       ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                       ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                            ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                       ;
-; USE_WYS                ; OFF         ; Untyped                                                                       ;
-; STYLE                  ; FAST        ; Untyped                                                                       ;
-; CBXI_PARAMETER         ; add_sub_big ; Untyped                                                                       ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                  ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 7           ; Signed Integer                                                                      ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                             ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                             ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                             ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                             ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                             ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                             ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                             ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                             ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                             ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                             ;
+; USE_WYS                ; OFF         ; Untyped                                                                             ;
+; STYLE                  ; FAST        ; Untyped                                                                             ;
+; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                                             ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                      ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:XOffsetReg ;
-+----------------+-------+--------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                               ;
-+----------------+-------+--------------------------------------------------------------------+
-; n              ; 8     ; Signed Integer                                                     ;
-+----------------+-------+--------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:YOffsetReg ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                          ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
-; LPM_WIDTH              ; 7           ; Signed Integer                                                                ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                       ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                       ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                       ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                                       ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                       ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                       ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                       ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                       ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                            ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                       ;
-; USE_WYS                ; OFF         ; Untyped                                                                       ;
-; STYLE                  ; FAST        ; Untyped                                                                       ;
-; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                                       ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                  ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 8           ; Signed Integer                                                                      ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                             ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                             ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                             ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                             ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                             ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                             ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                             ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                             ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                             ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                             ;
+; USE_WYS                ; OFF         ; Untyped                                                                             ;
+; STYLE                  ; FAST        ; Untyped                                                                             ;
+; CBXI_PARAMETER         ; add_sub_big ; Untyped                                                                             ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                      ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:YOffsetReg ;
-+----------------+-------+--------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                               ;
-+----------------+-------+--------------------------------------------------------------------+
-; n              ; 7     ; Signed Integer                                                     ;
-+----------------+-------+--------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 7           ; Signed Integer                                                                      ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                             ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                             ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                             ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                             ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                             ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                             ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                             ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                             ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                             ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                  ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                             ;
+; USE_WYS                ; OFF         ; Untyped                                                                             ;
+; STYLE                  ; FAST        ; Untyped                                                                             ;
+; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                                             ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                      ;
++------------------------+-------------+-------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                          ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
-; LPM_WIDTH              ; 8           ; Signed Integer                                                                ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                       ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                       ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                       ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                                       ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                       ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                       ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                       ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                       ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                            ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                       ;
-; USE_WYS                ; OFF         ; Untyped                                                                       ;
-; STYLE                  ; FAST        ; Untyped                                                                       ;
-; CBXI_PARAMETER         ; add_sub_big ; Untyped                                                                       ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                  ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                           ;
++------------------------+-------------+------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 7           ; Signed Integer                                                                                 ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                                        ;
+; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                        ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                        ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                                        ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                        ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                        ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                        ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                        ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                        ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                             ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                        ;
+; USE_WYS                ; OFF         ; Untyped                                                                                        ;
+; STYLE                  ; FAST        ; Untyped                                                                                        ;
+; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                                                        ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                     ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                   ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                   ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                 ;
++------------------------+-------------+------------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                          ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
-; LPM_WIDTH              ; 7           ; Signed Integer                                                                ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                       ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                       ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                       ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                                       ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                       ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                       ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                       ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                       ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                       ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                            ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                       ;
-; USE_WYS                ; OFF         ; Untyped                                                                       ;
-; STYLE                  ; FAST        ; Untyped                                                                       ;
-; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                                       ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                  ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                ;
-+------------------------+-------------+-------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|nBitRegister:AddressReg ;
++----------------+-------+--------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                     ;
++----------------+-------+--------------------------------------------------------------------------+
+; n              ; 7     ; Signed Integer                                                           ;
++----------------+-------+--------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component ;
-+------------------------+-------------+------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                                     ;
-+------------------------+-------------+------------------------------------------------------------------------------------------+
-; LPM_WIDTH              ; 7           ; Signed Integer                                                                           ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                                  ;
-; LPM_DIRECTION          ; DEFAULT     ; Untyped                                                                                  ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                  ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                                                  ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                  ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                                  ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                  ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                  ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                  ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                       ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                  ;
-; USE_WYS                ; OFF         ; Untyped                                                                                  ;
-; STYLE                  ; FAST        ; Untyped                                                                                  ;
-; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                                                  ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                             ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                           ;
-+------------------------+-------------+------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|nBitRegister:AddressReg ;
-+----------------+-------+--------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                               ;
-+----------------+-------+--------------------------------------------------------------------+
-; n              ; 7     ; Signed Integer                                                     ;
-+----------------+-------+--------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component ;
-+------------------------+-------------+----------------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                                   ;
-+------------------------+-------------+----------------------------------------------------------------------------------------+
-; LPM_WIDTH              ; 10          ; Signed Integer                                                                         ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                                ;
-; LPM_DIRECTION          ; ADD         ; Untyped                                                                                ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                ;
-; LPM_PIPELINE           ; 0           ; Untyped                                                                                ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                ;
-; REGISTERED_AT_END      ; 0           ; Untyped                                                                                ;
-; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                     ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                ;
-; USE_WYS                ; OFF         ; Untyped                                                                                ;
-; STYLE                  ; FAST        ; Untyped                                                                                ;
-; CBXI_PARAMETER         ; add_sub_llh ; Untyped                                                                                ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                           ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                         ;
-+------------------------+-------------+----------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component ;
++------------------------+-------------+----------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                                         ;
++------------------------+-------------+----------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 10          ; Signed Integer                                                                               ;
+; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                                                                                      ;
+; LPM_DIRECTION          ; ADD         ; Untyped                                                                                      ;
+; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                                                                                      ;
+; LPM_PIPELINE           ; 0           ; Untyped                                                                                      ;
+; MAXIMIZE_SPEED         ; 5           ; Untyped                                                                                      ;
+; REGISTERED_AT_END      ; 0           ; Untyped                                                                                      ;
+; OPTIMIZE_FOR_SPEED     ; 5           ; Untyped                                                                                      ;
+; USE_CS_BUFFERS         ; 1           ; Untyped                                                                                      ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                      ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                           ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                      ;
+; USE_WYS                ; OFF         ; Untyped                                                                                      ;
+; STYLE                  ; FAST        ; Untyped                                                                                      ;
+; CBXI_PARAMETER         ; add_sub_llh ; Untyped                                                                                      ;
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                   ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                 ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                 ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                               ;
++------------------------+-------------+----------------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -912,9 +828,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS                            ; ON         ; AUTO_CASCADE        ;
 ; IGNORE_CASCADE_BUFFERS                         ; OFF        ; IGNORE_CASCADE      ;
 ; LPM_WIDTHA                                     ; 4          ; Untyped             ;
-; LPM_WIDTHB                                     ; 7          ; Untyped             ;
-; LPM_WIDTHP                                     ; 11         ; Untyped             ;
-; LPM_WIDTHR                                     ; 11         ; Untyped             ;
+; LPM_WIDTHB                                     ; 11         ; Untyped             ;
+; LPM_WIDTHP                                     ; 15         ; Untyped             ;
+; LPM_WIDTHR                                     ; 15         ; Untyped             ;
 ; LPM_WIDTHS                                     ; 1          ; Untyped             ;
 ; LPM_REPRESENTATION                             ; UNSIGNED   ; Untyped             ;
 ; LPM_PIPELINE                                   ; 0          ; Untyped             ;
@@ -922,14 +838,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INPUT_A_IS_CONSTANT                            ; NO         ; Untyped             ;
 ; INPUT_B_IS_CONSTANT                            ; YES        ; Untyped             ;
 ; USE_EAB                                        ; OFF        ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6          ; Untyped             ;
 ; DEVICE_FAMILY                                  ; Cyclone II ; Untyped             ;
 ; CARRY_CHAIN                                    ; MANUAL     ; Untyped             ;
 ; APEX20K_TECHNOLOGY_MAPPER                      ; LUT        ; TECH_MAPPER_APEX20K ;
 ; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO       ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0          ; Untyped             ;
 ; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0          ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_mv01  ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_6111  ; Untyped             ;
 ; INPUT_A_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; INPUT_B_FIXED_VALUE                            ; Bx         ; Untyped             ;
 ; USE_AHDL_IMPLEMENTATION                        ; OFF        ; Untyped             ;
@@ -945,8 +861,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Number of entity instances            ; 1              ;
 ; Entity Instance                       ; lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 4              ;
-;     -- LPM_WIDTHB                     ; 7              ;
-;     -- LPM_WIDTHP                     ; 11             ;
+;     -- LPM_WIDTHB                     ; 11             ;
+;     -- LPM_WIDTHP                     ; 15             ;
 ;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
 ;     -- INPUT_A_IS_CONSTANT            ; NO             ;
 ;     -- INPUT_B_IS_CONSTANT            ; YES            ;
@@ -957,23 +873,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +---------------------------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis INI Usage                                                                  ;
-+----------------------+--------------------------------------------------------------------------+
-; Option               ; Usage                                                                    ;
-+----------------------+--------------------------------------------------------------------------+
-; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
-; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
-+----------------------+--------------------------------------------------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 17 19:12:03 2008
+    Info: Processing started: Tue Nov 18 12:16:38 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off drawBackground -c drawBackground
 Info: Found 1 design units, including 1 entities, in source file tileset.v
     Info: Found entity 1: tileset
@@ -1004,32 +910,21 @@ Info: Found 1 design units, including 1 entities, in source file counter3b.v
 Info: Found 1 design units, including 1 entities, in source file drawBackground.v
     Info: Found entity 1: drawBackground
 Info: Elaborating entity "drawBackground" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(105): truncated value with size 32 to match size of target (15)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(134): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(135): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(136): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(137): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(138): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(140): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(141): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(142): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(143): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(144): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at drawBackground.v(145): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at drawBackground.v(98): truncated value with size 32 to match size of target (15)
 Info: Elaborating entity "level1" for hierarchy "level1:level_mem"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf
     Info: Found entity 1: altsyncram
 Info: Elaborating entity "altsyncram" for hierarchy "level1:level_mem|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "level1:level_mem|altsyncram:altsyncram_component"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_7391.tdf
-    Info: Found entity 1: altsyncram_7391
-Info: Elaborating entity "altsyncram_7391" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/altsyncram_8691.tdf
+    Info: Found entity 1: altsyncram_8691
+Info: Elaborating entity "altsyncram_8691" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated"
 Info: Found 1 design units, including 1 entities, in source file db/decode_9oa.tdf
     Info: Found entity 1: decode_9oa
-Info: Elaborating entity "decode_9oa" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|decode_9oa:deep_decode"
+Info: Elaborating entity "decode_9oa" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|decode_9oa:deep_decode"
 Info: Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
     Info: Found entity 1: mux_kib
-Info: Elaborating entity "mux_kib" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|mux_kib:mux2"
+Info: Elaborating entity "mux_kib" for hierarchy "level1:level_mem|altsyncram:altsyncram_component|altsyncram_8691:auto_generated|mux_kib:mux2"
 Info: Elaborating entity "tileset" for hierarchy "tileset:tileset0"
 Info: Elaborating entity "altsyncram" for hierarchy "tileset:tileset0|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "tileset:tileset0|altsyncram:altsyncram_component"
@@ -1050,119 +945,67 @@ Info: Elaborated megafunction instantiation "counter4b:tile_countery|lpm_counter
 Info: Found 1 design units, including 1 entities, in source file db/cntr_3oi.tdf
     Info: Found entity 1: cntr_3oi
 Info: Elaborating entity "cntr_3oi" for hierarchy "counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated"
-Info: Elaborating entity "counter3b" for hierarchy "counter3b:draw_counterx"
-Info: Elaborating entity "lpm_counter" for hierarchy "counter3b:draw_counterx|lpm_counter:lpm_counter_component"
-Info: Elaborated megafunction instantiation "counter3b:draw_counterx|lpm_counter:lpm_counter_component"
-Info: Found 1 design units, including 1 entities, in source file db/cntr_2oi.tdf
-    Info: Found entity 1: cntr_2oi
-Info: Elaborating entity "cntr_2oi" for hierarchy "counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated"
-Info: Elaborating entity "drawTile" for hierarchy "drawTile:drawTileInst1"
+Info: Elaborating entity "drawTile" for hierarchy "drawTile:tile_drawing_module"
 Warning (10230): Verilog HDL assignment warning at drawTile.v(166): truncated value with size 32 to match size of target (10)
-Info: Elaborating entity "addx" for hierarchy "drawTile:drawTileInst1|addx:XoffAdder"
+Info: Elaborating entity "addx" for hierarchy "drawTile:tile_drawing_module|addx:XoffAdder"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf
     Info: Found entity 1: lpm_add_sub
-Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborated megafunction instantiation "drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_big.tdf
     Info: Found entity 1: add_sub_big
-Info: Elaborating entity "add_sub_big" for hierarchy "drawTile:drawTileInst1|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated"
-Info: Elaborating entity "nBitRegister" for hierarchy "drawTile:drawTileInst1|nBitRegister:XOffsetReg"
-Info: Elaborating entity "addy" for hierarchy "drawTile:drawTileInst1|addy:YoffAdder"
-Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborated megafunction instantiation "drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "add_sub_big" for hierarchy "drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated"
+Info: Elaborating entity "nBitRegister" for hierarchy "drawTile:tile_drawing_module|nBitRegister:XOffsetReg"
+Info: Elaborating entity "addy" for hierarchy "drawTile:tile_drawing_module|addy:YoffAdder"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_aig.tdf
     Info: Found entity 1: add_sub_aig
-Info: Elaborating entity "add_sub_aig" for hierarchy "drawTile:drawTileInst1|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated"
-Info: Elaborating entity "nBitRegister" for hierarchy "drawTile:drawTileInst1|nBitRegister:YOffsetReg"
-Info: Elaborating entity "memCount" for hierarchy "drawTile:drawTileInst1|memCount:AddressCounter"
-Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component"
-Info: Elaborated megafunction instantiation "drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborating entity "add_sub_aig" for hierarchy "drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated"
+Info: Elaborating entity "nBitRegister" for hierarchy "drawTile:tile_drawing_module|nBitRegister:YOffsetReg"
+Info: Elaborating entity "memCount" for hierarchy "drawTile:tile_drawing_module|memCount:AddressCounter"
+Info: Elaborating entity "lpm_add_sub" for hierarchy "drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component"
+Info: Elaborated megafunction instantiation "drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component"
 Info: Found 1 design units, including 1 entities, in source file db/add_sub_llh.tdf
     Info: Found entity 1: add_sub_llh
-Info: Elaborating entity "add_sub_llh" for hierarchy "drawTile:drawTileInst1|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated"
+Info: Elaborating entity "add_sub_llh" for hierarchy "drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated"
 Warning: Port "ordered port 0" on the entity instantiation of "AddressCounter" is connected to a signal of width 7. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
-Warning: Port "Address" on the entity instantiation of "drawTileInst1" is connected to a signal of width 8. The formal width of the signal in the module is 10.  Extra bits will be left dangling without any fanout logic.
-Warning: Port "TileSel" on the entity instantiation of "drawTileInst1" is connected to a signal of width 3. The formal width of the signal in the module is 4.  Extra bits will be driven by GND.
-Warning: Port "Xin" on the entity instantiation of "drawTileInst1" is connected to a signal of width 32. The formal width of the signal in the module is 8.  Extra bits will be ignored.
-Warning: Port "Yin" on the entity instantiation of "drawTileInst1" is connected to a signal of width 32. The formal width of the signal in the module is 7.  Extra bits will be ignored.
-Warning: Port "address" on the entity instantiation of "tileset0" is connected to a signal of width 8. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
-Warning: No clock transition on "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[3]" register due to stuck clock or clock enable
-Warning: No clock transition on "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[2]" register due to stuck clock or clock enable
-Warning: No clock transition on "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[1]" register due to stuck clock or clock enable
-Warning: No clock transition on "counter4b:draw_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated|safe_q[0]" register due to stuck clock or clock enable
-Warning: No clock transition on "counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[2]" register due to stuck clock or clock enable
-Warning: No clock transition on "counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[1]" register due to stuck clock or clock enable
-Warning: No clock transition on "counter3b:draw_counterx|lpm_counter:lpm_counter_component|cntr_2oi:auto_generated|safe_q[0]" register due to stuck clock or clock enable
-Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[2]" register due to stuck clock or clock enable
-Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[2]" with stuck clock port to stuck value GND
-Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[1]" register due to stuck clock or clock enable
-Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[1]" with stuck clock port to stuck value GND
-Warning: No clock transition on "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[0]" register due to stuck clock or clock enable
-Warning: Reduced register "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|address_reg_a[0]" with stuck clock port to stuck value GND
-Warning: Synthesized away the following node(s):
-    Warning: Synthesized away the following RAM node(s):
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a3"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a4"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a5"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a6"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a7"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a8"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a9"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a10"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a11"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a12"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a13"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a14"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a15"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a16"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a17"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a18"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a19"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a20"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a21"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a22"
-        Warning: Synthesized away node "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a23"
-Info: State machine "|drawBackground|drawTile:drawTileInst1|Q" contains 5 states
-Info: Selected Auto state machine encoding method for state machine "|drawBackground|drawTile:drawTileInst1|Q"
-Info: Encoding result for state machine "|drawBackground|drawTile:drawTileInst1|Q"
+Warning: Port "TileSel" on the entity instantiation of "tile_drawing_module" is connected to a signal of width 3. The formal width of the signal in the module is 4.  Extra bits will be driven by GND.
+Warning: Port "Xin" on the entity instantiation of "tile_drawing_module" is connected to a signal of width 32. The formal width of the signal in the module is 8.  Extra bits will be ignored.
+Warning: Port "Yin" on the entity instantiation of "tile_drawing_module" is connected to a signal of width 32. The formal width of the signal in the module is 7.  Extra bits will be ignored.
+Info: State machine "|drawBackground|drawTile:tile_drawing_module|Q" contains 5 states
+Info: Selected Auto state machine encoding method for state machine "|drawBackground|drawTile:tile_drawing_module|Q"
+Info: Encoding result for state machine "|drawBackground|drawTile:tile_drawing_module|Q"
     Info: Completed encoding using 5 state bits
-        Info: Encoded state bit "drawTile:drawTileInst1|Q.IDLE"
-        Info: Encoded state bit "drawTile:drawTileInst1|Q.DRAW"
-        Info: Encoded state bit "drawTile:drawTileInst1|Q.INC_X"
-        Info: Encoded state bit "drawTile:drawTileInst1|Q.000"
-        Info: Encoded state bit "drawTile:drawTileInst1|Q.INC_Y"
-    Info: State "|drawBackground|drawTile:drawTileInst1|Q.000" uses code string "00000"
-    Info: State "|drawBackground|drawTile:drawTileInst1|Q.INC_X" uses code string "00110"
-    Info: State "|drawBackground|drawTile:drawTileInst1|Q.DRAW" uses code string "01010"
-    Info: State "|drawBackground|drawTile:drawTileInst1|Q.IDLE" uses code string "10010"
-    Info: State "|drawBackground|drawTile:drawTileInst1|Q.INC_Y" uses code string "00011"
+        Info: Encoded state bit "drawTile:tile_drawing_module|Q.IDLE"
+        Info: Encoded state bit "drawTile:tile_drawing_module|Q.DRAW"
+        Info: Encoded state bit "drawTile:tile_drawing_module|Q.INC_X"
+        Info: Encoded state bit "drawTile:tile_drawing_module|Q.000"
+        Info: Encoded state bit "drawTile:tile_drawing_module|Q.INC_Y"
+    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.000" uses code string "00000"
+    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.INC_X" uses code string "00110"
+    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.DRAW" uses code string "01010"
+    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.IDLE" uses code string "10010"
+    Info: State "|drawBackground|drawTile:tile_drawing_module|Q.INC_Y" uses code string "00011"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf
     Info: Found entity 1: lpm_mult
 Info: Elaborated megafunction instantiation "lpm_mult:Mult0"
-Info: Found 1 design units, including 1 entities, in source file db/mult_mv01.tdf
-    Info: Found entity 1: mult_mv01
-Warning: Output pins are stuck at VCC or GND
-    Warning: Pin "level_address[12]" stuck at GND
-    Warning: Pin "level_address[13]" stuck at GND
-    Warning: Pin "level_address[14]" stuck at GND
+Info: Found 1 design units, including 1 entities, in source file db/mult_6111.tdf
+    Info: Found entity 1: mult_6111
 Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
-    Info: Register "drawTileInst1/Q~19" lost all its fanouts during netlist optimizations.
-    Info: Register "drawTileInst1/Q~20" lost all its fanouts during netlist optimizations.
-Info: Removed 2 MSB VCC or GND address nodes from RAM block "tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated|ALTSYNCRAM"
-Warning: WYSIWYG primitive "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a0" has port clk0 that is stuck at GND
-Warning: WYSIWYG primitive "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a1" has port clk0 that is stuck at GND
-Warning: WYSIWYG primitive "level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a2" has port clk0 that is stuck at GND
-Info: Implemented 169 device resources after synthesis - the final resource count might be different
-    Info: Implemented 10 input pins
+    Info: Register "tile_drawing_module/Q~19" lost all its fanouts during netlist optimizations.
+    Info: Register "tile_drawing_module/Q~20" lost all its fanouts during netlist optimizations.
+Info: Implemented 226 device resources after synthesis - the final resource count might be different
+    Info: Implemented 14 input pins
     Info: Implemented 50 output pins
-    Info: Implemented 96 logic cells
-    Info: Implemented 12 RAM segments
-    Info: Implemented 1 DSP elements
+    Info: Implemented 127 logic cells
+    Info: Implemented 33 RAM segments
+    Info: Implemented 2 DSP elements
 Info: Generated suppressed messages file W:/quartus/fpga2dsidescroller/drawBackground/drawBackground.map.smsg
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 62 warnings
-    Info: Allocated 143 megabytes of memory during processing
-    Info: Processing ended: Mon Nov 17 19:12:21 2008
-    Info: Elapsed time: 00:00:18
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
+    Info: Allocated 144 megabytes of memory during processing
+    Info: Processing ended: Tue Nov 18 12:16:47 2008
+    Info: Elapsed time: 00:00:09
 
 
 +------------------------------------------+

@@ -2,13 +2,13 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	//------------------------------------------
 	// Parameters
 	//------------------------------------------
-	parameter tilemap_length = 100; // In tiles
+	parameter tilemap_length = 2000; // In tiles
 	parameter color_depth = 9;
 	//------------------------------------------
 	// Inputs
 	//------------------------------------------
 	input clock;
-	input [(tilemap_length / 15):0] x_offset; // In tiles
+	input [10:0] x_offset; // log2(tilemap_length) - 1
 	input enable;
 	input resetn;
 	input [2:0] tile_code; // debug
@@ -36,7 +36,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	// Instance declaration
 	level1 level_mem (
 	.address(level_address),
-	.clock(CLOCK_50),
+	.clock(clock),
 	.q(tile_code));
 */	
 	//------------------------------------------
@@ -44,7 +44,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	//------------------------------------------
 	
 	// Signals
-	wire [7:0] tile_address;
+	wire [9:0] tile_address;
 	wire [8:0] tileset0_out;
 	
 	tileset tileset0 (
@@ -77,32 +77,25 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	.sclr(tile_cnt_reset_y),
 	.q(tile_y));
 
-	// X drawing counter - 0-7
-	reg draw_cnt_en_x, draw_cnt_reset_x;
-	wire [2:0] draw_x;
-	
-	counter3b draw_counterx(
-	.clock(clock),
-	.cnt_en(draw_cnt_en_x),
-	.sclr(draw_cnt_reset_x),
-	.q(draw_x));
-	
-	// Y drawing counter - 0-8
-	reg draw_cnt_en_y, draw_cnt_reset_y;
-	wire [3:0] draw_y;
-	
-	counter4b draw_countery(
-	.clock(clock),
-	.cnt_en(draw_cnt_en_y),
-	.sclr(draw_cnt_reset_y),
-	.q(draw_y));
-	
 	// Actual x and y value calculations
 //	assign x = (tile_x * 8) + draw_x;
 //	assign y = (tile_y * 8) + draw_y;
 	
 	// Memory address calculations
-	assign level_address = x_offset + tile_x + (tile_y * tilemap_length);
+	// Pixel Dimensions:
+			// The screen is 160 pixels in the x-direction, by 120 pixels in the y-direction (160x120)
+			// Each tile is 8x8 pixels
+			// Each level is 120 pixels tall
+			// The length is a multiple of 8 pixels, but can be as long as we want.
+	// Tile dimensions:
+		// 20 tiles in the x, 15 tiles in the y
+		// Each level is 15 tiles tall
+		// Each level can be as long as we want, but should be greater than 20 (screen length)
+		
+	// Exact level calculations
+		// Level size: 2000 tiles in the x, 15 tiles in the y
+		// Therefore, each y-increase should increase the memory pointer by 2000
+	assign level_address = 0 + x_offset + tile_x + (tile_y * tilemap_length);
 //	assign tile_address = (draw_x + (draw_y * 4'd8)) + 1;
 	
 	//------------------------------------------
@@ -120,14 +113,14 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	always @ (posedge clock or negedge resetn)
 	begin: picktile_state_FFs
 		if (!resetn)
-			p_Q <= 3'b0;
+			p_Q <= 0;
 		else
 			p_Q <= p_D;
 	end
 	
 	// PickTile State Machine
 	// Picks which tile to draw at which location by reading from a tilemap
-	parameter WAIT_PT = 0, READ_PT = 1, DRAW_PT = 2, CHECK_PT = 4, INCREMENT_PT = 5, DROP_PT = 6; //states
+	parameter WAIT_PT = 3'b000, READ_PT = 3'b001, DRAW_PT = 3'b010, CHECK_PT = 3'b011, INCREMENT_PT = 3'b100, DROP_PT = 3'b101; //states
 	always @ (*)
 	begin: picktile_state_table
 		case (p_Q)
@@ -142,7 +135,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
  			INCREMENT_PT: p_D <= READ_PT;
  			DROP_PT: if (tile_y == 15) p_D <= WAIT_PT;
  			else p_D <= READ_PT;
-			default: p_D <= 'bx;
+			default: p_D <= 3'bx;
 		endcase
 	end
 	
@@ -162,7 +155,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	
 	// drawTile instantiation
 	
-	drawTile drawTileInst1 (
+	drawTile tile_drawing_module (
         // Inputs
 	.Xin(tile_x * 8), 
 	.Yin(tile_y * 8),
