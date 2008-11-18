@@ -64,6 +64,15 @@ module main_state_machine
 		defparam VGA.BACKGROUND_IMAGE = "display.mif";
 
 	//------------------------------------------
+	// Debugging
+	//------------------------------------------
+	
+	assign LEDR[2:0] = tile_code;
+	assign LEDR[17:15] = main_Q;
+	assign LEDR[14:12] = main_D;
+	assign LEDG[0] = draw_background_done;
+
+	//------------------------------------------
 	// Level Memory
 	//------------------------------------------
 	
@@ -75,24 +84,36 @@ module main_state_machine
 	// Instance declaration
 	level1 level_mem (
 	.address(level_address),
-	.clock(clock),
-	.data(3'bx),
-	.wren(1'b0),
+	.clock(CLOCK_50),
 	.q(tile_code));
 
+	//------------------------------------------
+	// Character Memory
+	//------------------------------------------
+	
+	wire [11:0] character_address;
+	wire [8:0] char_color;
+	
+	SpriteRAM character_mem (
+	.address(character_address),
+	.clock(CLOCK_50),
+	.data('bx),
+	.wren(1'b0),
+	.q(char_color));
+	
 	//------------------------------------------
 	// DrawBackground instantiation
 	//------------------------------------------
 	
-	assign Clock = CLOCK_50;
-	
+	wire draw_background_done;
 	wire [7:0] x_background;
 	wire [6:0] y_background;
 	wire [8:0] color_background;
+	wire writeEn_background;
 	
 	drawBackground draw_background(
 	.resetn(resetn),
-	.clock(Clock),
+	.clock(CLOCK_50),
 	.color(color_background),
 	.level_address(level_address),
 	.tile_code(tile_code),
@@ -101,15 +122,44 @@ module main_state_machine
 	.plot(writeEn_background),
 	.x_offset(x_position),
 	.enable(draw_background_enable),
-	.done(draw_background_done));/*,
-	.p_D(LEDR[2:0]),
-	.y_D(LEDG[2:0]));*/
+	.done(draw_background_done));
 	
 	//------------------------------------------
 	// DrawCharacter instantiation
 	//------------------------------------------
 	
 	wire draw_character_done;
+	wire [7:0] x_character;
+	wire [6:0] y_character;
+	wire [8:0] color_character;
+	wire writeEn_character;
+	
+	// I don't know what these do, and they're not currently
+	// connected to anything
+	wire [2:0] AnimStep;
+	assign AnimStep = 3'b0;
+	wire [2:0] Sprite;
+	assign Sprite = 3'b0;
+	wire [2:0] MemSel;
+	
+	drawSprite draw_character(
+	.Xin(x_position), 
+	.Yin(y_position), 
+	.Sprite(Sprite), 
+	.AnimStep(AnimStep), 
+	.Width(5'b0), 
+	.Height(5'b0), 
+	.DataIn(char_color), 
+	.Enable(draw_character_enable), 
+	.Resetn(resetn), 
+	.Clock(CLOCK_50), 
+	.MemSel(MemSel), 
+	.Address(character_address), 
+	.Xout(x_character), 
+	.Yout(y_character), 
+	.Color(color_character), 
+	.Done(done_character), 
+	.VGA_Draw(writeEn_character));
 	
 	assign draw_character_done = 1;
 	
@@ -142,7 +192,7 @@ module main_state_machine
 	wire [31:0] x_position;
 	
 	counter32b x_position_counter(
-	.clock(Clock),
+	.clock(CLOCK_50),
 	.cnt_en(x_position_cnt_enable & ~KEY[3]),
 	.sclr(x_position_cnt_reset),
 	.q(x_position));
@@ -170,11 +220,11 @@ module main_state_machine
 	assign writeEn = writeEn_out;
 	
 	// Main State flipflops
-	reg [2:0] main_Q, main_D;
-	always @ (posedge Clock or negedge resetn)
+	reg [2:0] main_Q, main_D /*synthesis keep*/; 
+	always @ (posedge CLOCK_50 or negedge resetn)
 	begin: main_state_FFs
 		if (!resetn)
-			main_Q <= 'b0;
+			main_Q <= 0;
 		else
 			main_Q <= main_D;
 	end
@@ -191,8 +241,9 @@ module main_state_machine
 			DRAW_ENEMIES: if (draw_enemies_done == 1) main_D <= DETECT_COLLISIONS;
 			else main_D <= DRAW_ENEMIES;
 			DETECT_COLLISIONS: if (detect_collisions_done == 1) main_D <= MOVEMENT;
+			else main_D <= DETECT_COLLISIONS;
 			MOVEMENT: main_D <= DRAW_BACKGROUND;
-			default: main_D <= 'bx;
+			default: main_D <= DRAW_BACKGROUND;
 		endcase
 	end
 	
@@ -217,10 +268,10 @@ module main_state_machine
 						draw_character_enable_out = 1;
 						draw_enemies_enable_out = 0;
 						detect_collisions_enable_out = 0;
-						x_out = x_background; 
-						y_out = y_background; 
-						color_out = color_background; 
-						writeEn_out = writeEn_background;
+						x_out = x_character; 
+						y_out = y_character; 
+						color_out = color_character; 
+						writeEn_out = writeEn_character;
 				end
 			DRAW_ENEMIES:
 				begin 	x_position_cnt_enable = 0; 

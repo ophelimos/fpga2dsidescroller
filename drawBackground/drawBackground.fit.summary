@@ -1,4 +1,4 @@
-Fitter Status : Successful - Mon Nov 17 16:53:30 2008
+Fitter Status : Successful - Mon Nov 17 19:03:28 2008
 Quartus II Version : 7.1 Build 178 06/25/2007 SP 1 SJ Full Version
 Revision Name : drawBackground
 Top-level Entity Name : drawBackground
@@ -9,8 +9,8 @@ Total logic elements : 93 / 33,216 ( < 1 % )
     Total combinational functions : 93 / 33,216 ( < 1 % )
     Dedicated logic registers : 39 / 33,216 ( < 1 % )
 Total registers : 39
-Total pins : 66 / 475 ( 14 % )
+Total pins : 60 / 475 ( 13 % )
 Total virtual pins : 0
-Total memory bits : 2,304 / 483,840 ( < 1 % )
+Total memory bits : 14,592 / 483,840 ( 3 % )
 Embedded Multiplier 9-bit elements : 1 / 70 ( 1 % )
 Total PLLs : 0 / 4 ( 0 % )

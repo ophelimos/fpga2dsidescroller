@@ -8,7 +8,7 @@ module NBitTristate (in, oe, out);
 	generate
 		for (i=0; i < n ; i=i+1)
 		begin: tristate_buf
-			Tristate (in[i], oe, out[i]);
+			Tristate tristate_buffer (in[i], oe, out[i]);
 		end
 	endgenerate
 

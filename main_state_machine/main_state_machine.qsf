@@ -456,6 +456,14 @@ set_location_assignment PIN_V24 -to GPIO_1[32]
 set_location_assignment PIN_V23 -to GPIO_1[33]
 set_location_assignment PIN_W25 -to GPIO_1[34]
 set_location_assignment PIN_W23 -to GPIO_1[35]
+set_global_assignment -name VERILOG_FILE ../drawSprite/drawSprite.v
+set_global_assignment -name VERILOG_FILE ../SpriteMem/W_H_Mux.v
+set_global_assignment -name VERILOG_FILE ../SpriteMem/DataOut_Mux.v
+set_global_assignment -name VERILOG_FILE ../SpriteMem/SpriteMem.v
+set_global_assignment -name VERILOG_FILE ../SpriteMem/SpriteRAM.v
+set_global_assignment -name VERILOG_FILE ../SpriteMem/TriState.v
+set_global_assignment -name VERILOG_FILE ../SpriteMem/TristateRegBlock.v
+set_global_assignment -name VERILOG_FILE ../SpriteMem/AStep_Mux.v
 set_global_assignment -name VERILOG_FILE ../drawTileMichael/addx.v
 set_global_assignment -name VERILOG_FILE ../drawTileMichael/addy.v
 set_global_assignment -name VERILOG_FILE ../drawTileMichael/drawTile.v
@@ -477,3 +485,4 @@ set_global_assignment -name VERILOG_FILE vga_adapter/vga_controller.v
 set_global_assignment -name VERILOG_FILE vga_adapter/vga_adapter.v
 set_global_assignment -name VERILOG_FILE ../drawBackground/drawBackground.v
 set_global_assignment -name VERILOG_FILE main_state_machine.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE main_state_machine.vwf
