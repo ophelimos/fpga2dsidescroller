@@ -1,6 +1,6 @@
 Analysis & Synthesis report for drawTile
-Tue Nov 11 00:57:52 2008
-Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
+Wed Nov 19 14:44:03 2008
+Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -27,7 +27,7 @@ Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
  19. Parameter Settings for User Entity Instance: addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
  20. Parameter Settings for User Entity Instance: nBitRegister:AddressReg
  21. Parameter Settings for User Entity Instance: memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
- 22. Analysis & Synthesis Equations
+ 22. Analysis & Synthesis INI Usage
  23. Analysis & Synthesis Messages
 
 
@@ -35,7 +35,7 @@ Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2008 Altera Corporation
+Copyright (C) 1991-2007 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -51,122 +51,112 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                      ;
-+------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 11 00:57:51 2008        ;
-; Quartus II Version                 ; 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition ;
-; Revision Name                      ; drawTile                                     ;
-; Top-level Entity Name              ; drawTile                                     ;
-; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 58                                           ;
-;     Total combinational functions  ; 58                                           ;
-;     Dedicated logic registers      ; 27                                           ;
-; Total registers                    ; 27                                           ;
-; Total pins                         ; 67                                           ;
-; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 0                                            ;
-; Embedded Multiplier 9-bit elements ; 0                                            ;
-; Total PLLs                         ; 0                                            ;
-+------------------------------------+----------------------------------------------+
++------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                       ;
++------------------------------------+-----------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 19 14:44:03 2008         ;
+; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
+; Revision Name                      ; drawTile                                      ;
+; Top-level Entity Name              ; drawTile                                      ;
+; Family                             ; Cyclone II                                    ;
+; Total logic elements               ; 59                                            ;
+;     Total combinational functions  ; 59                                            ;
+;     Dedicated logic registers      ; 28                                            ;
+; Total registers                    ; 28                                            ;
+; Total pins                         ; 67                                            ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0                                             ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total PLLs                         ; 0                                             ;
++------------------------------------+-----------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                          ;
-+--------------------------------------------------------------+--------------------+--------------------+
-; Option                                                       ; Setting            ; Default Value      ;
-+--------------------------------------------------------------+--------------------+--------------------+
-; Device                                                       ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                        ; drawTile           ; drawTile           ;
-; Family name                                                  ; Cyclone II         ; Stratix II         ;
-; Optimization Technique                                       ; Speed              ; Balanced           ;
-; Use Generated Physical Constraints File                      ; Off                ;                    ;
-; Use smart compilation                                        ; Off                ; Off                ;
-; Maximum processors allowed for parallel compilation          ; 1                  ; 1                  ;
-; Restructure Multiplexers                                     ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                          ; Off                ; Off                ;
-; Preserve fewer node names                                    ; On                 ; On                 ;
-; Disable OpenCore Plus hardware evaluation                    ; Off                ; Off                ;
-; Verilog Version                                              ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                 ; VHDL93             ; VHDL93             ;
-; State Machine Processing                                     ; Auto               ; Auto               ;
-; Safe State Machine                                           ; Off                ; Off                ;
-; Extract Verilog State Machines                               ; On                 ; On                 ;
-; Extract VHDL State Machines                                  ; On                 ; On                 ;
-; Ignore Verilog initial constructs                            ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                   ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops               ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                      ; On                 ; On                 ;
-; Parallel Synthesis                                           ; Off                ; Off                ;
-; DSP Block Balancing                                          ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                           ; On                 ; On                 ;
-; Power-Up Don't Care                                          ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                 ; Off                ; Off                ;
-; Remove Duplicate Registers                                   ; On                 ; On                 ;
-; Ignore CARRY Buffers                                         ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                       ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                    ; Off                ; Off                ;
-; Ignore LCELL Buffers                                         ; Off                ; Off                ;
-; Ignore SOFT Buffers                                          ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                               ; Off                ; Off                ;
-; Carry Chain Length                                           ; 70                 ; 70                 ;
-; Auto Carry Chains                                            ; On                 ; On                 ;
-; Auto Open-Drain Pins                                         ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                        ; Off                ; Off                ;
-; Perform gate-level register retiming                         ; Off                ; Off                ;
-; Allow register retiming to trade off Tsu/Tco with Fmax       ; On                 ; On                 ;
-; Auto ROM Replacement                                         ; On                 ; On                 ;
-; Auto RAM Replacement                                         ; On                 ; On                 ;
-; Auto Shift Register Replacement                              ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                ; On                 ; On                 ;
-; Strict RAM Replacement                                       ; Off                ; Off                ;
-; Allow Synchronous Control Signals                            ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                       ; Off                ; Off                ;
-; Auto RAM to Logic Cell Conversion                            ; Off                ; Off                ;
-; Auto Resource Sharing                                        ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                           ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                           ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                ; Off                ; Off                ;
-; Ignore translate_off and synthesis_off directives            ; Off                ; Off                ;
-; Show Parameter Settings Tables in Synthesis Report           ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                           ; Off                ; Off                ;
-; Synchronization Register Chain Length                        ; 2                  ; 2                  ;
-; PowerPlay Power Optimization                                 ; Normal compilation ; Normal compilation ;
-; HDL message level                                            ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages              ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report     ; 100                ; 100                ;
-; Number of Inverted Registers Reported in Synthesis Report    ; 100                ; 100                ;
-; Clock MUX Protection                                         ; On                 ; On                 ;
-; Block Design Naming                                          ; Auto               ; Auto               ;
-; SDC constraint protection                                    ; Off                ; Off                ;
-; Synthesis Effort                                             ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal ; On                 ; On                 ;
-+--------------------------------------------------------------+--------------------+--------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                            ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                         ; Setting            ; Default Value      ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                         ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                          ; drawTile           ; drawTile           ;
+; Family name                                                                    ; Cyclone II         ; Stratix II         ;
+; Optimization Technique -- Cyclone II/Cyclone III                               ; Speed              ; Balanced           ;
+; Use Generated Physical Constraints File                                        ; Off                ;                    ;
+; Restructure Multiplexers                                                       ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                            ; Off                ; Off                ;
+; Preserve fewer node names                                                      ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                      ; Off                ; Off                ;
+; Verilog Version                                                                ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                   ; VHDL93             ; VHDL93             ;
+; State Machine Processing                                                       ; Auto               ; Auto               ;
+; Safe State Machine                                                             ; Off                ; Off                ;
+; Extract Verilog State Machines                                                 ; On                 ; On                 ;
+; Extract VHDL State Machines                                                    ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                              ; Off                ; Off                ;
+; Add Pass-Through Logic to Inferred RAMs                                        ; On                 ; On                 ;
+; DSP Block Balancing                                                            ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                             ; On                 ; On                 ;
+; Power-Up Don't Care                                                            ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                   ; Off                ; Off                ;
+; Remove Duplicate Registers                                                     ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                           ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                         ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                          ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                           ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                            ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                 ; Off                ; Off                ;
+; Carry Chain Length -- Stratix/Stratix GX/Cyclone/MAX II/Cyclone II/Cyclone III ; 70                 ; 70                 ;
+; Auto Carry Chains                                                              ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                           ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                          ; Off                ; Off                ;
+; Perform gate-level register retiming                                           ; Off                ; Off                ;
+; Allow register retiming to trade off Tsu/Tco with Fmax                         ; On                 ; On                 ;
+; Auto ROM Replacement                                                           ; On                 ; On                 ;
+; Auto RAM Replacement                                                           ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                  ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                              ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                         ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                              ; Off                ; Off                ;
+; Auto Resource Sharing                                                          ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                             ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                  ; Off                ; Off                ;
+; Ignore translate_off and synthesis_off directives                              ; Off                ; Off                ;
+; Show Parameter Settings Tables in Synthesis Report                             ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                             ; Off                ; Off                ;
+; Retiming Meta-Stability Register Sequence Length                               ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                              ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                           ; On                 ; On                 ;
+; Use smart compilation                                                          ; Off                ; Off                ;
++--------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                          ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------+
-; addx.v                           ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/addx.v             ;
-; addy.v                           ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/addy.v             ;
-; nBitRegister.v                   ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/nBitRegister.v     ;
-; drawTile.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/drawTile.v         ;
-; memCount.v                       ; yes             ; User Verilog HDL File        ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/memCount.v         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                       ;
-; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/addcore.inc                                                           ;
-; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/look_add.inc                                                          ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/bypassff.inc                                                          ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/altshift.inc                                                          ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                               ;
-; alt_mercury_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/alt_mercury_add_sub.inc                                               ;
-; aglobal80.inc                    ; yes             ; Megafunction                 ; c:/altera/80sp1/quartus/libraries/megafunctions/aglobal80.inc                                                         ;
-; db/add_sub_big.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/db/add_sub_big.tdf ;
-; db/add_sub_aig.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/db/add_sub_aig.tdf ;
-; db/add_sub_llh.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/db/add_sub_llh.tdf ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
+; addx.v                           ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/addx.v                 ;
+; addy.v                           ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/addy.v                 ;
+; nBitRegister.v                   ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/nBitRegister.v         ;
+; drawTile.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/drawTile.v             ;
+; memCount.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/fpga2dsidescroller/drawTileMichael/memCount.v             ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc             ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc            ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/bypassff.inc            ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altshift.inc            ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;
+; alt_mercury_add_sub.inc          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_mercury_add_sub.inc ;
+; aglobal71.inc                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/aglobal71.inc           ;
+; db/add_sub_cig.tdf               ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawTileMichael/db/add_sub_cig.tdf     ;
+; db/add_sub_dig.tdf               ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawTileMichael/db/add_sub_dig.tdf     ;
+; db/add_sub_mlh.tdf               ; yes             ; Auto-Generated Megafunction  ; W:/quartus/fpga2dsidescroller/drawTileMichael/db/add_sub_mlh.tdf     ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -174,26 +164,26 @@ applicable agreement for further details.
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 58    ;
+; Estimated Total logic elements              ; 59    ;
 ;                                             ;       ;
-; Total combinational functions               ; 58    ;
+; Total combinational functions               ; 59    ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 7     ;
-;     -- 3 input functions                    ; 19    ;
+;     -- 4 input functions                    ; 6     ;
+;     -- 3 input functions                    ; 21    ;
 ;     -- <=2 input functions                  ; 32    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 23    ;
+;     -- normal mode                          ; 24    ;
 ;     -- arithmetic mode                      ; 35    ;
 ;                                             ;       ;
-; Total registers                             ; 27    ;
-;     -- Dedicated logic registers            ; 27    ;
+; Total registers                             ; 28    ;
+;     -- Dedicated logic registers            ; 28    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 67    ;
 ; Maximum fan-out node                        ; Clock ;
-; Maximum fan-out                             ; 27    ;
-; Total fan-out                               ; 257   ;
+; Maximum fan-out                             ; 28    ;
+; Total fan-out                               ; 261   ;
 ; Average fan-out                             ; 1.69  ;
 +---------------------------------------------+-------+
 
@@ -203,16 +193,16 @@ applicable agreement for further details.
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                            ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------------------------+--------------+
-; |drawTile                                 ; 58 (17)           ; 27 (5)       ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |drawTile                                                                                      ; work         ;
+; |drawTile                                 ; 59 (18)           ; 28 (6)       ; 0           ; 0            ; 0       ; 0         ; 67   ; 0            ; |drawTile                                                                                      ; work         ;
 ;    |addx:XoutAdder|                       ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|addx:XoutAdder                                                                       ; work         ;
 ;       |lpm_add_sub:lpm_add_sub_component| ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
-;          |add_sub_big:auto_generated|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated          ; work         ;
+;          |add_sub_cig:auto_generated|     ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated          ; work         ;
 ;    |addy:YoutAdder|                       ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|addy:YoutAdder                                                                       ; work         ;
 ;       |lpm_add_sub:lpm_add_sub_component| ; 7 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
-;          |add_sub_aig:auto_generated|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated          ; work         ;
+;          |add_sub_dig:auto_generated|     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated          ; work         ;
 ;    |memCount:AddressCounter|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|memCount:AddressCounter                                                              ; work         ;
 ;       |lpm_add_sub:lpm_add_sub_component| ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component                            ; work         ;
-;          |add_sub_llh:auto_generated|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated ; work         ;
+;          |add_sub_mlh:auto_generated|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated ; work         ;
 ;    |nBitRegister:AddressReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|nBitRegister:AddressReg                                                              ; work         ;
 ;    |nBitRegister:XOffsetReg|              ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|nBitRegister:XOffsetReg                                                              ; work         ;
 ;    |nBitRegister:YOffsetReg|              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |drawTile|nBitRegister:YOffsetReg                                                              ; work         ;
@@ -221,17 +211,18 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------+
-; State Machine - |drawTile|Q                           ;
-+---------+---------+--------+--------+-------+---------+
-; Name    ; Q.INC_X ; Q.DRAW ; Q.IDLE ; Q.000 ; Q.INC_Y ;
-+---------+---------+--------+--------+-------+---------+
-; Q.000   ; 0       ; 0      ; 0      ; 0     ; 0       ;
-; Q.IDLE  ; 0       ; 0      ; 1      ; 1     ; 0       ;
-; Q.DRAW  ; 0       ; 1      ; 0      ; 1     ; 0       ;
-; Q.INC_X ; 1       ; 0      ; 0      ; 1     ; 0       ;
-; Q.INC_Y ; 0       ; 0      ; 0      ; 1     ; 1       ;
-+---------+---------+--------+--------+-------+---------+
++----------------------------------------------------------------+
+; State Machine - |drawTile|Q                                    ;
++---------+---------+--------+--------+--------+---------+-------+
+; Name    ; Q.INC_Y ; Q.IDLE ; Q.READ ; Q.DRAW ; Q.INC_X ; Q.000 ;
++---------+---------+--------+--------+--------+---------+-------+
+; Q.000   ; 0       ; 0      ; 0      ; 0      ; 0       ; 0     ;
+; Q.INC_X ; 0       ; 0      ; 0      ; 0      ; 1       ; 1     ;
+; Q.DRAW  ; 0       ; 0      ; 0      ; 1      ; 0       ; 1     ;
+; Q.READ  ; 0       ; 0      ; 1      ; 0      ; 0       ; 1     ;
+; Q.IDLE  ; 0       ; 1      ; 0      ; 0      ; 0       ; 1     ;
+; Q.INC_Y ; 1       ; 0      ; 0      ; 0      ; 0       ; 1     ;
++---------+---------+--------+--------+--------+---------+-------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -241,9 +232,10 @@ Encoding Type:  One-Hot
 +---------------+------------------------------------------------------------------+--------------------------------------------+
 ; Q.DRAW        ; yes                                                              ; yes                                        ;
 ; Q.IDLE        ; yes                                                              ; yes                                        ;
-; Q.INC_Y       ; yes                                                              ; yes                                        ;
 ; Q.INC_X       ; yes                                                              ; yes                                        ;
+; Q.INC_Y       ; yes                                                              ; yes                                        ;
 ; Q.000         ; yes                                                              ; yes                                        ;
+; Q.READ        ; yes                                                              ; yes                                        ;
 +---------------+------------------------------------------------------------------+--------------------------------------------+
 
 
@@ -252,9 +244,10 @@ Encoding Type:  One-Hot
 +---------------------------------------+--------------------+
 ; Register name                         ; Reason for Removal ;
 +---------------------------------------+--------------------+
-; Q~19                                  ; Lost fanout        ;
-; Q~20                                  ; Lost fanout        ;
-; Total Number of Removed Registers = 2 ;                    ;
+; Q~12                                  ; Lost fanout        ;
+; Q~13                                  ; Lost fanout        ;
+; Q~14                                  ; Lost fanout        ;
+; Total Number of Removed Registers = 3 ;                    ;
 +---------------------------------------+--------------------+
 
 
@@ -263,7 +256,7 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 27    ;
+; Total registers                              ; 28    ;
 ; Number of registers using Synchronous Clear  ; 22    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -278,19 +271,22 @@ Encoding Type:  One-Hot
 +------------------------------+-------+------+---------+
 ; Assignment                   ; Value ; From ; To      ;
 +------------------------------+-------+------+---------+
-; PRESERVE_REGISTER            ; on    ; -    ; Q.000   ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.IDLE  ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW  ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X ;
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_Y ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.DRAW  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.DRAW  ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW  ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.READ  ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.IDLE  ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.000   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.READ  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.READ  ;
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_X ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_X ;
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_Y ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_Y ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.DRAW  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.DRAW  ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE  ;
 +------------------------------+-------+------+---------+
 
 
@@ -304,6 +300,7 @@ Encoding Type:  One-Hot
 ; DRAW           ; 010   ; Unsigned Binary                                 ;
 ; INC_X          ; 011   ; Unsigned Binary                                 ;
 ; INC_Y          ; 100   ; Unsigned Binary                                 ;
+; READ           ; 101   ; Unsigned Binary                                 ;
 +----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -327,7 +324,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                ;
 ; USE_WYS                ; OFF         ; Untyped                                                ;
 ; STYLE                  ; FAST        ; Untyped                                                ;
-; CBXI_PARAMETER         ; add_sub_big ; Untyped                                                ;
+; CBXI_PARAMETER         ; add_sub_cig ; Untyped                                                ;
 ; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                             ;
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                           ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                           ;
@@ -365,7 +362,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                ;
 ; USE_WYS                ; OFF         ; Untyped                                                ;
 ; STYLE                  ; FAST        ; Untyped                                                ;
-; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                ;
+; CBXI_PARAMETER         ; add_sub_dig ; Untyped                                                ;
 ; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                             ;
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                           ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                           ;
@@ -403,7 +400,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                ;
 ; USE_WYS                ; OFF         ; Untyped                                                ;
 ; STYLE                  ; FAST        ; Untyped                                                ;
-; CBXI_PARAMETER         ; add_sub_big ; Untyped                                                ;
+; CBXI_PARAMETER         ; add_sub_cig ; Untyped                                                ;
 ; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                             ;
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                           ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                           ;
@@ -431,7 +428,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                ;
 ; USE_WYS                ; OFF         ; Untyped                                                ;
 ; STYLE                  ; FAST        ; Untyped                                                ;
-; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                ;
+; CBXI_PARAMETER         ; add_sub_dig ; Untyped                                                ;
 ; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                             ;
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                           ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                           ;
@@ -459,7 +456,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                           ;
 ; USE_WYS                ; OFF         ; Untyped                                                           ;
 ; STYLE                  ; FAST        ; Untyped                                                           ;
-; CBXI_PARAMETER         ; add_sub_aig ; Untyped                                                           ;
+; CBXI_PARAMETER         ; add_sub_dig ; Untyped                                                           ;
 ; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                        ;
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                      ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                      ;
@@ -497,7 +494,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                         ;
 ; USE_WYS                ; OFF         ; Untyped                                                         ;
 ; STYLE                  ; FAST        ; Untyped                                                         ;
-; CBXI_PARAMETER         ; add_sub_llh ; Untyped                                                         ;
+; CBXI_PARAMETER         ; add_sub_mlh ; Untyped                                                         ;
 ; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                      ;
 ; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                    ;
 ; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                    ;
@@ -506,10 +503,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------+
-; Analysis & Synthesis Equations ;
-+--------------------------------+
-The equations can be found in C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/drawTile/drawTile.map.eqn.
++-------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis INI Usage                                                                  ;
++----------------------+--------------------------------------------------------------------------+
+; Option               ; Usage                                                                    ;
++----------------------+--------------------------------------------------------------------------+
+; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
+; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
++----------------------+--------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -517,8 +518,8 @@ The equations can be found in C:/Users/Owner/Documents/SKULE/Second Year/first s
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
-    Info: Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 11 00:57:47 2008
+    Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Nov 19 14:43:53 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off drawTile -c drawTile
 Info: Found 1 design units, including 1 entities, in source file addx.v
     Info: Found entity 1: addx
@@ -531,71 +532,56 @@ Info: Found 1 design units, including 1 entities, in source file drawTile.v
 Info: Found 1 design units, including 1 entities, in source file memCount.v
     Info: Found entity 1: memCount
 Info: Elaborating entity "drawTile" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at drawTile.v(166): truncated value with size 32 to match size of target (10)
 Info: Elaborating entity "addx" for hierarchy "addx:XoffAdder"
+Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf
+    Info: Found entity 1: lpm_add_sub
 Info: Elaborating entity "lpm_add_sub" for hierarchy "addx:XoffAdder|lpm_add_sub:lpm_add_sub_component"
 Info: Elaborated megafunction instantiation "addx:XoffAdder|lpm_add_sub:lpm_add_sub_component"
-Info: Instantiated megafunction "addx:XoffAdder|lpm_add_sub:lpm_add_sub_component" with the following parameter:
-    Info: Parameter "lpm_direction" = "UNUSED"
-    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
-    Info: Parameter "lpm_representation" = "UNSIGNED"
-    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
-    Info: Parameter "lpm_width" = "8"
-Info: Found 1 design units, including 1 entities, in source file db/add_sub_big.tdf
-    Info: Found entity 1: add_sub_big
-Info: Elaborating entity "add_sub_big" for hierarchy "addx:XoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_cig.tdf
+    Info: Found entity 1: add_sub_cig
+Info: Elaborating entity "add_sub_cig" for hierarchy "addx:XoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated"
 Info: Elaborating entity "nBitRegister" for hierarchy "nBitRegister:XOffsetReg"
 Info: Elaborating entity "addy" for hierarchy "addy:YoffAdder"
 Info: Elaborating entity "lpm_add_sub" for hierarchy "addy:YoffAdder|lpm_add_sub:lpm_add_sub_component"
 Info: Elaborated megafunction instantiation "addy:YoffAdder|lpm_add_sub:lpm_add_sub_component"
-Info: Instantiated megafunction "addy:YoffAdder|lpm_add_sub:lpm_add_sub_component" with the following parameter:
-    Info: Parameter "lpm_direction" = "UNUSED"
-    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
-    Info: Parameter "lpm_representation" = "UNSIGNED"
-    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
-    Info: Parameter "lpm_width" = "7"
-Info: Found 1 design units, including 1 entities, in source file db/add_sub_aig.tdf
-    Info: Found entity 1: add_sub_aig
-Info: Elaborating entity "add_sub_aig" for hierarchy "addy:YoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated"
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_dig.tdf
+    Info: Found entity 1: add_sub_dig
+Info: Elaborating entity "add_sub_dig" for hierarchy "addy:YoffAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated"
 Info: Elaborating entity "nBitRegister" for hierarchy "nBitRegister:YOffsetReg"
 Info: Elaborating entity "memCount" for hierarchy "memCount:AddressCounter"
 Info: Elaborating entity "lpm_add_sub" for hierarchy "memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component"
 Info: Elaborated megafunction instantiation "memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component"
-Info: Instantiated megafunction "memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component" with the following parameter:
-    Info: Parameter "lpm_direction" = "ADD"
-    Info: Parameter "lpm_hint" = "ONE_INPUT_IS_CONSTANT=NO,CIN_USED=NO"
-    Info: Parameter "lpm_representation" = "UNSIGNED"
-    Info: Parameter "lpm_type" = "LPM_ADD_SUB"
-    Info: Parameter "lpm_width" = "10"
-Info: Found 1 design units, including 1 entities, in source file db/add_sub_llh.tdf
-    Info: Found entity 1: add_sub_llh
-Info: Elaborating entity "add_sub_llh" for hierarchy "memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated"
-Warning (12010): Port "ordered port 0" on the entity instantiation of "AddressCounter" is connected to a signal of width 7. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
-Info: State machine "|drawTile|Q" contains 5 states
+Info: Found 1 design units, including 1 entities, in source file db/add_sub_mlh.tdf
+    Info: Found entity 1: add_sub_mlh
+Info: Elaborating entity "add_sub_mlh" for hierarchy "memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated"
+Warning: Port "ordered port 0" on the entity instantiation of "AddressCounter" is connected to a signal of width 7. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
+Info: State machine "|drawTile|Q" contains 6 states
 Info: Selected Auto state machine encoding method for state machine "|drawTile|Q"
 Info: Encoding result for state machine "|drawTile|Q"
-    Info: Completed encoding using 5 state bits
-        Info: Encoded state bit "Q.INC_X"
-        Info: Encoded state bit "Q.DRAW"
-        Info: Encoded state bit "Q.IDLE"
-        Info: Encoded state bit "Q.000"
+    Info: Completed encoding using 6 state bits
         Info: Encoded state bit "Q.INC_Y"
-    Info: State "|drawTile|Q.000" uses code string "00000"
-    Info: State "|drawTile|Q.IDLE" uses code string "00110"
-    Info: State "|drawTile|Q.DRAW" uses code string "01010"
-    Info: State "|drawTile|Q.INC_X" uses code string "10010"
-    Info: State "|drawTile|Q.INC_Y" uses code string "00011"
-Info: 2 registers lost all their fanouts during netlist optimizations. The first 2 are displayed below.
-    Info: Register "Q~19" lost all its fanouts during netlist optimizations.
-    Info: Register "Q~20" lost all its fanouts during netlist optimizations.
-Info: Implemented 126 device resources after synthesis - the final resource count might be different
+        Info: Encoded state bit "Q.IDLE"
+        Info: Encoded state bit "Q.READ"
+        Info: Encoded state bit "Q.DRAW"
+        Info: Encoded state bit "Q.INC_X"
+        Info: Encoded state bit "Q.000"
+    Info: State "|drawTile|Q.000" uses code string "000000"
+    Info: State "|drawTile|Q.INC_X" uses code string "000011"
+    Info: State "|drawTile|Q.DRAW" uses code string "000101"
+    Info: State "|drawTile|Q.READ" uses code string "001001"
+    Info: State "|drawTile|Q.IDLE" uses code string "010001"
+    Info: State "|drawTile|Q.INC_Y" uses code string "100001"
+Info: 3 registers lost all their fanouts during netlist optimizations. The first 3 are displayed below.
+    Info: Register "Q~12" lost all its fanouts during netlist optimizations.
+    Info: Register "Q~13" lost all its fanouts during netlist optimizations.
+    Info: Register "Q~14" lost all its fanouts during netlist optimizations.
+Info: Implemented 127 device resources after synthesis - the final resource count might be different
     Info: Implemented 31 input pins
     Info: Implemented 36 output pins
-    Info: Implemented 59 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 196 megabytes
-    Info: Processing ended: Tue Nov 11 00:57:52 2008
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Implemented 60 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Allocated 135 megabytes of memory during processing
+    Info: Processing ended: Wed Nov 19 14:44:03 2008
+    Info: Elapsed time: 00:00:10
 
 

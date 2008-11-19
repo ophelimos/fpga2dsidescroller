@@ -25,7 +25,8 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 				IDLE	= 3'b001,
 				DRAW	= 3'b010,
 				INC_X	= 3'b011,
-				INC_Y	= 3'b100;
+				INC_Y	= 3'b100,
+				READ	= 3'b101;
 				
 	// State Register
 	always @(posedge Clock)
@@ -50,6 +51,8 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 						D <= IDLE;
 			end
 			
+			READ:	D <= DRAW;
+			
 			DRAW:
 			begin
 					if (DoneX & ~DoneY)
@@ -60,9 +63,9 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 						D <= IDLE;
 			end
 			
-			INC_X:		D <= DRAW;
+			INC_X:		D <= READ;
 	
-			INC_Y:		D <= DRAW;
+			INC_Y:		D <= READ;
 			
 			default:	D <= IDLE;
 		endcase
@@ -89,6 +92,16 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 				EnableY	= 0;
 				ResetX 	= 1;
 				ResetY	= 1;
+				VGA_Draw_D = 0;
+			end
+			
+			READ:
+			begin
+				Done 	= 0;
+				EnableX	= 0;
+				EnableY	= 0;
+				ResetX 	= 0;
+				ResetY	= 0;
 				VGA_Draw_D = 0;
 			end
 			
@@ -173,7 +186,7 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 	reg VGA_Draw;
 	always @*
 	begin
-		if (DataIn == 9'b111000111)		// transparency colour <--
+		if (DataIn == 9'b100101110)		// transparency colour <--
 			VGA_Draw <= 0;
 		else 
 			VGA_Draw <= VGA_Draw_D;

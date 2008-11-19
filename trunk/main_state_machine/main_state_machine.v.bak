@@ -149,7 +149,7 @@ module main_state_machine
 	wire [4:0] SpriteHeight, SpriteWidth;	// width and height of the selected sprite
 	
 	drawSprite draw_character(
-	.Xin(x_position), 
+	.Xin(72), 
 	.Yin(y_position), 
 	.Sprite(SpriteSelect), 
 	.AnimStep(AnimStep), 
@@ -227,8 +227,6 @@ module main_state_machine
 	wire [6:0] y_position;
 	assign y_position = 7'd60;	// just below center on the screen (in pixels)
 	
-	// Time counter - 1/60 second
-	
 	// 60 fps = 833_333 clocks which needs 20 bits
 	reg time_cnt_reset;
 	reg time_cnt_enable;
@@ -243,23 +241,30 @@ module main_state_machine
 	// Make the time counter reset appropriately
 	always @(*)
 		if (time_out == 833_333)
+			begin
 				time_cnt_enable = 1'b0;
+			end
 		else
+			begin
 				time_cnt_enable = 1'b1;
+			end
 				
 	
 	// Counter enable logic
 	always @(*)
-		if ( (x_movement_enable == 1) && (time_cnt_enable == 0) && (KEY[3] == 0))
+		if ( (x_movement_enable == 1) && (KEY[3] == 0))
 			begin
 				x_position_cnt_enable = 1'b1;
-				time_cnt_reset = 1'b1;
 			end
 		else
 			begin
 				x_position_cnt_enable = 1'b0;
-				time_cnt_reset = 1'b0;
 			end
+	
+		
+	//------------------------------------------
+	// Scoring
+	//------------------------------------------
 	
 	// Score Counters --- 0-9 on 3 hexadecimal displays
 	reg score_cnt_enable;
@@ -287,6 +292,31 @@ module main_state_machine
 	// This should be done with a generate, but I haven't
 	// bothered to look up the syntax
 	
+/*	genvar i;
+	parameter numHex = 3;
+	
+	reg [numHex-1:0] score_out_enable;
+	reg [numHex-1:0] score_out_reset;
+	wire [numHex-1:0] score_out[3:0];
+
+	generate
+		for (i = 0; i < 3; i = i + 1)
+		begin: countersto9
+			reg score_out_enable;
+			reg score_out_reset;
+			wire [3:0] score_out;
+	
+			counter4b score_cnt_out(
+				.clock(CLOCK_50),
+				.cnt_en(score_out_enable),
+				.sclr(score_out_reset),
+				.q(score_out));
+				
+			hex_digits hex (score_out[i], HEX[i]);
+		end
+	endgenerate
+*/	
+
 	reg score_out0_enable;
 	reg score_out0_reset;
 	wire [3:0] score_out0;
@@ -340,6 +370,7 @@ module main_state_machine
 		.cnt_en(score_out2_enable),
 		.sclr(score_out2_reset),
 		.q(score_out2));
+	
 		
 	hex_digits hex0 (score_out0, HEX0);
 	hex_digits hex1 (score_out1, HEX1);
@@ -383,7 +414,7 @@ module main_state_machine
 	end
 	
 	// Main State Machine
-	parameter DRAW_BACKGROUND = 0, DRAW_CHARACTER = 1, DRAW_ENEMIES = 2, DETECT_COLLISIONS = 3, MOVEMENT = 4;//states
+	parameter DRAW_BACKGROUND = 0, DRAW_CHARACTER = 1, DRAW_ENEMIES = 2, DETECT_COLLISIONS = 3, MOVEMENT = 4, WAIT = 5;//states
 	always @ (*)
 	begin: main_state_table
 		case (main_Q)
@@ -395,8 +426,10 @@ module main_state_machine
 			else main_D <= DRAW_ENEMIES;
 			DETECT_COLLISIONS: if (detect_collisions_done == 1) main_D <= MOVEMENT;
 			else main_D <= DETECT_COLLISIONS;
-			MOVEMENT: main_D <= DRAW_BACKGROUND;
-			default: main_D <= DRAW_BACKGROUND;
+			MOVEMENT: main_D <= WAIT;
+			WAIT: if (time_cnt_enable == 0) main_D <= DRAW_BACKGROUND;
+			else main_D <= WAIT;
+			default: main_D <= 3'bx;
 		endcase
 	end
 	
@@ -414,6 +447,7 @@ module main_state_machine
 						y_out = y_background; 
 						color_out = color_background; 
 						writeEn_out = writeEn_background;
+						time_cnt_reset = 1'b1;
 				end
 			DRAW_CHARACTER:
 				begin 	x_movement_enable = 0; 
@@ -425,6 +459,7 @@ module main_state_machine
 						y_out = y_character; 
 						color_out = color_character; 
 						writeEn_out = writeEn_character;
+						time_cnt_reset = 1'b0;
 				end
 			DRAW_ENEMIES:
 				begin 	x_movement_enable = 0; 
@@ -436,6 +471,7 @@ module main_state_machine
 						y_out = y_background; 
 						color_out = color_background; 
 						writeEn_out = writeEn_background;
+						time_cnt_reset = 1'b0;
 				end
 			DETECT_COLLISIONS:
 				begin 	x_movement_enable = 0; 
@@ -443,10 +479,11 @@ module main_state_machine
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
 						detect_collisions_enable_out = 1;
-						x_out = x_background; 
-						y_out = y_background; 
-						color_out = color_background; 
-						writeEn_out = writeEn_background;
+						x_out = 0; 
+						y_out = 0; 
+						color_out = 0; 
+						writeEn_out = 0;
+						time_cnt_reset = 1'b0;
 				end
 			MOVEMENT:
 				begin 	x_movement_enable = 1; 
@@ -454,10 +491,23 @@ module main_state_machine
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
 						detect_collisions_enable_out = 0;
-						x_out = x_background; 
-						y_out = y_background; 
-						color_out = color_background; 
-						writeEn_out = writeEn_background;
+						x_out = 0; 
+						y_out = 0; 
+						color_out = 0; 
+						writeEn_out = 0;
+						time_cnt_reset = 1'b0;
+				end
+			WAIT:
+				begin 	x_movement_enable = 0; 
+						draw_background_enable_out = 0;
+						draw_character_enable_out = 0;
+						draw_enemies_enable_out = 0;
+						detect_collisions_enable_out = 0;
+						x_out = 0; 
+						y_out = 0; 
+						color_out = 0; 
+						writeEn_out = 0;
+						time_cnt_reset = 1'b0;
 				end
 			default: 
 				begin 	x_movement_enable = 1'bx; 
@@ -469,6 +519,7 @@ module main_state_machine
 						y_out = 'bx; 
 						color_out = 'bx; 
 						writeEn_out = 1'bx;
+						time_cnt_reset = 1'bx;
 				end
 			endcase
 	end

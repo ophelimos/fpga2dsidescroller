@@ -5,7 +5,7 @@ the Block Editor! File corruption is VERY likely to occur.
 */
 
 /*
-Copyright (C) 1991-2008 Altera Corporation
+Copyright (C) 1991-2007 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -992,7 +992,11 @@ TRANSITION_LIST("DataIn[8]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 38400.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 5200.0;
 	}
 }
 
@@ -1001,7 +1005,13 @@ TRANSITION_LIST("DataIn[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 2560.0;
+		LEVEL 1 FOR 8960.0;
+		LEVEL 0 FOR 10240.0;
+		LEVEL 1 FOR 3840.0;
+		LEVEL 0 FOR 20560.0;
 	}
 }
 
@@ -1010,7 +1020,9 @@ TRANSITION_LIST("DataIn[6]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 46160.0;
 	}
 }
 
@@ -1019,7 +1031,9 @@ TRANSITION_LIST("DataIn[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 46160.0;
 	}
 }
 
@@ -1028,7 +1042,13 @@ TRANSITION_LIST("DataIn[4]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 29440.0;
+		LEVEL 1 FOR 5120.0;
+		LEVEL 0 FOR 5120.0;
+		LEVEL 1 FOR 5120.0;
+		LEVEL 0 FOR 1360.0;
 	}
 }
 
@@ -1037,7 +1057,11 @@ TRANSITION_LIST("DataIn[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 5120.0;
+		LEVEL 1 FOR 11520.0;
+		LEVEL 0 FOR 29520.0;
 	}
 }
 
@@ -1046,7 +1070,9 @@ TRANSITION_LIST("DataIn[2]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 46160.0;
 	}
 }
 
@@ -1055,7 +1081,13 @@ TRANSITION_LIST("DataIn[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 6400.0;
+		LEVEL 1 FOR 6400.0;
+		LEVEL 0 FOR 28160.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 2640.0;
 	}
 }
 
@@ -1064,7 +1096,11 @@ TRANSITION_LIST("DataIn[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 50000.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 2560.0;
+		LEVEL 0 FOR 29440.0;
+		LEVEL 1 FOR 3840.0;
+		LEVEL 0 FOR 12880.0;
 	}
 }
 
@@ -1650,7 +1686,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "DataIn";
-	EXPAND_STATUS = COLLAPSED;
+	EXPAND_STATUS = EXPANDED;
 	RADIX = ASCII;
 	TREE_INDEX = 22;
 	TREE_LEVEL = 0;
