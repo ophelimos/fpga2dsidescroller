@@ -20,6 +20,7 @@ module detectBackgroundCollision(resetn, clock, enable, x_location, y_location, 
    output                          right;
    output                          up;
    output                          down;
+output done;
 
    //------------------------------------------
    // Output Flipflops
