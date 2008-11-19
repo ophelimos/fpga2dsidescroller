@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Nov 18 15:21:48 2008
-Quartus II Version : 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Wed Nov 19 14:25:42 2008
+Quartus II Version : 7.1 Build 178 06/25/2007 SP 1 SJ Full Version
 Revision Name : drawBackground
 Top-level Entity Name : drawBackground
 Family : Cyclone II
-Total logic elements : 106
-    Total combinational functions : 106
-    Dedicated logic registers : 39
-Total registers : 39
-Total pins : 65
+Total logic elements : 120
+    Total combinational functions : 120
+    Dedicated logic registers : 42
+Total registers : 42
+Total pins : 64
 Total virtual pins : 0
-Total memory bits : 9,216
-Embedded Multiplier 9-bit elements : 0
+Total memory bits : 99,216
+Embedded Multiplier 9-bit elements : 2
 Total PLLs : 0

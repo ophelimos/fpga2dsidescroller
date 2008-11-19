@@ -1,6 +1,6 @@
 Flow report for drawTile
-Tue Nov 11 00:58:21 2008
-Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
+Wed Nov 19 14:45:10 2008
+Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -18,7 +18,7 @@ Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2008 Altera Corporation
+Copyright (C) 1991-2007 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -34,27 +34,27 @@ applicable agreement for further details.
 
 
 
-+-----------------------------------------------------------------------------------+
-; Flow Summary                                                                      ;
-+------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 11 00:58:21 2008        ;
-; Quartus II Version                 ; 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition ;
-; Revision Name                      ; drawTile                                     ;
-; Top-level Entity Name              ; drawTile                                     ;
-; Family                             ; Cyclone II                                   ;
-; Device                             ; EP2C35F672C6                                 ;
-; Timing Models                      ; Final                                        ;
-; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 58 / 33,216 ( < 1 % )                        ;
-;     Total combinational functions  ; 58 / 33,216 ( < 1 % )                        ;
-;     Dedicated logic registers      ; 27 / 33,216 ( < 1 % )                        ;
-; Total registers                    ; 27                                           ;
-; Total pins                         ; 67 / 475 ( 14 % )                            ;
-; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 0 / 483,840 ( 0 % )                          ;
-; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                               ;
-; Total PLLs                         ; 0 / 4 ( 0 % )                                ;
-+------------------------------------+----------------------------------------------+
++------------------------------------------------------------------------------------+
+; Flow Summary                                                                       ;
++------------------------------------+-----------------------------------------------+
+; Flow Status                        ; Successful - Wed Nov 19 14:45:09 2008         ;
+; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
+; Revision Name                      ; drawTile                                      ;
+; Top-level Entity Name              ; drawTile                                      ;
+; Family                             ; Cyclone II                                    ;
+; Device                             ; EP2C35F672C6                                  ;
+; Timing Models                      ; Final                                         ;
+; Met timing requirements            ; Yes                                           ;
+; Total logic elements               ; 59 / 33,216 ( < 1 % )                         ;
+;     Total combinational functions  ; 59 / 33,216 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 28 / 33,216 ( < 1 % )                         ;
+; Total registers                    ; 28                                            ;
+; Total pins                         ; 67 / 475 ( 14 % )                             ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0 / 483,840 ( 0 % )                           ;
+; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                 ;
++------------------------------------+-----------------------------------------------+
 
 
 +-----------------------------------------+
@@ -62,36 +62,35 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/11/2008 00:57:48 ;
+; Start date & time ; 11/19/2008 14:43:55 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; drawTile            ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                             ;
-+------------------------------------+------------------------------+---------------+-------------+------------+
-; Assignment Name                    ; Value                        ; Default Value ; Entity Name ; Section Id ;
-+------------------------------------+------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID              ; 117970801258.122638306807916 ; --            ; --          ; --         ;
-; CYCLONEII_OPTIMIZATION_TECHNIQUE   ; Speed                        ; Balanced      ; --          ; --         ;
-; PARTITION_COLOR                    ; 14622752                     ; --            ; --          ; Top        ;
-; PARTITION_NETLIST_TYPE             ; SOURCE                       ; --            ; --          ; Top        ;
-; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off                          ; --            ; --          ; eda_palace ;
-+------------------------------------+------------------------------+---------------+-------------+------------+
++------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                         ;
++------------------------------------+----------+---------------+-------------+------------+
+; Assignment Name                    ; Value    ; Default Value ; Entity Name ; Section Id ;
++------------------------------------+----------+---------------+-------------+------------+
+; CYCLONEII_OPTIMIZATION_TECHNIQUE   ; Speed    ; Balanced      ; --          ; --         ;
+; PARTITION_COLOR                    ; 14622752 ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE             ; SOURCE   ; --            ; --          ; Top        ;
+; USE_GENERATED_PHYSICAL_CONSTRAINTS ; Off      ; --            ; --          ; eda_palace ;
++------------------------------------+----------+---------------+-------------+------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                           ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:03     ; 1.0                     ; 188 MB              ; 00:00:02                           ;
-; Fitter                  ; 00:00:14     ; 1.0                     ; 247 MB              ; 00:00:14                           ;
-; Assembler               ; 00:00:06     ; 1.0                     ; 240 MB              ; 00:00:05                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 150 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:24     ; --                      ; --                  ; 00:00:22                           ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------+
+; Flow Elapsed Time                      ;
++-------------------------+--------------+
+; Module Name             ; Elapsed Time ;
++-------------------------+--------------+
+; Analysis & Synthesis    ; 00:00:09     ;
+; Fitter                  ; 00:00:26     ;
+; Assembler               ; 00:00:30     ;
+; Classic Timing Analyzer ; 00:00:03     ;
+; Total                   ; 00:01:08     ;
++-------------------------+--------------+
 
 
 ------------

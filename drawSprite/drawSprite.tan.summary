@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 8.213 ns
-From           : Height[0]
-To             : Q.INC_Y
+Actual Time    : 8.448 ns
+From           : Width[0]
+To             : Q.IDLE
 From Clock     : --
 To Clock       : Clock
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.707 ns
-From           : nBitRegister:YOffsetReg|Q[1]
-To             : Address[8]
+Actual Time    : 14.967 ns
+From           : nBitRegister:YOffsetReg|Q[0]
+To             : Address[7]
 From Clock     : Clock
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case tpd
 Slack          : N/A
 Required Time  : None
-Actual Time    : 21.174 ns
-From           : AnimStep[1]
-To             : Address[8]
+Actual Time    : 21.105 ns
+From           : Width[3]
+To             : Address[7]
 From Clock     : --
 To Clock       : --
 Failed Paths   : 0
@@ -35,7 +35,7 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -3.984 ns
+Actual Time    : -3.873 ns
 From           : Resetn
 To             : Q.IDLE
 From Clock     : --
@@ -45,9 +45,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'Clock'
 Slack          : N/A
 Required Time  : None
-Actual Time    : Restricted to 260.01 MHz ( period = 3.846 ns )
-From           : Q.INC_Y
-To             : nBitRegister:YOffsetReg|Q[5]
+Actual Time    : 337.27 MHz ( period = 2.965 ns )
+From           : nBitRegister:XOffsetReg|Q[2]
+To             : Q.IDLE
 From Clock     : Clock
 To Clock       : Clock
 Failed Paths   : 0

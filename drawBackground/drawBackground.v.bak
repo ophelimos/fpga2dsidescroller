@@ -11,7 +11,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	input [10:0] x_offset; // log2(tilemap_length) - 1
 	input enable;
 	input resetn;
-	input [3:0] tile_code; // debug
+	output [3:0] tile_code; // debug
 	//------------------------------------------
 	// Outputs
 	//------------------------------------------
@@ -27,7 +27,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	//------------------------------------------
 	// Level Memory // debug
 	//------------------------------------------
-/*	
+	
 	// Signals
 	wire [14:0] level_address;
 	// We agreed on 4-bit, but 3-bit works for now
@@ -38,7 +38,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	.address(level_address),
 	.clock(clock),
 	.q(tile_code));
-*/	
+	
 	//------------------------------------------
 	// Tile Memory
 	//------------------------------------------
@@ -78,10 +78,10 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	.q(tile_y));
 
 	// Actual x and y value calculations
-	assign x = (tile_x * 8) + draw_x;
-	assign y = (tile_y * 8) + draw_y;
+//	assign x = (tile_x * 8) + draw_x;
+//	assign y = (tile_y * 8) + draw_y;
 	
-	assign tile_address = (draw_x + (draw_y * 4'd8));
+//	assign tile_address = (draw_x + (draw_y * 4'd8));
 
 	// Memory address calculations
 	// Pixel Dimensions:
@@ -136,7 +136,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
  			INCREMENT_PT: p_D <= READ_PT;
  			DROP_PT: if (tile_y == 15) p_D <= WAIT_PT;
  			else p_D <= READ_PT;
-			default: p_D <= WAIT_PT;
+			default: p_D <= 3'bx;
 		endcase
 	end
 	

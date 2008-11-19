@@ -1,6 +1,6 @@
 Classic Timing Analyzer report for drawTile
-Tue Nov 11 00:58:21 2008
-Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
+Wed Nov 19 14:45:09 2008
+Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
 ---------------------
@@ -15,14 +15,15 @@ Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
   7. tco
   8. tpd
   9. th
- 10. Timing Analyzer Messages
+ 10. Timing Analyzer INI Usage
+ 11. Timing Analyzer Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2008 Altera Corporation
+Copyright (C) 1991-2007 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
@@ -38,47 +39,43 @@ applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                      ;
-+------------------------------+-------+---------------+----------------------------------+------------------------------+------------------------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                      ; From                         ; To                           ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+----------------------------------+------------------------------+------------------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 4.863 ns                         ; Enable                       ; Q.IDLE                       ; --         ; Clock    ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 11.013 ns                        ; nBitRegister:AddressReg|Q[6] ; Address[8]                   ; Clock      ; --       ; 0            ;
-; Worst-case tpd               ; N/A   ; None          ; 12.778 ns                        ; Xin[1]                       ; X[3]                         ; --         ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; -3.458 ns                        ; Resetn                       ; Q.INC_X                      ; --         ; Clock    ; 0            ;
-; Clock Setup: 'Clock'         ; N/A   ; None          ; 363.37 MHz ( period = 2.752 ns ) ; Q.INC_X                      ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; 0            ;
-; Total number of failed paths ;       ;               ;                                  ;                              ;                              ;            ;          ; 0            ;
-+------------------------------+-------+---------------+----------------------------------+------------------------------+------------------------------+------------+----------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                    ;
++------------------------------+-------+---------------+----------------------------------+------------------------------+------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                         ; To         ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------------------+------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.422 ns                         ; Enable                       ; Q.IDLE     ; --         ; Clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 9.724 ns                         ; nBitRegister:AddressReg|Q[6] ; Address[7] ; Clock      ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 12.722 ns                        ; Yin[0]                       ; Y[1]       ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.580 ns                        ; Resetn                       ; Q.INC_X    ; --         ; Clock    ; 0            ;
+; Clock Setup: 'Clock'         ; N/A   ; None          ; 377.50 MHz ( period = 2.649 ns ) ; nBitRegister:XOffsetReg|Q[3] ; Q.IDLE     ; Clock      ; Clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                              ;            ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------------------+------------+------------+----------+--------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Settings                                                                                           ;
-+---------------------------------------------------------------------+--------------------+------+----+-------------+
-; Option                                                              ; Setting            ; From ; To ; Entity Name ;
-+---------------------------------------------------------------------+--------------------+------+----+-------------+
-; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
-; Timing Models                                                       ; Final              ;      ;    ;             ;
-; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
-; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
-; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
-; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
-; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
-; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
-; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
-; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
-; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
-; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
-; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
-; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
-; Number of paths to report                                           ; 200                ;      ;    ;             ;
-; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
-; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
-; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
-; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
-; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
-; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
-+---------------------------------------------------------------------+--------------------+------+----+-------------+
++------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                ; Setting            ; From ; To ; Entity Name ;
++-------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                           ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                         ; Final              ;      ;    ;             ;
+; Default hold multicycle                               ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains             ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                        ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                      ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                 ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements               ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                      ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                  ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                 ; 10                 ;      ;    ;             ;
+; Number of paths to report                             ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                          ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                            ; Off                ;      ;    ;             ;
++-------------------------------------------------------+--------------------+------+----+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -95,206 +92,206 @@ applicable agreement for further details.
 +-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 ; Slack                                   ; Actual fmax (period)                                ; From                         ; To                           ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
 +-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A                                     ; 363.37 MHz ( period = 2.752 ns )                    ; Q.INC_X                      ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 2.542 ns                ;
-; N/A                                     ; 373.00 MHz ( period = 2.681 ns )                    ; Q.INC_X                      ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 2.471 ns                ;
-; N/A                                     ; 379.08 MHz ( period = 2.638 ns )                    ; nBitRegister:XOffsetReg|Q[3] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.423 ns                ;
-; N/A                                     ; 380.23 MHz ( period = 2.630 ns )                    ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 2.416 ns                ;
-; N/A                                     ; 383.14 MHz ( period = 2.610 ns )                    ; Q.INC_X                      ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 2.400 ns                ;
-; N/A                                     ; 388.95 MHz ( period = 2.571 ns )                    ; nBitRegister:XOffsetReg|Q[0] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.356 ns                ;
-; N/A                                     ; 389.86 MHz ( period = 2.565 ns )                    ; nBitRegister:XOffsetReg|Q[6] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 2.346 ns                ;
-; N/A                                     ; 390.17 MHz ( period = 2.563 ns )                    ; nBitRegister:XOffsetReg|Q[6] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.348 ns                ;
-; N/A                                     ; 390.78 MHz ( period = 2.559 ns )                    ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 2.345 ns                ;
-; N/A                                     ; 391.85 MHz ( period = 2.552 ns )                    ; nBitRegister:AddressReg|Q[2] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.338 ns                ;
-; N/A                                     ; 392.93 MHz ( period = 2.545 ns )                    ; nBitRegister:XOffsetReg|Q[1] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.330 ns                ;
-; N/A                                     ; 397.61 MHz ( period = 2.515 ns )                    ; nBitRegister:AddressReg|Q[0] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.301 ns                ;
-; N/A                                     ; 399.20 MHz ( period = 2.505 ns )                    ; nBitRegister:XOffsetReg|Q[6] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.290 ns                ;
-; N/A                                     ; 401.93 MHz ( period = 2.488 ns )                    ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 2.274 ns                ;
-; N/A                                     ; 402.41 MHz ( period = 2.485 ns )                    ; nBitRegister:XOffsetReg|Q[5] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 2.266 ns                ;
-; N/A                                     ; 402.74 MHz ( period = 2.483 ns )                    ; nBitRegister:XOffsetReg|Q[5] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.268 ns                ;
-; N/A                                     ; 408.00 MHz ( period = 2.451 ns )                    ; Q.INC_X                      ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 2.241 ns                ;
-; N/A                                     ; 408.33 MHz ( period = 2.449 ns )                    ; nBitRegister:XOffsetReg|Q[4] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 2.230 ns                ;
-; N/A                                     ; 408.66 MHz ( period = 2.447 ns )                    ; nBitRegister:XOffsetReg|Q[4] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.232 ns                ;
-; N/A                                     ; 412.37 MHz ( period = 2.425 ns )                    ; nBitRegister:XOffsetReg|Q[5] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.210 ns                ;
-; N/A                                     ; 418.59 MHz ( period = 2.389 ns )                    ; nBitRegister:XOffsetReg|Q[4] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.174 ns                ;
-; N/A                                     ; 420.17 MHz ( period = 2.380 ns )                    ; Q.INC_X                      ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 2.170 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.163 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 2.171 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 2.115 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 2.099 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.085 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 2.100 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.074 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[2] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.067 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 2.053 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 2.044 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 2.047 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.030 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.029 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.025 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 2.029 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.986 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.973 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.976 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.960 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[7] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.956 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[7] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.958 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.958 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.958 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[6] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.940 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.932 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:YOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.942 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.942 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.942 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.942 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.942 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.942 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.942 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[5] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.903 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[7] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.900 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.905 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.911 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.911 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.911 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.911 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.911 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.911 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.911 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.892 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.880 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.887 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.849 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.849 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.849 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.849 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.849 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.849 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.849 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.834 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.818 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.818 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.818 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.818 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.818 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.818 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.818 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.809 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.816 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.788 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.762 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.758 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.763 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.750 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.750 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.750 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.750 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; nBitRegister:XOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.750 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.750 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.750 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.750 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.738 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.715 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; Q.DRAW                       ; Clock      ; Clock    ; None                        ; None                      ; 1.712 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.716 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; Q.DRAW                       ; Clock      ; Clock    ; None                        ; None                      ; 1.689 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.687 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.692 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.679 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[6] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.669 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.644 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[5] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.632 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.623 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.627 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.627 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.608 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.590 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.579 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.573 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.566 ns                ;
+; N/A                                     ; 377.50 MHz ( period = 2.649 ns )                    ; nBitRegister:XOffsetReg|Q[3] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.437 ns                ;
+; N/A                                     ; 379.94 MHz ( period = 2.632 ns )                    ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 2.418 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; nBitRegister:XOffsetReg|Q[2] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.361 ns                ;
+; N/A                                     ; 389.26 MHz ( period = 2.569 ns )                    ; nBitRegister:AddressReg|Q[2] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.355 ns                ;
+; N/A                                     ; 390.47 MHz ( period = 2.561 ns )                    ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 2.347 ns                ;
+; N/A                                     ; 391.85 MHz ( period = 2.552 ns )                    ; Q.INC_X                      ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 2.340 ns                ;
+; N/A                                     ; 392.77 MHz ( period = 2.546 ns )                    ; nBitRegister:XOffsetReg|Q[0] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.334 ns                ;
+; N/A                                     ; 395.41 MHz ( period = 2.529 ns )                    ; nBitRegister:AddressReg|Q[3] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.315 ns                ;
+; N/A                                     ; 396.67 MHz ( period = 2.521 ns )                    ; Q.000                        ; nBitRegister:YOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 2.309 ns                ;
+; N/A                                     ; 396.67 MHz ( period = 2.521 ns )                    ; Q.000                        ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 2.309 ns                ;
+; N/A                                     ; 396.67 MHz ( period = 2.521 ns )                    ; Q.000                        ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 2.309 ns                ;
+; N/A                                     ; 396.67 MHz ( period = 2.521 ns )                    ; Q.000                        ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 2.309 ns                ;
+; N/A                                     ; 396.67 MHz ( period = 2.521 ns )                    ; Q.000                        ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 2.309 ns                ;
+; N/A                                     ; 396.67 MHz ( period = 2.521 ns )                    ; Q.000                        ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 2.309 ns                ;
+; N/A                                     ; 396.67 MHz ( period = 2.521 ns )                    ; Q.000                        ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 2.309 ns                ;
+; N/A                                     ; 401.61 MHz ( period = 2.490 ns )                    ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 2.276 ns                ;
+; N/A                                     ; 403.06 MHz ( period = 2.481 ns )                    ; Q.INC_X                      ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 2.269 ns                ;
+; N/A                                     ; 414.94 MHz ( period = 2.410 ns )                    ; Q.INC_X                      ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 2.198 ns                ;
+; N/A                                     ; 419.46 MHz ( period = 2.384 ns )                    ; nBitRegister:AddressReg|Q[0] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.170 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.164 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[5] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.164 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 2.117 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 2.093 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[5] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 2.093 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[7] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.088 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.088 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 2.083 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[2] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.072 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 2.062 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.048 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 2.046 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 2.039 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.036 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.032 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 2.024 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[7] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 2.017 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.013 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[5] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 2.013 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 2.012 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.986 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.974 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.974 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.974 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.974 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.974 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.974 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.974 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.975 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.968 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.959 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.960 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.956 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[6] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.945 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.941 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[7] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.937 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.933 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.931 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.931 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.931 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.931 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.931 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.931 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.931 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[5] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.914 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.897 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.887 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.881 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.881 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.881 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.881 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.881 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:XOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.881 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.881 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.881 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[6] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.874 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.870 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.864 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.799 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.793 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[6] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.794 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.765 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.762 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[6] ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.752 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.731 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.731 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.731 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.731 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.731 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:XOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.731 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.731 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.731 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.732 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.728 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.722 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.719 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.713 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.698 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.691 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.687 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.673 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.661 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.660 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.648 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.647 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[5] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.631 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:XOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.621 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.620 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.596 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.596 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.596 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.596 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.596 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.596 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.596 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.592 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.590 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.589 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.577 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.563 ns                ;
 ; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[2] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.552 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.552 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.538 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.537 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.530 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.508 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.502 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.495 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.491 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.551 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.550 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.550 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.519 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.518 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.514 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.508 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.IDLE                       ; Q.DRAW                       ; Clock      ; Clock    ; None                        ; None                      ; 1.497 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.492 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.485 ns                ;
 ; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[2] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.481 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.481 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.467 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.466 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.459 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.450 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.000                        ; Q.IDLE                       ; Clock      ; Clock    ; None                        ; None                      ; 1.447 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.437 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.431 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.425 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.424 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.417 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.480 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.479 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.479 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[6] ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.469 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.461 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.456 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.451 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.448 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; Q.READ                       ; Clock      ; Clock    ; None                        ; None                      ; 1.441 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.442 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.421 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.418 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.414 ns                ;
 ; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[2] ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.410 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.397 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.396 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.395 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[3] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.389 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.388 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.379 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; Q.INC_Y                      ; Clock      ; Clock    ; None                        ; None                      ; 1.377 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.360 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.354 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.353 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.346 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.326 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.325 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.324 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.339 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.322 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.318 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[3] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.318 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.317 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.308 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[5] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.292 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.289 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.283 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.282 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[4] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.276 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.275 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.255 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.254 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.253 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.251 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.408 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.390 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.385 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.380 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.377 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.371 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; Q.READ                       ; Clock      ; Clock    ; None                        ; None                      ; 1.363 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.359 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.347 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[3] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.347 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.343 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_Y                      ; nBitRegister:YOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.341 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.321 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.320 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.320 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[5] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.319 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.319 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[4] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.315 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.314 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.309 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.300 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.288 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.276 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[3] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.276 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.272 ns                ;
 ; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[2] ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.251 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[5] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.248 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.247 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[3] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.247 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.246 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[5] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.221 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[6] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.221 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; Q.DRAW                       ; Clock      ; Clock    ; None                        ; None                      ; 1.216 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.212 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.211 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.250 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.249 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.249 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.249 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[5] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.248 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.248 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.245 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[4] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.244 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.243 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.217 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[6] ; nBitRegister:XOffsetReg|Q[7] ; Clock      ; Clock    ; None                        ; None                      ; 1.212 ns                ;
 ; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[5] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.207 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[4] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 1.205 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 1.204 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.DRAW                       ; Q.INC_X                      ; Clock      ; Clock    ; None                        ; None                      ; 1.069 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.050 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[4] ; nBitRegister:XOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 0.869 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[2] ; nBitRegister:XOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 0.868 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[0] ; nBitRegister:XOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 0.866 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.READ                       ; Q.DRAW                       ; Clock      ; Clock    ; None                        ; None                      ; 1.205 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; Q.INC_X                      ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 1.205 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[3] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 1.205 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[5] ; nBitRegister:YOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 1.205 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 1.201 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[0] ; nBitRegister:AddressReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 1.034 ns                ;
+; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[0] ; nBitRegister:YOffsetReg|Q[0] ; Clock      ; Clock    ; None                        ; None                      ; 0.994 ns                ;
 ; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[2] ; nBitRegister:AddressReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 0.865 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[1] ; nBitRegister:AddressReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 0.865 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[5] ; nBitRegister:YOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 0.862 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[6] ; nBitRegister:AddressReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 0.861 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[4] ; nBitRegister:AddressReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 0.861 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[3] ; nBitRegister:YOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 0.861 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[1] ; nBitRegister:YOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 0.860 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[5] ; nBitRegister:XOffsetReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 0.838 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[6] ; nBitRegister:XOffsetReg|Q[6] ; Clock      ; Clock    ; None                        ; None                      ; 0.838 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[3] ; nBitRegister:AddressReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 0.833 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[3] ; nBitRegister:XOffsetReg|Q[3] ; Clock      ; Clock    ; None                        ; None                      ; 0.829 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:XOffsetReg|Q[1] ; nBitRegister:XOffsetReg|Q[1] ; Clock      ; Clock    ; None                        ; None                      ; 0.828 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:AddressReg|Q[5] ; nBitRegister:AddressReg|Q[5] ; Clock      ; Clock    ; None                        ; None                      ; 0.824 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[4] ; nBitRegister:YOffsetReg|Q[4] ; Clock      ; Clock    ; None                        ; None                      ; 0.822 ns                ;
-; N/A                                     ; Restricted to 420.17 MHz ( period = 2.380 ns )      ; nBitRegister:YOffsetReg|Q[2] ; nBitRegister:YOffsetReg|Q[2] ; Clock      ; Clock    ; None                        ; None                      ; 0.821 ns                ;
 ; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                              ;                              ;            ;          ;                             ;                           ;                         ;
 +-----------------------------------------+-----------------------------------------------------+------------------------------+------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
@@ -304,13 +301,14 @@ applicable agreement for further details.
 +-------+--------------+------------+--------+---------+----------+
 ; Slack ; Required tsu ; Actual tsu ; From   ; To      ; To Clock ;
 +-------+--------------+------------+--------+---------+----------+
-; N/A   ; None         ; 4.863 ns   ; Enable ; Q.IDLE  ; Clock    ;
-; N/A   ; None         ; 4.492 ns   ; Enable ; Q.DRAW  ; Clock    ;
-; N/A   ; None         ; 3.836 ns   ; Resetn ; Q.INC_Y ; Clock    ;
-; N/A   ; None         ; 3.835 ns   ; Resetn ; Q.IDLE  ; Clock    ;
-; N/A   ; None         ; 3.701 ns   ; Resetn ; Q.000   ; Clock    ;
-; N/A   ; None         ; 3.695 ns   ; Resetn ; Q.DRAW  ; Clock    ;
-; N/A   ; None         ; 3.688 ns   ; Resetn ; Q.INC_X ; Clock    ;
+; N/A   ; None         ; 5.422 ns   ; Enable ; Q.IDLE  ; Clock    ;
+; N/A   ; None         ; 4.559 ns   ; Enable ; Q.DRAW  ; Clock    ;
+; N/A   ; None         ; 4.012 ns   ; Resetn ; Q.IDLE  ; Clock    ;
+; N/A   ; None         ; 4.011 ns   ; Resetn ; Q.000   ; Clock    ;
+; N/A   ; None         ; 4.009 ns   ; Resetn ; Q.INC_Y ; Clock    ;
+; N/A   ; None         ; 3.956 ns   ; Resetn ; Q.READ  ; Clock    ;
+; N/A   ; None         ; 3.813 ns   ; Resetn ; Q.DRAW  ; Clock    ;
+; N/A   ; None         ; 3.810 ns   ; Resetn ; Q.INC_X ; Clock    ;
 +-------+--------------+------------+--------+---------+----------+
 
 
@@ -319,82 +317,82 @@ applicable agreement for further details.
 +-------+--------------+------------+------------------------------+------------+------------+
 ; Slack ; Required tco ; Actual tco ; From                         ; To         ; From Clock ;
 +-------+--------------+------------+------------------------------+------------+------------+
-; N/A   ; None         ; 11.013 ns  ; nBitRegister:AddressReg|Q[6] ; Address[8] ; Clock      ;
-; N/A   ; None         ; 10.948 ns  ; nBitRegister:AddressReg|Q[6] ; Address[7] ; Clock      ;
-; N/A   ; None         ; 10.850 ns  ; nBitRegister:AddressReg|Q[6] ; Address[9] ; Clock      ;
-; N/A   ; None         ; 10.567 ns  ; nBitRegister:AddressReg|Q[6] ; Address[6] ; Clock      ;
-; N/A   ; None         ; 8.924 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[3]       ; Clock      ;
-; N/A   ; None         ; 8.809 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[3]       ; Clock      ;
-; N/A   ; None         ; 8.781 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[3]       ; Clock      ;
-; N/A   ; None         ; 8.726 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[7]       ; Clock      ;
-; N/A   ; None         ; 8.611 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[7]       ; Clock      ;
-; N/A   ; None         ; 8.583 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[7]       ; Clock      ;
-; N/A   ; None         ; 8.468 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[7]       ; Clock      ;
-; N/A   ; None         ; 8.440 ns   ; nBitRegister:XOffsetReg|Q[4] ; X[7]       ; Clock      ;
-; N/A   ; None         ; 8.408 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[6]       ; Clock      ;
-; N/A   ; None         ; 8.350 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[3]       ; Clock      ;
-; N/A   ; None         ; 8.333 ns   ; nBitRegister:XOffsetReg|Q[5] ; X[7]       ; Clock      ;
-; N/A   ; None         ; 8.293 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[6]       ; Clock      ;
-; N/A   ; None         ; 8.284 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[1]       ; Clock      ;
-; N/A   ; None         ; 8.265 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[6]       ; Clock      ;
-; N/A   ; None         ; 8.262 ns   ; nBitRegister:XOffsetReg|Q[6] ; X[7]       ; Clock      ;
-; N/A   ; None         ; 8.224 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[4]       ; Clock      ;
-; N/A   ; None         ; 8.192 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[5]       ; Clock      ;
-; N/A   ; None         ; 8.177 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[5]       ; Clock      ;
-; N/A   ; None         ; 8.150 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[6]       ; Clock      ;
-; N/A   ; None         ; 8.122 ns   ; nBitRegister:XOffsetReg|Q[4] ; X[6]       ; Clock      ;
-; N/A   ; None         ; 8.109 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[4]       ; Clock      ;
-; N/A   ; None         ; 8.106 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[4]       ; Clock      ;
-; N/A   ; None         ; 8.096 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[5]       ; Clock      ;
-; N/A   ; None         ; 8.091 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[4]       ; Clock      ;
-; N/A   ; None         ; 8.088 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[2]       ; Clock      ;
-; N/A   ; None         ; 8.081 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[4]       ; Clock      ;
-; N/A   ; None         ; 8.062 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[5]       ; Clock      ;
-; N/A   ; None         ; 8.034 ns   ; nBitRegister:YOffsetReg|Q[3] ; Y[5]       ; Clock      ;
-; N/A   ; None         ; 8.015 ns   ; nBitRegister:XOffsetReg|Q[5] ; X[6]       ; Clock      ;
-; N/A   ; None         ; 7.981 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[5]       ; Clock      ;
-; N/A   ; None         ; 7.976 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[4]       ; Clock      ;
-; N/A   ; None         ; 7.975 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[2]       ; Clock      ;
-; N/A   ; None         ; 7.973 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[2]       ; Clock      ;
-; N/A   ; None         ; 7.966 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[4]       ; Clock      ;
-; N/A   ; None         ; 7.960 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[2]       ; Clock      ;
-; N/A   ; None         ; 7.953 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[5]       ; Clock      ;
-; N/A   ; None         ; 7.948 ns   ; nBitRegister:YOffsetReg|Q[3] ; Y[4]       ; Clock      ;
-; N/A   ; None         ; 7.918 ns   ; nBitRegister:YOffsetReg|Q[4] ; Y[5]       ; Clock      ;
-; N/A   ; None         ; 7.898 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[1]       ; Clock      ;
-; N/A   ; None         ; 7.878 ns   ; nBitRegister:XOffsetReg|Q[7] ; X[7]       ; Clock      ;
-; N/A   ; None         ; 7.853 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[1]       ; Clock      ;
-; N/A   ; None         ; 7.841 ns   ; Q.IDLE                       ; Done       ; Clock      ;
-; N/A   ; None         ; 7.838 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[5]       ; Clock      ;
-; N/A   ; None         ; 7.835 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[0]       ; Clock      ;
-; N/A   ; None         ; 7.821 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[6]       ; Clock      ;
-; N/A   ; None         ; 7.810 ns   ; nBitRegister:XOffsetReg|Q[4] ; X[5]       ; Clock      ;
-; N/A   ; None         ; 7.806 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[6]       ; Clock      ;
-; N/A   ; None         ; 7.691 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[6]       ; Clock      ;
-; N/A   ; None         ; 7.663 ns   ; nBitRegister:YOffsetReg|Q[3] ; Y[6]       ; Clock      ;
-; N/A   ; None         ; 7.632 ns   ; nBitRegister:XOffsetReg|Q[6] ; X[6]       ; Clock      ;
-; N/A   ; None         ; 7.630 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[2]       ; Clock      ;
-; N/A   ; None         ; 7.623 ns   ; nBitRegister:XOffsetReg|Q[4] ; X[4]       ; Clock      ;
-; N/A   ; None         ; 7.603 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[3]       ; Clock      ;
-; N/A   ; None         ; 7.588 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[3]       ; Clock      ;
-; N/A   ; None         ; 7.576 ns   ; nBitRegister:YOffsetReg|Q[5] ; Y[5]       ; Clock      ;
-; N/A   ; None         ; 7.568 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[1]       ; Clock      ;
-; N/A   ; None         ; 7.547 ns   ; nBitRegister:YOffsetReg|Q[4] ; Y[6]       ; Clock      ;
-; N/A   ; None         ; 7.533 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[2]       ; Clock      ;
-; N/A   ; None         ; 7.528 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[0]       ; Clock      ;
-; N/A   ; None         ; 7.520 ns   ; nBitRegister:YOffsetReg|Q[5] ; Y[6]       ; Clock      ;
-; N/A   ; None         ; 7.520 ns   ; nBitRegister:YOffsetReg|Q[4] ; Y[4]       ; Clock      ;
-; N/A   ; None         ; 7.473 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[3]       ; Clock      ;
-; N/A   ; None         ; 7.387 ns   ; nBitRegister:XOffsetReg|Q[5] ; X[5]       ; Clock      ;
-; N/A   ; None         ; 7.211 ns   ; nBitRegister:AddressReg|Q[2] ; Address[2] ; Clock      ;
-; N/A   ; None         ; 7.130 ns   ; nBitRegister:YOffsetReg|Q[3] ; Y[3]       ; Clock      ;
-; N/A   ; None         ; 7.126 ns   ; Q.DRAW                       ; VGA_Draw   ; Clock      ;
-; N/A   ; None         ; 6.961 ns   ; nBitRegister:AddressReg|Q[3] ; Address[3] ; Clock      ;
-; N/A   ; None         ; 6.949 ns   ; nBitRegister:AddressReg|Q[5] ; Address[5] ; Clock      ;
-; N/A   ; None         ; 6.936 ns   ; nBitRegister:AddressReg|Q[4] ; Address[4] ; Clock      ;
-; N/A   ; None         ; 6.808 ns   ; nBitRegister:YOffsetReg|Q[6] ; Y[6]       ; Clock      ;
-; N/A   ; None         ; 6.713 ns   ; nBitRegister:AddressReg|Q[0] ; Address[0] ; Clock      ;
-; N/A   ; None         ; 6.701 ns   ; nBitRegister:AddressReg|Q[1] ; Address[1] ; Clock      ;
+; N/A   ; None         ; 9.724 ns   ; nBitRegister:AddressReg|Q[6] ; Address[7] ; Clock      ;
+; N/A   ; None         ; 9.618 ns   ; nBitRegister:AddressReg|Q[6] ; Address[8] ; Clock      ;
+; N/A   ; None         ; 9.592 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[1]       ; Clock      ;
+; N/A   ; None         ; 9.582 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[4]       ; Clock      ;
+; N/A   ; None         ; 9.575 ns   ; nBitRegister:AddressReg|Q[6] ; Address[9] ; Clock      ;
+; N/A   ; None         ; 9.535 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[4]       ; Clock      ;
+; N/A   ; None         ; 9.464 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[4]       ; Clock      ;
+; N/A   ; None         ; 9.412 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[4]       ; Clock      ;
+; N/A   ; None         ; 9.357 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[5]       ; Clock      ;
+; N/A   ; None         ; 9.339 ns   ; nBitRegister:AddressReg|Q[6] ; Address[6] ; Clock      ;
+; N/A   ; None         ; 9.330 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[5]       ; Clock      ;
+; N/A   ; None         ; 9.310 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[5]       ; Clock      ;
+; N/A   ; None         ; 9.282 ns   ; nBitRegister:YOffsetReg|Q[3] ; Y[5]       ; Clock      ;
+; N/A   ; None         ; 9.275 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[7]       ; Clock      ;
+; N/A   ; None         ; 9.239 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[5]       ; Clock      ;
+; N/A   ; None         ; 9.228 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[7]       ; Clock      ;
+; N/A   ; None         ; 9.211 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[5]       ; Clock      ;
+; N/A   ; None         ; 9.187 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[5]       ; Clock      ;
+; N/A   ; None         ; 9.184 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[5]       ; Clock      ;
+; N/A   ; None         ; 9.177 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[6]       ; Clock      ;
+; N/A   ; None         ; 9.157 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[1]       ; Clock      ;
+; N/A   ; None         ; 9.157 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[7]       ; Clock      ;
+; N/A   ; None         ; 9.150 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[6]       ; Clock      ;
+; N/A   ; None         ; 9.130 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[6]       ; Clock      ;
+; N/A   ; None         ; 9.127 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[3]       ; Clock      ;
+; N/A   ; None         ; 9.105 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[7]       ; Clock      ;
+; N/A   ; None         ; 9.102 ns   ; nBitRegister:YOffsetReg|Q[3] ; Y[6]       ; Clock      ;
+; N/A   ; None         ; 9.102 ns   ; nBitRegister:XOffsetReg|Q[4] ; X[5]       ; Clock      ;
+; N/A   ; None         ; 9.080 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[3]       ; Clock      ;
+; N/A   ; None         ; 9.071 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[2]       ; Clock      ;
+; N/A   ; None         ; 9.059 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[6]       ; Clock      ;
+; N/A   ; None         ; 9.045 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[1]       ; Clock      ;
+; N/A   ; None         ; 9.041 ns   ; nBitRegister:YOffsetReg|Q[4] ; Y[5]       ; Clock      ;
+; N/A   ; None         ; 9.031 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[6]       ; Clock      ;
+; N/A   ; None         ; 9.024 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[2]       ; Clock      ;
+; N/A   ; None         ; 9.020 ns   ; nBitRegister:XOffsetReg|Q[4] ; X[7]       ; Clock      ;
+; N/A   ; None         ; 9.012 ns   ; nBitRegister:XOffsetReg|Q[4] ; X[4]       ; Clock      ;
+; N/A   ; None         ; 9.009 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[3]       ; Clock      ;
+; N/A   ; None         ; 9.007 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[6]       ; Clock      ;
+; N/A   ; None         ; 9.004 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[6]       ; Clock      ;
+; N/A   ; None         ; 8.998 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[4]       ; Clock      ;
+; N/A   ; None         ; 8.952 ns   ; nBitRegister:XOffsetReg|Q[5] ; X[7]       ; Clock      ;
+; N/A   ; None         ; 8.950 ns   ; nBitRegister:YOffsetReg|Q[3] ; Y[4]       ; Clock      ;
+; N/A   ; None         ; 8.922 ns   ; nBitRegister:XOffsetReg|Q[4] ; X[6]       ; Clock      ;
+; N/A   ; None         ; 8.879 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[4]       ; Clock      ;
+; N/A   ; None         ; 8.879 ns   ; nBitRegister:XOffsetReg|Q[6] ; X[7]       ; Clock      ;
+; N/A   ; None         ; 8.861 ns   ; nBitRegister:YOffsetReg|Q[4] ; Y[6]       ; Clock      ;
+; N/A   ; None         ; 8.854 ns   ; nBitRegister:XOffsetReg|Q[5] ; X[6]       ; Clock      ;
+; N/A   ; None         ; 8.852 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[4]       ; Clock      ;
+; N/A   ; None         ; 8.815 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[2]       ; Clock      ;
+; N/A   ; None         ; 8.749 ns   ; nBitRegister:YOffsetReg|Q[5] ; Y[6]       ; Clock      ;
+; N/A   ; None         ; 8.719 ns   ; nBitRegister:XOffsetReg|Q[5] ; X[5]       ; Clock      ;
+; N/A   ; None         ; 8.696 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[2]       ; Clock      ;
+; N/A   ; None         ; 8.683 ns   ; nBitRegister:XOffsetReg|Q[1] ; X[1]       ; Clock      ;
+; N/A   ; None         ; 8.642 ns   ; nBitRegister:XOffsetReg|Q[3] ; X[3]       ; Clock      ;
+; N/A   ; None         ; 8.638 ns   ; nBitRegister:XOffsetReg|Q[2] ; X[2]       ; Clock      ;
+; N/A   ; None         ; 8.613 ns   ; nBitRegister:YOffsetReg|Q[5] ; Y[5]       ; Clock      ;
+; N/A   ; None         ; 8.488 ns   ; nBitRegister:XOffsetReg|Q[7] ; X[7]       ; Clock      ;
+; N/A   ; None         ; 8.466 ns   ; nBitRegister:XOffsetReg|Q[6] ; X[6]       ; Clock      ;
+; N/A   ; None         ; 8.464 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[3]       ; Clock      ;
+; N/A   ; None         ; 8.394 ns   ; nBitRegister:YOffsetReg|Q[4] ; Y[4]       ; Clock      ;
+; N/A   ; None         ; 8.365 ns   ; nBitRegister:YOffsetReg|Q[6] ; Y[6]       ; Clock      ;
+; N/A   ; None         ; 8.354 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[2]       ; Clock      ;
+; N/A   ; None         ; 8.345 ns   ; nBitRegister:YOffsetReg|Q[1] ; Y[3]       ; Clock      ;
+; N/A   ; None         ; 8.318 ns   ; nBitRegister:YOffsetReg|Q[2] ; Y[3]       ; Clock      ;
+; N/A   ; None         ; 8.292 ns   ; nBitRegister:XOffsetReg|Q[0] ; X[0]       ; Clock      ;
+; N/A   ; None         ; 8.101 ns   ; nBitRegister:YOffsetReg|Q[3] ; Y[3]       ; Clock      ;
+; N/A   ; None         ; 7.903 ns   ; nBitRegister:YOffsetReg|Q[0] ; Y[0]       ; Clock      ;
+; N/A   ; None         ; 7.889 ns   ; nBitRegister:AddressReg|Q[0] ; Address[0] ; Clock      ;
+; N/A   ; None         ; 7.544 ns   ; nBitRegister:AddressReg|Q[5] ; Address[5] ; Clock      ;
+; N/A   ; None         ; 7.392 ns   ; nBitRegister:AddressReg|Q[3] ; Address[3] ; Clock      ;
+; N/A   ; None         ; 7.387 ns   ; nBitRegister:AddressReg|Q[1] ; Address[1] ; Clock      ;
+; N/A   ; None         ; 7.247 ns   ; Q.IDLE                       ; Done       ; Clock      ;
+; N/A   ; None         ; 7.214 ns   ; Q.DRAW                       ; VGA_Draw   ; Clock      ;
+; N/A   ; None         ; 7.208 ns   ; nBitRegister:AddressReg|Q[2] ; Address[2] ; Clock      ;
+; N/A   ; None         ; 7.179 ns   ; nBitRegister:AddressReg|Q[4] ; Address[4] ; Clock      ;
 +-------+--------------+------------+------------------------------+------------+------------+
 
 
@@ -403,89 +401,89 @@ applicable agreement for further details.
 +-------+-------------------+-----------------+------------+------------+
 ; Slack ; Required P2P Time ; Actual P2P Time ; From       ; To         ;
 +-------+-------------------+-----------------+------------+------------+
-; N/A   ; None              ; 12.778 ns       ; Xin[1]     ; X[3]       ;
-; N/A   ; None              ; 12.580 ns       ; Xin[1]     ; X[7]       ;
-; N/A   ; None              ; 12.262 ns       ; Xin[1]     ; X[6]       ;
-; N/A   ; None              ; 12.078 ns       ; Xin[1]     ; X[4]       ;
-; N/A   ; None              ; 11.950 ns       ; Xin[1]     ; X[5]       ;
-; N/A   ; None              ; 11.942 ns       ; Xin[1]     ; X[2]       ;
-; N/A   ; None              ; 11.823 ns       ; Xin[1]     ; X[1]       ;
-; N/A   ; None              ; 11.765 ns       ; Xin[2]     ; X[3]       ;
-; N/A   ; None              ; 11.694 ns       ; Xin[3]     ; X[7]       ;
-; N/A   ; None              ; 11.668 ns       ; Xin[0]     ; X[3]       ;
-; N/A   ; None              ; 11.577 ns       ; Xin[3]     ; X[3]       ;
-; N/A   ; None              ; 11.567 ns       ; Xin[2]     ; X[7]       ;
-; N/A   ; None              ; 11.470 ns       ; Xin[0]     ; X[7]       ;
-; N/A   ; None              ; 11.439 ns       ; Xin[6]     ; X[7]       ;
-; N/A   ; None              ; 11.377 ns       ; Xin[5]     ; X[7]       ;
-; N/A   ; None              ; 11.376 ns       ; Xin[3]     ; X[6]       ;
-; N/A   ; None              ; 11.370 ns       ; Xin[4]     ; X[7]       ;
-; N/A   ; None              ; 11.249 ns       ; Xin[2]     ; X[6]       ;
-; N/A   ; None              ; 11.237 ns       ; Yin[1]     ; Y[5]       ;
-; N/A   ; None              ; 11.192 ns       ; Xin[3]     ; X[4]       ;
-; N/A   ; None              ; 11.152 ns       ; Xin[0]     ; X[6]       ;
-; N/A   ; None              ; 11.151 ns       ; Yin[1]     ; Y[4]       ;
-; N/A   ; None              ; 11.098 ns       ; Yin[0]     ; Y[5]       ;
-; N/A   ; None              ; 11.065 ns       ; Xin[2]     ; X[4]       ;
-; N/A   ; None              ; 11.064 ns       ; Xin[3]     ; X[5]       ;
-; N/A   ; None              ; 11.059 ns       ; Xin[5]     ; X[6]       ;
-; N/A   ; None              ; 11.055 ns       ; Yin[4]     ; Y[5]       ;
-; N/A   ; None              ; 11.052 ns       ; Xin[4]     ; X[6]       ;
-; N/A   ; None              ; 11.028 ns       ; Xin[0]     ; X[1]       ;
-; N/A   ; None              ; 11.027 ns       ; Yin[2]     ; Y[5]       ;
-; N/A   ; None              ; 11.020 ns       ; Yin[1]     ; Y[2]       ;
-; N/A   ; None              ; 11.012 ns       ; Yin[0]     ; Y[4]       ;
-; N/A   ; None              ; 10.968 ns       ; Xin[0]     ; X[4]       ;
-; N/A   ; None              ; 10.941 ns       ; Yin[2]     ; Y[4]       ;
-; N/A   ; None              ; 10.937 ns       ; Xin[2]     ; X[5]       ;
-; N/A   ; None              ; 10.881 ns       ; Yin[0]     ; Y[2]       ;
-; N/A   ; None              ; 10.872 ns       ; Yin[3]     ; Y[5]       ;
-; N/A   ; None              ; 10.866 ns       ; Yin[1]     ; Y[6]       ;
-; N/A   ; None              ; 10.840 ns       ; Xin[0]     ; X[5]       ;
-; N/A   ; None              ; 10.832 ns       ; Xin[0]     ; X[2]       ;
-; N/A   ; None              ; 10.806 ns       ; Xin[6]     ; X[6]       ;
-; N/A   ; None              ; 10.804 ns       ; Yin[0]     ; Y[1]       ;
-; N/A   ; None              ; 10.798 ns       ; Xin[7]     ; X[7]       ;
-; N/A   ; None              ; 10.786 ns       ; Yin[3]     ; Y[4]       ;
-; N/A   ; None              ; 10.740 ns       ; Xin[4]     ; X[5]       ;
-; N/A   ; None              ; 10.727 ns       ; Yin[0]     ; Y[6]       ;
-; N/A   ; None              ; 10.684 ns       ; Yin[4]     ; Y[6]       ;
-; N/A   ; None              ; 10.656 ns       ; Yin[2]     ; Y[6]       ;
-; N/A   ; None              ; 10.654 ns       ; Yin[4]     ; Y[4]       ;
-; N/A   ; None              ; 10.648 ns       ; Yin[1]     ; Y[3]       ;
-; N/A   ; None              ; 10.627 ns       ; Yin[1]     ; Y[1]       ;
-; N/A   ; None              ; 10.617 ns       ; Xin[2]     ; X[2]       ;
-; N/A   ; None              ; 10.583 ns       ; Xin[0]     ; X[0]       ;
-; N/A   ; None              ; 10.556 ns       ; Xin[4]     ; X[4]       ;
-; N/A   ; None              ; 10.509 ns       ; Yin[0]     ; Y[3]       ;
-; N/A   ; None              ; 10.501 ns       ; Yin[3]     ; Y[6]       ;
-; N/A   ; None              ; 10.495 ns       ; Yin[2]     ; Y[2]       ;
-; N/A   ; None              ; 10.438 ns       ; Yin[2]     ; Y[3]       ;
-; N/A   ; None              ; 10.432 ns       ; Xin[5]     ; X[5]       ;
-; N/A   ; None              ; 10.430 ns       ; Yin[0]     ; Y[0]       ;
-; N/A   ; None              ; 10.401 ns       ; TileSel[0] ; Address[8] ;
-; N/A   ; None              ; 10.336 ns       ; TileSel[0] ; Address[7] ;
-; N/A   ; None              ; 10.238 ns       ; TileSel[0] ; Address[9] ;
-; N/A   ; None              ; 10.097 ns       ; TileSel[1] ; Address[8] ;
-; N/A   ; None              ; 9.968 ns        ; Yin[6]     ; Y[6]       ;
-; N/A   ; None              ; 9.967 ns        ; Yin[3]     ; Y[3]       ;
-; N/A   ; None              ; 9.959 ns        ; TileSel[0] ; Address[6] ;
-; N/A   ; None              ; 9.943 ns        ; Yin[5]     ; Y[5]       ;
-; N/A   ; None              ; 9.934 ns        ; TileSel[1] ; Address[9] ;
-; N/A   ; None              ; 9.898 ns        ; TileSel[2] ; Address[9] ;
-; N/A   ; None              ; 9.888 ns        ; Yin[5]     ; Y[6]       ;
-; N/A   ; None              ; 9.746 ns        ; TileSel[2] ; Address[8] ;
-; N/A   ; None              ; 9.720 ns        ; TileSel[1] ; Address[7] ;
-; N/A   ; None              ; 9.188 ns        ; TileSel[3] ; Address[9] ;
-; N/A   ; None              ; 8.942 ns        ; DataIn[5]  ; Color[5]   ;
-; N/A   ; None              ; 8.932 ns        ; DataIn[3]  ; Color[3]   ;
-; N/A   ; None              ; 8.926 ns        ; DataIn[6]  ; Color[6]   ;
+; N/A   ; None              ; 12.722 ns       ; Yin[0]     ; Y[1]       ;
+; N/A   ; None              ; 12.506 ns       ; Yin[1]     ; Y[5]       ;
+; N/A   ; None              ; 12.460 ns       ; Yin[0]     ; Y[5]       ;
+; N/A   ; None              ; 12.453 ns       ; Yin[1]     ; Y[1]       ;
+; N/A   ; None              ; 12.424 ns       ; Xin[0]     ; X[4]       ;
+; N/A   ; None              ; 12.328 ns       ; Yin[3]     ; Y[5]       ;
+; N/A   ; None              ; 12.326 ns       ; Yin[1]     ; Y[6]       ;
+; N/A   ; None              ; 12.314 ns       ; Xin[2]     ; X[4]       ;
+; N/A   ; None              ; 12.280 ns       ; Yin[0]     ; Y[6]       ;
+; N/A   ; None              ; 12.208 ns       ; Yin[4]     ; Y[5]       ;
+; N/A   ; None              ; 12.199 ns       ; Xin[0]     ; X[5]       ;
+; N/A   ; None              ; 12.174 ns       ; Yin[1]     ; Y[4]       ;
+; N/A   ; None              ; 12.148 ns       ; Yin[3]     ; Y[6]       ;
+; N/A   ; None              ; 12.128 ns       ; Yin[0]     ; Y[4]       ;
+; N/A   ; None              ; 12.117 ns       ; Xin[0]     ; X[7]       ;
+; N/A   ; None              ; 12.105 ns       ; Xin[1]     ; X[4]       ;
+; N/A   ; None              ; 12.089 ns       ; Xin[2]     ; X[5]       ;
+; N/A   ; None              ; 12.028 ns       ; Yin[4]     ; Y[6]       ;
+; N/A   ; None              ; 12.019 ns       ; Xin[0]     ; X[6]       ;
+; N/A   ; None              ; 12.007 ns       ; Xin[2]     ; X[7]       ;
+; N/A   ; None              ; 11.996 ns       ; Yin[3]     ; Y[4]       ;
+; N/A   ; None              ; 11.991 ns       ; Yin[1]     ; Y[2]       ;
+; N/A   ; None              ; 11.976 ns       ; Yin[5]     ; Y[6]       ;
+; N/A   ; None              ; 11.969 ns       ; Xin[0]     ; X[3]       ;
+; N/A   ; None              ; 11.945 ns       ; Yin[0]     ; Y[2]       ;
+; N/A   ; None              ; 11.913 ns       ; Xin[0]     ; X[2]       ;
+; N/A   ; None              ; 11.909 ns       ; Xin[2]     ; X[6]       ;
+; N/A   ; None              ; 11.887 ns       ; Xin[0]     ; X[1]       ;
+; N/A   ; None              ; 11.880 ns       ; Xin[1]     ; X[5]       ;
+; N/A   ; None              ; 11.859 ns       ; Xin[2]     ; X[3]       ;
+; N/A   ; None              ; 11.850 ns       ; Xin[3]     ; X[4]       ;
+; N/A   ; None              ; 11.841 ns       ; Yin[5]     ; Y[5]       ;
+; N/A   ; None              ; 11.827 ns       ; Yin[2]     ; Y[5]       ;
+; N/A   ; None              ; 11.798 ns       ; Xin[1]     ; X[7]       ;
+; N/A   ; None              ; 11.711 ns       ; Xin[4]     ; X[5]       ;
+; N/A   ; None              ; 11.700 ns       ; Xin[1]     ; X[6]       ;
+; N/A   ; None              ; 11.680 ns       ; Xin[5]     ; X[7]       ;
+; N/A   ; None              ; 11.650 ns       ; Xin[1]     ; X[3]       ;
+; N/A   ; None              ; 11.647 ns       ; Yin[2]     ; Y[6]       ;
+; N/A   ; None              ; 11.640 ns       ; Yin[1]     ; Y[3]       ;
+; N/A   ; None              ; 11.629 ns       ; Xin[4]     ; X[7]       ;
+; N/A   ; None              ; 11.625 ns       ; Xin[3]     ; X[5]       ;
+; N/A   ; None              ; 11.624 ns       ; Xin[4]     ; X[4]       ;
+; N/A   ; None              ; 11.594 ns       ; Yin[0]     ; Y[3]       ;
+; N/A   ; None              ; 11.594 ns       ; Xin[1]     ; X[2]       ;
+; N/A   ; None              ; 11.582 ns       ; Xin[5]     ; X[6]       ;
+; N/A   ; None              ; 11.564 ns       ; Yin[4]     ; Y[4]       ;
+; N/A   ; None              ; 11.543 ns       ; Xin[3]     ; X[7]       ;
+; N/A   ; None              ; 11.531 ns       ; Xin[4]     ; X[6]       ;
+; N/A   ; None              ; 11.495 ns       ; Yin[2]     ; Y[4]       ;
+; N/A   ; None              ; 11.491 ns       ; Xin[2]     ; X[2]       ;
+; N/A   ; None              ; 11.446 ns       ; Xin[5]     ; X[5]       ;
+; N/A   ; None              ; 11.445 ns       ; Xin[3]     ; X[6]       ;
+; N/A   ; None              ; 11.323 ns       ; Xin[6]     ; X[7]       ;
+; N/A   ; None              ; 11.252 ns       ; Xin[1]     ; X[1]       ;
+; N/A   ; None              ; 11.239 ns       ; Yin[6]     ; Y[6]       ;
+; N/A   ; None              ; 11.146 ns       ; Yin[3]     ; Y[3]       ;
+; N/A   ; None              ; 11.138 ns       ; Xin[0]     ; X[0]       ;
+; N/A   ; None              ; 11.079 ns       ; Xin[3]     ; X[3]       ;
+; N/A   ; None              ; 11.037 ns       ; Yin[0]     ; Y[0]       ;
+; N/A   ; None              ; 11.014 ns       ; Xin[7]     ; X[7]       ;
+; N/A   ; None              ; 11.000 ns       ; Yin[2]     ; Y[2]       ;
+; N/A   ; None              ; 10.961 ns       ; Yin[2]     ; Y[3]       ;
+; N/A   ; None              ; 10.913 ns       ; Xin[6]     ; X[6]       ;
+; N/A   ; None              ; 9.935 ns        ; TileSel[0] ; Address[7] ;
+; N/A   ; None              ; 9.829 ns        ; TileSel[0] ; Address[8] ;
+; N/A   ; None              ; 9.786 ns        ; TileSel[0] ; Address[9] ;
+; N/A   ; None              ; 9.734 ns        ; TileSel[1] ; Address[8] ;
+; N/A   ; None              ; 9.691 ns        ; TileSel[1] ; Address[9] ;
+; N/A   ; None              ; 9.546 ns        ; TileSel[0] ; Address[6] ;
+; N/A   ; None              ; 9.525 ns        ; TileSel[1] ; Address[7] ;
+; N/A   ; None              ; 9.226 ns        ; TileSel[2] ; Address[9] ;
+; N/A   ; None              ; 8.954 ns        ; TileSel[2] ; Address[8] ;
+; N/A   ; None              ; 8.925 ns        ; TileSel[3] ; Address[9] ;
+; N/A   ; None              ; 8.895 ns        ; DataIn[7]  ; Color[7]   ;
 ; N/A   ; None              ; 8.854 ns        ; DataIn[1]  ; Color[1]   ;
-; N/A   ; None              ; 8.829 ns        ; DataIn[0]  ; Color[0]   ;
-; N/A   ; None              ; 8.785 ns        ; DataIn[8]  ; Color[8]   ;
-; N/A   ; None              ; 7.994 ns        ; DataIn[7]  ; Color[7]   ;
-; N/A   ; None              ; 7.990 ns        ; DataIn[2]  ; Color[2]   ;
-; N/A   ; None              ; 7.924 ns        ; DataIn[4]  ; Color[4]   ;
+; N/A   ; None              ; 8.818 ns        ; DataIn[0]  ; Color[0]   ;
+; N/A   ; None              ; 8.812 ns        ; DataIn[8]  ; Color[8]   ;
+; N/A   ; None              ; 8.810 ns        ; DataIn[2]  ; Color[2]   ;
+; N/A   ; None              ; 8.741 ns        ; DataIn[4]  ; Color[4]   ;
+; N/A   ; None              ; 8.650 ns        ; DataIn[5]  ; Color[5]   ;
+; N/A   ; None              ; 8.251 ns        ; DataIn[6]  ; Color[6]   ;
+; N/A   ; None              ; 7.964 ns        ; DataIn[3]  ; Color[3]   ;
 +-------+-------------------+-----------------+------------+------------+
 
 
@@ -494,14 +492,25 @@ applicable agreement for further details.
 +---------------+-------------+-----------+--------+---------+----------+
 ; Minimum Slack ; Required th ; Actual th ; From   ; To      ; To Clock ;
 +---------------+-------------+-----------+--------+---------+----------+
-; N/A           ; None        ; -3.458 ns ; Resetn ; Q.INC_X ; Clock    ;
-; N/A           ; None        ; -3.465 ns ; Resetn ; Q.DRAW  ; Clock    ;
-; N/A           ; None        ; -3.471 ns ; Resetn ; Q.000   ; Clock    ;
-; N/A           ; None        ; -3.605 ns ; Resetn ; Q.IDLE  ; Clock    ;
-; N/A           ; None        ; -3.606 ns ; Resetn ; Q.INC_Y ; Clock    ;
-; N/A           ; None        ; -4.262 ns ; Enable ; Q.DRAW  ; Clock    ;
-; N/A           ; None        ; -4.633 ns ; Enable ; Q.IDLE  ; Clock    ;
+; N/A           ; None        ; -3.580 ns ; Resetn ; Q.INC_X ; Clock    ;
+; N/A           ; None        ; -3.583 ns ; Resetn ; Q.DRAW  ; Clock    ;
+; N/A           ; None        ; -3.726 ns ; Resetn ; Q.READ  ; Clock    ;
+; N/A           ; None        ; -3.779 ns ; Resetn ; Q.INC_Y ; Clock    ;
+; N/A           ; None        ; -3.781 ns ; Resetn ; Q.000   ; Clock    ;
+; N/A           ; None        ; -3.782 ns ; Resetn ; Q.IDLE  ; Clock    ;
+; N/A           ; None        ; -4.329 ns ; Enable ; Q.DRAW  ; Clock    ;
+; N/A           ; None        ; -5.192 ns ; Enable ; Q.IDLE  ; Clock    ;
 +---------------+-------------+-----------+--------+---------+----------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Timing Analyzer INI Usage                                                                       ;
++----------------------+--------------------------------------------------------------------------+
+; Option               ; Usage                                                                    ;
++----------------------+--------------------------------------------------------------------------+
+; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
+; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
++----------------------+--------------------------------------------------------------------------+
 
 
 +--------------------------+
@@ -509,98 +518,91 @@ applicable agreement for further details.
 +--------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
-    Info: Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Nov 11 00:58:20 2008
+    Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Nov 19 14:45:06 2008
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off drawTile -c drawTile --timing_analysis_only
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "Clock" is an undefined clock
-Info: Clock "Clock" has Internal fmax of 363.37 MHz between source register "Q.INC_X" and destination register "nBitRegister:AddressReg|Q[6]" (period= 2.752 ns)
-    Info: + Longest register to register delay is 2.542 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X36_Y29_N11; Fanout = 5; REG Node = 'Q.INC_X'
-        Info: 2: + IC(0.340 ns) + CELL(0.438 ns) = 0.778 ns; Loc. = LCCOMB_X36_Y29_N28; Fanout = 2; COMB Node = 'EnableMemCounter'
-        Info: 3: + IC(0.434 ns) + CELL(0.393 ns) = 1.605 ns; Loc. = LCCOMB_X37_Y29_N8; Fanout = 2; COMB Node = 'nBitRegister:AddressReg|Q[0]~108'
-        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.676 ns; Loc. = LCCOMB_X37_Y29_N10; Fanout = 2; COMB Node = 'nBitRegister:AddressReg|Q[1]~110'
-        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.747 ns; Loc. = LCCOMB_X37_Y29_N12; Fanout = 2; COMB Node = 'nBitRegister:AddressReg|Q[2]~112'
-        Info: 6: + IC(0.000 ns) + CELL(0.159 ns) = 1.906 ns; Loc. = LCCOMB_X37_Y29_N14; Fanout = 2; COMB Node = 'nBitRegister:AddressReg|Q[3]~114'
-        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.977 ns; Loc. = LCCOMB_X37_Y29_N16; Fanout = 2; COMB Node = 'nBitRegister:AddressReg|Q[4]~116'
-        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 2.048 ns; Loc. = LCCOMB_X37_Y29_N18; Fanout = 1; COMB Node = 'nBitRegister:AddressReg|Q[5]~118'
-        Info: 9: + IC(0.000 ns) + CELL(0.410 ns) = 2.458 ns; Loc. = LCCOMB_X37_Y29_N20; Fanout = 1; COMB Node = 'nBitRegister:AddressReg|Q[6]~119'
-        Info: 10: + IC(0.000 ns) + CELL(0.084 ns) = 2.542 ns; Loc. = LCFF_X37_Y29_N21; Fanout = 4; REG Node = 'nBitRegister:AddressReg|Q[6]'
-        Info: Total cell delay = 1.768 ns ( 69.55 % )
-        Info: Total interconnect delay = 0.774 ns ( 30.45 % )
-    Info: - Smallest clock skew is 0.004 ns
-        Info: + Shortest clock path from clock "Clock" to destination register is 2.653 ns
+Info: Clock "Clock" has Internal fmax of 377.5 MHz between source register "nBitRegister:XOffsetReg|Q[3]" and destination register "Q.IDLE" (period= 2.649 ns)
+    Info: + Longest register to register delay is 2.437 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X17_Y15_N13; Fanout = 5; REG Node = 'nBitRegister:XOffsetReg|Q[3]'
+        Info: 2: + IC(0.726 ns) + CELL(0.275 ns) = 1.001 ns; Loc. = LCCOMB_X18_Y15_N24; Fanout = 3; COMB Node = 'Equal1~113'
+        Info: 3: + IC(0.276 ns) + CELL(0.271 ns) = 1.548 ns; Loc. = LCCOMB_X18_Y15_N2; Fanout = 1; COMB Node = 'Equal1~115'
+        Info: 4: + IC(0.247 ns) + CELL(0.150 ns) = 1.945 ns; Loc. = LCCOMB_X18_Y15_N6; Fanout = 1; COMB Node = 'D.IDLE'
+        Info: 5: + IC(0.258 ns) + CELL(0.150 ns) = 2.353 ns; Loc. = LCCOMB_X18_Y15_N22; Fanout = 1; COMB Node = 'Q~75'
+        Info: 6: + IC(0.000 ns) + CELL(0.084 ns) = 2.437 ns; Loc. = LCFF_X18_Y15_N23; Fanout = 5; REG Node = 'Q.IDLE'
+        Info: Total cell delay = 0.930 ns ( 38.16 % )
+        Info: Total interconnect delay = 1.507 ns ( 61.84 % )
+    Info: - Smallest clock skew is 0.002 ns
+        Info: + Shortest clock path from clock "Clock" to destination register is 2.676 ns
             Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'Clock'
-            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 27; COMB Node = 'Clock~clkctrl'
-            Info: 3: + IC(0.999 ns) + CELL(0.537 ns) = 2.653 ns; Loc. = LCFF_X37_Y29_N21; Fanout = 4; REG Node = 'nBitRegister:AddressReg|Q[6]'
-            Info: Total cell delay = 1.536 ns ( 57.90 % )
-            Info: Total interconnect delay = 1.117 ns ( 42.10 % )
-        Info: - Longest clock path from clock "Clock" to source register is 2.649 ns
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 28; COMB Node = 'Clock~clkctrl'
+            Info: 3: + IC(1.022 ns) + CELL(0.537 ns) = 2.676 ns; Loc. = LCFF_X18_Y15_N23; Fanout = 5; REG Node = 'Q.IDLE'
+            Info: Total cell delay = 1.536 ns ( 57.40 % )
+            Info: Total interconnect delay = 1.140 ns ( 42.60 % )
+        Info: - Longest clock path from clock "Clock" to source register is 2.674 ns
             Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'Clock'
-            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 27; COMB Node = 'Clock~clkctrl'
-            Info: 3: + IC(0.995 ns) + CELL(0.537 ns) = 2.649 ns; Loc. = LCFF_X36_Y29_N11; Fanout = 5; REG Node = 'Q.INC_X'
-            Info: Total cell delay = 1.536 ns ( 57.98 % )
-            Info: Total interconnect delay = 1.113 ns ( 42.02 % )
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 28; COMB Node = 'Clock~clkctrl'
+            Info: 3: + IC(1.020 ns) + CELL(0.537 ns) = 2.674 ns; Loc. = LCFF_X17_Y15_N13; Fanout = 5; REG Node = 'nBitRegister:XOffsetReg|Q[3]'
+            Info: Total cell delay = 1.536 ns ( 57.44 % )
+            Info: Total interconnect delay = 1.138 ns ( 42.56 % )
     Info: + Micro clock to output delay of source is 0.250 ns
     Info: + Micro setup delay of destination is -0.036 ns
-Info: tsu for register "Q.IDLE" (data pin = "Enable", clock pin = "Clock") is 4.863 ns
-    Info: + Longest pin to register delay is 7.552 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.830 ns) = 0.830 ns; Loc. = PIN_G14; Fanout = 2; PIN Node = 'Enable'
-        Info: 2: + IC(5.160 ns) + CELL(0.438 ns) = 6.428 ns; Loc. = LCCOMB_X36_Y29_N30; Fanout = 1; COMB Node = 'Selector0~28'
-        Info: 3: + IC(0.395 ns) + CELL(0.245 ns) = 7.068 ns; Loc. = LCCOMB_X37_Y29_N28; Fanout = 1; COMB Node = 'D.IDLE'
-        Info: 4: + IC(0.250 ns) + CELL(0.150 ns) = 7.468 ns; Loc. = LCCOMB_X37_Y29_N24; Fanout = 1; COMB Node = 'Q~68'
-        Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 7.552 ns; Loc. = LCFF_X37_Y29_N25; Fanout = 4; REG Node = 'Q.IDLE'
-        Info: Total cell delay = 1.747 ns ( 23.13 % )
-        Info: Total interconnect delay = 5.805 ns ( 76.87 % )
+Info: tsu for register "Q.IDLE" (data pin = "Enable", clock pin = "Clock") is 5.422 ns
+    Info: + Longest pin to register delay is 8.134 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.810 ns) = 0.810 ns; Loc. = PIN_Y11; Fanout = 2; PIN Node = 'Enable'
+        Info: 2: + IC(5.529 ns) + CELL(0.420 ns) = 6.759 ns; Loc. = LCCOMB_X19_Y15_N26; Fanout = 1; COMB Node = 'Selector1~28'
+        Info: 3: + IC(0.445 ns) + CELL(0.438 ns) = 7.642 ns; Loc. = LCCOMB_X18_Y15_N6; Fanout = 1; COMB Node = 'D.IDLE'
+        Info: 4: + IC(0.258 ns) + CELL(0.150 ns) = 8.050 ns; Loc. = LCCOMB_X18_Y15_N22; Fanout = 1; COMB Node = 'Q~75'
+        Info: 5: + IC(0.000 ns) + CELL(0.084 ns) = 8.134 ns; Loc. = LCFF_X18_Y15_N23; Fanout = 5; REG Node = 'Q.IDLE'
+        Info: Total cell delay = 1.902 ns ( 23.38 % )
+        Info: Total interconnect delay = 6.232 ns ( 76.62 % )
     Info: + Micro setup delay of destination is -0.036 ns
-    Info: - Shortest clock path from clock "Clock" to destination register is 2.653 ns
+    Info: - Shortest clock path from clock "Clock" to destination register is 2.676 ns
         Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'Clock'
-        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 27; COMB Node = 'Clock~clkctrl'
-        Info: 3: + IC(0.999 ns) + CELL(0.537 ns) = 2.653 ns; Loc. = LCFF_X37_Y29_N25; Fanout = 4; REG Node = 'Q.IDLE'
-        Info: Total cell delay = 1.536 ns ( 57.90 % )
-        Info: Total interconnect delay = 1.117 ns ( 42.10 % )
-Info: tco from clock "Clock" to destination pin "Address[8]" through register "nBitRegister:AddressReg|Q[6]" is 11.013 ns
-    Info: + Longest clock path from clock "Clock" to source register is 2.653 ns
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 28; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(1.022 ns) + CELL(0.537 ns) = 2.676 ns; Loc. = LCFF_X18_Y15_N23; Fanout = 5; REG Node = 'Q.IDLE'
+        Info: Total cell delay = 1.536 ns ( 57.40 % )
+        Info: Total interconnect delay = 1.140 ns ( 42.60 % )
+Info: tco from clock "Clock" to destination pin "Address[7]" through register "nBitRegister:AddressReg|Q[6]" is 9.724 ns
+    Info: + Longest clock path from clock "Clock" to source register is 2.676 ns
         Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'Clock'
-        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 27; COMB Node = 'Clock~clkctrl'
-        Info: 3: + IC(0.999 ns) + CELL(0.537 ns) = 2.653 ns; Loc. = LCFF_X37_Y29_N21; Fanout = 4; REG Node = 'nBitRegister:AddressReg|Q[6]'
-        Info: Total cell delay = 1.536 ns ( 57.90 % )
-        Info: Total interconnect delay = 1.117 ns ( 42.10 % )
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 28; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(1.022 ns) + CELL(0.537 ns) = 2.676 ns; Loc. = LCFF_X18_Y15_N21; Fanout = 4; REG Node = 'nBitRegister:AddressReg|Q[6]'
+        Info: Total cell delay = 1.536 ns ( 57.40 % )
+        Info: Total interconnect delay = 1.140 ns ( 42.60 % )
     Info: + Micro clock to output delay of source is 0.250 ns
-    Info: + Longest register to pin delay is 8.110 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X37_Y29_N21; Fanout = 4; REG Node = 'nBitRegister:AddressReg|Q[6]'
-        Info: 2: + IC(3.589 ns) + CELL(0.414 ns) = 4.003 ns; Loc. = LCCOMB_X53_Y2_N8; Fanout = 2; COMB Node = 'memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated|result[6]~21'
-        Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 4.074 ns; Loc. = LCCOMB_X53_Y2_N10; Fanout = 2; COMB Node = 'memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated|result[7]~23'
-        Info: 4: + IC(0.000 ns) + CELL(0.410 ns) = 4.484 ns; Loc. = LCCOMB_X53_Y2_N12; Fanout = 1; COMB Node = 'memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated|result[8]~24'
-        Info: 5: + IC(0.848 ns) + CELL(2.778 ns) = 8.110 ns; Loc. = PIN_W17; Fanout = 0; PIN Node = 'Address[8]'
-        Info: Total cell delay = 3.673 ns ( 45.29 % )
-        Info: Total interconnect delay = 4.437 ns ( 54.71 % )
-Info: Longest tpd from source pin "Xin[1]" to destination pin "X[3]" is 12.778 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.860 ns) = 0.860 ns; Loc. = PIN_H8; Fanout = 2; PIN Node = 'Xin[1]'
-    Info: 2: + IC(6.322 ns) + CELL(0.414 ns) = 7.596 ns; Loc. = LCCOMB_X38_Y29_N2; Fanout = 2; COMB Node = 'addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~107'
-    Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 7.667 ns; Loc. = LCCOMB_X38_Y29_N4; Fanout = 2; COMB Node = 'addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~109'
-    Info: 4: + IC(0.000 ns) + CELL(0.410 ns) = 8.077 ns; Loc. = LCCOMB_X38_Y29_N6; Fanout = 1; COMB Node = 'addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~110'
-    Info: 5: + IC(2.049 ns) + CELL(2.652 ns) = 12.778 ns; Loc. = PIN_F26; Fanout = 0; PIN Node = 'X[3]'
-    Info: Total cell delay = 4.407 ns ( 34.49 % )
-    Info: Total interconnect delay = 8.371 ns ( 65.51 % )
-Info: th for register "Q.INC_X" (data pin = "Resetn", clock pin = "Clock") is -3.458 ns
-    Info: + Longest clock path from clock "Clock" to destination register is 2.649 ns
+    Info: + Longest register to pin delay is 6.798 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X18_Y15_N21; Fanout = 4; REG Node = 'nBitRegister:AddressReg|Q[6]'
+        Info: 2: + IC(2.580 ns) + CELL(0.393 ns) = 2.973 ns; Loc. = LCCOMB_X1_Y2_N8; Fanout = 2; COMB Node = 'memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~21'
+        Info: 3: + IC(0.000 ns) + CELL(0.410 ns) = 3.383 ns; Loc. = LCCOMB_X1_Y2_N10; Fanout = 1; COMB Node = 'memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~22'
+        Info: 4: + IC(0.597 ns) + CELL(2.818 ns) = 6.798 ns; Loc. = PIN_AE4; Fanout = 0; PIN Node = 'Address[7]'
+        Info: Total cell delay = 3.621 ns ( 53.27 % )
+        Info: Total interconnect delay = 3.177 ns ( 46.73 % )
+Info: Longest tpd from source pin "Yin[0]" to destination pin "Y[1]" is 12.722 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.820 ns) = 0.820 ns; Loc. = PIN_E10; Fanout = 2; PIN Node = 'Yin[0]'
+    Info: 2: + IC(5.605 ns) + CELL(0.393 ns) = 6.818 ns; Loc. = LCCOMB_X17_Y17_N0; Fanout = 2; COMB Node = 'addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~92'
+    Info: 3: + IC(0.000 ns) + CELL(0.410 ns) = 7.228 ns; Loc. = LCCOMB_X17_Y17_N2; Fanout = 1; COMB Node = 'addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~93'
+    Info: 4: + IC(2.716 ns) + CELL(2.778 ns) = 12.722 ns; Loc. = PIN_F10; Fanout = 0; PIN Node = 'Y[1]'
+    Info: Total cell delay = 4.401 ns ( 34.59 % )
+    Info: Total interconnect delay = 8.321 ns ( 65.41 % )
+Info: th for register "Q.INC_X" (data pin = "Resetn", clock pin = "Clock") is -3.580 ns
+    Info: + Longest clock path from clock "Clock" to destination register is 2.674 ns
         Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'Clock'
-        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 27; COMB Node = 'Clock~clkctrl'
-        Info: 3: + IC(0.995 ns) + CELL(0.537 ns) = 2.649 ns; Loc. = LCFF_X36_Y29_N11; Fanout = 5; REG Node = 'Q.INC_X'
-        Info: Total cell delay = 1.536 ns ( 57.98 % )
-        Info: Total interconnect delay = 1.113 ns ( 42.02 % )
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 28; COMB Node = 'Clock~clkctrl'
+        Info: 3: + IC(1.020 ns) + CELL(0.537 ns) = 2.674 ns; Loc. = LCFF_X17_Y15_N5; Fanout = 3; REG Node = 'Q.INC_X'
+        Info: Total cell delay = 1.536 ns ( 57.44 % )
+        Info: Total interconnect delay = 1.138 ns ( 42.56 % )
     Info: + Micro hold delay of destination is 0.266 ns
-    Info: - Shortest pin to register delay is 6.373 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.850 ns) = 0.850 ns; Loc. = PIN_C16; Fanout = 5; PIN Node = 'Resetn'
-        Info: 2: + IC(5.168 ns) + CELL(0.271 ns) = 6.289 ns; Loc. = LCCOMB_X36_Y29_N10; Fanout = 1; COMB Node = 'Q~70'
-        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 6.373 ns; Loc. = LCFF_X36_Y29_N11; Fanout = 5; REG Node = 'Q.INC_X'
-        Info: Total cell delay = 1.205 ns ( 18.91 % )
-        Info: Total interconnect delay = 5.168 ns ( 81.09 % )
+    Info: - Shortest pin to register delay is 6.520 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.860 ns) = 0.860 ns; Loc. = PIN_AE8; Fanout = 6; PIN Node = 'Resetn'
+        Info: 2: + IC(5.305 ns) + CELL(0.271 ns) = 6.436 ns; Loc. = LCCOMB_X17_Y15_N4; Fanout = 1; COMB Node = 'Q~76'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 6.520 ns; Loc. = LCFF_X17_Y15_N5; Fanout = 3; REG Node = 'Q.INC_X'
+        Info: Total cell delay = 1.215 ns ( 18.63 % )
+        Info: Total interconnect delay = 5.305 ns ( 81.37 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 165 megabytes
-    Info: Processing ended: Tue Nov 11 00:58:22 2008
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Allocated 113 megabytes of memory during processing
+    Info: Processing ended: Wed Nov 19 14:45:10 2008
+    Info: Elapsed time: 00:00:04
 
 

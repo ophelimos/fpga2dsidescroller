@@ -27,7 +27,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	//------------------------------------------
 	// Level Memory // debug
 	//------------------------------------------
-/*	
+	/*
 	// Signals
 	wire [14:0] level_address;
 	// We agreed on 4-bit, but 3-bit works for now
@@ -38,7 +38,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	.address(level_address),
 	.clock(clock),
 	.q(tile_code));
-*/	
+	*/
 	//------------------------------------------
 	// Tile Memory
 	//------------------------------------------
@@ -136,7 +136,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
  			INCREMENT_PT: p_D <= READ_PT;
  			DROP_PT: if (tile_y == 15) p_D <= WAIT_PT;
  			else p_D <= READ_PT;
-			default: p_D <= WAIT_PT;
+			default: p_D <= 3'bx;
 		endcase
 	end
 	
