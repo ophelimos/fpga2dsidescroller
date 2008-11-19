@@ -12,7 +12,8 @@ module main_state_machine
 		VGA_B,   						//	VGA Blue[9:0]
 		SW,								//  Switches
 		LEDR,							//  Red LEDs
-		LEDG							//  Green LEDs
+		LEDG,							//  Green LEDs
+		HEX0, HEX1, HEX2				//  Hexadecimal Displays
 	);
 
 	input			CLOCK_50;				//	50 MHz
@@ -28,6 +29,7 @@ module main_state_machine
 	output	[9:0]	VGA_B;   				//	VGA Blue[9:0]
 	output 	[17:0] 	LEDR;					//  Red LEDs
 	output 	[7:0] 	LEDG;					//  Green LEDs
+	output  [6:0] HEX2, HEX1, HEX0;			//  Hexadecimal Displays
 	
 	wire resetn;
 	assign resetn = SW[0];
@@ -162,10 +164,10 @@ module main_state_machine
 	.Xout(x_character), 
 	.Yout(y_character), 
 	.Color(color_character), 
-	.Done(done_character), 
+	.Done(draw_character_done), 
 	.VGA_Draw(writeEn_character));
 	
-	assign draw_character_done = 1;
+	//assign draw_character_done = 1;
 	
 	//------------------------------------------
 	// DrawEnemies instantiation
@@ -176,8 +178,27 @@ module main_state_machine
 	assign draw_enemies_done = 1;
 	
 	//------------------------------------------
-	// DetectBackgroundCollisions instantiation
+	// Collision Detection Area
 	//------------------------------------------
+	
+	wire left_blocked;
+	wire right_blocked;
+	wire up_blocked;
+	wire down_blocked;
+	
+	/*detectBackgroundCollision background_collision_detector(
+	.resetn(resetn), 
+	.clock(CLOCK_50), 
+	.enable(detect_collisions_enable), 
+	.x_location(x_location), 
+	.y_location(y_location), 
+	.memory_input(tile_code), 
+	.memory_address(level_address), 
+	.left(left_blocked), 
+	.right(right_blocked), 
+	.up(up_blocked), 
+	.down(down_blocked), 
+	.done(detect_background_collisions_done));*/
 	
 	wire detect_background_collisions_done;
 	wire detect_collisions_done;
@@ -239,6 +260,90 @@ module main_state_machine
 				x_position_cnt_enable = 1'b0;
 				time_cnt_reset = 1'b0;
 			end
+	
+	// Score Counters --- 0-9 on 3 hexadecimal displays
+	reg score_cnt_enable;
+	reg score_cnt_reset;
+	wire [25:0] score_cnt;
+	
+	counter26b score_counter (
+		.clock(CLOCK_50),
+		.cnt_en(score_cnt_enable),
+		.sclr(score_cnt_reset),
+		.q(score_cnt));
+		
+	always @(*)
+		if (score_cnt == 50_000_000)
+			begin
+				score_cnt_reset = 1;
+				score_out0_enable = 1;
+			end
+		else
+			begin
+				score_cnt_reset = 0;
+				score_out0_enable = 0;
+			end
+	
+	// This should be done with a generate, but I haven't
+	// bothered to look up the syntax
+	
+	reg score_out0_enable;
+	reg score_out0_reset;
+	wire [3:0] score_out0;
+	
+	counter4b score_cnt_out0 (
+		.clock(CLOCK_50),
+		.cnt_en(score_out0_enable),
+		.sclr(score_out0_reset),
+		.q(score_out0));
+		
+	always @(*)
+		if (score_out0 == 10)
+			begin
+				score_out0_reset = 1;
+				score_out1_enable = 1;
+			end
+		else
+			begin
+				score_out0_reset = 0;
+				score_out1_enable = 0;
+			end
+	
+	reg score_out1_enable;
+	reg score_out1_reset;
+	wire [3:0] score_out1;
+	
+	counter4b score_cnt_out1 (
+		.clock(CLOCK_50),
+		.cnt_en(score_out1_enable),
+		.sclr(score_out1_reset),
+		.q(score_out1));
+		
+	always @(*)
+		if (score_out1 == 10)
+			begin
+				score_out1_reset = 1;
+				score_out2_enable = 1;
+			end
+		else
+			begin
+				score_out1_reset = 0;
+				score_out2_enable = 0;
+			end
+		
+	reg score_out2_enable;
+	reg score_out2_reset;
+	wire [3:0] score_out2;
+	
+	counter4b score__cnt_out2 (
+		.clock(CLOCK_50),
+		.cnt_en(score_out2_enable),
+		.sclr(score_out2_reset),
+		.q(score_out2));
+		
+	hex_digits hex0 (score_out0, HEX0);
+	hex_digits hex1 (score_out1, HEX1);
+	hex_digits hex2 (score_out2, HEX2);
 	
 	//------------------------------------------
 	// Main State Machine

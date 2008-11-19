@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Tue Nov 18 15:28:30 2008
-Quartus II Version : 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition
+Analysis & Synthesis Status : Successful - Wed Nov 19 09:59:32 2008
+Quartus II Version : 7.1 Build 178 06/25/2007 SP 1 SJ Full Version
 Revision Name : main_state_machine
 Top-level Entity Name : main_state_machine
 Family : Cyclone II
-Total logic elements : 379
-    Total combinational functions : 379
-    Dedicated logic registers : 130
-Total registers : 130
-Total pins : 67
+Total logic elements : 441
+    Total combinational functions : 441
+    Dedicated logic registers : 168
+Total registers : 168
+Total pins : 88
 Total virtual pins : 0
 Total memory bits : 308,880
-Embedded Multiplier 9-bit elements : 0
+Embedded Multiplier 9-bit elements : 2
 Total PLLs : 1

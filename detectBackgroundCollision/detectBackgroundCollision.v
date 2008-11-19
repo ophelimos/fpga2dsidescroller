@@ -2,12 +2,12 @@ module detectBackgroundCollision(resetn, clock, enable, x_location, y_location, 
    //------------------------------------------
    // Parameters
    //------------------------------------------
-   parameter tilemap_length = 100; // In tiles
+   parameter tilemap_length = 2000; // In tiles
    //------------------------------------------
    // Inputs
    //------------------------------------------
    input clock;
-   input [(tilemap_length / 15):0] x_location; // In tiles
+   input [10:0] x_location; // In tiles
    input [3:0]                     y_location;
    input                           enable;
    input                           resetn;
