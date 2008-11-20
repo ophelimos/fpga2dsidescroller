@@ -221,6 +221,7 @@ module main_state_machine
 	.clock(CLOCK_50),
 	.cnt_en(x_position_cnt_enable),
 	.sclr(x_position_cnt_reset),
+	.updown(x_position_cnt_left),
 	.q(x_position));
 	
 	// Character y position (fixed for now)
@@ -250,12 +251,21 @@ module main_state_machine
 			end
 				
 	
-	// Counter enable logic
+	// Moving left or right logic
 	always @(*)
-		if ( (x_movement_enable == 1) && (KEY[3] == 0))
+		if ( (x_movement_enable == 0)
 			begin
-				x_position_cnt_enable = 1'b1;
+				x_position_cnt_enable = 1'b0;
 			end
+		else if (KEY[0] == 0)
+				begin
+					x_position_cnt_enable = 1'b1;
+					x_position_cnt_left = 1'b0;
+				end
+		else if (KEY[3] == 0;
+				begin
+					x_position_cnt_enable = 1'b1;
+					x_position_cnt_left = 1'b1;
 		else
 			begin
 				x_position_cnt_enable = 1'b0;
@@ -267,13 +277,12 @@ module main_state_machine
 	//------------------------------------------
 	
 	// Score Counters --- 0-9 on 3 hexadecimal displays
-	reg score_cnt_enable;
 	reg score_cnt_reset;
 	wire [25:0] score_cnt;
 	
 	counter26b score_counter (
 		.clock(CLOCK_50),
-		.cnt_en(score_cnt_enable),
+		.cnt_en(1'b1),
 		.sclr(score_cnt_reset),
 		.q(score_cnt));
 		
@@ -375,6 +384,17 @@ module main_state_machine
 	hex_digits hex0 (score_out0, HEX0);
 	hex_digits hex1 (score_out1, HEX1);
 	hex_digits hex2 (score_out2, HEX2);
+	
+	always @(*)
+		if (score_out2 == 10)
+			begin
+				score_out2_reset = 1;
+			end
+		else
+			begin
+				score_out2_reset = 0;
+			end
+		
 	
 	//------------------------------------------
 	// Main State Machine
