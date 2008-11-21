@@ -29,8 +29,10 @@ set_global_assignment -name TOP_LEVEL_ENTITY characterMovement
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "7.1 SP1"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:18:00  NOVEMBER 21, 2008"
 set_global_assignment -name LAST_QUARTUS_VERSION "7.1 SP1"
+set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name VERILOG_FILE register8b.v
 set_global_assignment -name VERILOG_FILE counter6bdown.v
 set_global_assignment -name VERILOG_FILE register7b.v
 set_global_assignment -name VERILOG_FILE characterMovement.v
-set_instance_assignment -name PARTITION_HIERARCHY no_file_for_top_partition -to | -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE characterMovement.vwf
