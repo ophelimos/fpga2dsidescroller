@@ -222,10 +222,24 @@ module main_state_machine
 	wire [7:0] x_character_position;
 	wire [6:0] y_character_position;
 	
+	reg jump;
+	
+	// Jumping logic
+	always @(*)
+		if (movement_enable == 1 && KEY[1] == 0 && down_blocked == 1)
+			jump = 1;
+		else
+			jump = 0;
+	
 	characterMovement character_movement (
 	.clock(CLOCK_50),
 	.enable(movement_enable),
 	.resetn(resetn),
+	.jump(jump),
+	.left_blocked(left_blocked),
+	.right_blocked(right_blocked), 
+	.up_blocked(up_blocked), 
+	.down_blocked(down_blocked),
 	.x_position(x_character_position),
 	.y_position(y_character_position));
 	
@@ -477,7 +491,8 @@ module main_state_machine
 	begin: main_datapath
 		case (main_D)
 			DRAW_BACKGROUND: 
-				begin 	movement_enable_out = 0; 
+				begin 	
+						movement_enable_out = 0; 
 						draw_background_enable_out = 1;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
@@ -490,7 +505,8 @@ module main_state_machine
 						level_address_out = level_address_background;
 				end
 			DRAW_CHARACTER:
-				begin 	movement_enable_out = 0; 
+				begin 	
+						movement_enable_out = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 1;
 						draw_enemies_enable_out = 0;
@@ -503,7 +519,8 @@ module main_state_machine
 						level_address_out = 4'bx;
 				end
 			DRAW_ENEMIES:
-				begin 	movement_enable_out = 0; 
+				begin 	
+						movement_enable_out = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 1;
@@ -516,7 +533,8 @@ module main_state_machine
 						level_address_out = 4'bx;
 				end
 			DETECT_COLLISIONS:
-				begin 	movement_enable_out = 0; 
+				begin 	
+						movement_enable_out = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
@@ -529,7 +547,8 @@ module main_state_machine
 						level_address_out = level_address_collisions;
 				end
 			MOVEMENT:
-				begin 	movement_enable_out = 1; 
+				begin 	
+						movement_enable_out = 1; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
@@ -542,7 +561,8 @@ module main_state_machine
 						level_address_out = 4'bx;
 				end
 			WAIT:
-				begin 	movement_enable_out = 0; 
+				begin 	
+						movement_enable_out = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
@@ -555,7 +575,8 @@ module main_state_machine
 						level_address_out = 4'bx;
 				end
 			default: 
-				begin 	movement_enable_out = 1'bx; 
+				begin 	
+						movement_enable_out = 1'bx; 
 						draw_background_enable_out = 1'bx;
 						draw_character_enable_out = 1'bx;
 						draw_enemies_enable_out = 1'bx;

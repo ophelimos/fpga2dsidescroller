@@ -222,10 +222,24 @@ module main_state_machine
 	wire [7:0] x_character_position;
 	wire [6:0] y_character_position;
 	
+	reg jump;
+	
+	// Jumping logic
+	always @(*)
+		if (movement_enable == 1 && KEY[1] == 0 && down_blocked == 1)
+			jump = 1;
+		else
+			jump = 0;
+	
 	characterMovement character_movement (
 	.clock(CLOCK_50),
 	.enable(movement_enable),
 	.resetn(resetn),
+	.jump(jump),
+	.left_blocked(left_blocked),
+	.right_blocked(right_blocked), 
+	.up_blocked(up_blocked), 
+	.down_blocked(down_blocked),
 	.x_position(x_character_position),
 	.y_position(y_character_position));
 	
