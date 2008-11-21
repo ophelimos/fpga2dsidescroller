@@ -1,4 +1,4 @@
-module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocked, up_blocked, down_blocked, x_position, y_position);
+module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocked, up_blocked, down_blocked, x_position, y_position, jumping_Q, jumping_D, jump_factor);
 	//------------------------------------------
 	// Inputs
 	//------------------------------------------
@@ -15,6 +15,8 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	//------------------------------------------
 	output [7:0] x_position; // Adjust location on-screen, in pixels
 	output [6:0] y_position;
+	output [1:0] jumping_Q, jumping_D;
+	output [5:0] jump_factor;
 	
 	// Character x position (probably fixed permanently)	
 	assign x_position = 8'd72;	// Right around the center (in pixels)
@@ -23,13 +25,16 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	//assign y_position = 7'd60;	// just below center on the screen (in pixels)
 	
 	// Position will simply be the output of a register
-	// Should start at the top of the screen (0
+	// Should start at the top of the screen (0)
 	
-	wire [6:0] y_position_in;
+	// Technically a 7-bit register would work, but I want his head to be able to leave the top of the screen
+	// without his body wrapping around.  Therefore, we need a larger number
 	
-	register7b y_position_register (
+	wire [7:0] y_position_change;
+	
+	register8b y_position_register (
 	.clock(clock),
-	.data(y_position_in),
+	.data(y_position_change),
 	.sclr(~resetn),
 	.q(y_position));
 	
@@ -84,7 +89,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 		case (jumping_Q)
 			WAIT: if (jump == 1) jumping_D <= SLOW_DOWN;
 			else jumping_D <= WAIT;
-			SLOW_DOWN: if (down_blocked) jumping_D <= HIT_GROUND;
+			SLOW_DOWN: if (down_blocked == 1) jumping_D <= HIT_GROUND;
 			else if (jump_factor == 0) jumping_D <= WAIT;
 			else jumping_D <= SLOW_DOWN;
 			HIT_GROUND: jumping_D <= WAIT;
@@ -124,11 +129,25 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	//------------------------------------------
 
 	// Remember, up = negative, down = positive
+	parameter fall_speed = 8;
+	
+	reg [7:0] y_position_in;
+	assign y_position_change = y_position_in;
+	
+	always @(*)
+		if (up_blocked == 1 && down_blocked == 1)
+			y_position_in = y_position;
+		else if (up_blocked == 0 && down_blocked == 1)
+			y_position_in = y_position - jump_factor;
+		else if (up_blocked == 1 && down_blocked == 0)
+			y_position_in = y_position + fall_speed;
+		else
+			y_position_in = y_position + fall_speed - jump_factor;
 
-	assign y_position_in = 
+/*	assign y_position_in = y_position
 	// Falling
-	/*+*/( (~down_blocked) * 8 ) 
+	+( (~down_blocked) * 8 ) 
 	// Jumping
 	- ( (~up_blocked) * jump_factor );
-	
+	*/
 endmodule
