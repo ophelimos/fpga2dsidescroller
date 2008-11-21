@@ -11,7 +11,7 @@ module detectBackgroundCollision(resetn, clock, enable, x_location, y_location, 
    input [3:0]                     y_location;
    input                           enable;
    input                           resetn;
-   input [2:0]                     memory_input;
+   input [3:0]                     memory_input;
    //------------------------------------------
    // Outputs
    //------------------------------------------
@@ -86,7 +86,7 @@ always @(posedge clock or negedge resetn)
 
 always @(*)
 	begin
-		if (memory_input == 3'b000)
+		if (memory_input == 4'b000)
 			collision = 0;
 		else
 			collision = 1;
