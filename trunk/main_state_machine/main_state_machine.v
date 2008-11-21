@@ -69,7 +69,7 @@ module main_state_machine
 	// Debugging
 	//------------------------------------------
 	
-	assign LEDR[2:0] = tile_code;
+	assign LEDR[3:0] = tile_code;
 	assign LEDR[17:15] = main_Q;
 	assign LEDR[14:12] = main_D;
 	assign LEDG[0] = draw_background_done;
@@ -118,17 +118,18 @@ module main_state_machine
 	wire [6:0] y_background;
 	wire [8:0] color_background;
 	wire writeEn_background;
+	wire [14:0] level_address_background;
 	
 	drawBackground draw_background(
 	.resetn(resetn),
 	.clock(CLOCK_50),
 	.color(color_background),
-	.level_address(level_address),
+	.level_address(level_address_background),
 	.tile_code(tile_code),			// input - which tile to draw
 	.x(x_background),
 	.y(y_background),
 	.plot(writeEn_background),
-	.x_offset(x_position),
+	.x_offset(x_tile_position),
 	.enable(draw_background_enable),
 	.done(draw_background_done));
 	
@@ -149,8 +150,8 @@ module main_state_machine
 	wire [4:0] SpriteHeight, SpriteWidth;	// width and height of the selected sprite
 	
 	drawSprite draw_character(
-	.Xin(72), 
-	.Yin(y_position), 
+	.Xin(x_character_position), 
+	.Yin(y_character_position), 
 	.Sprite(SpriteSelect), 
 	.AnimStep(AnimStep), 
 	.Width(SpriteWidth), 
@@ -185,48 +186,66 @@ module main_state_machine
 	wire right_blocked;
 	wire up_blocked;
 	wire down_blocked;
+	wire [14:0] level_address_collisions;
 	
-	/*detectBackgroundCollision background_collision_detector(
+	detectBackgroundCollision background_collision_detector(
 	.resetn(resetn), 
 	.clock(CLOCK_50), 
-	.enable(detect_collisions_enable), 
-	.x_location(x_location), 
-	.y_location(y_location), 
+	.enable(detect_collisions_enable),
+	// Character position is in pixels on the screen, but we detect collisions based on tiles
+	// in the tilemap (non screen-oriented)
+	// character_position (tiles) = x_location (tiles) + character_position on screen (tiles)
+	// In the y-direction though, we currently don't have this problem
+	.x_location( (x_tile_position + (x_character_position / 4'd8)) ),
+	.y_location( (y_character_position / 4'd8) ), 
 	.memory_input(tile_code), 
-	.memory_address(level_address), 
+	.memory_address(level_address_collisions), 
 	.left(left_blocked), 
 	.right(right_blocked), 
 	.up(up_blocked), 
 	.down(down_blocked), 
-	.done(detect_background_collisions_done));*/
+	.done(detect_background_collisions_done));
 	
 	wire detect_background_collisions_done;
 	wire detect_collisions_done;
 	
-	assign detect_background_collisions_done = 1;
+//	assign detect_background_collisions_done = 1;
 	
 	assign detect_collisions_done = detect_background_collisions_done;
 	
 	//------------------------------------------
-	// Movement and Physics Area
+	// Character Movement Area
 	//------------------------------------------
 	
-	// Character x position counter - 32bit
+	wire movement_enable;
 	
-	reg x_position_cnt_enable;
-	reg  x_position_cnt_reset;
-	wire [31:0] x_position;
+	wire [7:0] x_character_position;
+	wire [6:0] y_character_position;
 	
-	counter32b x_position_counter(
+	characterMovement character_movement (
 	.clock(CLOCK_50),
-	.cnt_en(x_position_cnt_enable),
-	.sclr(x_position_cnt_reset),
-	.updown(x_position_cnt_left),
-	.q(x_position));
+	.enable(movement_enable),
+	.resetn(resetn),
+	.x_position(x_character_position),
+	.y_position(y_character_position));
 	
-	// Character y position (fixed for now)
-	wire [6:0] y_position;
-	assign y_position = 7'd60;	// just below center on the screen (in pixels)
+	//------------------------------------------
+	// Level Movement Area
+	//------------------------------------------
+	
+	// Level x-offset tile position counter - 32bit
+	
+	reg x_tile_position_cnt_enable;
+	reg x_tile_position_cnt_reset;
+	reg x_tile_position_cnt_left;
+	wire [31:0] x_tile_position;
+	
+	counter32b x_tile_position_counter(
+	.clock(CLOCK_50),
+	.cnt_en(x_tile_position_cnt_enable),
+	.sclr(x_tile_position_cnt_reset),
+	.updown(x_tile_position_cnt_left),
+	.q(x_tile_position));
 	
 	// 60 fps = 833_333 clocks which needs 20 bits
 	reg time_cnt_reset;
@@ -253,25 +272,22 @@ module main_state_machine
 	
 	// Moving left or right logic
 	always @(*)
-		if ( (x_movement_enable == 0)
-			begin
-				x_position_cnt_enable = 1'b0;
-			end
-		else if (KEY[0] == 0)
+		if (movement_enable == 1 && KEY[3] == 0 && right_blocked == 0)
 				begin
-					x_position_cnt_enable = 1'b1;
-					x_position_cnt_left = 1'b0;
+					x_tile_position_cnt_enable = 1'b1;
+					x_tile_position_cnt_left = 1'b0;
 				end
-		else if (KEY[3] == 0;
+		else if (movement_enable == 1 && KEY[0] == 0 && left_blocked == 0)
 				begin
-					x_position_cnt_enable = 1'b1;
-					x_position_cnt_left = 1'b1;
+					x_tile_position_cnt_enable = 1'b1;
+					x_tile_position_cnt_left = 1'b1;
+				end
 		else
 			begin
-				x_position_cnt_enable = 1'b0;
+				x_tile_position_cnt_enable = 1'b0;
+				x_tile_position_cnt_left = 1'bx;
 			end
 	
-		
 	//------------------------------------------
 	// Scoring
 	//------------------------------------------
@@ -283,7 +299,7 @@ module main_state_machine
 	counter26b score_counter (
 		.clock(CLOCK_50),
 		.cnt_en(1'b1),
-		.sclr(score_cnt_reset),
+		.sclr(score_cnt_reset || ~resetn),
 		.q(score_cnt));
 		
 	always @(*)
@@ -333,7 +349,7 @@ module main_state_machine
 	counter4b score_cnt_out0 (
 		.clock(CLOCK_50),
 		.cnt_en(score_out0_enable),
-		.sclr(score_out0_reset),
+		.sclr(score_out0_reset || ~resetn),
 		.q(score_out0));
 		
 	always @(*)
@@ -355,7 +371,7 @@ module main_state_machine
 	counter4b score_cnt_out1 (
 		.clock(CLOCK_50),
 		.cnt_en(score_out1_enable),
-		.sclr(score_out1_reset),
+		.sclr(score_out1_reset || ~resetn),
 		.q(score_out1));
 		
 	always @(*)
@@ -377,7 +393,7 @@ module main_state_machine
 	counter4b score__cnt_out2 (
 		.clock(CLOCK_50),
 		.cnt_en(score_out2_enable),
-		.sclr(score_out2_reset),
+		.sclr(score_out2_reset || ~resetn),
 		.q(score_out2));
 	
 		
@@ -421,7 +437,10 @@ module main_state_machine
 	assign color = color_out;
 	reg writeEn_out;
 	assign writeEn = writeEn_out;
-	reg  x_movement_enable;
+	reg [14:0] level_address_out;
+	assign level_address = level_address_out;
+	reg movement_enable_out;
+	assign movement_enable = movement_enable_out;
 	
 	// Main State flipflops
 	reg [2:0] main_Q, main_D /*synthesis keep*/; 
@@ -458,7 +477,7 @@ module main_state_machine
 	begin: main_datapath
 		case (main_D)
 			DRAW_BACKGROUND: 
-				begin 	x_movement_enable = 0; 
+				begin 	movement_enable_out = 0; 
 						draw_background_enable_out = 1;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
@@ -468,9 +487,10 @@ module main_state_machine
 						color_out = color_background; 
 						writeEn_out = writeEn_background;
 						time_cnt_reset = 1'b1;
+						level_address_out = level_address_background;
 				end
 			DRAW_CHARACTER:
-				begin 	x_movement_enable = 0; 
+				begin 	movement_enable_out = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 1;
 						draw_enemies_enable_out = 0;
@@ -480,66 +500,72 @@ module main_state_machine
 						color_out = color_character; 
 						writeEn_out = writeEn_character;
 						time_cnt_reset = 1'b0;
+						level_address_out = 4'bx;
 				end
 			DRAW_ENEMIES:
-				begin 	x_movement_enable = 0; 
+				begin 	movement_enable_out = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 1;
 						detect_collisions_enable_out = 0;
-						x_out = x_background; 
-						y_out = y_background; 
-						color_out = color_background; 
-						writeEn_out = writeEn_background;
+						x_out = 8'bx; 
+						y_out = 7'bx; 
+						color_out = 9'bx; 
+						writeEn_out = 0;
 						time_cnt_reset = 1'b0;
+						level_address_out = 4'bx;
 				end
 			DETECT_COLLISIONS:
-				begin 	x_movement_enable = 0; 
+				begin 	movement_enable_out = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
 						detect_collisions_enable_out = 1;
-						x_out = 0; 
-						y_out = 0; 
-						color_out = 0; 
+						x_out = 8'bx; 
+						y_out = 7'bx; 
+						color_out = 9'bx; 
 						writeEn_out = 0;
 						time_cnt_reset = 1'b0;
+						level_address_out = level_address_collisions;
 				end
 			MOVEMENT:
-				begin 	x_movement_enable = 1; 
+				begin 	movement_enable_out = 1; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
 						detect_collisions_enable_out = 0;
-						x_out = 0; 
-						y_out = 0; 
-						color_out = 0; 
+						x_out = 8'bx; 
+						y_out = 7'bx; 
+						color_out = 9'bx; 
 						writeEn_out = 0;
 						time_cnt_reset = 1'b0;
+						level_address_out = 4'bx;
 				end
 			WAIT:
-				begin 	x_movement_enable = 0; 
+				begin 	movement_enable_out = 0; 
 						draw_background_enable_out = 0;
 						draw_character_enable_out = 0;
 						draw_enemies_enable_out = 0;
 						detect_collisions_enable_out = 0;
-						x_out = 0; 
-						y_out = 0; 
-						color_out = 0; 
+						x_out = 8'bx; 
+						y_out = 7'bx; 
+						color_out = 9'bx; 
 						writeEn_out = 0;
 						time_cnt_reset = 1'b0;
+						level_address_out = 4'bx;
 				end
 			default: 
-				begin 	x_movement_enable = 1'bx; 
+				begin 	movement_enable_out = 1'bx; 
 						draw_background_enable_out = 1'bx;
 						draw_character_enable_out = 1'bx;
 						draw_enemies_enable_out = 1'bx;
 						detect_collisions_enable_out = 1'bx;
-						x_out = 'bx; 
-						y_out = 'bx; 
-						color_out = 'bx; 
+						x_out = 8'bx; 
+						y_out = 7'bx; 
+						color_out = 9'bx; 
 						writeEn_out = 1'bx;
 						time_cnt_reset = 1'bx;
+						level_address_out = 4'bx;
 				end
 			endcase
 	end
