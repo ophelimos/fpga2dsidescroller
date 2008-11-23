@@ -1,4 +1,4 @@
-module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_offset, enable, plot, done, p_Q, p_D);
+module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_tile_offset, x_pixel_offset, enable, plot, done, p_Q, p_D);
 	//------------------------------------------
 	// Parameters
 	//------------------------------------------
@@ -8,7 +8,8 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	// Inputs
 	//------------------------------------------
 	input clock;
-	input [10:0] x_offset; // log2(tilemap_length) - 1
+	input [10:0] x_tile_offset; // log2(tilemap_length) - 1
+	input [2:0] x_pixel_offset;	// 0-7 pixels
 	input enable;
 	input resetn;
 	input [3:0] tile_code; // debug
@@ -97,7 +98,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	// Exact level calculations
 		// Level size: 2000 tiles in the x, 15 tiles in the y
 		// Therefore, each y-increase should increase the memory pointer by 2000
-	assign level_address = 0 + x_offset + tile_x + (tile_y * tilemap_length);
+	assign level_address = 0 + x_tile_offset + tile_x + (tile_y * tilemap_length);
 	
 	//------------------------------------------
 	// PickTile State Machine
@@ -158,7 +159,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	
 	wire [7:0] tile_x_input;
 	wire [6:0] tile_y_input;
-	assign tile_x_input = tile_x * 4'd8;
+	assign tile_x_input = (tile_x * 4'd8) + x_pixel_offset;
 	assign tile_y_input = tile_y * 4'd8;
 	
 	drawTile tile_drawing_module (

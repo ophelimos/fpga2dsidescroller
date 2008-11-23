@@ -129,7 +129,8 @@ module main_state_machine
 	.x(x_background),
 	.y(y_background),
 	.plot(writeEn_background),
-	.x_offset(x_tile_position),
+	.x_tile_offset(x_tile_position),
+	.x_pixel_offset(x_pixel_on_tile_position),
 	.enable(draw_background_enable),
 	.done(draw_background_done));
 	
@@ -261,6 +262,19 @@ module main_state_machine
 	.updown(x_tile_position_cnt_left),
 	.q(x_tile_position));
 	
+	// pixel offset per tile 0-7
+	reg x_pixel_on_tile_cnt_enable;
+//	reg x_pixel_on_tile_cnt_reset;
+	reg x_pixel_on_tile_cnt_left;
+	wire [2:0] x_pixel_on_tile_position;
+	
+	counter3b_updwn x_pixel_on_tile_counter(
+	.clock(CLOCK_50),
+	.cnt_en(x_pixel_on_tile_cnt_enable),
+	.sclr(1'b0),
+	.updown(x_pixel_on_tile_cnt_left),
+	.q(x_pixel_on_tile_position));
+	
 	// 60 fps = 833_333 clocks which needs 20 bits
 	reg time_cnt_reset;
 	reg time_cnt_enable;
@@ -287,19 +301,37 @@ module main_state_machine
 	// Moving left or right logic
 	always @(*)
 		if (movement_enable == 1 && KEY[3] == 0 && right_blocked == 0)
-				begin
-					x_tile_position_cnt_enable = 1'b1;
-					x_tile_position_cnt_left = 1'b0;
-				end
-		else if (movement_enable == 1 && KEY[0] == 0 && left_blocked == 0)
-				begin
-					x_tile_position_cnt_enable = 1'b1;
-					x_tile_position_cnt_left = 1'b1;
-				end
+			begin
+				x_tile_position_cnt_left = 1'b0;	// move right
+				x_pixel_on_tile_cnt_left = 1'b0;	//
+				
+				if (x_pixel_on_tile_position == 7)	// increment tile
+						x_tile_position_cnt_enable = 1'b1;
+				else
+						x_tile_position_cnt_enable = 1'b0;
+						
+				x_pixel_on_tile_cnt_enable = 1'b1;	// increment pixel on tile
+
+			end
+		else if (movement_enable == 1 && KEY[0] == 0 && left_blocked == 0)	
+			begin
+				x_pixel_on_tile_cnt_left = 1'b1;	// move left
+				x_tile_position_cnt_left = 1'b1;	//
+				
+				if (x_pixel_on_tile_position == 0)	// decrement tile
+						x_tile_position_cnt_enable = 1'b1;
+				else
+						x_tile_position_cnt_enable = 1'b0;
+
+				x_pixel_on_tile_cnt_enable = 1'b1;	// decrement pixel on tile
+
+			end
 		else
 			begin
 				x_tile_position_cnt_enable = 1'b0;
+				x_pixel_on_tile_cnt_enable = 1'b0;
 				x_tile_position_cnt_left = 1'bx;
+				x_pixel_on_tile_cnt_left = 1'bx;
 			end
 	
 	//------------------------------------------
