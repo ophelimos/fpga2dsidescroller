@@ -14,7 +14,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	// Outputs
 	//------------------------------------------
 	output [7:0] x_position; // Adjust location on-screen, in pixels
-	output [6:0] y_position;
+	output [7:0] y_position;
 	output [1:0] jumping_Q, jumping_D;
 	output [5:0] jump_factor;
 	

@@ -11,7 +11,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	input [10:0] x_offset; // log2(tilemap_length) - 1
 	input enable;
 	input resetn;
-	output [3:0] tile_code; // debug
+	input [3:0] tile_code; // debug
 	//------------------------------------------
 	// Outputs
 	//------------------------------------------
@@ -27,7 +27,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	//------------------------------------------
 	// Level Memory // debug
 	//------------------------------------------
-	
+	/*
 	// Signals
 	wire [14:0] level_address;
 	// We agreed on 4-bit, but 3-bit works for now
@@ -38,7 +38,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_of
 	.address(level_address),
 	.clock(clock),
 	.q(tile_code));
-	
+	*/
 	//------------------------------------------
 	// Tile Memory
 	//------------------------------------------
