@@ -220,7 +220,25 @@ module main_state_machine
 	wire movement_enable;
 	
 	wire [7:0] x_character_position;
-	wire [6:0] y_character_position;
+	reg [6:0] y_character_position;
+	wire [7:0] y_movement_position;
+	
+	// Character y position
+	//assign y_position = 7'd60;	// just below center on the screen (in pixels)
+	
+	// Position will simply be the output of a register
+	// Should start at the top of the screen (0)
+	
+	// Technically a 7-bit register would work, but I want his head to be able to leave the top of the screen
+	// without his body wrapping around.  Therefore, we need a larger number
+	
+/*	register8b y_position_register (
+	.clock(clock),
+	.data(y_movement_position),
+	.sclr(~resetn),
+	.q(y_character_position));*/
+	
+	// I don't actually need a register, since we're just constantly outputting
 	
 	reg jump;
 	
@@ -235,13 +253,29 @@ module main_state_machine
 	.clock(CLOCK_50),
 	.enable(movement_enable),
 	.resetn(resetn),
+	.y_position_in(y_character_position),
 	.jump(jump),
 	.left_blocked(left_blocked),
 	.right_blocked(right_blocked), 
 	.up_blocked(up_blocked), 
 	.down_blocked(down_blocked),
 	.x_position(x_character_position),
-	.y_position(y_character_position));
+	.y_position(y_movement_position));
+	
+	// drawCharacter -> characterMovement -> normalizing logic -> drawCharacter
+	// y_character_position -> characterMovement -> y_movement_position -> drawCharacter
+	
+	// Y normalizing logic
+	always @(*)
+		if (~resetn)
+			y_character_position = 0;
+		else if (y_movement_position >= 120 && y_movement_position < 192)
+			y_character_position = 119;
+		else if (y_movement_position >= 192 && y_movement_position < 256)
+			y_character_position = 0;
+		else
+			y_character_position = y_movement_position;
+	
 	
 	//------------------------------------------
 	// Level Movement Area
@@ -257,7 +291,7 @@ module main_state_machine
 	counter32b x_tile_position_counter(
 	.clock(CLOCK_50),
 	.cnt_en(x_tile_position_cnt_enable),
-	.sclr(x_tile_position_cnt_reset),
+	.sclr(x_tile_position_cnt_reset | ~resetn),
 	.updown(x_tile_position_cnt_left),
 	.q(x_tile_position));
 	

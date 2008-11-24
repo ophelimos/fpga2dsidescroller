@@ -1,10 +1,11 @@
-module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocked, up_blocked, down_blocked, x_position, y_position, jumping_Q, jumping_D, jump_factor);
+module characterMovement(clock, resetn, enable, y_position_in, jump, left_blocked, right_blocked, up_blocked, down_blocked, x_position, y_position, jumping_Q, jumping_D, jump_factor);
 	//------------------------------------------
 	// Inputs
 	//------------------------------------------
 	input clock;
 	input enable;
 	input resetn;
+	input [7:0] y_position_in;
 	input jump;
 	input left_blocked;
 	input right_blocked;
@@ -14,7 +15,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	// Outputs
 	//------------------------------------------
 	output [7:0] x_position; // Adjust location on-screen, in pixels
-	output [6:0] y_position;
+	output [7:0] y_position;
 	output [1:0] jumping_Q, jumping_D;
 	output [5:0] jump_factor;
 	
@@ -55,7 +56,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 		else
 			jump_reset_out = 0;
 	
-	counter6bdown jump_rate_counter (
+	counter4bdown jump_rate_counter (
 	.clock(clock),
 	.cnt_en(slow_jump),
 	.sclr(jump_reset),
@@ -100,7 +101,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	// Jumping Datapath
 	always @ (*)
 	begin: jumping_datapath
-		case (jumping_D)
+		case (jumping_Q)
 			WAIT: 
 				begin
 					stop_jump_out = 0;
@@ -129,25 +130,19 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	//------------------------------------------
 
 	// Remember, up = negative, down = positive
-	parameter fall_speed = 8;
+	parameter fall_speed = 2;
 	
-	reg [7:0] y_position_in;
-	assign y_position_change = y_position_in;
+	reg [7:0] y_position_change;
+	assign y_position = y_position_change;
 	
 	always @(*)
-		if (up_blocked == 1 && down_blocked == 1)
-			y_position_in = y_position;
+		if (up_blocked == 0 && down_blocked == 0)
+			y_position_change = y_position_in + fall_speed - jump_factor;
 		else if (up_blocked == 0 && down_blocked == 1)
-			y_position_in = y_position - jump_factor;
+			y_position_change = y_position_in - jump_factor;
 		else if (up_blocked == 1 && down_blocked == 0)
-			y_position_in = y_position + fall_speed;
+			y_position_change = y_position_in + fall_speed;
 		else
-			y_position_in = y_position + fall_speed - jump_factor;
+			y_position_change = y_position_in;
 
-/*	assign y_position_in = y_position
-	// Falling
-	+( (~down_blocked) * 8 ) 
-	// Jumping
-	- ( (~up_blocked) * jump_factor );
-	*/
 endmodule
