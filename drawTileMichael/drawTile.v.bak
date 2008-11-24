@@ -24,7 +24,8 @@ module drawTile (Xin, Yin, TileSel, Enable, Clock, Resetn, DataIn, Address, X, Y
 				IDLE	= 3'b001,
 				DRAW	= 3'b010,
 				INC_X	= 3'b011,
-				INC_Y	= 3'b100;
+				INC_Y	= 3'b100,
+				READ	= 3'b101;
 				
 	// State Register
 	always @(posedge Clock)
@@ -49,6 +50,8 @@ module drawTile (Xin, Yin, TileSel, Enable, Clock, Resetn, DataIn, Address, X, Y
 						D <= IDLE;
 			end
 			
+			READ:	D <= DRAW;
+			
 			DRAW:
 			begin
 					if (DoneX & ~DoneY)
@@ -59,9 +62,9 @@ module drawTile (Xin, Yin, TileSel, Enable, Clock, Resetn, DataIn, Address, X, Y
 						D <= IDLE;
 			end
 			
-			INC_X:		D <= DRAW;
+			INC_X:		D <= READ;
 	
-			INC_Y:		D <= DRAW;
+			INC_Y:		D <= READ;
 			
 			default:	D <= IDLE;
 		endcase
@@ -88,6 +91,16 @@ module drawTile (Xin, Yin, TileSel, Enable, Clock, Resetn, DataIn, Address, X, Y
 				EnableY	= 0;
 				ResetX 	= 1;
 				ResetY	= 1;
+				VGA_Draw = 0;
+			end
+			
+			READ:
+			begin
+				Done 	= 0;
+				EnableX	= 0;
+				EnableY	= 0;
+				ResetX 	= 0;
+				ResetY	= 0;
 				VGA_Draw = 0;
 			end
 			
@@ -163,7 +176,7 @@ module drawTile (Xin, Yin, TileSel, Enable, Clock, Resetn, DataIn, Address, X, Y
 	reg [9:0] TileSel_Offset;
 	always @(TileSel)
 	begin
-		TileSel_Offset <= TileSel * 6'd64;
+		TileSel_Offset <= TileSel * 7'd64;
 	end
 	
 	// memory address tile-offset + tile selection counter

@@ -26,7 +26,8 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 				DRAW	= 3'b010,
 				INC_X	= 3'b011,
 				INC_Y	= 3'b100,
-				READ	= 3'b101;
+				READ	= 3'b101,
+				FINISHED = 3'b110;
 				
 	// State Register
 	always @(posedge Clock)
@@ -60,12 +61,20 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 					else if (~DoneX)
 						D <= INC_X;
 					else //DoneX & DoneY
-						D <= IDLE;
+						D <= FINISHED;
 			end
 			
 			INC_X:		D <= READ;
 	
 			INC_Y:		D <= READ;
+			
+			FINISHED:
+			begin		// wait until enable drops
+				if (~Enable)
+						D <= IDLE;
+				else
+						D <= FINISHED;
+			end
 			
 			default:	D <= IDLE;
 		endcase
@@ -87,7 +96,7 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 			
 			IDLE:
 			begin
-				Done 	= 1;
+				Done 	= 0;
 				EnableX	= 0;
 				EnableY	= 0;
 				ResetX 	= 1;
@@ -132,6 +141,16 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 				EnableY	= 1;
 				ResetX 	= 1;
 				ResetY	= 0;
+				VGA_Draw_D = 0;
+			end
+			
+			FINISHED:
+			begin
+				Done 	= 1;
+				EnableX	= 0;
+				EnableY	= 0;
+				ResetX 	= 1;
+				ResetY	= 1;
 				VGA_Draw_D = 0;
 			end
 		endcase
