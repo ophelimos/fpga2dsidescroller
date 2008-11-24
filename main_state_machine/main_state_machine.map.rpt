@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_state_machine
-Sun Nov 23 16:20:14 2008
+Sun Nov 23 21:28:30 2008
 Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
 
 
@@ -117,13 +117,13 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 23 16:20:14 2008        ;
+; Analysis & Synthesis Status        ; Successful - Sun Nov 23 21:28:29 2008        ;
 ; Quartus II Version                 ; 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition ;
 ; Revision Name                      ; main_state_machine                           ;
 ; Top-level Entity Name              ; main_state_machine                           ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 701                                          ;
-;     Total combinational functions  ; 701                                          ;
+; Total logic elements               ; 728                                          ;
+;     Total combinational functions  ; 728                                          ;
 ;     Dedicated logic registers      ; 202                                          ;
 ; Total registers                    ; 202                                          ;
 ; Total pins                         ; 88                                           ;
@@ -322,16 +322,16 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 701      ;
+; Estimated Total logic elements              ; 728      ;
 ;                                             ;          ;
-; Total combinational functions               ; 701      ;
+; Total combinational functions               ; 728      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 199      ;
-;     -- 3 input functions                    ; 226      ;
-;     -- <=2 input functions                  ; 276      ;
+;     -- 4 input functions                    ; 189      ;
+;     -- 3 input functions                    ; 234      ;
+;     -- <=2 input functions                  ; 305      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 388      ;
+;     -- normal mode                          ; 415      ;
 ;     -- arithmetic mode                      ; 313      ;
 ;                                             ;          ;
 ; Total registers                             ; 202      ;
@@ -343,8 +343,8 @@ applicable agreement for further details.
 ; Total PLLs                                  ; 1        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
 ; Maximum fan-out                             ; 258      ;
-; Total fan-out                               ; 4630     ;
-; Average fan-out                             ; 4.29     ;
+; Total fan-out                               ; 4642     ;
+; Average fan-out                             ; 4.20     ;
 +---------------------------------------------+----------+
 
 
@@ -353,12 +353,12 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                ; Library Name ;
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |main_state_machine                                          ; 701 (96)          ; 202 (6)      ; 290448      ; 0            ; 0       ; 0         ; 88   ; 0            ; |main_state_machine                                                                                                                                                                                ; work         ;
+; |main_state_machine                                          ; 728 (143)         ; 202 (6)      ; 290448      ; 0            ; 0       ; 0         ; 88   ; 0            ; |main_state_machine                                                                                                                                                                                ; work         ;
 ;    |SpriteMem:character_mem|                                 ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem                                                                                                                                                        ; work         ;
 ;       |spriteROM0:MEM0|                                      ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0                                                                                                                                        ; work         ;
 ;          |altsyncram:altsyncram_component|                   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component                                                                                                        ; work         ;
 ;             |altsyncram_u491:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated                                                                         ; work         ;
-;    |characterMovement:character_movement|                    ; 50 (41)           ; 15 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement                                                                                                                                           ; work         ;
+;    |characterMovement:character_movement|                    ; 51 (42)           ; 15 (2)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement                                                                                                                                           ; work         ;
 ;       |counter6bdown:jump_rate_counter|                      ; 9 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement|counter6bdown:jump_rate_counter                                                                                                           ; work         ;
 ;          |lpm_counter:lpm_counter_component|                 ; 9 (0)             ; 6 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement|counter6bdown:jump_rate_counter|lpm_counter:lpm_counter_component                                                                         ; work         ;
 ;             |cntr_ndj:auto_generated|                        ; 9 (9)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement|counter6bdown:jump_rate_counter|lpm_counter:lpm_counter_component|cntr_ndj:auto_generated                                                 ; work         ;
@@ -385,7 +385,7 @@ applicable agreement for further details.
 ;    |counter4b:score_cnt_out1|                                ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1                                                                                                                                                       ; work         ;
 ;       |lpm_counter:lpm_counter_component|                    ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1|lpm_counter:lpm_counter_component                                                                                                                     ; work         ;
 ;          |cntr_3oi:auto_generated|                           ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                                                                                             ; work         ;
-;    |detectBackgroundCollision:background_collision_detector| ; 120 (75)          ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector                                                                                                                        ; work         ;
+;    |detectBackgroundCollision:background_collision_detector| ; 127 (82)          ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector                                                                                                                        ; work         ;
 ;       |lpm_mult:Mult0|                                       ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0                                                                                                         ; work         ;
 ;          |multcore:mult_core|                                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0|multcore:mult_core                                                                                      ; work         ;
 ;       |lpm_mult:Mult1|                                       ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1                                                                                                         ; work         ;
@@ -401,28 +401,28 @@ applicable agreement for further details.
 ;                |mpar_add:sub_par_add|                        ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add                                                 ; work         ;
 ;                   |lpm_add_sub:adder[0]|                     ; 3 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]                            ; work         ;
 ;                      |add_sub_ach:auto_generated|            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_ach:auto_generated ; work         ;
-;    |drawBackground:draw_background|                          ; 132 (43)          ; 40 (3)       ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background                                                                                                                                                 ; work         ;
+;    |drawBackground:draw_background|                          ; 108 (31)          ; 40 (3)       ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background                                                                                                                                                 ; work         ;
 ;       |counter4b:tile_countery|                              ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery                                                                                                                         ; work         ;
 ;          |lpm_counter:lpm_counter_component|                 ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component                                                                                       ; work         ;
 ;             |cntr_3oi:auto_generated|                        ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                                                               ; work         ;
 ;       |counter5b:tile_counterx|                              ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx                                                                                                                         ; work         ;
 ;          |lpm_counter:lpm_counter_component|                 ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component                                                                                       ; work         ;
 ;             |cntr_4oi:auto_generated|                        ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated                                                               ; work         ;
-;       |drawTile:tile_drawing_module|                         ; 69 (19)           ; 28 (6)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module                                                                                                                    ; work         ;
-;          |addx:XoutAdder|                                    ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoutAdder                                                                                                     ; work         ;
-;             |lpm_add_sub:lpm_add_sub_component|              ; 16 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                                                   ; work         ;
-;                |add_sub_big:auto_generated|                  ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated                                        ; work         ;
-;          |addy:YoutAdder|                                    ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder                                                                                                     ; work         ;
-;             |lpm_add_sub:lpm_add_sub_component|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component                                                                   ; work         ;
-;                |add_sub_aig:auto_generated|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated                                        ; work         ;
+;       |drawTile:tile_drawing_module|                         ; 56 (18)           ; 28 (6)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module                                                                                                                    ; work         ;
+;          |addx:XoutAdder|                                    ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoutAdder                                                                                                     ; work         ;
+;             |lpm_add_sub:lpm_add_sub_component|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                                                   ; work         ;
+;                |add_sub_big:auto_generated|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated                                        ; work         ;
+;          |addy:YoutAdder|                                    ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder                                                                                                     ; work         ;
+;             |lpm_add_sub:lpm_add_sub_component|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component                                                                   ; work         ;
+;                |add_sub_aig:auto_generated|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated                                        ; work         ;
 ;          |memCount:AddressCounter|                           ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|memCount:AddressCounter                                                                                            ; work         ;
 ;             |lpm_add_sub:lpm_add_sub_component|              ; 4 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component                                                          ; work         ;
 ;                |add_sub_llh:auto_generated|                  ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated                               ; work         ;
 ;          |nBitRegister:AddressReg|                           ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:AddressReg                                                                                            ; work         ;
 ;          |nBitRegister:XOffsetReg|                           ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:XOffsetReg                                                                                            ; work         ;
 ;          |nBitRegister:YOffsetReg|                           ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:YOffsetReg                                                                                            ; work         ;
-;       |lpm_mult:Mult0|                                       ; 9 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|lpm_mult:Mult0                                                                                                                                  ; work         ;
-;          |multcore:mult_core|                                ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|lpm_mult:Mult0|multcore:mult_core                                                                                                               ; work         ;
+;       |lpm_mult:Mult0|                                       ; 10 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|lpm_mult:Mult0                                                                                                                                  ; work         ;
+;          |multcore:mult_core|                                ; 10 (10)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|lpm_mult:Mult0|multcore:mult_core                                                                                                               ; work         ;
 ;       |tileset:tileset0|                                     ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0                                                                                                                                ; work         ;
 ;          |altsyncram:altsyncram_component|                   ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component                                                                                                ; work         ;
 ;             |altsyncram_tu81:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated                                                                 ; work         ;
@@ -443,7 +443,7 @@ applicable agreement for further details.
 ;          |altsyncram_7391:auto_generated|                    ; 23 (0)            ; 3 (3)        ; 90000       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated                                                                                                ; work         ;
 ;             |decode_9oa:deep_decode|                         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|decode_9oa:deep_decode                                                                         ; work         ;
 ;             |mux_kib:mux2|                                   ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|mux_kib:mux2                                                                                   ; work         ;
-;    |vga_adapter:VGA|                                         ; 125 (6)           ; 32 (0)       ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|vga_adapter:VGA                                                                                                                                                                ; work         ;
+;    |vga_adapter:VGA|                                         ; 121 (2)           ; 32 (0)       ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|vga_adapter:VGA                                                                                                                                                                ; work         ;
 ;       |altsyncram:VideoMemory|                               ; 42 (0)            ; 6 (0)        ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|vga_adapter:VGA|altsyncram:VideoMemory                                                                                                                                         ; work         ;
 ;          |altsyncram_p3g1:auto_generated|                    ; 42 (0)            ; 6 (0)        ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated                                                                                                          ; work         ;
 ;             |altsyncram_ptq1:altsyncram1|                    ; 42 (0)            ; 6 (6)        ; 172800      ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1                                                                              ; work         ;
@@ -473,51 +473,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |main_state_machine|main_Q                                                                                                     ;
-+--------------------------+-------------+-----------------+--------------------------+---------------------+-----------------------+------------+
-; Name                     ; main_Q.WAIT ; main_Q.MOVEMENT ; main_Q.DETECT_COLLISIONS ; main_Q.DRAW_ENEMIES ; main_Q.DRAW_CHARACTER ; main_Q.000 ;
-+--------------------------+-------------+-----------------+--------------------------+---------------------+-----------------------+------------+
-; main_Q.000               ; 0           ; 0               ; 0                        ; 0                   ; 0                     ; 0          ;
-; main_Q.DRAW_CHARACTER    ; 0           ; 0               ; 0                        ; 0                   ; 1                     ; 1          ;
-; main_Q.DRAW_ENEMIES      ; 0           ; 0               ; 0                        ; 1                   ; 0                     ; 1          ;
-; main_Q.DETECT_COLLISIONS ; 0           ; 0               ; 1                        ; 0                   ; 0                     ; 1          ;
-; main_Q.MOVEMENT          ; 0           ; 1               ; 0                        ; 0                   ; 0                     ; 1          ;
-; main_Q.WAIT              ; 1           ; 0               ; 0                        ; 0                   ; 0                     ; 1          ;
-+--------------------------+-------------+-----------------+--------------------------+---------------------+-----------------------+------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main_state_machine|main_Q                                                                                                                 ;
++--------------------------+------------------------+-----------------+--------------------------+---------------------+-----------------------+-------------+
+; Name                     ; main_Q.DRAW_BACKGROUND ; main_Q.MOVEMENT ; main_Q.DETECT_COLLISIONS ; main_Q.DRAW_ENEMIES ; main_Q.DRAW_CHARACTER ; main_Q.WAIT ;
++--------------------------+------------------------+-----------------+--------------------------+---------------------+-----------------------+-------------+
+; main_Q.WAIT              ; 0                      ; 0               ; 0                        ; 0                   ; 0                     ; 0           ;
+; main_Q.DRAW_CHARACTER    ; 0                      ; 0               ; 0                        ; 0                   ; 1                     ; 1           ;
+; main_Q.DRAW_ENEMIES      ; 0                      ; 0               ; 0                        ; 1                   ; 0                     ; 1           ;
+; main_Q.DETECT_COLLISIONS ; 0                      ; 0               ; 1                        ; 0                   ; 0                     ; 1           ;
+; main_Q.MOVEMENT          ; 0                      ; 1               ; 0                        ; 0                   ; 0                     ; 1           ;
+; main_Q.DRAW_BACKGROUND   ; 1                      ; 0               ; 0                        ; 0                   ; 0                     ; 1           ;
++--------------------------+------------------------+-----------------+--------------------------+---------------------+-----------------------+-------------+
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q                                                                                                           ;
-+----------------------+---------------------+------------------+-------------------+---------------------+----------------------+--------------------+---------------------+------------+--------------------+
-; Name                 ; dbc_Q.READ_DOWN_DBC ; dbc_Q.SET_UP_DBC ; dbc_Q.READ_UP_DBC ; dbc_Q.SET_RIGHT_DBC ; dbc_Q.READ_RIGHT_DBC ; dbc_Q.SET_LEFT_DBC ; dbc_Q.READ_LEFT_DBC ; dbc_Q.0000 ; dbc_Q.SET_DOWN_DBC ;
-+----------------------+---------------------+------------------+-------------------+---------------------+----------------------+--------------------+---------------------+------------+--------------------+
-; dbc_Q.0000           ; 0                   ; 0                ; 0                 ; 0                   ; 0                    ; 0                  ; 0                   ; 0          ; 0                  ;
-; dbc_Q.READ_LEFT_DBC  ; 0                   ; 0                ; 0                 ; 0                   ; 0                    ; 0                  ; 1                   ; 1          ; 0                  ;
-; dbc_Q.SET_LEFT_DBC   ; 0                   ; 0                ; 0                 ; 0                   ; 0                    ; 1                  ; 0                   ; 1          ; 0                  ;
-; dbc_Q.READ_RIGHT_DBC ; 0                   ; 0                ; 0                 ; 0                   ; 1                    ; 0                  ; 0                   ; 1          ; 0                  ;
-; dbc_Q.SET_RIGHT_DBC  ; 0                   ; 0                ; 0                 ; 1                   ; 0                    ; 0                  ; 0                   ; 1          ; 0                  ;
-; dbc_Q.READ_UP_DBC    ; 0                   ; 0                ; 1                 ; 0                   ; 0                    ; 0                  ; 0                   ; 1          ; 0                  ;
-; dbc_Q.SET_UP_DBC     ; 0                   ; 1                ; 0                 ; 0                   ; 0                    ; 0                  ; 0                   ; 1          ; 0                  ;
-; dbc_Q.READ_DOWN_DBC  ; 1                   ; 0                ; 0                 ; 0                   ; 0                    ; 0                  ; 0                   ; 1          ; 0                  ;
-; dbc_Q.SET_DOWN_DBC   ; 0                   ; 0                ; 0                 ; 0                   ; 0                    ; 0                  ; 0                   ; 1          ; 1                  ;
-+----------------------+---------------------+------------------+-------------------+---------------------+----------------------+--------------------+---------------------+------------+--------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q                                                                                                               ;
++----------------------+---------------------+------------------+-------------------+---------------------+----------------------+--------------------+---------------------+----------------+--------------------+
+; Name                 ; dbc_Q.READ_DOWN_DBC ; dbc_Q.SET_UP_DBC ; dbc_Q.READ_UP_DBC ; dbc_Q.SET_RIGHT_DBC ; dbc_Q.READ_RIGHT_DBC ; dbc_Q.SET_LEFT_DBC ; dbc_Q.READ_LEFT_DBC ; dbc_Q.WAIT_DBC ; dbc_Q.SET_DOWN_DBC ;
++----------------------+---------------------+------------------+-------------------+---------------------+----------------------+--------------------+---------------------+----------------+--------------------+
+; dbc_Q.WAIT_DBC       ; 0                   ; 0                ; 0                 ; 0                   ; 0                    ; 0                  ; 0                   ; 0              ; 0                  ;
+; dbc_Q.READ_LEFT_DBC  ; 0                   ; 0                ; 0                 ; 0                   ; 0                    ; 0                  ; 1                   ; 1              ; 0                  ;
+; dbc_Q.SET_LEFT_DBC   ; 0                   ; 0                ; 0                 ; 0                   ; 0                    ; 1                  ; 0                   ; 1              ; 0                  ;
+; dbc_Q.READ_RIGHT_DBC ; 0                   ; 0                ; 0                 ; 0                   ; 1                    ; 0                  ; 0                   ; 1              ; 0                  ;
+; dbc_Q.SET_RIGHT_DBC  ; 0                   ; 0                ; 0                 ; 1                   ; 0                    ; 0                  ; 0                   ; 1              ; 0                  ;
+; dbc_Q.READ_UP_DBC    ; 0                   ; 0                ; 1                 ; 0                   ; 0                    ; 0                  ; 0                   ; 1              ; 0                  ;
+; dbc_Q.SET_UP_DBC     ; 0                   ; 1                ; 0                 ; 0                   ; 0                    ; 0                  ; 0                   ; 1              ; 0                  ;
+; dbc_Q.READ_DOWN_DBC  ; 1                   ; 0                ; 0                 ; 0                   ; 0                    ; 0                  ; 0                   ; 1              ; 0                  ;
+; dbc_Q.SET_DOWN_DBC   ; 0                   ; 0                ; 0                 ; 0                   ; 0                    ; 0                  ; 0                   ; 1              ; 1                  ;
++----------------------+---------------------+------------------+-------------------+---------------------+----------------------+--------------------+---------------------+----------------+--------------------+
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------+
-; State Machine - |main_state_machine|drawSprite:draw_character|Q ;
-+---------+--------+---------+---------+--------+--------+--------+
-; Name    ; Q.READ ; Q.INC_Y ; Q.INC_X ; Q.DRAW ; Q.IDLE ; Q.000  ;
-+---------+--------+---------+---------+--------+--------+--------+
-; Q.000   ; 0      ; 0       ; 0       ; 0      ; 0      ; 0      ;
-; Q.IDLE  ; 0      ; 0       ; 0       ; 0      ; 1      ; 1      ;
-; Q.DRAW  ; 0      ; 0       ; 0       ; 1      ; 0      ; 1      ;
-; Q.INC_X ; 0      ; 0       ; 1       ; 0      ; 0      ; 1      ;
-; Q.INC_Y ; 0      ; 1       ; 0       ; 0      ; 0      ; 1      ;
-; Q.READ  ; 1      ; 0       ; 0       ; 0      ; 0      ; 1      ;
-+---------+--------+---------+---------+--------+--------+--------+
++------------------------------------------------------------------+
+; State Machine - |main_state_machine|drawSprite:draw_character|Q  ;
++---------+--------+---------+---------+--------+--------+---------+
+; Name    ; Q.READ ; Q.INC_Y ; Q.INC_X ; Q.DRAW ; Q.IDLE ; Q.START ;
++---------+--------+---------+---------+--------+--------+---------+
+; Q.START ; 0      ; 0       ; 0       ; 0      ; 0      ; 0       ;
+; Q.IDLE  ; 0      ; 0       ; 0       ; 0      ; 1      ; 1       ;
+; Q.DRAW  ; 0      ; 0       ; 0       ; 1      ; 0      ; 1       ;
+; Q.INC_X ; 0      ; 0       ; 1       ; 0      ; 0      ; 1       ;
+; Q.INC_Y ; 0      ; 1       ; 0       ; 0      ; 0      ; 1       ;
+; Q.READ  ; 1      ; 0       ; 0       ; 0      ; 0      ; 1       ;
++---------+--------+---------+---------+--------+--------+---------+
 
 
 Encoding Type:  One-Hot
@@ -540,20 +540,20 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 ; Register Name                                                       ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
 +---------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
-; main_Q.000                                                          ; yes                                                              ; yes                                        ;
 ; main_Q.DRAW_ENEMIES                                                 ; yes                                                              ; yes                                        ;
 ; main_Q.MOVEMENT                                                     ; yes                                                              ; yes                                        ;
+; main_Q.DRAW_BACKGROUND                                              ; yes                                                              ; yes                                        ;
 ; main_Q.DETECT_COLLISIONS                                            ; yes                                                              ; yes                                        ;
 ; main_Q.WAIT                                                         ; yes                                                              ; yes                                        ;
+; main_Q.DRAW_CHARACTER                                               ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.IDLE                                    ; yes                                                              ; yes                                        ;
 ; drawBackground:draw_background|drawTile:tile_drawing_module|Q.IDLE  ; yes                                                              ; yes                                        ;
 ; drawSprite:draw_character|Q.DRAW                                    ; yes                                                              ; yes                                        ;
 ; drawBackground:draw_background|drawTile:tile_drawing_module|Q.DRAW  ; yes                                                              ; yes                                        ;
-; main_Q.DRAW_CHARACTER                                               ; yes                                                              ; yes                                        ;
-; drawSprite:draw_character|Q.IDLE                                    ; yes                                                              ; yes                                        ;
 ; drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_Y ; yes                                                              ; yes                                        ;
 ; drawBackground:draw_background|drawTile:tile_drawing_module|Q.000   ; yes                                                              ; yes                                        ;
 ; drawSprite:draw_character|Q.INC_Y                                   ; yes                                                              ; yes                                        ;
-; drawSprite:draw_character|Q.000                                     ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.START                                   ; yes                                                              ; yes                                        ;
 ; drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_X ; yes                                                              ; yes                                        ;
 ; drawSprite:draw_character|Q.INC_X                                   ; yes                                                              ; yes                                        ;
 ; drawSprite:draw_character|Q.READ                                    ; yes                                                              ; yes                                        ;
@@ -567,12 +567,12 @@ Encoding Type:  One-Hot
 ; Register name                                                                                               ; Reason for Removal ;
 +-------------------------------------------------------------------------------------------------------------+--------------------+
 ; counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component|cntr_vgh:auto_generated|safe_q[11..31] ; Lost fanout        ;
-; main_Q~14                                                                                                   ; Lost fanout        ;
-; main_Q~15                                                                                                   ; Lost fanout        ;
-; main_Q~16                                                                                                   ; Lost fanout        ;
-; detectBackgroundCollision:background_collision_detector|dbc_Q~14                                            ; Lost fanout        ;
-; detectBackgroundCollision:background_collision_detector|dbc_Q~15                                            ; Lost fanout        ;
-; detectBackgroundCollision:background_collision_detector|dbc_Q~16                                            ; Lost fanout        ;
+; main_Q~25                                                                                                   ; Lost fanout        ;
+; main_Q~26                                                                                                   ; Lost fanout        ;
+; main_Q~27                                                                                                   ; Lost fanout        ;
+; detectBackgroundCollision:background_collision_detector|dbc_Q~33                                            ; Lost fanout        ;
+; detectBackgroundCollision:background_collision_detector|dbc_Q~34                                            ; Lost fanout        ;
+; detectBackgroundCollision:background_collision_detector|dbc_Q~35                                            ; Lost fanout        ;
 ; drawSprite:draw_character|Q~22                                                                              ; Lost fanout        ;
 ; drawSprite:draw_character|Q~23                                                                              ; Lost fanout        ;
 ; drawSprite:draw_character|Q~24                                                                              ; Lost fanout        ;
@@ -590,9 +590,9 @@ Encoding Type:  One-Hot
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 202   ;
-; Number of registers using Synchronous Clear  ; 44    ;
+; Number of registers using Synchronous Clear  ; 49    ;
 ; Number of registers using Synchronous Load   ; 73    ;
-; Number of registers using Asynchronous Clear ; 44    ;
+; Number of registers using Asynchronous Clear ; 24    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 61    ;
 ; Number of registers using Preset             ; 0     ;
@@ -605,36 +605,148 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |main_state_machine|characterMovement:character_movement|y_position_change[2] ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |main_state_machine|characterMovement:character_movement|y_position_change[6] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |main_state_machine|Selector41                                                ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |main_state_machine|Selector36                                                ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |main_state_machine|characterMovement:character_movement|y_position_change[7] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |main_state_machine|Selector43                                                ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |main_state_machine|Selector34                                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------+
-; Source assignments for Top-level Entity: |main_state_machine           ;
-+------------------------------+-------+------+--------------------------+
-; Assignment                   ; Value ; From ; To                       ;
-+------------------------------+-------+------+--------------------------+
-; PRESERVE_REGISTER            ; on    ; -    ; main_Q.000               ;
-; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DRAW_CHARACTER    ;
-; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DRAW_ENEMIES      ;
-; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DETECT_COLLISIONS ;
-; PRESERVE_REGISTER            ; on    ; -    ; main_Q.MOVEMENT          ;
-; PRESERVE_REGISTER            ; on    ; -    ; main_Q.WAIT              ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_BACKGROUND   ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_BACKGROUND   ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_CHARACTER    ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_CHARACTER    ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_ENEMIES      ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_ENEMIES      ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DETECT_COLLISIONS ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DETECT_COLLISIONS ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.MOVEMENT          ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.MOVEMENT          ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.WAIT              ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.WAIT              ;
-+------------------------------+-------+------+--------------------------+
++----------------------------------------------------------------------------+
+; Source assignments for Top-level Entity: |main_state_machine               ;
++------------------------------+-------+------+------------------------------+
+; Assignment                   ; Value ; From ; To                           ;
++------------------------------+-------+------+------------------------------+
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DRAW_BACKGROUND       ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DRAW_CHARACTER        ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DRAW_ENEMIES          ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.DETECT_COLLISIONS     ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.MOVEMENT              ;
+; PRESERVE_REGISTER            ; on    ; -    ; main_Q.WAIT                  ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_BACKGROUND       ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_BACKGROUND       ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_CHARACTER        ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_CHARACTER        ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DRAW_ENEMIES          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DRAW_ENEMIES          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.DETECT_COLLISIONS     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.DETECT_COLLISIONS     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.MOVEMENT              ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.MOVEMENT              ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; main_D.WAIT                  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; main_D.WAIT                  ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; movement_enable_out          ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; movement_enable_out          ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; draw_background_enable_out   ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; draw_background_enable_out   ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; draw_character_enable_out    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; draw_character_enable_out    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; detect_collisions_enable_out ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; detect_collisions_enable_out ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; x_out[7]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; x_out[7]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; x_out[6]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; x_out[6]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; x_out[5]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; x_out[5]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; x_out[4]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; x_out[4]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; x_out[3]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; x_out[3]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; x_out[2]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; x_out[2]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; x_out[1]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; x_out[1]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; x_out[0]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; x_out[0]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; y_out[6]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; y_out[6]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; y_out[5]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; y_out[5]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; y_out[4]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; y_out[4]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; y_out[3]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; y_out[3]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; y_out[2]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; y_out[2]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; y_out[1]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; y_out[1]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; y_out[0]                     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; y_out[0]                     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[8]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[8]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[7]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[7]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[6]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[6]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[5]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[5]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[4]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[4]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[3]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[3]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[2]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[2]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[1]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[1]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; color_out[0]                 ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; color_out[0]                 ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; writeEn_out                  ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; writeEn_out                  ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[14]        ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[14]        ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[13]        ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[13]        ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[12]        ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[12]        ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[11]        ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[11]        ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[10]        ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[10]        ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[9]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[9]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[8]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[8]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[7]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[7]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[6]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[6]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[5]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[5]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[4]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[4]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[3]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[3]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[2]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[2]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[1]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[1]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; level_address_out[0]         ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; level_address_out[0]         ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out0[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out0[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out0[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out0[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out0[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out0[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out0[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out0[0]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out1[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out1[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out1[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out1[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out1[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out1[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out1[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out1[0]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out2[3]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out2[3]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out2[2]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out2[2]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out2[1]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out2[1]                ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; score_out2[0]                ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; score_out2[0]                ;
++------------------------------+-------+------+------------------------------+
 
 
 +----------------------------------------------------------------------------------------------+
@@ -733,7 +845,7 @@ Encoding Type:  One-Hot
 +------------------------------+-------+------+---------+
 ; Assignment                   ; Value ; From ; To      ;
 +------------------------------+-------+------+---------+
-; PRESERVE_REGISTER            ; on    ; -    ; Q.000   ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.START ;
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.IDLE  ;
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW  ;
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X ;
@@ -2495,7 +2607,7 @@ The equations can be found in C:/Users/Owner/Documents/SKULE/Second Year/first s
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
-    Info: Processing started: Sun Nov 23 16:19:55 2008
+    Info: Processing started: Sun Nov 23 21:28:10 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main_state_machine -c main_state_machine
 Info: Found 1 design units, including 1 entities, in source file ../SpriteMem/spriteROM0.v
     Info: Found entity 1: spriteROM0
@@ -2817,6 +2929,7 @@ Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(1
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(147): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(148): truncated value with size 32 to match size of target (15)
 Info: Elaborating entity "characterMovement" for hierarchy "characterMovement:character_movement"
+Warning (10230): Verilog HDL assignment warning at characterMovement.v(80): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at characterMovement.v(90): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at characterMovement.v(91): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at characterMovement.v(92): truncated value with size 32 to match size of target (2)
@@ -2904,18 +3017,18 @@ Info: State machine "|main_state_machine|drawBackground:draw_background|drawTile
 Info: Selected Auto state machine encoding method for state machine "|main_state_machine|main_Q"
 Info: Encoding result for state machine "|main_state_machine|main_Q"
     Info: Completed encoding using 6 state bits
-        Info: Encoded state bit "main_Q.WAIT"
+        Info: Encoded state bit "main_Q.DRAW_BACKGROUND"
         Info: Encoded state bit "main_Q.MOVEMENT"
         Info: Encoded state bit "main_Q.DETECT_COLLISIONS"
         Info: Encoded state bit "main_Q.DRAW_ENEMIES"
         Info: Encoded state bit "main_Q.DRAW_CHARACTER"
-        Info: Encoded state bit "main_Q.000"
-    Info: State "|main_state_machine|main_Q.000" uses code string "000000"
+        Info: Encoded state bit "main_Q.WAIT"
+    Info: State "|main_state_machine|main_Q.WAIT" uses code string "000000"
     Info: State "|main_state_machine|main_Q.DRAW_CHARACTER" uses code string "000011"
     Info: State "|main_state_machine|main_Q.DRAW_ENEMIES" uses code string "000101"
     Info: State "|main_state_machine|main_Q.DETECT_COLLISIONS" uses code string "001001"
     Info: State "|main_state_machine|main_Q.MOVEMENT" uses code string "010001"
-    Info: State "|main_state_machine|main_Q.WAIT" uses code string "100001"
+    Info: State "|main_state_machine|main_Q.DRAW_BACKGROUND" uses code string "100001"
 Info: Selected Auto state machine encoding method for state machine "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q"
 Info: Encoding result for state machine "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q"
     Info: Completed encoding using 9 state bits
@@ -2926,9 +3039,9 @@ Info: Encoding result for state machine "|main_state_machine|detectBackgroundCol
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.READ_RIGHT_DBC"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.SET_LEFT_DBC"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.READ_LEFT_DBC"
-        Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.0000"
+        Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.WAIT_DBC"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.SET_DOWN_DBC"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.0000" uses code string "000000000"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.WAIT_DBC" uses code string "000000000"
     Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_LEFT_DBC" uses code string "000000110"
     Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_LEFT_DBC" uses code string "000001010"
     Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_RIGHT_DBC" uses code string "000010010"
@@ -2945,8 +3058,8 @@ Info: Encoding result for state machine "|main_state_machine|drawSprite:draw_cha
         Info: Encoded state bit "drawSprite:draw_character|Q.INC_X"
         Info: Encoded state bit "drawSprite:draw_character|Q.DRAW"
         Info: Encoded state bit "drawSprite:draw_character|Q.IDLE"
-        Info: Encoded state bit "drawSprite:draw_character|Q.000"
-    Info: State "|main_state_machine|drawSprite:draw_character|Q.000" uses code string "000000"
+        Info: Encoded state bit "drawSprite:draw_character|Q.START"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.START" uses code string "000000"
     Info: State "|main_state_machine|drawSprite:draw_character|Q.IDLE" uses code string "000011"
     Info: State "|main_state_machine|drawSprite:draw_character|Q.DRAW" uses code string "000101"
     Info: State "|main_state_machine|drawSprite:draw_character|Q.INC_X" uses code string "001001"
@@ -3068,12 +3181,12 @@ Info: 34 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component|cntr_vgh:auto_generated|safe_q[13]" lost all its fanouts during netlist optimizations.
     Info: Register "counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component|cntr_vgh:auto_generated|safe_q[12]" lost all its fanouts during netlist optimizations.
     Info: Register "counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component|cntr_vgh:auto_generated|safe_q[11]" lost all its fanouts during netlist optimizations.
-    Info: Register "main_Q~14" lost all its fanouts during netlist optimizations.
-    Info: Register "main_Q~15" lost all its fanouts during netlist optimizations.
-    Info: Register "main_Q~16" lost all its fanouts during netlist optimizations.
-    Info: Register "detectBackgroundCollision:background_collision_detector|dbc_Q~14" lost all its fanouts during netlist optimizations.
-    Info: Register "detectBackgroundCollision:background_collision_detector|dbc_Q~15" lost all its fanouts during netlist optimizations.
-    Info: Register "detectBackgroundCollision:background_collision_detector|dbc_Q~16" lost all its fanouts during netlist optimizations.
+    Info: Register "main_Q~25" lost all its fanouts during netlist optimizations.
+    Info: Register "main_Q~26" lost all its fanouts during netlist optimizations.
+    Info: Register "main_Q~27" lost all its fanouts during netlist optimizations.
+    Info: Register "detectBackgroundCollision:background_collision_detector|dbc_Q~33" lost all its fanouts during netlist optimizations.
+    Info: Register "detectBackgroundCollision:background_collision_detector|dbc_Q~34" lost all its fanouts during netlist optimizations.
+    Info: Register "detectBackgroundCollision:background_collision_detector|dbc_Q~35" lost all its fanouts during netlist optimizations.
     Info: Register "drawSprite:draw_character|Q~22" lost all its fanouts during netlist optimizations.
     Info: Register "drawSprite:draw_character|Q~23" lost all its fanouts during netlist optimizations.
     Info: Register "drawSprite:draw_character|Q~24" lost all its fanouts during netlist optimizations.
@@ -3082,19 +3195,36 @@ Info: 34 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "drawBackground:draw_background|drawTile:tile_drawing_module|Q~24" lost all its fanouts during netlist optimizations.
     Info: Register "characterMovement:character_movement|register8b:y_position_register|lpm_ff:lpm_ff_component|dffs[7]" lost all its fanouts during netlist optimizations.
 Info: Removed 1 MSB VCC or GND address nodes from RAM block "SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ALTSYNCRAM"
+Info: Found the following redundant logic cells in design
+    Info (17048): Logic cell "score_out0[0]"
+    Info (17048): Logic cell "score_out0[3]"
+    Info (17048): Logic cell "score_out0[2]"
+    Info (17048): Logic cell "score_out0[1]"
+    Info (17048): Logic cell "score_out1[0]"
+    Info (17048): Logic cell "score_out1[3]"
+    Info (17048): Logic cell "score_out1[2]"
+    Info (17048): Logic cell "score_out1[1]"
+    Info (17048): Logic cell "score_out2[0]"
+    Info (17048): Logic cell "score_out2[3]"
+    Info (17048): Logic cell "score_out2[2]"
+    Info (17048): Logic cell "score_out2[1]"
+    Info (17048): Logic cell "draw_background_enable_out"
+    Info (17048): Logic cell "detect_collisions_enable_out"
+    Info (17048): Logic cell "movement_enable_out"
+    Info (17048): Logic cell "draw_character_enable_out"
 Info: Generated suppressed messages file C:/Users/Owner/Documents/SKULE/Second Year/first semester/Digital Systems/quartus/project/working/main_state_machine/main_state_machine.map.smsg
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[2]"
-Info: Implemented 908 device resources after synthesis - the final resource count might be different
+Info: Implemented 918 device resources after synthesis - the final resource count might be different
     Info: Implemented 6 input pins
     Info: Implemented 82 output pins
-    Info: Implemented 732 logic cells
+    Info: Implemented 742 logic cells
     Info: Implemented 87 RAM segments
     Info: Implemented 1 ClockLock PLLs
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 68 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 69 warnings
     Info: Peak virtual memory: 210 megabytes
-    Info: Processing ended: Sun Nov 23 16:20:14 2008
-    Info: Elapsed time: 00:00:19
+    Info: Processing ended: Sun Nov 23 21:28:30 2008
+    Info: Elapsed time: 00:00:20
     Info: Total CPU time (on all processors): 00:00:17
 
 

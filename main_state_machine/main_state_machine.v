@@ -288,7 +288,7 @@ module main_state_machine
 	
 	// Make the time counter reset appropriately
 	always @(*)
-		if (time_out == 833_333)
+		if (time_out == /*833_333*/20)
 			begin
 				time_cnt_enable = 1'b0;
 			end
@@ -390,7 +390,7 @@ module main_state_machine
 
 	reg score_out0_enable;
 	reg score_out0_reset;
-	wire [3:0] score_out0;
+	wire [3:0] score_out0/*synthesis keep*/;
 	
 	counter4b score_cnt_out0 (
 		.clock(CLOCK_50),
@@ -412,7 +412,7 @@ module main_state_machine
 	
 	reg score_out1_enable;
 	reg score_out1_reset;
-	wire [3:0] score_out1;
+	wire [3:0] score_out1/*synthesis keep*/;
 	
 	counter4b score_cnt_out1 (
 		.clock(CLOCK_50),
@@ -434,7 +434,7 @@ module main_state_machine
 		
 	reg score_out2_enable;
 	reg score_out2_reset;
-	wire [3:0] score_out2;
+	wire [3:0] score_out2/*synthesis keep*/;
 	
 	counter4b score__cnt_out2 (
 		.clock(CLOCK_50),
@@ -463,37 +463,37 @@ module main_state_machine
 	//------------------------------------------
 	
 	// Signals -- always reg
-	reg draw_background_enable_out;
+	reg draw_background_enable_out/*synthesis keep*/;
 	wire draw_background_enable;
 	assign draw_background_enable = draw_background_enable_out;
-	reg draw_character_enable_out;
+	reg draw_character_enable_out/*synthesis keep*/;
 	wire draw_character_enable;
 	assign draw_character_enable = draw_character_enable_out;
-	reg draw_enemies_enable_out;
+	reg draw_enemies_enable_out/*synthesis keep*/;
 	wire draw_enemies_enable;
 	assign draw_enemies_enable = draw_enemies_enable_out;
-	reg detect_collisions_enable_out;
+	reg detect_collisions_enable_out/*synthesis keep*/;
 	wire detect_collisions_enable;
 	assign detect_collisions_enable = detect_collisions_enable_out;
-	reg [7:0] x_out;
+	reg [7:0] x_out/*synthesis keep*/;
 	assign x = x_out;
-	reg [6:0] y_out;
+	reg [6:0] y_out/*synthesis keep*/;
 	assign y = y_out;
-	reg [8:0] color_out;
+	reg [8:0] color_out/*synthesis keep*/;
 	assign color = color_out;
-	reg writeEn_out;
+	reg writeEn_out/*synthesis keep*/;
 	assign writeEn = writeEn_out;
-	reg [14:0] level_address_out;
+	reg [14:0] level_address_out/*synthesis keep*/;
 	assign level_address = level_address_out;
-	reg movement_enable_out;
+	reg movement_enable_out/*synthesis keep*/;
 	assign movement_enable = movement_enable_out;
 	
 	// Main State flipflops
 	reg [2:0] main_Q, main_D /*synthesis keep*/; 
-	always @ (posedge CLOCK_50 or negedge resetn)
+	always @ (posedge CLOCK_50)
 	begin: main_state_FFs
-		if (!resetn)
-			main_Q <= 0;
+		if (~resetn)
+			main_Q <= WAIT;		// state to reset to
 		else
 			main_Q <= main_D;
 	end
@@ -521,7 +521,7 @@ module main_state_machine
 	// Main Datapath
 	always @ (*)
 	begin: main_datapath
-		case (main_D)
+		case (main_Q)
 			DRAW_BACKGROUND: 
 				begin 	
 						movement_enable_out = 0; 

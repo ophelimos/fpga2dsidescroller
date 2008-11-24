@@ -74,10 +74,10 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	
 	// Jumping State flipflops
 	reg [1:0] jumping_Q, jumping_D; 
-	always @ (posedge clock or negedge resetn)
+	always @ (posedge clock)
 	begin: jumping_state_FFs
 		if (!resetn)
-			jumping_Q <= 0;
+			jumping_Q <= WAIT;		// state to reset to
 		else
 			jumping_Q <= jumping_D;
 	end
@@ -100,7 +100,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	// Jumping Datapath
 	always @ (*)
 	begin: jumping_datapath
-		case (jumping_D)
+		case (jumping_Q)
 			WAIT: 
 				begin
 					stop_jump_out = 0;
