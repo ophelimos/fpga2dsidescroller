@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Nov 24 14:54:27 2008
+Analysis & Synthesis Status : Successful - Mon Nov 24 17:00:05 2008
 Quartus II Version : 7.1 Build 178 06/25/2007 SP 1 SJ Full Version
 Revision Name : main_state_machine
 Top-level Entity Name : main_state_machine
 Family : Cyclone II
-Total logic elements : 660
-    Total combinational functions : 660
-    Dedicated logic registers : 201
-Total registers : 201
+Total logic elements : 611
+    Total combinational functions : 611
+    Dedicated logic registers : 195
+Total registers : 195
 Total pins : 88
 Total virtual pins : 0
 Total memory bits : 290,448

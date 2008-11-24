@@ -1,5 +1,5 @@
 Flow report for main_state_machine
-Mon Nov 24 14:56:23 2008
+Mon Nov 24 17:01:41 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 24 14:56:22 2008         ;
+; Flow Status                        ; Successful - Mon Nov 24 17:01:40 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; main_state_machine                            ;
 ; Top-level Entity Name              ; main_state_machine                            ;
@@ -45,10 +45,10 @@ applicable agreement for further details.
 ; Device                             ; EP2C35F672C6                                  ;
 ; Timing Models                      ; Final                                         ;
 ; Met timing requirements            ; Yes                                           ;
-; Total logic elements               ; 667 / 33,216 ( 2 % )                          ;
-;     Total combinational functions  ; 660 / 33,216 ( 2 % )                          ;
-;     Dedicated logic registers      ; 201 / 33,216 ( < 1 % )                        ;
-; Total registers                    ; 201                                           ;
+; Total logic elements               ; 618 / 33,216 ( 2 % )                          ;
+;     Total combinational functions  ; 611 / 33,216 ( 2 % )                          ;
+;     Dedicated logic registers      ; 195 / 33,216 ( < 1 % )                        ;
+; Total registers                    ; 195                                           ;
 ; Total pins                         ; 88 / 475 ( 19 % )                             ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 290,448 / 483,840 ( 60 % )                    ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2008 14:53:43 ;
+; Start date & time ; 11/24/2008 16:59:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main_state_machine  ;
 +-------------------+---------------------+
@@ -84,11 +84,11 @@ applicable agreement for further details.
 +-------------------------+--------------+
 ; Module Name             ; Elapsed Time ;
 +-------------------------+--------------+
-; Analysis & Synthesis    ; 00:00:46     ;
-; Fitter                  ; 00:00:48     ;
-; Assembler               ; 00:00:36     ;
-; Classic Timing Analyzer ; 00:00:09     ;
-; Total                   ; 00:02:19     ;
+; Analysis & Synthesis    ; 00:00:42     ;
+; Fitter                  ; 00:00:46     ;
+; Assembler               ; 00:00:29     ;
+; Classic Timing Analyzer ; 00:00:07     ;
+; Total                   ; 00:02:04     ;
 +-------------------------+--------------+
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_state_machine
-Mon Nov 24 14:54:28 2008
+Mon Nov 24 17:00:05 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -32,7 +32,7 @@ Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
  24. Source assignments for drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
  25. Source assignments for drawBackground:draw_background|drawTile:tile_drawing_module
  26. Source assignments for drawSprite:draw_character
- 27. Source assignments for characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component
+ 27. Source assignments for counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component
  28. Source assignments for counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component
  29. Source assignments for counter20b:count60fps|lpm_counter:lpm_counter_component
  30. Source assignments for counter26b:score_counter|lpm_counter:lpm_counter_component
@@ -74,23 +74,21 @@ Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
  66. Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
  67. Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
  68. Parameter Settings for User Entity Instance: detectBackgroundCollision:background_collision_detector
- 69. Parameter Settings for User Entity Instance: characterMovement:character_movement
- 70. Parameter Settings for User Entity Instance: characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component
- 71. Parameter Settings for User Entity Instance: flipflop:y_position_holder|lpm_ff:lpm_ff_component
- 72. Parameter Settings for User Entity Instance: counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component
- 73. Parameter Settings for User Entity Instance: counter20b:count60fps|lpm_counter:lpm_counter_component
- 74. Parameter Settings for User Entity Instance: counter26b:score_counter|lpm_counter:lpm_counter_component
- 75. Parameter Settings for User Entity Instance: counter4b:score_cnt_out0|lpm_counter:lpm_counter_component
- 76. Parameter Settings for User Entity Instance: counter4b:score_cnt_out1|lpm_counter:lpm_counter_component
- 77. Parameter Settings for User Entity Instance: counter4b:score__cnt_out2|lpm_counter:lpm_counter_component
- 78. Parameter Settings for Inferred Entity Instance: drawBackground:draw_background|lpm_mult:Mult0
- 79. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1
- 80. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0
- 81. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2
- 82. lpm_mult Parameter Settings by Entity Instance
- 83. Analysis & Synthesis INI Usage
- 84. Analysis & Synthesis Messages
- 85. Analysis & Synthesis Suppressed Messages
+ 69. Parameter Settings for User Entity Instance: counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component
+ 70. Parameter Settings for User Entity Instance: counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component
+ 71. Parameter Settings for User Entity Instance: counter20b:count60fps|lpm_counter:lpm_counter_component
+ 72. Parameter Settings for User Entity Instance: counter26b:score_counter|lpm_counter:lpm_counter_component
+ 73. Parameter Settings for User Entity Instance: counter4b:score_cnt_out0|lpm_counter:lpm_counter_component
+ 74. Parameter Settings for User Entity Instance: counter4b:score_cnt_out1|lpm_counter:lpm_counter_component
+ 75. Parameter Settings for User Entity Instance: counter4b:score__cnt_out2|lpm_counter:lpm_counter_component
+ 76. Parameter Settings for Inferred Entity Instance: drawBackground:draw_background|lpm_mult:Mult0
+ 77. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1
+ 78. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0
+ 79. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2
+ 80. lpm_mult Parameter Settings by Entity Instance
+ 81. Analysis & Synthesis INI Usage
+ 82. Analysis & Synthesis Messages
+ 83. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -116,15 +114,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 24 14:54:27 2008         ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 24 17:00:05 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; main_state_machine                            ;
 ; Top-level Entity Name              ; main_state_machine                            ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 660                                           ;
-;     Total combinational functions  ; 660                                           ;
-;     Dedicated logic registers      ; 201                                           ;
-; Total registers                    ; 201                                           ;
+; Total logic elements               ; 611                                           ;
+;     Total combinational functions  ; 611                                           ;
+;     Dedicated logic registers      ; 195                                           ;
+; Total registers                    ; 195                                           ;
 ; Total pins                         ; 88                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 290,448                                       ;
@@ -196,102 +194,99 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                           ;
-+----------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
-; File Name with User-Entered Path                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ;
-+----------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
-; flipflop.v                                               ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/flipflop.v                                 ;
-; ../characterMovement/counter4bdown.v                     ; yes             ; User Verilog HDL File        ; W:/r20/characterMovement/counter4bdown.v                             ;
-; ../characterMovement/characterMovement.v                 ; yes             ; User Verilog HDL File        ; W:/r20/characterMovement/characterMovement.v                         ;
-; ../detectBackgroundCollision/detectBackgroundCollision.v ; yes             ; User Verilog HDL File        ; W:/r20/detectBackgroundCollision/detectBackgroundCollision.v         ;
-; ../SpriteMem/spriteROM0.v                                ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/spriteROM0.v                                        ;
-; hex_digits.v                                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/hex_digits.v                               ;
-; counter26b.v                                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/counter26b.v                               ;
-; counter20b.v                                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/counter20b.v                               ;
-; ../drawSprite/drawSprite.v                               ; yes             ; User Verilog HDL File        ; W:/r20/drawSprite/drawSprite.v                                       ;
-; ../SpriteMem/W_H_Mux.v                                   ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/W_H_Mux.v                                           ;
-; ../SpriteMem/DataOut_Mux.v                               ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/DataOut_Mux.v                                       ;
-; ../SpriteMem/SpriteMem.v                                 ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/SpriteMem.v                                         ;
-; ../SpriteMem/AStep_Mux.v                                 ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/AStep_Mux.v                                         ;
-; ../drawTileMichael/addx.v                                ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/addx.v                                        ;
-; ../drawTileMichael/addy.v                                ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/addy.v                                        ;
-; ../drawTileMichael/drawTile.v                            ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/drawTile.v                                    ;
-; ../drawTileMichael/memCount.v                            ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/memCount.v                                    ;
-; ../drawTileMichael/nBitRegister.v                        ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/nBitRegister.v                                ;
-; ../drawBackground/tileset.v                              ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/tileset.v                                      ;
-; ../drawBackground/counter4b.v                            ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/counter4b.v                                    ;
-; ../drawBackground/counter5b.v                            ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/counter5b.v                                    ;
-; counter32b.v                                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/counter32b.v                               ;
-; ../drawBackground/level1.v                               ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/level1.v                                       ;
-; vga_adapter/vga_pll.v                                    ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/vga_adapter/vga_pll.v                      ;
-; vga_adapter/vga_address_translator.v                     ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/vga_adapter/vga_address_translator.v       ;
-; vga_adapter/vga_controller.v                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/vga_adapter/vga_controller.v               ;
-; vga_adapter/vga_adapter.v                                ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/vga_adapter/vga_adapter.v                  ;
-; ../drawBackground/drawBackground.v                       ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/drawBackground.v                               ;
-; main_state_machine.v                                     ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/main_state_machine.v                       ;
-; altsyncram.tdf                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf          ;
-; stratix_ram_block.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_ram_block.inc   ;
-; lpm_mux.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.inc             ;
-; lpm_decode.inc                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_decode.inc          ;
-; aglobal71.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/aglobal71.inc           ;
-; a_rdenreg.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/a_rdenreg.inc           ;
-; altrom.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altrom.inc              ;
-; altram.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc              ;
-; altdpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc            ;
-; altqpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc            ;
-; db/altsyncram_p3g1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_p3g1.tdf                     ;
-; db/altsyncram_ptq1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_ptq1.tdf                     ;
-; db/decode_6oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/decode_6oa.tdf                          ;
-; db/mux_nib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_nib.tdf                             ;
-; altpll.tdf                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altpll.tdf              ;
-; stratix_pll.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_pll.inc         ;
-; stratixii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratixii_pll.inc       ;
-; cycloneii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cycloneii_pll.inc       ;
-; db/altsyncram_7391.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_7391.tdf                     ;
-; db/decode_9oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/decode_9oa.tdf                          ;
-; db/mux_kib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_kib.tdf                             ;
-; lpm_mux.tdf                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.tdf             ;
-; muxlut.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/muxlut.inc              ;
-; bypassff.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/bypassff.inc            ;
-; altshift.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altshift.inc            ;
-; db/mux_1nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_1nc.tdf                             ;
-; db/mux_vmc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_vmc.tdf                             ;
-; db/altsyncram_u491.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_u491.tdf                     ;
-; db/mux_5nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_5nc.tdf                             ;
-; db/altsyncram_tu81.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_tu81.tdf                     ;
-; lpm_counter.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf         ;
-; lpm_constant.inc                                         ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc        ;
-; lpm_add_sub.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc         ;
-; cmpconst.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cmpconst.inc            ;
-; lpm_compare.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_compare.inc         ;
-; lpm_counter.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.inc         ;
-; dffeea.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/dffeea.inc              ;
-; alt_synch_counter.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter.inc   ;
-; alt_synch_counter_f.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter_f.inc ;
-; alt_counter_f10ke.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_f10ke.inc   ;
-; alt_counter_stratix.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_stratix.inc ;
-; db/cntr_4oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_4oi.tdf                            ;
-; db/cntr_3oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_3oi.tdf                            ;
-; lpm_add_sub.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;
-; addcore.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc             ;
-; look_add.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc            ;
-; alt_stratix_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;
-; alt_mercury_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_mercury_add_sub.inc ;
-; db/add_sub_big.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/add_sub_big.tdf                         ;
-; db/add_sub_aig.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/add_sub_aig.tdf                         ;
-; db/add_sub_llh.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/add_sub_llh.tdf                         ;
-; db/cntr_ldj.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_ldj.tdf                            ;
-; lpm_ff.tdf                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_ff.tdf              ;
-; db/cntr_vgh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_vgh.tdf                            ;
-; db/cntr_hpi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_hpi.tdf                            ;
-; db/cntr_npi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_npi.tdf                            ;
-; lpm_mult.tdf                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf            ;
-; multcore.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/multcore.inc            ;
-; db/mult_6111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mult_6111.tdf                           ;
-; db/mult_p211.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mult_p211.tdf                           ;
-; db/mult_8111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mult_8111.tdf                           ;
-+----------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
+; File Name with User-Entered Path                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ;
++----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
+; counterupdown7b.v                                        ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counterupdown7b.v                    ;
+; ../detectBackgroundCollision/detectBackgroundCollision.v ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/detectBackgroundCollision/detectBackgroundCollision.v   ;
+; ../SpriteMem/spriteROM0.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/spriteROM0.v                                  ;
+; hex_digits.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/hex_digits.v                         ;
+; counter26b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter26b.v                         ;
+; counter20b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter20b.v                         ;
+; ../drawSprite/drawSprite.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawSprite/drawSprite.v                                 ;
+; ../SpriteMem/W_H_Mux.v                                   ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/W_H_Mux.v                                     ;
+; ../SpriteMem/DataOut_Mux.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/DataOut_Mux.v                                 ;
+; ../SpriteMem/SpriteMem.v                                 ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/SpriteMem.v                                   ;
+; ../SpriteMem/AStep_Mux.v                                 ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/AStep_Mux.v                                   ;
+; ../drawTileMichael/addx.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/addx.v                                  ;
+; ../drawTileMichael/addy.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/addy.v                                  ;
+; ../drawTileMichael/drawTile.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/drawTile.v                              ;
+; ../drawTileMichael/memCount.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/memCount.v                              ;
+; ../drawTileMichael/nBitRegister.v                        ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/nBitRegister.v                          ;
+; ../drawBackground/tileset.v                              ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/tileset.v                                ;
+; ../drawBackground/counter4b.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/counter4b.v                              ;
+; ../drawBackground/counter5b.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/counter5b.v                              ;
+; counter32b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter32b.v                         ;
+; ../drawBackground/level1.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/level1.v                                 ;
+; vga_adapter/vga_pll.v                                    ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_pll.v                ;
+; vga_adapter/vga_address_translator.v                     ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_address_translator.v ;
+; vga_adapter/vga_controller.v                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_controller.v         ;
+; vga_adapter/vga_adapter.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_adapter.v            ;
+; ../drawBackground/drawBackground.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/drawBackground.v                         ;
+; main_state_machine.v                                     ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/main_state_machine.v                 ;
+; altsyncram.tdf                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf                   ;
+; stratix_ram_block.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_ram_block.inc            ;
+; lpm_mux.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.inc                      ;
+; lpm_decode.inc                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_decode.inc                   ;
+; aglobal71.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/aglobal71.inc                    ;
+; a_rdenreg.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/a_rdenreg.inc                    ;
+; altrom.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altrom.inc                       ;
+; altram.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc                       ;
+; altdpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc                     ;
+; altqpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc                     ;
+; db/altsyncram_p3g1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_p3g1.tdf               ;
+; db/altsyncram_ptq1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_ptq1.tdf               ;
+; db/decode_6oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/decode_6oa.tdf                    ;
+; db/mux_nib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_nib.tdf                       ;
+; altpll.tdf                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altpll.tdf                       ;
+; stratix_pll.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_pll.inc                  ;
+; stratixii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratixii_pll.inc                ;
+; cycloneii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cycloneii_pll.inc                ;
+; db/altsyncram_7391.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_7391.tdf               ;
+; db/decode_9oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/decode_9oa.tdf                    ;
+; db/mux_kib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_kib.tdf                       ;
+; lpm_mux.tdf                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.tdf                      ;
+; muxlut.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/muxlut.inc                       ;
+; bypassff.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/bypassff.inc                     ;
+; altshift.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altshift.inc                     ;
+; db/mux_1nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_1nc.tdf                       ;
+; db/mux_vmc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_vmc.tdf                       ;
+; db/altsyncram_u491.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_u491.tdf               ;
+; db/mux_5nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_5nc.tdf                       ;
+; db/altsyncram_tu81.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_tu81.tdf               ;
+; lpm_counter.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf                  ;
+; lpm_constant.inc                                         ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc                 ;
+; lpm_add_sub.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc                  ;
+; cmpconst.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cmpconst.inc                     ;
+; lpm_compare.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_compare.inc                  ;
+; lpm_counter.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.inc                  ;
+; dffeea.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/dffeea.inc                       ;
+; alt_synch_counter.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter.inc            ;
+; alt_synch_counter_f.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter_f.inc          ;
+; alt_counter_f10ke.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_f10ke.inc            ;
+; alt_counter_stratix.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_stratix.inc          ;
+; db/cntr_4oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_4oi.tdf                      ;
+; db/cntr_3oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_3oi.tdf                      ;
+; lpm_add_sub.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf                  ;
+; addcore.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc                      ;
+; look_add.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc                     ;
+; alt_stratix_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_stratix_add_sub.inc          ;
+; alt_mercury_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_mercury_add_sub.inc          ;
+; db/add_sub_big.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_big.tdf                   ;
+; db/add_sub_aig.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_aig.tdf                   ;
+; db/add_sub_llh.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_llh.tdf                   ;
+; db/cntr_hfh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_hfh.tdf                      ;
+; db/cntr_vgh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_vgh.tdf                      ;
+; db/cntr_hpi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_hpi.tdf                      ;
+; db/cntr_npi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_npi.tdf                      ;
+; lpm_mult.tdf                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf                     ;
+; multcore.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/multcore.inc                     ;
+; db/mult_6111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_6111.tdf                     ;
+; db/mult_p211.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_p211.tdf                     ;
+; db/mult_8111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_8111.tdf                     ;
++----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -299,20 +294,20 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 660      ;
+; Estimated Total logic elements              ; 611      ;
 ;                                             ;          ;
-; Total combinational functions               ; 660      ;
+; Total combinational functions               ; 611      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 181      ;
-;     -- 3 input functions                    ; 226      ;
-;     -- <=2 input functions                  ; 253      ;
+;     -- 4 input functions                    ; 155      ;
+;     -- 3 input functions                    ; 212      ;
+;     -- <=2 input functions                  ; 244      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 378      ;
-;     -- arithmetic mode                      ; 282      ;
+;     -- normal mode                          ; 338      ;
+;     -- arithmetic mode                      ; 273      ;
 ;                                             ;          ;
-; Total registers                             ; 201      ;
-;     -- Dedicated logic registers            ; 201      ;
+; Total registers                             ; 195      ;
+;     -- Dedicated logic registers            ; 195      ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
 ; I/O pins                                    ; 88       ;
@@ -320,9 +315,9 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 8        ;
 ; Total PLLs                                  ; 1        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 257      ;
-; Total fan-out                               ; 4561     ;
-; Average fan-out                             ; 4.36     ;
+; Maximum fan-out                             ; 251      ;
+; Total fan-out                               ; 4391     ;
+; Average fan-out                             ; 4.44     ;
 +---------------------------------------------+----------+
 
 
@@ -331,15 +326,11 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |main_state_machine                                          ; 660 (105)         ; 201 (7)      ; 290448      ; 8            ; 0       ; 4         ; 88   ; 0            ; |main_state_machine                                                                                                                                                  ; work         ;
+; |main_state_machine                                          ; 611 (95)          ; 195 (7)      ; 290448      ; 8            ; 0       ; 4         ; 88   ; 0            ; |main_state_machine                                                                                                                                                  ; work         ;
 ;    |SpriteMem:character_mem|                                 ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem                                                                                                                          ; work         ;
 ;       |spriteROM0:MEM0|                                      ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0                                                                                                          ; work         ;
 ;          |altsyncram:altsyncram_component|                   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component                                                                          ; work         ;
 ;             |altsyncram_u491:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated                                           ; work         ;
-;    |characterMovement:character_movement|                    ; 47 (40)           ; 6 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement                                                                                                             ; work         ;
-;       |counter4bdown:jump_rate_counter|                      ; 7 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement|counter4bdown:jump_rate_counter                                                                             ; work         ;
-;          |lpm_counter:lpm_counter_component|                 ; 7 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component                                           ; work         ;
-;             |cntr_ldj:auto_generated|                        ; 7 (7)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component|cntr_ldj:auto_generated                   ; work         ;
 ;    |counter20b:count60fps|                                   ; 21 (0)            ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter20b:count60fps                                                                                                                            ; work         ;
 ;       |lpm_counter:lpm_counter_component|                    ; 21 (0)            ; 20 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter20b:count60fps|lpm_counter:lpm_counter_component                                                                                          ; work         ;
 ;          |cntr_hpi:auto_generated|                           ; 21 (21)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter20b:count60fps|lpm_counter:lpm_counter_component|cntr_hpi:auto_generated                                                                  ; work         ;
@@ -358,6 +349,9 @@ applicable agreement for further details.
 ;    |counter4b:score_cnt_out1|                                ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1                                                                                                                         ; work         ;
 ;       |lpm_counter:lpm_counter_component|                    ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1|lpm_counter:lpm_counter_component                                                                                       ; work         ;
 ;          |cntr_3oi:auto_generated|                           ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                                                               ; work         ;
+;    |counterupdown7b:y_character_position_counter|            ; 8 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counterupdown7b:y_character_position_counter                                                                                                     ; work         ;
+;       |lpm_counter:lpm_counter_component|                    ; 8 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component                                                                   ; work         ;
+;          |cntr_hfh:auto_generated|                           ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component|cntr_hfh:auto_generated                                           ; work         ;
 ;    |detectBackgroundCollision:background_collision_detector| ; 82 (82)           ; 14 (14)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector                                                                                          ; work         ;
 ;       |lpm_mult:Mult0|                                       ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0                                                                           ; work         ;
 ;          |mult_6111:auto_generated|                          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0|mult_6111:auto_generated                                                  ; work         ;
@@ -396,8 +390,6 @@ applicable agreement for further details.
 ;             |add_sub_aig:auto_generated|                     ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated                                            ; work         ;
 ;       |nBitRegister:XOffsetReg|                              ; 8 (8)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|nBitRegister:XOffsetReg                                                                                                ; work         ;
 ;       |nBitRegister:YOffsetReg|                              ; 7 (7)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|nBitRegister:YOffsetReg                                                                                                ; work         ;
-;    |flipflop:y_position_holder|                              ; 0 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|flipflop:y_position_holder                                                                                                                       ; work         ;
-;       |lpm_ff:lpm_ff_component|                              ; 0 (0)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|flipflop:y_position_holder|lpm_ff:lpm_ff_component                                                                                               ; work         ;
 ;    |hex_digits:hex0|                                         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|hex_digits:hex0                                                                                                                                  ; work         ;
 ;    |hex_digits:hex1|                                         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|hex_digits:hex1                                                                                                                                  ; work         ;
 ;    |hex_digits:hex2|                                         ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|hex_digits:hex2                                                                                                                                  ; work         ;
@@ -577,26 +569,24 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 201   ;
+; Total registers                              ; 195   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
-; Number of registers using Synchronous Load   ; 82    ;
-; Number of registers using Asynchronous Clear ; 46    ;
+; Number of registers using Synchronous Load   ; 85    ;
+; Number of registers using Asynchronous Clear ; 44    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 56    ;
+; Number of registers using Clock Enable       ; 59    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main_state_machine|flipflop:y_position_holder|lpm_ff:lpm_ff_component|dffs[1] ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main_state_machine|y_character_position[0]                                    ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |main_state_machine|Selector42                                                 ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |main_state_machine|Selector34                                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |main_state_machine|Selector45 ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |main_state_machine|Selector33 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
 
 
 +------------------------------------------------------------------------+
@@ -749,15 +739,15 @@ Encoding Type:  One-Hot
 +------------------------------+-------+------+------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component ;
-+---------------------------+-------+------+------------------------------------------------------------------------------------+
-; Assignment                ; Value ; From ; To                                                                                 ;
-+---------------------------+-------+------+------------------------------------------------------------------------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                                                  ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                                                  ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                                                  ;
-+---------------------------+-------+------+------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------+
+; Source assignments for counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+------------------------------------------------------------+
+; Assignment                ; Value ; From ; To                                                         ;
++---------------------------+-------+------+------------------------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                                          ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                                          ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                                          ;
++---------------------------+-------+------+------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------+
@@ -2020,62 +2010,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: characterMovement:character_movement ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; WAIT           ; 0     ; Signed Integer                                           ;
-; SLOW_DOWN      ; 1     ; Signed Integer                                           ;
-; HIT_GROUND     ; 2     ; Signed Integer                                           ;
-; fall_speed     ; 2     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component ;
-+------------------------+-------------+--------------------------------------------------------------------------------------------------------------+
-; Parameter Name         ; Value       ; Type                                                                                                         ;
-+------------------------+-------------+--------------------------------------------------------------------------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                                                                   ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                                                                 ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                                                                 ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                                                               ;
-; LPM_WIDTH              ; 4           ; Signed Integer                                                                                               ;
-; LPM_DIRECTION          ; DOWN        ; Untyped                                                                                                      ;
-; LPM_MODULUS            ; 0           ; Untyped                                                                                                      ;
-; LPM_AVALUE             ; UNUSED      ; Untyped                                                                                                      ;
-; LPM_SVALUE             ; UNUSED      ; Untyped                                                                                                      ;
-; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                                                                      ;
-; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                                                                      ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                                                                                                      ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                                                           ;
-; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                                                           ;
-; CARRY_CNT_EN           ; SMART       ; Untyped                                                                                                      ;
-; LABWIDE_SCLR           ; ON          ; Untyped                                                                                                      ;
-; USE_NEW_VERSION        ; TRUE        ; Untyped                                                                                                      ;
-; CBXI_PARAMETER         ; cntr_ldj    ; Untyped                                                                                                      ;
-+------------------------+-------------+--------------------------------------------------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: flipflop:y_position_holder|lpm_ff:lpm_ff_component ;
-+------------------------+------------+-----------------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                                      ;
-+------------------------+------------+-----------------------------------------------------------+
-; LPM_WIDTH              ; 7          ; Signed Integer                                            ;
-; LPM_AVALUE             ; UNUSED     ; Untyped                                                   ;
-; LPM_SVALUE             ; UNUSED     ; Untyped                                                   ;
-; LPM_FFTYPE             ; DFF        ; Untyped                                                   ;
-; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                   ;
-; CBXI_PARAMETER         ; NOTHING    ; Untyped                                                   ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                              ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                              ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                            ;
-+------------------------+------------+-----------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+; Parameter Name         ; Value      ; Type                                                                                  ;
++------------------------+------------+---------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                                                        ;
+; LPM_WIDTH              ; 7          ; Signed Integer                                                                        ;
+; LPM_DIRECTION          ; DEFAULT    ; Untyped                                                                               ;
+; LPM_MODULUS            ; 0          ; Untyped                                                                               ;
+; LPM_AVALUE             ; UNUSED     ; Untyped                                                                               ;
+; LPM_SVALUE             ; UNUSED     ; Untyped                                                                               ;
+; LPM_PORT_UPDOWN        ; PORT_USED  ; Untyped                                                                               ;
+; DEVICE_FAMILY          ; Cyclone II ; Untyped                                                                               ;
+; CARRY_CHAIN            ; MANUAL     ; Untyped                                                                               ;
+; CARRY_CHAIN_LENGTH     ; 48         ; CARRY_CHAIN_LENGTH                                                                    ;
+; NOT_GATE_PUSH_BACK     ; ON         ; NOT_GATE_PUSH_BACK                                                                    ;
+; CARRY_CNT_EN           ; SMART      ; Untyped                                                                               ;
+; LABWIDE_SCLR           ; ON         ; Untyped                                                                               ;
+; USE_NEW_VERSION        ; TRUE       ; Untyped                                                                               ;
+; CBXI_PARAMETER         ; cntr_hfh   ; Untyped                                                                               ;
++------------------------+------------+---------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -2439,7 +2397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+--------------------------------------------------------------------------+
 ; Option               ; Usage                                                                    ;
 +----------------------+--------------------------------------------------------------------------+
-; Initialization file: ; C:\Documents and Settings\michniew/quartus.ini                           ;
+; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
 ; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
 +----------------------+--------------------------------------------------------------------------+
 
@@ -2450,8 +2408,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 24 14:53:40 2008
+    Info: Processing started: Mon Nov 24 16:59:21 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main_state_machine -c main_state_machine
+Info: Found 1 design units, including 1 entities, in source file counterupdown7b.v
+    Info: Found entity 1: counterupdown7b
 Info: Found 1 design units, including 1 entities, in source file flipflop.v
     Info: Found entity 1: flipflop
 Info: Found 1 design units, including 1 entities, in source file ../characterMovement/counter4bdown.v
@@ -2531,15 +2491,22 @@ Info: Found 1 design units, including 1 entities, in source file ../drawBackgrou
     Info: Found entity 1: drawBackground
 Info: Found 1 design units, including 1 entities, in source file main_state_machine.v
     Info: Found entity 1: main_state_machine
+Info: Found 1 design units, including 1 entities, in source file ../characterMovement/jumpingCalc.v
+    Info: Found entity 1: jumpingCalc
 Info: Elaborating entity "main_state_machine" for the top level hierarchy
-Warning (10858): Verilog HDL warning at main_state_machine.v(300): object x_tile_position_cnt_reset used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(488): object "draw_enemies_enable" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at main_state_machine.v(283): truncated value with size 8 to match size of target (7)
+Warning (10858): Verilog HDL warning at main_state_machine.v(279): object y_character_position_cnt_reset used but never assigned
+Warning (10858): Verilog HDL warning at main_state_machine.v(316): object x_tile_position_cnt_reset used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(504): object "draw_enemies_enable" assigned a value but never read
+Warning (10034): Output port "LEDR[3]" at main_state_machine.v(30) has no driver
+Warning (10034): Output port "LEDR[2]" at main_state_machine.v(30) has no driver
+Warning (10034): Output port "LEDR[1]" at main_state_machine.v(30) has no driver
+Warning (10034): Output port "LEDR[0]" at main_state_machine.v(30) has no driver
 Warning (10034): Output port "LEDG[3]" at main_state_machine.v(31) has no driver
 Warning (10034): Output port "LEDG[2]" at main_state_machine.v(31) has no driver
 Warning (10034): Output port "LEDG[1]" at main_state_machine.v(31) has no driver
 Warning (10034): Output port "LEDG[0]" at main_state_machine.v(31) has no driver
-Warning (10030): Net "x_tile_position_cnt_reset" at main_state_machine.v(300) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "y_character_position_cnt_reset" at main_state_machine.v(279) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "x_tile_position_cnt_reset" at main_state_machine.v(316) has no driver or initial value, using a default initial value '0'
 Info: Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA"
 Info: Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf
@@ -2663,26 +2630,12 @@ Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(1
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(149): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(150): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(151): truncated value with size 32 to match size of target (15)
-Info: Elaborating entity "characterMovement" for hierarchy "characterMovement:character_movement"
-Warning (10230): Verilog HDL assignment warning at characterMovement.v(74): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at characterMovement.v(75): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at characterMovement.v(76): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at characterMovement.v(77): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at characterMovement.v(78): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at characterMovement.v(79): truncated value with size 32 to match size of target (2)
-Warning (10230): Verilog HDL assignment warning at characterMovement.v(123): truncated value with size 32 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at characterMovement.v(127): truncated value with size 32 to match size of target (8)
-Info: Elaborating entity "counter4bdown" for hierarchy "characterMovement:character_movement|counter4bdown:jump_rate_counter"
-Info: Elaborating entity "lpm_counter" for hierarchy "characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component"
-Info: Elaborated megafunction instantiation "characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component"
-Info: Found 1 design units, including 1 entities, in source file db/cntr_ldj.tdf
-    Info: Found entity 1: cntr_ldj
-Info: Elaborating entity "cntr_ldj" for hierarchy "characterMovement:character_movement|counter4bdown:jump_rate_counter|lpm_counter:lpm_counter_component|cntr_ldj:auto_generated"
-Info: Elaborating entity "flipflop" for hierarchy "flipflop:y_position_holder"
-Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_ff.tdf
-    Info: Found entity 1: lpm_ff
-Info: Elaborating entity "lpm_ff" for hierarchy "flipflop:y_position_holder|lpm_ff:lpm_ff_component"
-Info: Elaborated megafunction instantiation "flipflop:y_position_holder|lpm_ff:lpm_ff_component"
+Info: Elaborating entity "counterupdown7b" for hierarchy "counterupdown7b:y_character_position_counter"
+Info: Elaborating entity "lpm_counter" for hierarchy "counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component"
+Info: Elaborated megafunction instantiation "counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component"
+Info: Found 1 design units, including 1 entities, in source file db/cntr_hfh.tdf
+    Info: Found entity 1: cntr_hfh
+Info: Elaborating entity "cntr_hfh" for hierarchy "counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component|cntr_hfh:auto_generated"
 Info: Elaborating entity "counter32b" for hierarchy "counter32b:x_tile_position_counter"
 Info: Elaborating entity "lpm_counter" for hierarchy "counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component"
 Info: Elaborated megafunction instantiation "counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component"
@@ -2702,10 +2655,6 @@ Info: Found 1 design units, including 1 entities, in source file db/cntr_npi.tdf
     Info: Found entity 1: cntr_npi
 Info: Elaborating entity "cntr_npi" for hierarchy "counter26b:score_counter|lpm_counter:lpm_counter_component|cntr_npi:auto_generated"
 Info: Elaborating entity "hex_digits" for hierarchy "hex_digits:hex0"
-Warning: Port "data" on the entity instantiation of "y_position_holder" is connected to a signal of width 8. The formal width of the signal in the module is 7.  Extra bits will be ignored.
-Warning: Port "q" on the entity instantiation of "y_position_holder" is connected to a signal of width 8. The formal width of the signal in the module is 7.  Extra bits will be left dangling without any fanout logic.
-Warning: Port "q" on the entity instantiation of "jump_rate_counter" is connected to a signal of width 6. The formal width of the signal in the module is 4.  Extra bits will be left dangling without any fanout logic.
-Warning: Port "y_position_in" on the entity instantiation of "character_movement" is connected to a signal of width 7. The formal width of the signal in the module is 8.  Extra bits will be driven by GND.
 Warning: Port "x_location" on the entity instantiation of "background_collision_detector" is connected to a signal of width 32. The formal width of the signal in the module is 11.  Extra bits will be ignored.
 Warning: Port "ordered port 0" on the entity instantiation of "AddressCounter" is connected to a signal of width 7. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
 Warning: Port "x_offset" on the entity instantiation of "draw_background" is connected to a signal of width 32. The formal width of the signal in the module is 11.  Extra bits will be ignored.
@@ -2808,6 +2757,9 @@ Warning: Output pins are stuck at VCC or GND
     Warning: Pin "VGA_R[0]" stuck at GND
     Warning: Pin "VGA_G[0]" stuck at GND
     Warning: Pin "VGA_B[0]" stuck at GND
+    Warning: Pin "LEDR[0]" stuck at GND
+    Warning: Pin "LEDR[1]" stuck at GND
+    Warning: Pin "LEDR[2]" stuck at GND
     Warning: Pin "LEDR[3]" stuck at GND
     Warning: Pin "LEDR[11]" stuck at GND
     Warning: Pin "LEDG[0]" stuck at GND
@@ -2850,25 +2802,23 @@ Info: 34 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "draw_background/tile_drawing_module/Q~26" lost all its fanouts during netlist optimizations.
     Info: Register "draw_background/tile_drawing_module/Q~27" lost all its fanouts during netlist optimizations.
 Info: Removed 1 MSB VCC or GND address nodes from RAM block "SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ALTSYNCRAM"
-Info: Generated suppressed messages file W:/r20/main_state_machine/main_state_machine.map.smsg
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning: No output dependent on input pin "KEY[2]"
-Info: Implemented 871 device resources after synthesis - the final resource count might be different
+Info: Generated suppressed messages file W:/quartus/oldversion/main_state_machine/main_state_machine.map.smsg
+Info: Implemented 822 device resources after synthesis - the final resource count might be different
     Info: Implemented 6 input pins
     Info: Implemented 82 output pins
-    Info: Implemented 687 logic cells
+    Info: Implemented 638 logic cells
     Info: Implemented 87 RAM segments
     Info: Implemented 1 ClockLock PLLs
     Info: Implemented 8 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Allocated 158 megabytes of memory during processing
-    Info: Processing ended: Mon Nov 24 14:54:28 2008
-    Info: Elapsed time: 00:00:48
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 48 warnings
+    Info: Allocated 157 megabytes of memory during processing
+    Info: Processing ended: Mon Nov 24 17:00:06 2008
+    Info: Elapsed time: 00:00:45
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in W:/r20/main_state_machine/main_state_machine.map.smsg.
+The suppressed messages can be found in W:/quartus/oldversion/main_state_machine/main_state_machine.map.smsg.
 
 

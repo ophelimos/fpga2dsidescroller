@@ -70,6 +70,7 @@ module main_state_machine
 	//------------------------------------------
 	
 //	assign LEDR[3:0] = tile_code;
+//	assign LEDR[0] = jump;
 	assign LEDR[17:15] = main_Q;
 	assign LEDR[14:12] = main_D;
 	assign LEDG[7] = left_blocked;
@@ -78,7 +79,7 @@ module main_state_machine
 	assign LEDG[4] = right_blocked;
 	assign LEDR [11:4] = y_character_position;
 	wire debug_signal;
-	assign debug_signal = KEY[1];
+	assign debug_signal = 0;//KEY[1];
 
 	//------------------------------------------
 	// Level Memory
@@ -151,8 +152,8 @@ module main_state_machine
 	
 	wire [2:0] SpriteSelect;	// choose which sprite we want to work with (draw)
 	assign SpriteSelect = 3'b0;
-	wire [2:0] AnimStep;		// animation 'frame' we are on (default 0)
-	assign AnimStep = 3'b0;	
+
+	reg [2:0] AnimStep; // animation 'frame' we are on, determined in Character Movement section
 	wire [4:0] SpriteHeight, SpriteWidth;	// width and height of the selected sprite
 	
 	drawSprite draw_character(
@@ -175,6 +176,8 @@ module main_state_machine
 	.VGA_Draw(writeEn_character));
 	
 	//assign draw_character_done = 1;
+	
+	
 	
 	//------------------------------------------
 	// DrawEnemies instantiation
@@ -226,8 +229,10 @@ module main_state_machine
 	wire movement_enable;
 	
 	wire [7:0] x_character_position;
-	reg [6:0] y_character_position;
-	wire [7:0] y_movement_position;
+	assign x_character_position = 8'd72;	// Right around the center (in pixels)
+	wire [6:0] y_character_position;
+	wire character_movement_done;
+//	wire [7:0] y_movement_position;
 	
 	// Character y position
 	//assign y_position = 7'd60;	// just below center on the screen (in pixels)
@@ -246,7 +251,7 @@ module main_state_machine
 	
 	// I don't actually need a register, since we're just constantly outputting
 	
-	reg jump;
+/*	reg jump;
 	
 	// Jumping logic
 	always @(*)
@@ -266,30 +271,40 @@ module main_state_machine
 	.up_blocked(up_blocked), 
 	.down_blocked(down_blocked),
 	.x_position(x_character_position),
-	.y_position(y_movement_position));
-	
-	// drawCharacter -> characterMovement -> normalizing logic -> drawCharacter
-	// y_character_position -> characterMovement -> y_movement_position -> drawCharacter
-	
-	// Y normalizing logic
-	always @(*)
-		if (~resetn)
-			y_character_position = 0;
-		else if (y_movement_position_reg >= 103 && y_movement_position_reg < 192)
-			y_character_position = 103; // 119-16
-		else if (y_movement_position_reg >= 192 && y_movement_position_reg <= 255)
-			y_character_position = 0;
-		else
-			y_character_position = y_movement_position_reg;
-			
-	wire [7:0] y_movement_position_reg;
-	
-	flipflop y_position_holder (
+	.y_position(y_character_position),
+	.done(character_movement_done));
+*/
+
+	reg y_character_position_cnt_enable;
+	reg y_character_position_cnt_reset;
+	reg y_character_position_cnt_down;
+
+	counterupdown7b y_character_position_counter(
 	.clock(CLOCK_50),
-	.aload(movement_enable),
-	.data(y_movement_position),
-	.q(y_movement_position_reg));
-	
+	.cnt_en(y_character_position_cnt_enable),
+	.sclr(y_character_position_cnt_reset | ~resetn),
+	.updown(y_character_position_cnt_down),
+	.q(y_character_position));
+		
+	// Moving up or down logic
+	always @(*)
+		if (movement_enable == 1 && KEY[2] == 0 && up_blocked == 0)
+				begin
+					y_character_position_cnt_enable = 1'b1;
+					y_character_position_cnt_down = 1'b0;
+				end
+		else if (movement_enable == 1 && KEY[1] == 0 && down_blocked == 0)
+				begin
+					y_character_position_cnt_enable = 1'b1;
+					y_character_position_cnt_down = 1'b1;
+				end
+		else
+			begin
+				y_character_position_cnt_enable = 1'b0;
+				y_character_position_cnt_down = 1'bx;
+			end
+			
+	assign character_movement_done = 1;
 	
 	//------------------------------------------
 	// Level Movement Area
@@ -527,8 +542,9 @@ module main_state_machine
 			else main_D <= DRAW_ENEMIES;
 			DETECT_COLLISIONS: if (detect_collisions_done == 1) main_D <= MOVEMENT;
 			else main_D <= DETECT_COLLISIONS;
-			MOVEMENT: main_D <= WAIT;
-			WAIT: if (time_cnt_enable == 0 && debug_signal != 0) main_D <= DEBUG;
+			MOVEMENT: if (character_movement_done == 1) main_D <= WAIT;
+			else main_D <= MOVEMENT;
+			WAIT: if (time_cnt_enable == 0 /*&& debug_signal != 0*/) main_D <= DEBUG;
 			else main_D <= WAIT;
 			DEBUG: if (debug_signal == 0) main_D <= DRAW_BACKGROUND;
 			else main_D <= DEBUG;
