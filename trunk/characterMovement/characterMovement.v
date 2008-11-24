@@ -57,7 +57,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	
 	counter6bdown jump_rate_counter (
 	.clock(clock),
-	.cnt_en(slow_jump),
+	.cnt_en(slow_jump & enable),
 	.sclr(jump_reset),
 	.sset(jump),
 	.q(jump_factor));
