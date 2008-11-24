@@ -80,7 +80,30 @@ module main_state_machine
 	assign LEDR [11:4] = y_character_position;
 	wire debug_signal;
 	assign debug_signal = 0;//KEY[1];
+	
+	//------------------------------------------
+	// Screen Memory
+	//------------------------------------------
+	
+/*	// Signals
+	wire [14:0] screen_address;
+	// 9-bit
+	wire [8:0] lose_screen_pixel;
+	wire [8:0] win_screen_pixel;
+	
+	// Instance declaration
 
+//  Yay for running out of memory! 
+	loseScreen lose_screen (
+	.address(screen_address),
+	.clock(CLOCK_50),
+	.q(lose_screen_pixel));
+
+	winScreen win_screen (
+	.address(screen_address),
+	.clock(CLOCK_50),
+	.q(win_screen_pixel));
+*/
 	//------------------------------------------
 	// Level Memory
 	//------------------------------------------
@@ -195,9 +218,9 @@ module main_state_machine
 			character_moving = 1'b0;
 			
 		if (~KEY[0])
-			character_facing_left = 1'b1;
-		if (~KEY[3])
 			character_facing_left = 1'b0;
+		if (~KEY[3])
+			character_facing_left = 1'b1;
 	end
 	
 	// used to toggle frames when running
@@ -216,7 +239,7 @@ module main_state_machine
 	//			3 - facing left, still
 	always @(*)
 	begin
-		if (jump == 1)	// jumping
+		if (down_blocked == 0)	// jumping
 			begin
 				if (character_facing_left == 1)
 					AnimStep = 3'd2;
@@ -277,7 +300,7 @@ module main_state_machine
 	// character_position (tiles) = x_location (tiles) + character_position on screen (tiles)
 	// In the y-direction though, we currently don't have this problem
 	.x_location( (x_tile_position + (x_character_position / 4'd8)) ),
-	.y_location( (y_character_position / 4'd8) ), 
+	.y_location( (y_character_position / 4'd8) + 1), 
 	.memory_input(tile_code), 
 	.memory_address(level_address_collisions), 
 	.left(left_blocked), 

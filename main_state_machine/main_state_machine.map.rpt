@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_state_machine
-Mon Nov 24 17:00:05 2008
+Mon Nov 24 17:29:07 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -19,76 +19,79 @@ Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
  11. State Machine - |main_state_machine|drawSprite:draw_character|Q
  12. State Machine - |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q
  13. Registers Protected by Synthesis
- 14. Registers Removed During Synthesis
- 15. General Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for Top-level Entity: |main_state_machine
- 18. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated
- 19. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1
- 20. Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated
- 21. Source assignments for SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated
- 22. Source assignments for drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated
- 23. Source assignments for drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 24. Source assignments for drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
- 25. Source assignments for drawBackground:draw_background|drawTile:tile_drawing_module
- 26. Source assignments for drawSprite:draw_character
- 27. Source assignments for counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component
- 28. Source assignments for counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component
- 29. Source assignments for counter20b:count60fps|lpm_counter:lpm_counter_component
- 30. Source assignments for counter26b:score_counter|lpm_counter:lpm_counter_component
- 31. Source assignments for counter4b:score_cnt_out0|lpm_counter:lpm_counter_component
- 32. Source assignments for counter4b:score_cnt_out1|lpm_counter:lpm_counter_component
- 33. Source assignments for counter4b:score__cnt_out2|lpm_counter:lpm_counter_component
- 34. Parameter Settings for User Entity Instance: Top-level Entity: |main_state_machine
- 35. Parameter Settings for User Entity Instance: vga_adapter:VGA
- 36. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
- 37. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
- 38. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
- 39. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
- 40. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
- 41. Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component
- 42. Parameter Settings for User Entity Instance: SpriteMem:character_mem|W_H_Mux:InfoWidthMux|lpm_mux:lpm_mux_component
- 43. Parameter Settings for User Entity Instance: SpriteMem:character_mem|W_H_Mux:InfoHeightMux|lpm_mux:lpm_mux_component
- 44. Parameter Settings for User Entity Instance: SpriteMem:character_mem|AStep_Mux:AnimStepsMux|lpm_mux:lpm_mux_component
- 45. Parameter Settings for User Entity Instance: SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component
- 46. Parameter Settings for User Entity Instance: SpriteMem:character_mem|DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component
- 47. Parameter Settings for User Entity Instance: drawBackground:draw_background
- 48. Parameter Settings for User Entity Instance: drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component
- 49. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component
- 50. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
- 51. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module
- 52. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
- 53. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:XOffsetReg
- 54. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
- 55. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:YOffsetReg
- 56. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
- 57. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
- 58. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
- 59. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:AddressReg
- 60. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
- 61. Parameter Settings for User Entity Instance: drawSprite:draw_character
- 62. Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
- 63. Parameter Settings for User Entity Instance: drawSprite:draw_character|nBitRegister:XOffsetReg
- 64. Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
- 65. Parameter Settings for User Entity Instance: drawSprite:draw_character|nBitRegister:YOffsetReg
- 66. Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
- 67. Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
- 68. Parameter Settings for User Entity Instance: detectBackgroundCollision:background_collision_detector
- 69. Parameter Settings for User Entity Instance: counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component
- 70. Parameter Settings for User Entity Instance: counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component
- 71. Parameter Settings for User Entity Instance: counter20b:count60fps|lpm_counter:lpm_counter_component
- 72. Parameter Settings for User Entity Instance: counter26b:score_counter|lpm_counter:lpm_counter_component
- 73. Parameter Settings for User Entity Instance: counter4b:score_cnt_out0|lpm_counter:lpm_counter_component
- 74. Parameter Settings for User Entity Instance: counter4b:score_cnt_out1|lpm_counter:lpm_counter_component
- 75. Parameter Settings for User Entity Instance: counter4b:score__cnt_out2|lpm_counter:lpm_counter_component
- 76. Parameter Settings for Inferred Entity Instance: drawBackground:draw_background|lpm_mult:Mult0
- 77. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1
- 78. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0
- 79. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2
- 80. lpm_mult Parameter Settings by Entity Instance
- 81. Analysis & Synthesis INI Usage
- 82. Analysis & Synthesis Messages
- 83. Analysis & Synthesis Suppressed Messages
+ 14. User-Specified and Inferred Latches
+ 15. Registers Removed During Synthesis
+ 16. General Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for Top-level Entity: |main_state_machine
+ 19. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated
+ 20. Source assignments for vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1
+ 21. Source assignments for level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated
+ 22. Source assignments for SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated
+ 23. Source assignments for drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated
+ 24. Source assignments for drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 25. Source assignments for drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 26. Source assignments for drawBackground:draw_background|drawTile:tile_drawing_module
+ 27. Source assignments for drawSprite:draw_character
+ 28. Source assignments for counter5b:char_anim_counter|lpm_counter:lpm_counter_component
+ 29. Source assignments for counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component
+ 30. Source assignments for counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component
+ 31. Source assignments for counter20b:count60fps|lpm_counter:lpm_counter_component
+ 32. Source assignments for counter26b:score_counter|lpm_counter:lpm_counter_component
+ 33. Source assignments for counter4b:score_cnt_out0|lpm_counter:lpm_counter_component
+ 34. Source assignments for counter4b:score_cnt_out1|lpm_counter:lpm_counter_component
+ 35. Source assignments for counter4b:score__cnt_out2|lpm_counter:lpm_counter_component
+ 36. Parameter Settings for User Entity Instance: Top-level Entity: |main_state_machine
+ 37. Parameter Settings for User Entity Instance: vga_adapter:VGA
+ 38. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_address_translator:user_input_translator
+ 39. Parameter Settings for User Entity Instance: vga_adapter:VGA|altsyncram:VideoMemory
+ 40. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component
+ 41. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller
+ 42. Parameter Settings for User Entity Instance: vga_adapter:VGA|vga_controller:controller|vga_address_translator:controller_translator
+ 43. Parameter Settings for User Entity Instance: level1:level_mem|altsyncram:altsyncram_component
+ 44. Parameter Settings for User Entity Instance: SpriteMem:character_mem|W_H_Mux:InfoWidthMux|lpm_mux:lpm_mux_component
+ 45. Parameter Settings for User Entity Instance: SpriteMem:character_mem|W_H_Mux:InfoHeightMux|lpm_mux:lpm_mux_component
+ 46. Parameter Settings for User Entity Instance: SpriteMem:character_mem|AStep_Mux:AnimStepsMux|lpm_mux:lpm_mux_component
+ 47. Parameter Settings for User Entity Instance: SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component
+ 48. Parameter Settings for User Entity Instance: SpriteMem:character_mem|DataOut_Mux:ColorMux|lpm_mux:lpm_mux_component
+ 49. Parameter Settings for User Entity Instance: drawBackground:draw_background
+ 50. Parameter Settings for User Entity Instance: drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component
+ 51. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component
+ 52. Parameter Settings for User Entity Instance: drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component
+ 53. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module
+ 54. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
+ 55. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:XOffsetReg
+ 56. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
+ 57. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:YOffsetReg
+ 58. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
+ 59. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
+ 60. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|addy:AddressOffsetCounter|lpm_add_sub:lpm_add_sub_component
+ 61. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|nBitRegister:AddressReg
+ 62. Parameter Settings for User Entity Instance: drawBackground:draw_background|drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component
+ 63. Parameter Settings for User Entity Instance: drawSprite:draw_character
+ 64. Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoffAdder|lpm_add_sub:lpm_add_sub_component
+ 65. Parameter Settings for User Entity Instance: drawSprite:draw_character|nBitRegister:XOffsetReg
+ 66. Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoffAdder|lpm_add_sub:lpm_add_sub_component
+ 67. Parameter Settings for User Entity Instance: drawSprite:draw_character|nBitRegister:YOffsetReg
+ 68. Parameter Settings for User Entity Instance: drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component
+ 69. Parameter Settings for User Entity Instance: drawSprite:draw_character|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component
+ 70. Parameter Settings for User Entity Instance: counter5b:char_anim_counter|lpm_counter:lpm_counter_component
+ 71. Parameter Settings for User Entity Instance: detectBackgroundCollision:background_collision_detector
+ 72. Parameter Settings for User Entity Instance: counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component
+ 73. Parameter Settings for User Entity Instance: counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component
+ 74. Parameter Settings for User Entity Instance: counter20b:count60fps|lpm_counter:lpm_counter_component
+ 75. Parameter Settings for User Entity Instance: counter26b:score_counter|lpm_counter:lpm_counter_component
+ 76. Parameter Settings for User Entity Instance: counter4b:score_cnt_out0|lpm_counter:lpm_counter_component
+ 77. Parameter Settings for User Entity Instance: counter4b:score_cnt_out1|lpm_counter:lpm_counter_component
+ 78. Parameter Settings for User Entity Instance: counter4b:score__cnt_out2|lpm_counter:lpm_counter_component
+ 79. Parameter Settings for Inferred Entity Instance: drawBackground:draw_background|lpm_mult:Mult0
+ 80. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1
+ 81. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0
+ 82. Parameter Settings for Inferred Entity Instance: detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2
+ 83. lpm_mult Parameter Settings by Entity Instance
+ 84. Analysis & Synthesis INI Usage
+ 85. Analysis & Synthesis Messages
+ 86. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -114,15 +117,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 24 17:00:05 2008         ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 24 17:29:06 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; main_state_machine                            ;
 ; Top-level Entity Name              ; main_state_machine                            ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 611                                           ;
-;     Total combinational functions  ; 611                                           ;
-;     Dedicated logic registers      ; 195                                           ;
-; Total registers                    ; 195                                           ;
+; Total logic elements               ; 625                                           ;
+;     Total combinational functions  ; 625                                           ;
+;     Dedicated logic registers      ; 200                                           ;
+; Total registers                    ; 200                                           ;
 ; Total pins                         ; 88                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 290,448                                       ;
@@ -294,20 +297,20 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 611      ;
+; Estimated Total logic elements              ; 625      ;
 ;                                             ;          ;
-; Total combinational functions               ; 611      ;
+; Total combinational functions               ; 625      ;
 ; Logic element usage by number of LUT inputs ;          ;
 ;     -- 4 input functions                    ; 155      ;
-;     -- 3 input functions                    ; 212      ;
-;     -- <=2 input functions                  ; 244      ;
+;     -- 3 input functions                    ; 214      ;
+;     -- <=2 input functions                  ; 256      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 338      ;
-;     -- arithmetic mode                      ; 273      ;
+;     -- normal mode                          ; 345      ;
+;     -- arithmetic mode                      ; 280      ;
 ;                                             ;          ;
-; Total registers                             ; 195      ;
-;     -- Dedicated logic registers            ; 195      ;
+; Total registers                             ; 200      ;
+;     -- Dedicated logic registers            ; 200      ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
 ; I/O pins                                    ; 88       ;
@@ -315,9 +318,9 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 8        ;
 ; Total PLLs                                  ; 1        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 251      ;
-; Total fan-out                               ; 4391     ;
-; Average fan-out                             ; 4.44     ;
+; Maximum fan-out                             ; 256      ;
+; Total fan-out                               ; 4444     ;
+; Average fan-out                             ; 4.40     ;
 +---------------------------------------------+----------+
 
 
@@ -326,7 +329,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |main_state_machine                                          ; 611 (95)          ; 195 (7)      ; 290448      ; 8            ; 0       ; 4         ; 88   ; 0            ; |main_state_machine                                                                                                                                                  ; work         ;
+; |main_state_machine                                          ; 625 (102)         ; 200 (7)      ; 290448      ; 8            ; 0       ; 4         ; 88   ; 0            ; |main_state_machine                                                                                                                                                  ; work         ;
 ;    |SpriteMem:character_mem|                                 ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem                                                                                                                          ; work         ;
 ;       |spriteROM0:MEM0|                                      ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0                                                                                                          ; work         ;
 ;          |altsyncram:altsyncram_component|                   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component                                                                          ; work         ;
@@ -349,10 +352,13 @@ applicable agreement for further details.
 ;    |counter4b:score_cnt_out1|                                ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1                                                                                                                         ; work         ;
 ;       |lpm_counter:lpm_counter_component|                    ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1|lpm_counter:lpm_counter_component                                                                                       ; work         ;
 ;          |cntr_3oi:auto_generated|                           ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                                                               ; work         ;
+;    |counter5b:char_anim_counter|                             ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter5b:char_anim_counter                                                                                                                      ; work         ;
+;       |lpm_counter:lpm_counter_component|                    ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter5b:char_anim_counter|lpm_counter:lpm_counter_component                                                                                    ; work         ;
+;          |cntr_4oi:auto_generated|                           ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter5b:char_anim_counter|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated                                                            ; work         ;
 ;    |counterupdown7b:y_character_position_counter|            ; 8 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counterupdown7b:y_character_position_counter                                                                                                     ; work         ;
 ;       |lpm_counter:lpm_counter_component|                    ; 8 (0)             ; 7 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component                                                                   ; work         ;
 ;          |cntr_hfh:auto_generated|                           ; 8 (8)             ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component|cntr_hfh:auto_generated                                           ; work         ;
-;    |detectBackgroundCollision:background_collision_detector| ; 82 (82)           ; 14 (14)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector                                                                                          ; work         ;
+;    |detectBackgroundCollision:background_collision_detector| ; 79 (79)           ; 14 (14)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector                                                                                          ; work         ;
 ;       |lpm_mult:Mult0|                                       ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0                                                                           ; work         ;
 ;          |mult_6111:auto_generated|                          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0|mult_6111:auto_generated                                                  ; work         ;
 ;       |lpm_mult:Mult1|                                       ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1                                                                           ; work         ;
@@ -381,7 +387,7 @@ applicable agreement for further details.
 ;       |tileset:tileset0|                                     ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0                                                                                                  ; work         ;
 ;          |altsyncram:altsyncram_component|                   ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component                                                                  ; work         ;
 ;             |altsyncram_tu81:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated                                   ; work         ;
-;    |drawSprite:draw_character|                               ; 70 (29)           ; 22 (7)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character                                                                                                                        ; work         ;
+;    |drawSprite:draw_character|                               ; 74 (33)           ; 22 (7)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character                                                                                                                        ; work         ;
 ;       |addx:XoutAdder|                                       ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder                                                                                                         ; work         ;
 ;          |lpm_add_sub:lpm_add_sub_component|                 ; 19 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                                                       ; work         ;
 ;             |add_sub_big:auto_generated|                     ; 19 (19)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated                                            ; work         ;
@@ -541,6 +547,17 @@ Encoding Type:  One-Hot
 +------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; character_facing_left                              ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 1  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +--------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                               ;
 +-----------------------------------------------------------------------------+--------------------+
@@ -569,12 +586,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 195   ;
+; Total registers                              ; 200   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
-; Number of registers using Synchronous Load   ; 85    ;
+; Number of registers using Synchronous Load   ; 90    ;
 ; Number of registers using Asynchronous Clear ; 44    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 59    ;
+; Number of registers using Clock Enable       ; 64    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -737,6 +754,17 @@ Encoding Type:  One-Hot
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE     ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE     ;
 +------------------------------+-------+------+------------+
+
+
++--------------------------------------------------------------------------------------+
+; Source assignments for counter5b:char_anim_counter|lpm_counter:lpm_counter_component ;
++---------------------------+-------+------+-------------------------------------------+
+; Assignment                ; Value ; From ; To                                        ;
++---------------------------+-------+------+-------------------------------------------+
+; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                                         ;
+; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                                         ;
+; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                                         ;
++---------------------------+-------+------+-------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -1990,6 +2018,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: counter5b:char_anim_counter|lpm_counter:lpm_counter_component ;
++------------------------+-------------+---------------------------------------------------------------------+
+; Parameter Name         ; Value       ; Type                                                                ;
++------------------------+-------------+---------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                                                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                                                        ;
+; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                                                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                                                      ;
+; LPM_WIDTH              ; 5           ; Signed Integer                                                      ;
+; LPM_DIRECTION          ; UP          ; Untyped                                                             ;
+; LPM_MODULUS            ; 0           ; Untyped                                                             ;
+; LPM_AVALUE             ; UNUSED      ; Untyped                                                             ;
+; LPM_SVALUE             ; UNUSED      ; Untyped                                                             ;
+; LPM_PORT_UPDOWN        ; PORT_UNUSED ; Untyped                                                             ;
+; DEVICE_FAMILY          ; Cyclone II  ; Untyped                                                             ;
+; CARRY_CHAIN            ; MANUAL      ; Untyped                                                             ;
+; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                                                  ;
+; NOT_GATE_PUSH_BACK     ; ON          ; NOT_GATE_PUSH_BACK                                                  ;
+; CARRY_CNT_EN           ; SMART       ; Untyped                                                             ;
+; LABWIDE_SCLR           ; ON          ; Untyped                                                             ;
+; USE_NEW_VERSION        ; TRUE        ; Untyped                                                             ;
+; CBXI_PARAMETER         ; cntr_4oi    ; Untyped                                                             ;
++------------------------+-------------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: detectBackgroundCollision:background_collision_detector ;
 +----------------+-------+-----------------------------------------------------------------------------+
@@ -2408,7 +2463,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 24 16:59:21 2008
+    Info: Processing started: Mon Nov 24 17:28:25 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main_state_machine -c main_state_machine
 Info: Found 1 design units, including 1 entities, in source file counterupdown7b.v
     Info: Found entity 1: counterupdown7b
@@ -2494,9 +2549,10 @@ Info: Found 1 design units, including 1 entities, in source file main_state_mach
 Info: Found 1 design units, including 1 entities, in source file ../characterMovement/jumpingCalc.v
     Info: Found entity 1: jumpingCalc
 Info: Elaborating entity "main_state_machine" for the top level hierarchy
-Warning (10858): Verilog HDL warning at main_state_machine.v(279): object y_character_position_cnt_reset used but never assigned
-Warning (10858): Verilog HDL warning at main_state_machine.v(316): object x_tile_position_cnt_reset used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(504): object "draw_enemies_enable" assigned a value but never read
+Warning (10858): Verilog HDL warning at main_state_machine.v(373): object y_character_position_cnt_reset used but never assigned
+Warning (10858): Verilog HDL warning at main_state_machine.v(410): object x_tile_position_cnt_reset used but never assigned
+Warning (10036): Verilog HDL or VHDL warning at main_state_machine.v(598): object "draw_enemies_enable" assigned a value but never read
+Warning (10240): Verilog HDL Always Construct warning at main_state_machine.v(224): inferring latch(es) for variable "character_facing_left", which holds its previous value in one or more paths through the always construct
 Warning (10034): Output port "LEDR[3]" at main_state_machine.v(30) has no driver
 Warning (10034): Output port "LEDR[2]" at main_state_machine.v(30) has no driver
 Warning (10034): Output port "LEDR[1]" at main_state_machine.v(30) has no driver
@@ -2505,8 +2561,9 @@ Warning (10034): Output port "LEDG[3]" at main_state_machine.v(31) has no driver
 Warning (10034): Output port "LEDG[2]" at main_state_machine.v(31) has no driver
 Warning (10034): Output port "LEDG[1]" at main_state_machine.v(31) has no driver
 Warning (10034): Output port "LEDG[0]" at main_state_machine.v(31) has no driver
-Warning (10030): Net "y_character_position_cnt_reset" at main_state_machine.v(279) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "x_tile_position_cnt_reset" at main_state_machine.v(316) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "y_character_position_cnt_reset" at main_state_machine.v(373) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "x_tile_position_cnt_reset" at main_state_machine.v(410) has no driver or initial value, using a default initial value '0'
+Info (10041): Inferred latch for "character_facing_left" at main_state_machine.v(222)
 Info: Elaborating entity "vga_adapter" for hierarchy "vga_adapter:VGA"
 Info: Elaborating entity "vga_address_translator" for hierarchy "vga_adapter:VGA|vga_address_translator:user_input_translator"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf
@@ -2656,6 +2713,7 @@ Info: Found 1 design units, including 1 entities, in source file db/cntr_npi.tdf
 Info: Elaborating entity "cntr_npi" for hierarchy "counter26b:score_counter|lpm_counter:lpm_counter_component|cntr_npi:auto_generated"
 Info: Elaborating entity "hex_digits" for hierarchy "hex_digits:hex0"
 Warning: Port "x_location" on the entity instantiation of "background_collision_detector" is connected to a signal of width 32. The formal width of the signal in the module is 11.  Extra bits will be ignored.
+Warning: Port "y_location" on the entity instantiation of "background_collision_detector" is connected to a signal of width 32. The formal width of the signal in the module is 4.  Extra bits will be ignored.
 Warning: Port "ordered port 0" on the entity instantiation of "AddressCounter" is connected to a signal of width 7. The formal width of the signal in the module is 10.  Extra bits will be driven by GND.
 Warning: Port "x_offset" on the entity instantiation of "draw_background" is connected to a signal of width 32. The formal width of the signal in the module is 11.  Extra bits will be ignored.
 Warning: Port "q" on the entity instantiation of "level_mem" is connected to a signal of width 4. The formal width of the signal in the module is 3.  Extra bits will be left dangling without any fanout logic.
@@ -2749,6 +2807,7 @@ Info: Found 1 design units, including 1 entities, in source file db/mult_6111.td
 Info: Elaborated megafunction instantiation "detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1"
 Info: Found 1 design units, including 1 entities, in source file db/mult_p211.tdf
     Info: Found entity 1: mult_p211
+Info: Elaborated megafunction instantiation "detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0"
 Info: Elaborated megafunction instantiation "detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2"
 Info: Found 1 design units, including 1 entities, in source file db/mult_8111.tdf
     Info: Found entity 1: mult_8111
@@ -2803,17 +2862,17 @@ Info: 34 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "draw_background/tile_drawing_module/Q~27" lost all its fanouts during netlist optimizations.
 Info: Removed 1 MSB VCC or GND address nodes from RAM block "SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ALTSYNCRAM"
 Info: Generated suppressed messages file W:/quartus/oldversion/main_state_machine/main_state_machine.map.smsg
-Info: Implemented 822 device resources after synthesis - the final resource count might be different
+Info: Implemented 836 device resources after synthesis - the final resource count might be different
     Info: Implemented 6 input pins
     Info: Implemented 82 output pins
-    Info: Implemented 638 logic cells
+    Info: Implemented 652 logic cells
     Info: Implemented 87 RAM segments
     Info: Implemented 1 ClockLock PLLs
     Info: Implemented 8 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 48 warnings
-    Info: Allocated 157 megabytes of memory during processing
-    Info: Processing ended: Mon Nov 24 17:00:06 2008
-    Info: Elapsed time: 00:00:45
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Allocated 158 megabytes of memory during processing
+    Info: Processing ended: Mon Nov 24 17:29:07 2008
+    Info: Elapsed time: 00:00:42
 
 
 +------------------------------------------+
