@@ -80,7 +80,30 @@ module main_state_machine
 	assign LEDR [11:4] = y_character_position;
 	wire debug_signal;
 	assign debug_signal = 0;//KEY[1];
+	
+	//------------------------------------------
+	// Screen Memory
+	//------------------------------------------
+	
+/*	// Signals
+	wire [14:0] screen_address;
+	// 9-bit
+	wire [8:0] lose_screen_pixel;
+	wire [8:0] win_screen_pixel;
+	
+	// Instance declaration
 
+//  Yay for running out of memory! 
+	loseScreen lose_screen (
+	.address(screen_address),
+	.clock(CLOCK_50),
+	.q(lose_screen_pixel));
+
+	winScreen win_screen (
+	.address(screen_address),
+	.clock(CLOCK_50),
+	.q(win_screen_pixel));
+*/
 	//------------------------------------------
 	// Level Memory
 	//------------------------------------------
@@ -177,7 +200,78 @@ module main_state_machine
 	
 	//assign draw_character_done = 1;
 	
+	//-----------------------------------------
+	// Character Animation
+	//-----------------------------------------
 	
+	reg character_facing_left; 
+	wire [4:0] char_anim_cnt_value;
+	reg character_moving;
+	
+	// determine if character is moving
+	// and direction
+	always @(*)
+	begin
+		if (~KEY[0] || ~KEY[3])
+			character_moving = 1'b1;
+		else
+			character_moving = 1'b0;
+			
+		if (~KEY[0])
+			character_facing_left = 1'b1;
+		if (~KEY[3])
+			character_facing_left = 1'b0;
+	end
+	
+	// used to toggle frames when running
+	// - counts to 32 (each tick represents 1/60th sec)
+	counter5b char_anim_counter (
+	.clock(CLOCK_50),	
+	.cnt_en(character_moving && ~time_cnt_enable),	// linked to 60fps counter (essentially incremented each drawBG)
+	.sclr(resetn),
+	.q(char_anim_cnt_value));
+	
+	// determine which animation frame to draw
+	//
+	// AnimStep	0 - facing right, step/jump
+	//			1 - facing right, still
+	//			2 - facing left, step/jump
+	//			3 - facing left, still
+	always @(*)
+	begin
+		if (down_blocked == 0)	// jumping
+			begin
+				if (character_facing_left == 1)
+					AnimStep = 3'd2;
+				else
+					AnimStep = 3'd0;
+			end
+		else if	(character_moving == 1)	// running
+			begin		
+				if (char_anim_cnt_value > 15)
+				begin
+					if (character_facing_left == 1)
+						AnimStep = 3'd2;
+					else
+						AnimStep = 3'd0;
+				end
+				else
+				begin
+					if (character_facing_left == 1)
+						AnimStep = 3'd3;
+					else
+						AnimStep = 3'd1;
+				end
+			end
+		else			// standing still
+			begin
+				if (character_facing_left == 1)
+					AnimStep = 3'd3;
+				else
+					AnimStep = 3'd1;
+			end	
+	end
+
 	
 	//------------------------------------------
 	// DrawEnemies instantiation
@@ -206,7 +300,7 @@ module main_state_machine
 	// character_position (tiles) = x_location (tiles) + character_position on screen (tiles)
 	// In the y-direction though, we currently don't have this problem
 	.x_location( (x_tile_position + (x_character_position / 4'd8)) ),
-	.y_location( (y_character_position / 4'd8) ), 
+	.y_location( (y_character_position / 4'd8) + 1), 
 	.memory_input(tile_code), 
 	.memory_address(level_address_collisions), 
 	.left(left_blocked), 
