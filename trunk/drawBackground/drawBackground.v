@@ -112,10 +112,10 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_ti
 	
 	// PickTile state flipflops
 	reg [2:0] p_Q, p_D;
-	always @ (posedge clock or negedge resetn)
+	always @ (posedge clock)
 	begin: picktile_state_FFs
-		if (!resetn)
-			p_Q <= 0;
+		if (~resetn)
+			p_Q <= WAIT_PT;		// state to reset to
 		else
 			p_Q <= p_D;
 	end
@@ -144,7 +144,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_ti
 	// PickTile Datapath
 	always @ (*)
 	begin: picktile_datapath
-		case (p_D)
+		case (p_Q)
 			WAIT_PT: 		begin done_output = 1'b1; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b1; draw = 1'b0; end
 			READ_PT:		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
 			DRAW_PT: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b1; end

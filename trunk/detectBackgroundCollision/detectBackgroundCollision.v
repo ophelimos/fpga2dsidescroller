@@ -104,10 +104,10 @@ always @(*)
    
    // detectBackgroundCollision state flipflops
    reg [3:0]                             dbc_Q, dbc_D;
-   always @ (posedge clock or negedge resetn)
+   always @ (posedge clock)
      begin: detectBackgroundCollision_state_FFs
 	if (!resetn)
-	  dbc_Q <= 'b0;
+	  dbc_Q <= WAIT_DBC;		// state to reset to
 	else
 	  dbc_Q <= dbc_D;
      end
@@ -135,7 +135,7 @@ always @(*)
    // detectBackgroundCollision Datapath
    always @ (*)
      begin: detectBackgroundCollision_datapath
-	case (dbc_D)
+	case (dbc_Q)
 		WAIT_DBC: 			begin done_output = 1'b1; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = 'bx; end
 		READ_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b0; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = (x_location + 1) + ( (y_location + 0) * tilemap_length); end 
 		SET_LEFT_DBC: 		begin done_output = 1'b0; left_enable = 1'b1; right_enable = 1'b0; up_enable = 1'b0; down_enable = 1'b0; memory_address_output = 'bx; end 

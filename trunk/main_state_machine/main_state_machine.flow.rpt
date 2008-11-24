@@ -1,5 +1,5 @@
 Flow report for main_state_machine
-Sun Nov 23 16:20:54 2008
+Sun Nov 23 21:29:13 2008
 Quartus II Version 8.0 Build 231 07/10/2008 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Analyzed - Sun Nov 23 16:20:54 2008          ;
+; Flow Status                        ; Analyzed - Sun Nov 23 21:29:13 2008          ;
 ; Quartus II Version                 ; 8.0 Build 231 07/10/2008 SP 1 SJ Web Edition ;
 ; Revision Name                      ; main_state_machine                           ;
 ; Top-level Entity Name              ; main_state_machine                           ;
@@ -45,8 +45,8 @@ applicable agreement for further details.
 ; Device                             ; EP2C35F672C6                                 ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 708 / 33,216 ( 2 % )                         ;
-;     Total combinational functions  ; 701 / 33,216 ( 2 % )                         ;
+; Total logic elements               ; 731 / 33,216 ( 2 % )                         ;
+;     Total combinational functions  ; 728 / 33,216 ( 2 % )                         ;
 ;     Dedicated logic registers      ; 202 / 33,216 ( < 1 % )                       ;
 ; Total registers                    ; 202                                          ;
 ; Total pins                         ; 88 / 475 ( 19 % )                            ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/23/2008 16:19:56 ;
+; Start date & time ; 11/23/2008 21:28:11 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main_state_machine  ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------+
 ; Assignment Name        ; Value                                                                                                                                                                                                                        ; Default Value ; Entity Name ; Section Id ;
 +------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID  ; 117970801258.122747519506120                                                                                                                                                                                                 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID  ; 117970801258.122749369004472                                                                                                                                                                                                 ; --            ; --          ; --         ;
 ; ENABLE_DA_RULE         ; C101, C102, C103, C104, C105, C106, R101, R102, R103, R104, R105, T101, T102, A101, A102, A103, A104, A105, A106, A107, A108, A109, A110, S101, S102, S103, S104, D101, D102, D103, H101, H102, M101, M102, M103, M104, M105 ; --            ; --          ; --         ;
 ; ENABLE_DRC_SETTINGS    ; On                                                                                                                                                                                                                           ; Off           ; --          ; --         ;
 ; PARTITION_COLOR        ; 14622752                                                                                                                                                                                                                     ; --            ; --          ; Top        ;
@@ -86,12 +86,12 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:15     ; 1.0                     ; 210 MB              ; 00:00:15                           ;
-; Fitter                  ; 00:00:19     ; 1.0                     ; 255 MB              ; 00:00:19                           ;
+; Analysis & Synthesis    ; 00:00:16     ; 1.0                     ; 210 MB              ; 00:00:15                           ;
+; Fitter                  ; 00:00:20     ; 1.0                     ; 255 MB              ; 00:00:18                           ;
 ; Assembler               ; 00:00:05     ; 1.0                     ; 243 MB              ; 00:00:05                           ;
-; Classic Timing Analyzer ; 00:00:02     ; 1.0                     ; 162 MB              ; 00:00:02                           ;
-; Design Assistant        ; 00:00:05     ; 1.0                     ; 156 MB              ; 00:00:05                           ;
-; Total                   ; 00:00:46     ; --                      ; --                  ; 00:00:46                           ;
+; Classic Timing Analyzer ; 00:00:03     ; 1.0                     ; 162 MB              ; 00:00:02                           ;
+; Design Assistant        ; 00:00:06     ; 1.0                     ; 156 MB              ; 00:00:05                           ;
+; Total                   ; 00:00:50     ; --                      ; --                  ; 00:00:45                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
