@@ -506,5 +506,5 @@ set_global_assignment -name VERILOG_FILE vga_adapter/vga_adapter.v
 set_global_assignment -name VERILOG_FILE ../drawBackground/drawBackground.v
 set_global_assignment -name VERILOG_FILE main_state_machine.v
 set_global_assignment -name VECTOR_WAVEFORM_FILE main_state_machine.vwf
-set_global_assignment -name SIMULATION_MODE FUNCTIONAL
+set_global_assignment -name SIMULATION_MODE TIMING
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE main_state_machine.vwf

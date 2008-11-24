@@ -1,18 +1,10 @@
-Depth = 128;
+Depth = 64;
 Width = 1;
 Address_radix=dec;
 Data_radix=dec;
 Content
 BEGIN
-	[0..127] : 0;
-	120 :;
-	112 :;
-	104 :;
-	96 :;
-	88 :;
-	80 :;
-	72 :;
-	64 :;
+	[0..63] : 0;
 	56 :;
 	48 :;
 	40 :;
