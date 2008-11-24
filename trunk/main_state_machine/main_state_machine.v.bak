@@ -390,7 +390,7 @@ module main_state_machine
 
 	reg score_out0_enable;
 	reg score_out0_reset;
-	wire [3:0] score_out0;
+	wire [3:0] score_out0/*synthesis keep*/;
 	
 	counter4b score_cnt_out0 (
 		.clock(CLOCK_50),
@@ -412,7 +412,7 @@ module main_state_machine
 	
 	reg score_out1_enable;
 	reg score_out1_reset;
-	wire [3:0] score_out1;
+	wire [3:0] score_out1/*synthesis keep*/;
 	
 	counter4b score_cnt_out1 (
 		.clock(CLOCK_50),
@@ -434,7 +434,7 @@ module main_state_machine
 		
 	reg score_out2_enable;
 	reg score_out2_reset;
-	wire [3:0] score_out2;
+	wire [3:0] score_out2/*synthesis keep*/;
 	
 	counter4b score__cnt_out2 (
 		.clock(CLOCK_50),
