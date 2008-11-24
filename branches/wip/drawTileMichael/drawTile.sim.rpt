@@ -1,0 +1,447 @@
+Simulator report for drawTile
+Wed Nov 19 14:45:21 2008
+Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 50.0 us      ;
+; Simulation Netlist Size     ; 155 nodes    ;
+; Simulation Coverage         ;      51.58 % ;
+; Total Number of Transitions ; 58918        ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                        ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Option                                                                                     ; Setting      ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+; Simulation mode                                                                            ; Timing       ; Timing        ;
+; Start time                                                                                 ; 0 ns         ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF         ;               ;
+; Vector input source                                                                        ; drawTile.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On           ; On            ;
+; Check outputs                                                                              ; Off          ; Off           ;
+; Report simulation coverage                                                                 ; On           ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On           ; On            ;
+; Display missing 1-value coverage report                                                    ; On           ; On            ;
+; Display missing 0-value coverage report                                                    ; On           ; On            ;
+; Detect setup and hold time violations                                                      ; Off          ; Off           ;
+; Detect glitches                                                                            ; Off          ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off          ; Off           ;
+; Generate Signal Activity File                                                              ; Off          ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off          ; Off           ;
+; Group bus channels in simulation results                                                   ; Off          ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On           ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE   ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off          ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off          ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto         ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      51.58 % ;
+; Total nodes checked                                 ; 155          ;
+; Total output ports checked                          ; 190          ;
+; Total output ports with complete 1/0-value coverage ; 98           ;
+; Total output ports with no 1/0-value coverage       ; 90           ;
+; Total output ports with no 1-value coverage         ; 91           ;
+; Total output ports with no 0-value coverage         ; 91           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                        ;
++------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                      ; Output Port Name                                                                               ; Output Port Type ;
++------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+; |drawTile|nBitRegister:AddressReg|Q[0]                                                         ; |drawTile|nBitRegister:AddressReg|Q[0]                                                         ; regout           ;
+; |drawTile|nBitRegister:AddressReg|Q[1]                                                         ; |drawTile|nBitRegister:AddressReg|Q[1]                                                         ; regout           ;
+; |drawTile|nBitRegister:AddressReg|Q[2]                                                         ; |drawTile|nBitRegister:AddressReg|Q[2]                                                         ; regout           ;
+; |drawTile|nBitRegister:AddressReg|Q[3]                                                         ; |drawTile|nBitRegister:AddressReg|Q[3]                                                         ; regout           ;
+; |drawTile|nBitRegister:AddressReg|Q[4]                                                         ; |drawTile|nBitRegister:AddressReg|Q[4]                                                         ; regout           ;
+; |drawTile|nBitRegister:AddressReg|Q[5]                                                         ; |drawTile|nBitRegister:AddressReg|Q[5]                                                         ; regout           ;
+; |drawTile|nBitRegister:XOffsetReg|Q[0]                                                         ; |drawTile|nBitRegister:XOffsetReg|Q[0]                                                         ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~104 ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~104 ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[1]                                                         ; |drawTile|nBitRegister:XOffsetReg|Q[1]                                                         ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~106 ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~106 ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[2]                                                         ; |drawTile|nBitRegister:XOffsetReg|Q[2]                                                         ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~108 ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~108 ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[0]                                                         ; |drawTile|nBitRegister:YOffsetReg|Q[0]                                                         ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~91  ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~91  ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[1]                                                         ; |drawTile|nBitRegister:YOffsetReg|Q[1]                                                         ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~93  ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~93  ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[2]                                                         ; |drawTile|nBitRegister:YOffsetReg|Q[2]                                                         ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~95  ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~95  ; combout          ;
+; |drawTile|nBitRegister:AddressReg|Q[0]~49                                                      ; |drawTile|nBitRegister:AddressReg|Q[0]~49                                                      ; combout          ;
+; |drawTile|nBitRegister:AddressReg|Q[0]~49                                                      ; |drawTile|nBitRegister:AddressReg|Q[0]~84                                                      ; cout             ;
+; |drawTile|nBitRegister:AddressReg|Q[1]~50                                                      ; |drawTile|nBitRegister:AddressReg|Q[1]~50                                                      ; combout          ;
+; |drawTile|nBitRegister:AddressReg|Q[1]~50                                                      ; |drawTile|nBitRegister:AddressReg|Q[1]~85                                                      ; cout             ;
+; |drawTile|nBitRegister:AddressReg|Q[2]~51                                                      ; |drawTile|nBitRegister:AddressReg|Q[2]~51                                                      ; combout          ;
+; |drawTile|nBitRegister:AddressReg|Q[2]~51                                                      ; |drawTile|nBitRegister:AddressReg|Q[2]~86                                                      ; cout             ;
+; |drawTile|nBitRegister:AddressReg|Q[3]~52                                                      ; |drawTile|nBitRegister:AddressReg|Q[3]~52                                                      ; combout          ;
+; |drawTile|nBitRegister:AddressReg|Q[3]~52                                                      ; |drawTile|nBitRegister:AddressReg|Q[3]~87                                                      ; cout             ;
+; |drawTile|nBitRegister:AddressReg|Q[4]~53                                                      ; |drawTile|nBitRegister:AddressReg|Q[4]~53                                                      ; combout          ;
+; |drawTile|nBitRegister:AddressReg|Q[4]~53                                                      ; |drawTile|nBitRegister:AddressReg|Q[4]~88                                                      ; cout             ;
+; |drawTile|nBitRegister:AddressReg|Q[5]~54                                                      ; |drawTile|nBitRegister:AddressReg|Q[5]~54                                                      ; combout          ;
+; |drawTile|nBitRegister:AddressReg|Q[5]~54                                                      ; |drawTile|nBitRegister:AddressReg|Q[5]~89                                                      ; cout             ;
+; |drawTile|nBitRegister:AddressReg|Q[6]~55                                                      ; |drawTile|nBitRegister:AddressReg|Q[6]~55                                                      ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[0]~56                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[0]~56                                                      ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[0]~56                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[0]~64                                                      ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[1]~57                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[1]~57                                                      ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[1]~57                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[1]~65                                                      ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[2]~58                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[2]~58                                                      ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[0]~49                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[0]~49                                                      ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[0]~49                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[0]~56                                                      ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[1]~50                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[1]~50                                                      ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[1]~50                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[1]~57                                                      ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[2]~51                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[2]~51                                                      ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[2]~51                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[2]~58                                                      ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[3]~52                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[3]~52                                                      ; combout          ;
+; |drawTile|Q.DRAW                                                                               ; |drawTile|Q.DRAW                                                                               ; regout           ;
+; |drawTile|Q.IDLE                                                                               ; |drawTile|Q.IDLE                                                                               ; regout           ;
+; |drawTile|Q.INC_X                                                                              ; |drawTile|Q.INC_X                                                                              ; regout           ;
+; |drawTile|Q.INC_Y                                                                              ; |drawTile|Q.INC_Y                                                                              ; regout           ;
+; |drawTile|D.READ                                                                               ; |drawTile|D.READ                                                                               ; combout          ;
+; |drawTile|ResetY~2                                                                             ; |drawTile|ResetY~2                                                                             ; combout          ;
+; |drawTile|WideOr2                                                                              ; |drawTile|WideOr2                                                                              ; combout          ;
+; |drawTile|Q~74                                                                                 ; |drawTile|Q~74                                                                                 ; combout          ;
+; |drawTile|Q~75                                                                                 ; |drawTile|Q~75                                                                                 ; combout          ;
+; |drawTile|Q~76                                                                                 ; |drawTile|Q~76                                                                                 ; combout          ;
+; |drawTile|Q~77                                                                                 ; |drawTile|Q~77                                                                                 ; combout          ;
+; |drawTile|Q.READ                                                                               ; |drawTile|Q.READ                                                                               ; regout           ;
+; |drawTile|D.DRAW                                                                               ; |drawTile|D.DRAW                                                                               ; combout          ;
+; |drawTile|Equal1~113                                                                           ; |drawTile|Equal1~113                                                                           ; combout          ;
+; |drawTile|Equal1~115                                                                           ; |drawTile|Equal1~115                                                                           ; combout          ;
+; |drawTile|always1~85                                                                           ; |drawTile|always1~85                                                                           ; combout          ;
+; |drawTile|always1~86                                                                           ; |drawTile|always1~86                                                                           ; combout          ;
+; |drawTile|D.IDLE                                                                               ; |drawTile|D.IDLE                                                                               ; combout          ;
+; |drawTile|D.INC_X                                                                              ; |drawTile|D.INC_X                                                                              ; combout          ;
+; |drawTile|Q~78                                                                                 ; |drawTile|Q~78                                                                                 ; combout          ;
+; |drawTile|D.INC_Y                                                                              ; |drawTile|D.INC_Y                                                                              ; combout          ;
+; |drawTile|Address[0]                                                                           ; |drawTile|Address[0]                                                                           ; padio            ;
+; |drawTile|Address[1]                                                                           ; |drawTile|Address[1]                                                                           ; padio            ;
+; |drawTile|Address[2]                                                                           ; |drawTile|Address[2]                                                                           ; padio            ;
+; |drawTile|Address[3]                                                                           ; |drawTile|Address[3]                                                                           ; padio            ;
+; |drawTile|Address[4]                                                                           ; |drawTile|Address[4]                                                                           ; padio            ;
+; |drawTile|Address[5]                                                                           ; |drawTile|Address[5]                                                                           ; padio            ;
+; |drawTile|X[0]                                                                                 ; |drawTile|X[0]                                                                                 ; padio            ;
+; |drawTile|X[1]                                                                                 ; |drawTile|X[1]                                                                                 ; padio            ;
+; |drawTile|X[2]                                                                                 ; |drawTile|X[2]                                                                                 ; padio            ;
+; |drawTile|Y[0]                                                                                 ; |drawTile|Y[0]                                                                                 ; padio            ;
+; |drawTile|Y[1]                                                                                 ; |drawTile|Y[1]                                                                                 ; padio            ;
+; |drawTile|Y[2]                                                                                 ; |drawTile|Y[2]                                                                                 ; padio            ;
+; |drawTile|Color[0]                                                                             ; |drawTile|Color[0]                                                                             ; padio            ;
+; |drawTile|Color[1]                                                                             ; |drawTile|Color[1]                                                                             ; padio            ;
+; |drawTile|Color[2]                                                                             ; |drawTile|Color[2]                                                                             ; padio            ;
+; |drawTile|Color[3]                                                                             ; |drawTile|Color[3]                                                                             ; padio            ;
+; |drawTile|Color[4]                                                                             ; |drawTile|Color[4]                                                                             ; padio            ;
+; |drawTile|Color[5]                                                                             ; |drawTile|Color[5]                                                                             ; padio            ;
+; |drawTile|Color[6]                                                                             ; |drawTile|Color[6]                                                                             ; padio            ;
+; |drawTile|Color[7]                                                                             ; |drawTile|Color[7]                                                                             ; padio            ;
+; |drawTile|Color[8]                                                                             ; |drawTile|Color[8]                                                                             ; padio            ;
+; |drawTile|VGA_Draw                                                                             ; |drawTile|VGA_Draw                                                                             ; padio            ;
+; |drawTile|Done                                                                                 ; |drawTile|Done                                                                                 ; padio            ;
+; |drawTile|DataIn[0]                                                                            ; |drawTile|DataIn[0]~corein                                                                     ; combout          ;
+; |drawTile|DataIn[1]                                                                            ; |drawTile|DataIn[1]~corein                                                                     ; combout          ;
+; |drawTile|DataIn[2]                                                                            ; |drawTile|DataIn[2]~corein                                                                     ; combout          ;
+; |drawTile|DataIn[3]                                                                            ; |drawTile|DataIn[3]~corein                                                                     ; combout          ;
+; |drawTile|DataIn[4]                                                                            ; |drawTile|DataIn[4]~corein                                                                     ; combout          ;
+; |drawTile|DataIn[5]                                                                            ; |drawTile|DataIn[5]~corein                                                                     ; combout          ;
+; |drawTile|DataIn[6]                                                                            ; |drawTile|DataIn[6]~corein                                                                     ; combout          ;
+; |drawTile|DataIn[7]                                                                            ; |drawTile|DataIn[7]~corein                                                                     ; combout          ;
+; |drawTile|DataIn[8]                                                                            ; |drawTile|DataIn[8]~corein                                                                     ; combout          ;
+; |drawTile|Clock                                                                                ; |drawTile|Clock~corein                                                                         ; combout          ;
+; |drawTile|Clock~clkctrl                                                                        ; |drawTile|Clock~clkctrl                                                                        ; outclk           ;
++------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                                                     ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                   ; Output Port Name                                                                                            ; Output Port Type ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+; |drawTile|nBitRegister:AddressReg|Q[6]                                                                      ; |drawTile|nBitRegister:AddressReg|Q[6]                                                                      ; regout           ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~20 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~20 ; combout          ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~20 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~21 ; cout             ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~22 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~22 ; combout          ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~22 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~23 ; cout             ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[8]~24 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[8]~24 ; combout          ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[8]~24 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[8]~25 ; cout             ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[9]~26 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[9]~26 ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~104              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~105              ; cout             ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~106              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~107              ; cout             ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~108              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~109              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[3]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[3]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~110              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~110              ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~110              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~111              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[4]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[4]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~112              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~112              ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~112              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~113              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[5]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[5]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~114              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~114              ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~114              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~115              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[6]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[6]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~116              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~116              ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~116              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~117              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[7]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[7]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~118              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~118              ; combout          ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~91               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~92               ; cout             ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~93               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~94               ; cout             ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~95               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~96               ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[3]                                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[3]                                                                      ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~97               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~97               ; combout          ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~97               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~98               ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[4]                                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[4]                                                                      ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~99               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~99               ; combout          ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~99               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~100              ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[5]                                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[5]                                                                      ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~101              ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~101              ; combout          ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~101              ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~102              ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[6]                                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[6]                                                                      ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~103              ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~103              ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[2]~58                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[2]~66                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[3]~59                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[3]~59                                                                   ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[3]~59                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[3]~67                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[4]~60                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[4]~60                                                                   ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[4]~60                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[4]~68                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[5]~61                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[5]~61                                                                   ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[5]~61                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[5]~69                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[6]~62                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[6]~62                                                                   ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[6]~62                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[6]~70                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[7]~63                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[7]~63                                                                   ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[3]~52                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[3]~59                                                                   ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[4]~53                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[4]~53                                                                   ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[4]~53                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[4]~60                                                                   ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[5]~54                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[5]~54                                                                   ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[5]~54                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[5]~61                                                                   ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[6]~55                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[6]~55                                                                   ; combout          ;
+; |drawTile|Selector1~28                                                                                      ; |drawTile|Selector1~28                                                                                      ; combout          ;
+; |drawTile|Equal1~114                                                                                        ; |drawTile|Equal1~114                                                                                        ; combout          ;
+; |drawTile|Address[6]                                                                                        ; |drawTile|Address[6]                                                                                        ; padio            ;
+; |drawTile|Address[7]                                                                                        ; |drawTile|Address[7]                                                                                        ; padio            ;
+; |drawTile|Address[8]                                                                                        ; |drawTile|Address[8]                                                                                        ; padio            ;
+; |drawTile|Address[9]                                                                                        ; |drawTile|Address[9]                                                                                        ; padio            ;
+; |drawTile|X[3]                                                                                              ; |drawTile|X[3]                                                                                              ; padio            ;
+; |drawTile|X[4]                                                                                              ; |drawTile|X[4]                                                                                              ; padio            ;
+; |drawTile|X[5]                                                                                              ; |drawTile|X[5]                                                                                              ; padio            ;
+; |drawTile|X[6]                                                                                              ; |drawTile|X[6]                                                                                              ; padio            ;
+; |drawTile|X[7]                                                                                              ; |drawTile|X[7]                                                                                              ; padio            ;
+; |drawTile|Y[3]                                                                                              ; |drawTile|Y[3]                                                                                              ; padio            ;
+; |drawTile|Y[4]                                                                                              ; |drawTile|Y[4]                                                                                              ; padio            ;
+; |drawTile|Y[5]                                                                                              ; |drawTile|Y[5]                                                                                              ; padio            ;
+; |drawTile|Y[6]                                                                                              ; |drawTile|Y[6]                                                                                              ; padio            ;
+; |drawTile|TileSel[0]                                                                                        ; |drawTile|TileSel[0]~corein                                                                                 ; combout          ;
+; |drawTile|TileSel[1]                                                                                        ; |drawTile|TileSel[1]~corein                                                                                 ; combout          ;
+; |drawTile|TileSel[2]                                                                                        ; |drawTile|TileSel[2]~corein                                                                                 ; combout          ;
+; |drawTile|TileSel[3]                                                                                        ; |drawTile|TileSel[3]~corein                                                                                 ; combout          ;
+; |drawTile|Xin[0]                                                                                            ; |drawTile|Xin[0]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[1]                                                                                            ; |drawTile|Xin[1]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[2]                                                                                            ; |drawTile|Xin[2]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[3]                                                                                            ; |drawTile|Xin[3]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[4]                                                                                            ; |drawTile|Xin[4]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[5]                                                                                            ; |drawTile|Xin[5]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[6]                                                                                            ; |drawTile|Xin[6]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[7]                                                                                            ; |drawTile|Xin[7]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[0]                                                                                            ; |drawTile|Yin[0]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[1]                                                                                            ; |drawTile|Yin[1]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[2]                                                                                            ; |drawTile|Yin[2]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[3]                                                                                            ; |drawTile|Yin[3]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[4]                                                                                            ; |drawTile|Yin[4]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[5]                                                                                            ; |drawTile|Yin[5]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[6]                                                                                            ; |drawTile|Yin[6]~corein                                                                                     ; combout          ;
+; |drawTile|Resetn                                                                                            ; |drawTile|Resetn~corein                                                                                     ; combout          ;
+; |drawTile|Enable                                                                                            ; |drawTile|Enable~corein                                                                                     ; combout          ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                                                     ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                                   ; Output Port Name                                                                                            ; Output Port Type ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+; |drawTile|nBitRegister:AddressReg|Q[6]                                                                      ; |drawTile|nBitRegister:AddressReg|Q[6]                                                                      ; regout           ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~20 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~20 ; combout          ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~20 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[6]~21 ; cout             ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~22 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~22 ; combout          ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~22 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[7]~23 ; cout             ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[8]~24 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[8]~24 ; combout          ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[8]~24 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[8]~25 ; cout             ;
+; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[9]~26 ; |drawTile|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_mlh:auto_generated|result[9]~26 ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~104              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~105              ; cout             ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~106              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~107              ; cout             ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~108              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~109              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[3]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[3]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~110              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~110              ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~110              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~111              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[4]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[4]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~112              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~112              ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~112              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~113              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[5]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[5]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~114              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~114              ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~114              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~115              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[6]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[6]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~116              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~116              ; combout          ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~116              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~117              ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[7]                                                                      ; |drawTile|nBitRegister:XOffsetReg|Q[7]                                                                      ; regout           ;
+; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~118              ; |drawTile|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_cig:auto_generated|op_1~118              ; combout          ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~91               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~92               ; cout             ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~93               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~94               ; cout             ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~95               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~96               ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[3]                                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[3]                                                                      ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~97               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~97               ; combout          ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~97               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~98               ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[4]                                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[4]                                                                      ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~99               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~99               ; combout          ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~99               ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~100              ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[5]                                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[5]                                                                      ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~101              ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~101              ; combout          ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~101              ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~102              ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[6]                                                                      ; |drawTile|nBitRegister:YOffsetReg|Q[6]                                                                      ; regout           ;
+; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~103              ; |drawTile|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_dig:auto_generated|op_1~103              ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[2]~58                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[2]~66                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[3]~59                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[3]~59                                                                   ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[3]~59                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[3]~67                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[4]~60                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[4]~60                                                                   ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[4]~60                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[4]~68                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[5]~61                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[5]~61                                                                   ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[5]~61                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[5]~69                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[6]~62                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[6]~62                                                                   ; combout          ;
+; |drawTile|nBitRegister:XOffsetReg|Q[6]~62                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[6]~70                                                                   ; cout             ;
+; |drawTile|nBitRegister:XOffsetReg|Q[7]~63                                                                   ; |drawTile|nBitRegister:XOffsetReg|Q[7]~63                                                                   ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[3]~52                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[3]~59                                                                   ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[4]~53                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[4]~53                                                                   ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[4]~53                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[4]~60                                                                   ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[5]~54                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[5]~54                                                                   ; combout          ;
+; |drawTile|nBitRegister:YOffsetReg|Q[5]~54                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[5]~61                                                                   ; cout             ;
+; |drawTile|nBitRegister:YOffsetReg|Q[6]~55                                                                   ; |drawTile|nBitRegister:YOffsetReg|Q[6]~55                                                                   ; combout          ;
+; |drawTile|Q.000                                                                                             ; |drawTile|Q.000                                                                                             ; regout           ;
+; |drawTile|Equal1~114                                                                                        ; |drawTile|Equal1~114                                                                                        ; combout          ;
+; |drawTile|Address[6]                                                                                        ; |drawTile|Address[6]                                                                                        ; padio            ;
+; |drawTile|Address[7]                                                                                        ; |drawTile|Address[7]                                                                                        ; padio            ;
+; |drawTile|Address[8]                                                                                        ; |drawTile|Address[8]                                                                                        ; padio            ;
+; |drawTile|Address[9]                                                                                        ; |drawTile|Address[9]                                                                                        ; padio            ;
+; |drawTile|X[3]                                                                                              ; |drawTile|X[3]                                                                                              ; padio            ;
+; |drawTile|X[4]                                                                                              ; |drawTile|X[4]                                                                                              ; padio            ;
+; |drawTile|X[5]                                                                                              ; |drawTile|X[5]                                                                                              ; padio            ;
+; |drawTile|X[6]                                                                                              ; |drawTile|X[6]                                                                                              ; padio            ;
+; |drawTile|X[7]                                                                                              ; |drawTile|X[7]                                                                                              ; padio            ;
+; |drawTile|Y[3]                                                                                              ; |drawTile|Y[3]                                                                                              ; padio            ;
+; |drawTile|Y[4]                                                                                              ; |drawTile|Y[4]                                                                                              ; padio            ;
+; |drawTile|Y[5]                                                                                              ; |drawTile|Y[5]                                                                                              ; padio            ;
+; |drawTile|Y[6]                                                                                              ; |drawTile|Y[6]                                                                                              ; padio            ;
+; |drawTile|TileSel[0]                                                                                        ; |drawTile|TileSel[0]~corein                                                                                 ; combout          ;
+; |drawTile|TileSel[1]                                                                                        ; |drawTile|TileSel[1]~corein                                                                                 ; combout          ;
+; |drawTile|TileSel[2]                                                                                        ; |drawTile|TileSel[2]~corein                                                                                 ; combout          ;
+; |drawTile|TileSel[3]                                                                                        ; |drawTile|TileSel[3]~corein                                                                                 ; combout          ;
+; |drawTile|Xin[0]                                                                                            ; |drawTile|Xin[0]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[1]                                                                                            ; |drawTile|Xin[1]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[2]                                                                                            ; |drawTile|Xin[2]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[3]                                                                                            ; |drawTile|Xin[3]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[4]                                                                                            ; |drawTile|Xin[4]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[5]                                                                                            ; |drawTile|Xin[5]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[6]                                                                                            ; |drawTile|Xin[6]~corein                                                                                     ; combout          ;
+; |drawTile|Xin[7]                                                                                            ; |drawTile|Xin[7]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[0]                                                                                            ; |drawTile|Yin[0]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[1]                                                                                            ; |drawTile|Yin[1]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[2]                                                                                            ; |drawTile|Yin[2]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[3]                                                                                            ; |drawTile|Yin[3]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[4]                                                                                            ; |drawTile|Yin[4]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[5]                                                                                            ; |drawTile|Yin[5]~corein                                                                                     ; combout          ;
+; |drawTile|Yin[6]                                                                                            ; |drawTile|Yin[6]~corein                                                                                     ; combout          ;
+; |drawTile|Resetn                                                                                            ; |drawTile|Resetn~corein                                                                                     ; combout          ;
+; |drawTile|Enable                                                                                            ; |drawTile|Enable~corein                                                                                     ; combout          ;
++-------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Simulator INI Usage                                                                             ;
++----------------------+--------------------------------------------------------------------------+
+; Option               ; Usage                                                                    ;
++----------------------+--------------------------------------------------------------------------+
+; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
+; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
++----------------------+--------------------------------------------------------------------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Nov 19 14:45:16 2008
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off drawTile -c drawTile
+Info: Using vector source file "W:/quartus/fpga2dsidescroller/drawTileMichael/drawTile.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "D" in design.
+Warning: Wrong node type and/or width for node "|drawTile|Q" in vector source file. Node in design is of type Enum and of width 1, but node in vector source file is of type 9-Level and of width 1.
+Warning: Signal name "|drawTile|Q" changed to enum type
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      51.58 %
+Info: Number of transitions in simulation is 58918
+Info: Quartus II Simulator was successful. 0 errors, 3 warnings
+    Info: Allocated 96 megabytes of memory during processing
+    Info: Processing ended: Wed Nov 19 14:45:23 2008
+    Info: Elapsed time: 00:00:07
+
+
