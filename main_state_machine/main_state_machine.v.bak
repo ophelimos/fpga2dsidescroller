@@ -69,10 +69,16 @@ module main_state_machine
 	// Debugging
 	//------------------------------------------
 	
-	assign LEDR[3:0] = tile_code;
+//	assign LEDR[3:0] = tile_code;
 	assign LEDR[17:15] = main_Q;
 	assign LEDR[14:12] = main_D;
-	assign LEDG[0] = draw_background_done;
+	assign LEDG[7] = left_blocked;
+	assign LEDG[6] = up_blocked;
+	assign LEDG[5] = down_blocked;
+	assign LEDG[4] = right_blocked;
+	assign LEDR [11:4] = y_character_position;
+	wire debug_signal;
+	assign debug_signal = KEY[1];
 
 	//------------------------------------------
 	// Level Memory
@@ -220,8 +226,8 @@ module main_state_machine
 	wire movement_enable;
 	
 	wire [7:0] x_character_position;
-	wire [6:0] y_character_position;
-	reg [7:0] y_movement_position;
+	reg [6:0] y_character_position;
+	wire [7:0] y_movement_position;
 	
 	// Character y position
 	//assign y_position = 7'd60;	// just below center on the screen (in pixels)
@@ -269,12 +275,20 @@ module main_state_machine
 	always @(*)
 		if (~resetn)
 			y_character_position = 0;
-		else if (y_movement_position >= 120 && y_movement_position < 192)
-			y_character_position = 119;
-		else if (y_movement_position >= 192 && y_movement_position < 256)
+		else if (y_movement_position_reg >= 103 && y_movement_position_reg < 192)
+			y_character_position = 103; // 119-16
+		else if (y_movement_position_reg >= 192 && y_movement_position_reg <= 255)
 			y_character_position = 0;
 		else
-			y_character_position = y_movement_position;
+			y_character_position = y_movement_position_reg;
+			
+	wire [7:0] y_movement_position_reg;
+	
+	flipflop y_position_holder (
+	.clock(CLOCK_50),
+	.aload(movement_enable),
+	.data(y_movement_position),
+	.q(y_movement_position_reg));
 	
 	
 	//------------------------------------------
@@ -501,7 +515,7 @@ module main_state_machine
 	end
 	
 	// Main State Machine
-	parameter DRAW_BACKGROUND = 0, DRAW_CHARACTER = 1, DRAW_ENEMIES = 2, DETECT_COLLISIONS = 3, MOVEMENT = 4, WAIT = 5;//states
+	parameter DRAW_BACKGROUND = 0, DRAW_CHARACTER = 1, DRAW_ENEMIES = 2, DETECT_COLLISIONS = 3, MOVEMENT = 4, WAIT = 5, DEBUG = 6;//states
 	always @ (*)
 	begin: main_state_table
 		case (main_Q)
@@ -514,8 +528,10 @@ module main_state_machine
 			DETECT_COLLISIONS: if (detect_collisions_done == 1) main_D <= MOVEMENT;
 			else main_D <= DETECT_COLLISIONS;
 			MOVEMENT: main_D <= WAIT;
-			WAIT: if (time_cnt_enable == 0) main_D <= DRAW_BACKGROUND;
+			WAIT: if (time_cnt_enable == 0 && debug_signal != 0) main_D <= DEBUG;
 			else main_D <= WAIT;
+			DEBUG: if (debug_signal == 0) main_D <= DRAW_BACKGROUND;
+			else main_D <= DEBUG;
 			default: main_D <= 3'bx;
 		endcase
 	end
@@ -523,7 +539,7 @@ module main_state_machine
 	// Main Datapath
 	always @ (*)
 	begin: main_datapath
-		case (main_D)
+		case (main_Q)
 			DRAW_BACKGROUND: 
 				begin 	
 						movement_enable_out = 0; 
@@ -595,6 +611,20 @@ module main_state_machine
 						level_address_out = 4'bx;
 				end
 			WAIT:
+				begin 	
+						movement_enable_out = 0; 
+						draw_background_enable_out = 0;
+						draw_character_enable_out = 0;
+						draw_enemies_enable_out = 0;
+						detect_collisions_enable_out = 0;
+						x_out = 8'bx; 
+						y_out = 7'bx; 
+						color_out = 9'bx; 
+						writeEn_out = 0;
+						time_cnt_reset = 1'b0;
+						level_address_out = 4'bx;
+				end
+			DEBUG:
 				begin 	
 						movement_enable_out = 0; 
 						draw_background_enable_out = 0;
