@@ -168,8 +168,7 @@ module main_state_machine
 	
 	wire [2:0] SpriteSelect;	// choose which sprite we want to work with (draw)
 	assign SpriteSelect = 3'b0;
-	wire [2:0] AnimStep;		// animation 'frame' we are on (default 0)
-	assign AnimStep = 3'b0;	
+	reg [2:0] AnimStep;		// animation 'frame' we are on, determined in Character Movement section
 	wire [4:0] SpriteHeight, SpriteWidth;	// width and height of the selected sprite
 	
 	drawSprite draw_character(
@@ -380,6 +379,78 @@ module main_state_machine
 				x_tile_position_cnt_left = 1'bx;
 				x_pixel_on_tile_cnt_left = 1'bx;
 			end
+			
+	//-----------------------------------------
+	// Character Animation
+	//-----------------------------------------
+	
+	reg character_facing_left; 
+	wire [4:0] char_anim_cnt_value;
+	reg character_moving;
+	
+	// determine if character is moving
+	// and direction
+	always @(*)
+	begin
+		if (~KEY[0] || ~KEY[3])
+			character_moving = 1'b1;
+		else
+			character_moving = 1'b0;
+			
+		if (~KEY[0])
+			character_facing_left = 1'b1;
+		if (~KEY[3])
+			character_facing_left = 1'b0;
+	end
+	
+	// used to toggle frames when running
+	// - counts to 32 (each tick represents 1/60th sec)
+	counter5b char_anim_counter (
+	.clock(time_cnt_enable),	// linked to 60fps counter (essentially incremented each drawBG)
+	.cnt_en(character_moving),
+	.sclr(resetn),
+	.q(char_anim_cnt_value));
+	
+	// determine which animation frame to draw
+	//
+	// AnimStep	0 - facing right, step/jump
+	//			1 - facing right, still
+	//			2 - facing left, step/jump
+	//			3 - facing left, still
+	always @(*)
+	begin
+		if (jump == 1)	// jumping
+			begin
+				if (character_facing_left == 1)
+					AnimStep = 3'd2;
+				else
+					AnimStep = 3'd0;
+			end
+		else if	(character_moving == 1)	// running
+			begin		
+				if (char_anim_cnt_value > 15)
+				begin
+					if (character_facing_left == 1)
+						AnimStep = 3'd2;
+					else
+						AnimStep = 3'd0;
+				end
+				else
+				begin
+					if (character_facing_left == 1)
+						AnimStep = 3'd3;
+					else
+						AnimStep = 3'd1;
+				end
+			end
+		else			// standing still
+			begin
+				if (character_facing_left == 1)
+					AnimStep = 3'd3;
+				else
+					AnimStep = 3'd1;
+			end	
+	end
 	
 	//------------------------------------------
 	// Scoring
@@ -396,11 +467,16 @@ module main_state_machine
 		.sclr(score_cnt_reset || ~resetn),
 		.q(score_cnt));
 		
-	always @(*)
-		if (score_cnt == 50_000_000)
+	always @(posedge CLOCK_50)
+		if (score_cnt == 5)	// 50_000_000
 			begin
-				score_cnt_reset = 1;
+				score_cnt_reset = 0;
 				score_out0_enable = 1;
+			end
+		else if (score_out0_enable == 1)
+			begin
+				score_out0_enable = 0;
+				score_cnt_reset = 1;
 			end
 		else
 			begin

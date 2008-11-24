@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.455 ns
-From           : KEY[0]
-To             : counter3b_updwn:x_pixel_on_tile_counter|lpm_counter:lpm_counter_component|cntr_dfh:auto_generated|safe_q[2]
+Actual Time    : 10.002 ns
+From           : KEY[1]
+To             : SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ram_block1a7~porta_address_reg10
 From Clock     : --
 To Clock       : CLOCK_50
 Failed Paths   : 0
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 15.675 ns
-From           : level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a10~porta_address_reg11
+Actual Time    : 16.322 ns
+From           : level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a7~porta_address_reg11
 To             : LEDR[1]
 From Clock     : CLOCK_50
 To Clock       : --
@@ -25,48 +25,48 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 0.362 ns
+Actual Time    : 5.445 ns
 From           : SW[0]
-To             : characterMovement:character_movement|register8b:y_position_register|lpm_ff:lpm_ff_component|dffs[6]
+To             : counter5b:char_anim_counter|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated|safe_q[0]
 From Clock     : --
 To Clock       : CLOCK_50
 Failed Paths   : 0
 
 Type           : Clock Setup: 'CLOCK_50'
-Slack          : 7.002 ns
+Slack          : 7.685 ns
 Required Time  : 50.00 MHz ( period = 20.000 ns )
-Actual Time    : 76.93 MHz ( period = 12.998 ns )
-From           : SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ram_block1a5~porta_address_reg10
-To             : vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1|ram_block2a43~portb_we_reg
+Actual Time    : 81.20 MHz ( period = 12.315 ns )
+From           : counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component|cntr_vgh:auto_generated|safe_q[0]
+To             : level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a9~porta_address_reg11
 From Clock     : CLOCK_50
 To Clock       : CLOCK_50
 Failed Paths   : 0
 
 Type           : Clock Setup: 'vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0'
-Slack          : 29.288 ns
+Slack          : 31.165 ns
 Required Time  : 25.00 MHz ( period = 40.000 ns )
-Actual Time    : 93.35 MHz ( period = 10.712 ns )
-From           : vga_adapter:VGA|vga_controller:controller|yCounter[4]
-To             : vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1|ram_block2a2~porta_address_reg11
+Actual Time    : 113.19 MHz ( period = 8.835 ns )
+From           : vga_adapter:VGA|vga_controller:controller|yCounter[5]
+To             : vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1|ram_block2a39~porta_address_reg11
 From Clock     : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
 To Clock       : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
 Failed Paths   : 0
 
 Type           : Clock Hold: 'CLOCK_50'
-Slack          : 0.391 ns
+Slack          : -0.259 ns
 Required Time  : 50.00 MHz ( period = 20.000 ns )
 Actual Time    : N/A
-From           : characterMovement:character_movement|slow_jump
-To             : characterMovement:character_movement|slow_jump
+From           : counter5b:char_anim_counter|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated|safe_q[4]
+To             : counter5b:char_anim_counter|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated|safe_q[4]
 From Clock     : CLOCK_50
 To Clock       : CLOCK_50
-Failed Paths   : 0
+Failed Paths   : 2
 
 Type           : Clock Hold: 'vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0'
-Slack          : 0.538 ns
+Slack          : 0.558 ns
 Required Time  : 25.00 MHz ( period = 40.000 ns )
 Actual Time    : N/A
-From           : vga_adapter:VGA|vga_controller:controller|xCounter[9]
+From           : vga_adapter:VGA|vga_controller:controller|xCounter[8]
 To             : vga_adapter:VGA|vga_controller:controller|VGA_HS1
 From Clock     : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
 To Clock       : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
@@ -80,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 0
+Failed Paths   : 2
 
 --------------------------------------------------------------------------------------
 
