@@ -25,6 +25,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include <math.h>
 #define WIN32
 
 #define FLIP_INT(c) ((c >> 24) & 0x000000FF) | ((c & 0x00FF0000) >> 8) | ((c & 0x0000FF00) << 8) | ((c & 0x000000FF) << 24)
@@ -62,7 +63,7 @@ int faprint(FILE *fcol, FILE *fm, const char *pattern) {
 int main(int argc, char* argv[]) {
 	FILE *f, *fcol, *fm;
 	int y;
-	unsigned int x, c, r, g, b;
+	unsigned int x, c, r, g, b, brightness, r4, g4, b4;
 	unsigned int width, height;
 
 	if (argc != 2)
@@ -77,12 +78,12 @@ int main(int argc, char* argv[]) {
 	}
 	printf("This program converts n x m 24-bit .BMP image to MIF file\n");
 	printf("There are 2 files produced:\n");
-	printf("\timage.colour.mif - 8-colour channel, n x m x 3\n");
-	printf("\timage.mono.mif - black and white image, n x m x 1\n\n");
+	printf("\timage.colour.mif - 9-colour channel, n x m x 3\n");
+	printf("\timage.4level.mif - 4-level image, n x m x 1\n\n");
 
 	f = fopen(argv[1], "rb");
 	fcol = fopen("image.colour.mif", "wb");
-	fm = fopen("image.mono.mif", "wb");
+	fm = fopen("image.4bit.mif", "wb");
 
 	if (f) {
 		t_bmp_header header; 
@@ -123,12 +124,13 @@ int main(int argc, char* argv[]) {
 			fprintf(fcol, "Width = 9;\r\n");		// 9 bits wide (rgb333)
 			fprintf(fm, "Width = 1;\r\n");
 			faprint(fcol, fm, "Address_radix=dec;\r\n");
-			faprint(fcol, fm, "Data_radix=dec;\r\n");
+			fprintf(fcol, "Data_radix=dec;\r\n");
+			fprintf(fm, "Data_radix=bin;\r\n");
 			faprint(fcol, fm, "Content\r\n");
 			faprint(fcol, fm, "BEGIN\r\n");
 			sprintf(temp, "\t[0..%i] : 0;\r\n", width*height - 1);	// from 0 to width*height-1 , default 0
 			fprintf(fcol, temp);
-			sprintf(temp, "\t[0..%i] : 0;\r\n", width*height - 1);
+			sprintf(temp, "\t[0..%i] : 0000;\r\n", width*height - 1);
 			fprintf(fm, temp);
 
 			fseek(f, 54, SEEK_SET);
@@ -156,11 +158,19 @@ int main(int argc, char* argv[]) {
 					//c = r + g + b;
 					//c /= 3;
 	
-					//r = (r >= 128 ? 1 : 0);
-					//g = (g >= 128 ? 1 : 0);
-					//b = (b >= 128 ? 1 : 0);
 					//c = (c >= 128 ? 1 : 0);
+
+					// 4-bit rgbi calculation:
+					r4 = (r >= 127 ? 1 : 0);
+					g4 = (g >= 127 ? 1 : 0);
+					b4 = (b >= 127 ? 1 : 0);
+
+					//brightness  =  sqrt( 0.241*r*r + 0.691*g*g + 0.068*g*g );
+					brightness = max ( max(r,g) ,b);
+					brightness = (brightness > 128) ? 1 : 0;
+					//brightness = ( max (r,g,b) + min (r,g,b) ) /2;
 					
+					// rgb333 calculation (9-bit rgb)
 					r = (unsigned int)((r * 7.0) / 255);	// convert to rgb 333
 					g = (unsigned int)((g * 7.0) / 255);
 					b = (unsigned int)((b * 7.0) / 255);
@@ -172,7 +182,7 @@ int main(int argc, char* argv[]) {
 					c = (r << 6) | (g << 3) | b;	// convert to a single unsigned decimal number (from 0 to 511)
 					
 					fprintf(fcol, " %u", c);
-					//fprintf(fcol, " %u%u%u", r, g, b);
+					fprintf(fm, " %u%u%u%u", brightness, r4, g4, b4);
 					//fprintf(fm, " %i", c);
 				}
 				faprint(fcol, fm, ";\r\n");

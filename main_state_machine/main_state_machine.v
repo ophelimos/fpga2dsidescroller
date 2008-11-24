@@ -212,17 +212,17 @@ module main_state_machine
 	wire writeEn_screen;			// 'plot' signal
 	wire [8:0] screen_pixel;
 
-        drawScreen draw_screen(
-                          .Enable(screen_enable), 
-                          .Clock(CLOCK_50), 
-                          .Resetn(resetn),
-                          .DataIn(screen_pixel),
-                          .Address(screen_address), 
-                          .X(x_screen), 
-                          .Y(y_screen), 
-                          .Color(color_screen), 
-                          .VGA_Draw(writeEn_screen),
-                          .Done(draw_screen_done));
+	drawScreen draw_screen(
+						.Enable(screen_enable), 
+						.Clock(CLOCK_50), 
+						.Resetn(resetn),
+						.DataIn(screen_pixel),
+						.Address(screen_address), 
+						.X(x_screen), 
+						.Y(y_screen), 
+						.Color(color_screen), 
+						.VGA_Draw(writeEn_screen),
+						.Done(draw_screen_done));
 		
 	//------------------------------------------
 	// Collision Detection Area
