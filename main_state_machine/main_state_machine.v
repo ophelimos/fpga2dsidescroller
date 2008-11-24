@@ -288,7 +288,7 @@ module main_state_machine
 	
 	// Make the time counter reset appropriately
 	always @(*)
-		if (time_out == /*833_333*/20)
+		if (time_out == 833_333)
 			begin
 				time_cnt_enable = 1'b0;
 			end
