@@ -186,7 +186,7 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 	reg VGA_Draw;
 	always @*
 	begin
-		if (DataIn == 9'b100101110)		// transparency colour <--
+		if (DataIn == 9'b10010110)		// transparency colour <--
 			VGA_Draw <= 0;
 		else 
 			VGA_Draw <= VGA_Draw_D;

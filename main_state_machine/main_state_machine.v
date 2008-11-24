@@ -108,29 +108,7 @@ module main_state_machine
 		.Width(SpriteWidth), 	// gets width of SpriteSelect sprite
 		.Height(SpriteHeight), 	// " height
 		.AnimSteps(CharAnimSteps));	// " number of animation frames
-
-   	//------------------------------------------
-	// Screen Memory
-	//------------------------------------------
 	
-	// Signals
-	wire [14:0] screen_address;
-	// 9-bit
-	wire [8:0] lose_screen_pixel;
-	wire [8:0] win_screen_pixel;
-	
-	// Instance declaration
-   
-	loseScreen lose_screen (
-	.address(screen_address),
-	.clock(CLOCK_50),
-	.q(lose_screen_pixel));
-
-	winScreen win_screen (
-	.address(screen_address),
-	.clock(CLOCK_50),
-	.q(win_screen_pixel));
-
 	//------------------------------------------
 	// DrawBackground instantiation
 	//------------------------------------------
@@ -151,8 +129,7 @@ module main_state_machine
 	.x(x_background),
 	.y(y_background),
 	.plot(writeEn_background),
-	.x_tile_offset(x_tile_position),
-	.x_pixel_offset(x_pixel_on_tile_position),
+	.x_offset(x_tile_position),
 	.enable(draw_background_enable),
 	.done(draw_background_done));
 	
@@ -168,7 +145,8 @@ module main_state_machine
 	
 	wire [2:0] SpriteSelect;	// choose which sprite we want to work with (draw)
 	assign SpriteSelect = 3'b0;
-	reg [2:0] AnimStep;		// animation 'frame' we are on, determined in Character Movement section
+	wire [2:0] AnimStep;		// animation 'frame' we are on (default 0)
+	assign AnimStep = 3'b0;	
 	wire [4:0] SpriteHeight, SpriteWidth;	// width and height of the selected sprite
 	
 	drawSprite draw_character(
@@ -199,31 +177,7 @@ module main_state_machine
 	wire draw_enemies_done;
 	
 	assign draw_enemies_done = 1;
-
-	//------------------------------------------
-	// drawScreen Instantiation
-	//------------------------------------------
-
-        wire screen_enable;
-   	wire draw_screen_done;
-	wire [7:0] x_screen;			// x position on screen (pixel)
-	wire [6:0] y_screen;			// y position on screen (pixel)
-	wire [8:0] color_screen;		// color output
-	wire writeEn_screen;			// 'plot' signal
-	wire [8:0] screen_pixel;
-
-	drawScreen draw_screen(
-						.Enable(screen_enable), 
-						.Clock(CLOCK_50), 
-						.Resetn(resetn),
-						.DataIn(screen_pixel),
-						.Address(screen_address), 
-						.X(x_screen), 
-						.Y(y_screen), 
-						.Color(color_screen), 
-						.VGA_Draw(writeEn_screen),
-						.Done(draw_screen_done));
-		
+	
 	//------------------------------------------
 	// Collision Detection Area
 	//------------------------------------------
@@ -240,8 +194,7 @@ module main_state_machine
 	.enable(detect_collisions_enable),
 	// Character position is in pixels on the screen, but we detect collisions based on tiles
 	// in the tilemap (non screen-oriented)
-        // Formula:
-	// Character_position (tiles) = x_location (tiles) + character_position on screen (tiles)
+	// character_position (tiles) = x_location (tiles) + character_position on screen (tiles)
 	// In the y-direction though, we currently don't have this problem
 	.x_location( (x_tile_position + (x_character_position / 4'd8)) ),
 	.y_location( (y_character_position / 4'd8) ), 
@@ -308,19 +261,6 @@ module main_state_machine
 	.updown(x_tile_position_cnt_left),
 	.q(x_tile_position));
 	
-	// pixel offset per tile 0-7
-	reg x_pixel_on_tile_cnt_enable;
-//	reg x_pixel_on_tile_cnt_reset;
-	reg x_pixel_on_tile_cnt_left;
-	wire [2:0] x_pixel_on_tile_position;
-	
-	counter3b_updwn x_pixel_on_tile_counter(
-	.clock(CLOCK_50),
-	.cnt_en(x_pixel_on_tile_cnt_enable),
-	.sclr(1'b0),
-	.updown(x_pixel_on_tile_cnt_left),
-	.q(x_pixel_on_tile_position));
-	
 	// 60 fps = 833_333 clocks which needs 20 bits
 	reg time_cnt_reset;
 	reg time_cnt_enable;
@@ -347,110 +287,20 @@ module main_state_machine
 	// Moving left or right logic
 	always @(*)
 		if (movement_enable == 1 && KEY[3] == 0 && right_blocked == 0)
-			begin
-				x_tile_position_cnt_left = 1'b0;	// move right
-				x_pixel_on_tile_cnt_left = 1'b0;	//
-				
-				if (x_pixel_on_tile_position == 7)	// increment tile
-						x_tile_position_cnt_enable = 1'b1;
-				else
-						x_tile_position_cnt_enable = 1'b0;
-						
-				x_pixel_on_tile_cnt_enable = 1'b1;	// increment pixel on tile
-
-			end
-		else if (movement_enable == 1 && KEY[0] == 0 && left_blocked == 0)	
-			begin
-				x_pixel_on_tile_cnt_left = 1'b1;	// move left
-				x_tile_position_cnt_left = 1'b1;	//
-				
-				if (x_pixel_on_tile_position == 0)	// decrement tile
-						x_tile_position_cnt_enable = 1'b1;
-				else
-						x_tile_position_cnt_enable = 1'b0;
-
-				x_pixel_on_tile_cnt_enable = 1'b1;	// decrement pixel on tile
-
-			end
+				begin
+					x_tile_position_cnt_enable = 1'b1;
+					x_tile_position_cnt_left = 1'b0;
+				end
+		else if (movement_enable == 1 && KEY[0] == 0 && left_blocked == 0)
+				begin
+					x_tile_position_cnt_enable = 1'b1;
+					x_tile_position_cnt_left = 1'b1;
+				end
 		else
 			begin
 				x_tile_position_cnt_enable = 1'b0;
-				x_pixel_on_tile_cnt_enable = 1'b0;
 				x_tile_position_cnt_left = 1'bx;
-				x_pixel_on_tile_cnt_left = 1'bx;
 			end
-			
-	//-----------------------------------------
-	// Character Animation
-	//-----------------------------------------
-	
-	reg character_facing_left; 
-	wire [4:0] char_anim_cnt_value;
-	reg character_moving;
-	
-	// determine if character is moving
-	// and direction
-	always @(*)
-	begin
-		if (~KEY[0] || ~KEY[3])
-			character_moving = 1'b1;
-		else
-			character_moving = 1'b0;
-			
-		if (~KEY[0])
-			character_facing_left = 1'b1;
-		if (~KEY[3])
-			character_facing_left = 1'b0;
-	end
-	
-	// used to toggle frames when running
-	// - counts to 32 (each tick represents 1/60th sec)
-	counter5b char_anim_counter (
-	.clock(time_cnt_enable),	// linked to 60fps counter (essentially incremented each drawBG)
-	.cnt_en(character_moving),
-	.sclr(resetn),
-	.q(char_anim_cnt_value));
-	
-	// determine which animation frame to draw
-	//
-	// AnimStep	0 - facing right, step/jump
-	//			1 - facing right, still
-	//			2 - facing left, step/jump
-	//			3 - facing left, still
-	always @(*)
-	begin
-		if (jump == 1)	// jumping
-			begin
-				if (character_facing_left == 1)
-					AnimStep = 3'd2;
-				else
-					AnimStep = 3'd0;
-			end
-		else if	(character_moving == 1)	// running
-			begin		
-				if (char_anim_cnt_value > 15)
-				begin
-					if (character_facing_left == 1)
-						AnimStep = 3'd2;
-					else
-						AnimStep = 3'd0;
-				end
-				else
-				begin
-					if (character_facing_left == 1)
-						AnimStep = 3'd3;
-					else
-						AnimStep = 3'd1;
-				end
-			end
-		else			// standing still
-			begin
-				if (character_facing_left == 1)
-					AnimStep = 3'd3;
-				else
-					AnimStep = 3'd1;
-			end	
-	end
 	
 	//------------------------------------------
 	// Scoring
@@ -459,24 +309,18 @@ module main_state_machine
 	// Score Counters --- 0-9 on 3 hexadecimal displays
 	reg score_cnt_reset;
 	wire [25:0] score_cnt;
-	wire score_enable;
 	
 	counter26b score_counter (
 		.clock(CLOCK_50),
-		.cnt_en(score_enable),
+		.cnt_en(1'b1),
 		.sclr(score_cnt_reset || ~resetn),
 		.q(score_cnt));
 		
-	always @(posedge CLOCK_50)
-		if (score_cnt == 5)	// 50_000_000
+	always @(*)
+		if (score_cnt == 50_000_000)
 			begin
-				score_cnt_reset = 0;
-				score_out0_enable = 1;
-			end
-		else if (score_out0_enable == 1)
-			begin
-				score_out0_enable = 0;
 				score_cnt_reset = 1;
+				score_out0_enable = 1;
 			end
 		else
 			begin
@@ -514,7 +358,7 @@ module main_state_machine
 
 	reg score_out0_enable;
 	reg score_out0_reset;
-	wire [3:0] score_out0/*synthesis keep*/;
+	wire [3:0] score_out0;
 	
 	counter4b score_cnt_out0 (
 		.clock(CLOCK_50),
@@ -536,7 +380,7 @@ module main_state_machine
 	
 	reg score_out1_enable;
 	reg score_out1_reset;
-	wire [3:0] score_out1/*synthesis keep*/;
+	wire [3:0] score_out1;
 	
 	counter4b score_cnt_out1 (
 		.clock(CLOCK_50),
@@ -558,7 +402,7 @@ module main_state_machine
 		
 	reg score_out2_enable;
 	reg score_out2_reset;
-	wire [3:0] score_out2/*synthesis keep*/;
+	wire [3:0] score_out2;
 	
 	counter4b score__cnt_out2 (
 		.clock(CLOCK_50),
@@ -580,55 +424,50 @@ module main_state_machine
 			begin
 				score_out2_reset = 0;
 			end
+		
 	
 	//------------------------------------------
 	// Main State Machine
 	//------------------------------------------
 	
 	// Signals -- always reg
-	reg draw_background_enable_out/*synthesis keep*/;
+	reg draw_background_enable_out;
 	wire draw_background_enable;
 	assign draw_background_enable = draw_background_enable_out;
-	reg draw_character_enable_out/*synthesis keep*/;
+	reg draw_character_enable_out;
 	wire draw_character_enable;
 	assign draw_character_enable = draw_character_enable_out;
-	reg draw_enemies_enable_out/*synthesis keep*/;
+	reg draw_enemies_enable_out;
 	wire draw_enemies_enable;
 	assign draw_enemies_enable = draw_enemies_enable_out;
-	reg detect_collisions_enable_out/*synthesis keep*/;
+	reg detect_collisions_enable_out;
 	wire detect_collisions_enable;
 	assign detect_collisions_enable = detect_collisions_enable_out;
-	reg [7:0] x_out/*synthesis keep*/;
+	reg [7:0] x_out;
 	assign x = x_out;
-	reg [6:0] y_out/*synthesis keep*/;
+	reg [6:0] y_out;
 	assign y = y_out;
-	reg [8:0] color_out/*synthesis keep*/;
+	reg [8:0] color_out;
 	assign color = color_out;
-	reg writeEn_out/*synthesis keep*/;
+	reg writeEn_out;
 	assign writeEn = writeEn_out;
-	reg [14:0] level_address_out/*synthesis keep*/;
+	reg [14:0] level_address_out;
 	assign level_address = level_address_out;
-	reg movement_enable_out/*synthesis keep*/;
+	reg movement_enable_out;
 	assign movement_enable = movement_enable_out;
-        reg score_enable_out;
-        assign score_enable = score_enable_out;
-        reg screen_enable_out;
-        assign screen_enable = screen_enable_out;
-	reg [8:0] screen_pixel_out;
-        assign screen_pixel = screen_pixel_out;
 	
 	// Main State flipflops
 	reg [2:0] main_Q, main_D /*synthesis keep*/; 
-	always @ (posedge CLOCK_50)
+	always @ (posedge CLOCK_50 or negedge resetn)
 	begin: main_state_FFs
-		if (~resetn)
-			main_Q <= WAIT;		// state to reset to
+		if (!resetn)
+			main_Q <= 0;
 		else
 			main_Q <= main_D;
 	end
 	
 	// Main State Machine
-	parameter DRAW_BACKGROUND = 0, DRAW_CHARACTER = 1, DRAW_ENEMIES = 2, DETECT_COLLISIONS = 3, MOVEMENT = 4, WAIT = 5, LOSE = 6, WIN = 7;//states
+	parameter DRAW_BACKGROUND = 0, DRAW_CHARACTER = 1, DRAW_ENEMIES = 2, DETECT_COLLISIONS = 3, MOVEMENT = 4, WAIT = 5;//states
 	always @ (*)
 	begin: main_state_table
 		case (main_Q)
@@ -641,12 +480,8 @@ module main_state_machine
 			DETECT_COLLISIONS: if (detect_collisions_done == 1) main_D <= MOVEMENT;
 			else main_D <= DETECT_COLLISIONS;
 			MOVEMENT: main_D <= WAIT;
-			WAIT: if (y == 7'd121) main_D <= LOSE; // Off the bottom of the screen
-                        else if (x_tile_position == 32'd1980) main_D <= WIN; // This should NOT be hardcoded!  We need a way of parameterizing how big these levels are
-                        else if (time_cnt_enable == 0) main_D <= DRAW_BACKGROUND;
+			WAIT: if (time_cnt_enable == 0) main_D <= DRAW_BACKGROUND;
 			else main_D <= WAIT;
-                        LOSE: main_D <= LOSE;
-                        WIN: main_D <= WIN;
 			default: main_D <= 3'bx;
 		endcase
 	end
@@ -654,7 +489,7 @@ module main_state_machine
 	// Main Datapath
 	always @ (*)
 	begin: main_datapath
-		case (main_Q)
+		case (main_D)
 			DRAW_BACKGROUND: 
 				begin 	
 						movement_enable_out = 0; 
@@ -668,9 +503,6 @@ module main_state_machine
 						writeEn_out = writeEn_background;
 						time_cnt_reset = 1'b1;
 						level_address_out = level_address_background;
-                                                screen_enable_out = 1'b0;
-                                                score_enable_out = 1'b0;
-                                                screen_pixel_out = 9'bx;
 				end
 			DRAW_CHARACTER:
 				begin 	
@@ -685,9 +517,6 @@ module main_state_machine
 						writeEn_out = writeEn_character;
 						time_cnt_reset = 1'b0;
 						level_address_out = 4'bx;
-                                                screen_enable_out = 1'b0;
-                                                score_enable_out = 1'b0;
-                                                screen_pixel_out = 9'bx;
 				end
 			DRAW_ENEMIES:
 				begin 	
@@ -702,9 +531,6 @@ module main_state_machine
 						writeEn_out = 0;
 						time_cnt_reset = 1'b0;
 						level_address_out = 4'bx;
-                                                screen_enable_out = 1'b0;
-                                                score_enable_out = 1'b0;
-                                                screen_pixel_out = 9'bx;
 				end
 			DETECT_COLLISIONS:
 				begin 	
@@ -719,9 +545,6 @@ module main_state_machine
 						writeEn_out = 0;
 						time_cnt_reset = 1'b0;
 						level_address_out = level_address_collisions;
-                                                screen_enable_out = 1'b0;
-                                                score_enable_out = 1'b0;
-                                                screen_pixel_out = 9'bx;
 				end
 			MOVEMENT:
 				begin 	
@@ -736,9 +559,6 @@ module main_state_machine
 						writeEn_out = 0;
 						time_cnt_reset = 1'b0;
 						level_address_out = 4'bx;
-                                                screen_enable_out = 1'b0;
-                                                score_enable_out = 1'b0;
-                                                screen_pixel_out = 9'bx;
 				end
 			WAIT:
 				begin 	
@@ -753,45 +573,6 @@ module main_state_machine
 						writeEn_out = 0;
 						time_cnt_reset = 1'b0;
 						level_address_out = 4'bx;
-                                                screen_enable_out = 1'b0;
-                                                score_enable_out = 1'b0;
-                                                screen_pixel_out = 9'bx;
-				end
-			LOSE:
-				begin 	
-						movement_enable_out = 0; 
-						draw_background_enable_out = 0;
-						draw_character_enable_out = 0;
-						draw_enemies_enable_out = 0;
-						detect_collisions_enable_out = 0;
-						x_out = x_screen; 
-						y_out = y_screen; 
-						color_out = color_screen; 
-						writeEn_out = writeEn_screen;
-						time_cnt_reset = 1'b0;
-						level_address_out = 4'bx;
-                                                screen_enable_out = 1'b1;
-                                                score_enable_out = 1'b0;
-                                                screen_pixel_out = lose_screen_pixel;
-                          
-				end
-			WIN:
-				begin 	
-						movement_enable_out = 0; 
-						draw_background_enable_out = 0;
-						draw_character_enable_out = 0;
-						draw_enemies_enable_out = 0;
-						detect_collisions_enable_out = 0;
-						x_out = x_screen; 
-						y_out = y_screen; 
-						color_out = color_screen; 
-						writeEn_out = writeEn_screen;
-						time_cnt_reset = 1'b0;
-						level_address_out = 4'bx;
-                                                screen_enable_out = 1'b1;
-                                                score_enable_out = 1'b0;
-                                                screen_pixel_out = win_screen_pixel;
-                          
 				end
 			default: 
 				begin 	
@@ -806,9 +587,6 @@ module main_state_machine
 						writeEn_out = 1'bx;
 						time_cnt_reset = 1'bx;
 						level_address_out = 4'bx;
-                                                screen_enable_out = 1'bx;
-                                                score_enable_out = 1'bx;
-                                                screen_pixel_out = 9'bx;
 				end
 			endcase
 	end

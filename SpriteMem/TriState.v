@@ -1,5 +1,5 @@
 module NBitTristate (in, oe, out);
-	parameter n = 3;
+	parameter n;
 	input [n-1:0] in;		// input
 	input oe;				// output enable
 	output [n-1:0] out;		// output

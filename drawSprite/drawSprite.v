@@ -32,7 +32,7 @@ module drawSprite (Xin, Yin, Sprite, AnimStep, Width, Height, DataIn, Enable, Re
 	always @(posedge Clock)
 	begin
 		if (~Resetn)
-			Q <= START;		// state to reset to
+			Q <= 0;
 		else
 			Q <= D;
 	end

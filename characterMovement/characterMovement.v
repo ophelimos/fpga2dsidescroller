@@ -14,7 +14,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	// Outputs
 	//------------------------------------------
 	output [7:0] x_position; // Adjust location on-screen, in pixels
-	output [7:0] y_position;
+	output [6:0] y_position;
 	output [1:0] jumping_Q, jumping_D;
 	output [5:0] jump_factor;
 	
@@ -57,7 +57,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	
 	counter6bdown jump_rate_counter (
 	.clock(clock),
-	.cnt_en(slow_jump & enable),
+	.cnt_en(slow_jump),
 	.sclr(jump_reset),
 	.sset(jump),
 	.q(jump_factor));
@@ -74,10 +74,10 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	
 	// Jumping State flipflops
 	reg [1:0] jumping_Q, jumping_D; 
-	always @ (posedge clock)
+	always @ (posedge clock or negedge resetn)
 	begin: jumping_state_FFs
 		if (!resetn)
-			jumping_Q <= WAIT;		// state to reset to
+			jumping_Q <= 0;
 		else
 			jumping_Q <= jumping_D;
 	end
@@ -100,7 +100,7 @@ module characterMovement(clock, resetn, enable, jump, left_blocked, right_blocke
 	// Jumping Datapath
 	always @ (*)
 	begin: jumping_datapath
-		case (jumping_Q)
+		case (jumping_D)
 			WAIT: 
 				begin
 					stop_jump_out = 0;
