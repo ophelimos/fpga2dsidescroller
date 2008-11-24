@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_state_machine
-Mon Nov 24 12:52:36 2008
+Mon Nov 24 13:21:09 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -116,15 +116,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 24 12:52:35 2008         ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 24 13:21:09 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; main_state_machine                            ;
 ; Top-level Entity Name              ; main_state_machine                            ;
 ; Family                             ; Cyclone II                                    ;
-; Total logic elements               ; 653                                           ;
-;     Total combinational functions  ; 653                                           ;
-;     Dedicated logic registers      ; 190                                           ;
-; Total registers                    ; 190                                           ;
+; Total logic elements               ; 662                                           ;
+;     Total combinational functions  ; 662                                           ;
+;     Dedicated logic registers      ; 193                                           ;
+; Total registers                    ; 193                                           ;
 ; Total pins                         ; 88                                            ;
 ; Total virtual pins                 ; 0                                             ;
 ; Total memory bits                  ; 290,448                                       ;
@@ -196,100 +196,100 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
-; File Name with User-Entered Path                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ;
-+----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
-; ../characterMovement/counter4bdown.v                     ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/characterMovement/counter4bdown.v                       ;
-; ../characterMovement/characterMovement.v                 ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/characterMovement/characterMovement.v                   ;
-; ../detectBackgroundCollision/detectBackgroundCollision.v ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/detectBackgroundCollision/detectBackgroundCollision.v   ;
-; ../SpriteMem/spriteROM0.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/spriteROM0.v                                  ;
-; hex_digits.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/hex_digits.v                         ;
-; counter26b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter26b.v                         ;
-; counter20b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter20b.v                         ;
-; ../drawSprite/drawSprite.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawSprite/drawSprite.v                                 ;
-; ../SpriteMem/W_H_Mux.v                                   ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/W_H_Mux.v                                     ;
-; ../SpriteMem/DataOut_Mux.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/DataOut_Mux.v                                 ;
-; ../SpriteMem/SpriteMem.v                                 ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/SpriteMem.v                                   ;
-; ../SpriteMem/AStep_Mux.v                                 ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/AStep_Mux.v                                   ;
-; ../drawTileMichael/addx.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/addx.v                                  ;
-; ../drawTileMichael/addy.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/addy.v                                  ;
-; ../drawTileMichael/drawTile.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/drawTile.v                              ;
-; ../drawTileMichael/memCount.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/memCount.v                              ;
-; ../drawTileMichael/nBitRegister.v                        ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/nBitRegister.v                          ;
-; ../drawBackground/tileset.v                              ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/tileset.v                                ;
-; ../drawBackground/counter4b.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/counter4b.v                              ;
-; ../drawBackground/counter5b.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/counter5b.v                              ;
-; counter32b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter32b.v                         ;
-; ../drawBackground/level1.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/level1.v                                 ;
-; vga_adapter/vga_pll.v                                    ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_pll.v                ;
-; vga_adapter/vga_address_translator.v                     ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_address_translator.v ;
-; vga_adapter/vga_controller.v                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_controller.v         ;
-; vga_adapter/vga_adapter.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_adapter.v            ;
-; ../drawBackground/drawBackground.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/drawBackground.v                         ;
-; main_state_machine.v                                     ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/main_state_machine.v                 ;
-; altsyncram.tdf                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf                   ;
-; stratix_ram_block.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_ram_block.inc            ;
-; lpm_mux.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.inc                      ;
-; lpm_decode.inc                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_decode.inc                   ;
-; aglobal71.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/aglobal71.inc                    ;
-; a_rdenreg.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/a_rdenreg.inc                    ;
-; altrom.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altrom.inc                       ;
-; altram.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc                       ;
-; altdpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc                     ;
-; altqpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc                     ;
-; db/altsyncram_p3g1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_p3g1.tdf               ;
-; db/altsyncram_ptq1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_ptq1.tdf               ;
-; db/decode_6oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/decode_6oa.tdf                    ;
-; db/mux_nib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_nib.tdf                       ;
-; altpll.tdf                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altpll.tdf                       ;
-; stratix_pll.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_pll.inc                  ;
-; stratixii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratixii_pll.inc                ;
-; cycloneii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cycloneii_pll.inc                ;
-; db/altsyncram_7391.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_7391.tdf               ;
-; db/decode_9oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/decode_9oa.tdf                    ;
-; db/mux_kib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_kib.tdf                       ;
-; lpm_mux.tdf                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.tdf                      ;
-; muxlut.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/muxlut.inc                       ;
-; bypassff.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/bypassff.inc                     ;
-; altshift.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altshift.inc                     ;
-; db/mux_1nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_1nc.tdf                       ;
-; db/mux_vmc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_vmc.tdf                       ;
-; db/altsyncram_u491.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_u491.tdf               ;
-; db/mux_5nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_5nc.tdf                       ;
-; db/altsyncram_tu81.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_tu81.tdf               ;
-; lpm_counter.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf                  ;
-; lpm_constant.inc                                         ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc                 ;
-; lpm_add_sub.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc                  ;
-; cmpconst.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cmpconst.inc                     ;
-; lpm_compare.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_compare.inc                  ;
-; lpm_counter.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.inc                  ;
-; dffeea.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/dffeea.inc                       ;
-; alt_synch_counter.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter.inc            ;
-; alt_synch_counter_f.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter_f.inc          ;
-; alt_counter_f10ke.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_f10ke.inc            ;
-; alt_counter_stratix.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_stratix.inc          ;
-; db/cntr_4oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_4oi.tdf                      ;
-; db/cntr_3oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_3oi.tdf                      ;
-; lpm_add_sub.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf                  ;
-; addcore.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc                      ;
-; look_add.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc                     ;
-; alt_stratix_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_stratix_add_sub.inc          ;
-; alt_mercury_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_mercury_add_sub.inc          ;
-; db/add_sub_big.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_big.tdf                   ;
-; db/add_sub_aig.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_aig.tdf                   ;
-; db/add_sub_llh.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_llh.tdf                   ;
-; db/cntr_ldj.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_ldj.tdf                      ;
-; db/cntr_vgh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_vgh.tdf                      ;
-; db/cntr_hpi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_hpi.tdf                      ;
-; db/cntr_npi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_npi.tdf                      ;
-; lpm_mult.tdf                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf                     ;
-; multcore.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/multcore.inc                     ;
-; db/mult_6111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_6111.tdf                     ;
-; db/mult_8111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_8111.tdf                     ;
-; db/mult_p211.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_p211.tdf                     ;
-+----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                           ;
++----------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
+; File Name with User-Entered Path                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ;
++----------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
+; ../characterMovement/counter4bdown.v                     ; yes             ; User Verilog HDL File        ; W:/r20/characterMovement/counter4bdown.v                             ;
+; ../characterMovement/characterMovement.v                 ; yes             ; User Verilog HDL File        ; W:/r20/characterMovement/characterMovement.v                         ;
+; ../detectBackgroundCollision/detectBackgroundCollision.v ; yes             ; User Verilog HDL File        ; W:/r20/detectBackgroundCollision/detectBackgroundCollision.v         ;
+; ../SpriteMem/spriteROM0.v                                ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/spriteROM0.v                                        ;
+; hex_digits.v                                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/hex_digits.v                               ;
+; counter26b.v                                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/counter26b.v                               ;
+; counter20b.v                                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/counter20b.v                               ;
+; ../drawSprite/drawSprite.v                               ; yes             ; User Verilog HDL File        ; W:/r20/drawSprite/drawSprite.v                                       ;
+; ../SpriteMem/W_H_Mux.v                                   ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/W_H_Mux.v                                           ;
+; ../SpriteMem/DataOut_Mux.v                               ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/DataOut_Mux.v                                       ;
+; ../SpriteMem/SpriteMem.v                                 ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/SpriteMem.v                                         ;
+; ../SpriteMem/AStep_Mux.v                                 ; yes             ; User Verilog HDL File        ; W:/r20/SpriteMem/AStep_Mux.v                                         ;
+; ../drawTileMichael/addx.v                                ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/addx.v                                        ;
+; ../drawTileMichael/addy.v                                ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/addy.v                                        ;
+; ../drawTileMichael/drawTile.v                            ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/drawTile.v                                    ;
+; ../drawTileMichael/memCount.v                            ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/memCount.v                                    ;
+; ../drawTileMichael/nBitRegister.v                        ; yes             ; User Verilog HDL File        ; W:/r20/drawTileMichael/nBitRegister.v                                ;
+; ../drawBackground/tileset.v                              ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/tileset.v                                      ;
+; ../drawBackground/counter4b.v                            ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/counter4b.v                                    ;
+; ../drawBackground/counter5b.v                            ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/counter5b.v                                    ;
+; counter32b.v                                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/counter32b.v                               ;
+; ../drawBackground/level1.v                               ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/level1.v                                       ;
+; vga_adapter/vga_pll.v                                    ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/vga_adapter/vga_pll.v                      ;
+; vga_adapter/vga_address_translator.v                     ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/vga_adapter/vga_address_translator.v       ;
+; vga_adapter/vga_controller.v                             ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/vga_adapter/vga_controller.v               ;
+; vga_adapter/vga_adapter.v                                ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/vga_adapter/vga_adapter.v                  ;
+; ../drawBackground/drawBackground.v                       ; yes             ; User Verilog HDL File        ; W:/r20/drawBackground/drawBackground.v                               ;
+; main_state_machine.v                                     ; yes             ; User Verilog HDL File        ; W:/r20/main_state_machine/main_state_machine.v                       ;
+; altsyncram.tdf                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf          ;
+; stratix_ram_block.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_ram_block.inc   ;
+; lpm_mux.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.inc             ;
+; lpm_decode.inc                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_decode.inc          ;
+; aglobal71.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/aglobal71.inc           ;
+; a_rdenreg.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/a_rdenreg.inc           ;
+; altrom.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altrom.inc              ;
+; altram.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc              ;
+; altdpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc            ;
+; altqpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc            ;
+; db/altsyncram_p3g1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_p3g1.tdf                     ;
+; db/altsyncram_ptq1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_ptq1.tdf                     ;
+; db/decode_6oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/decode_6oa.tdf                          ;
+; db/mux_nib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_nib.tdf                             ;
+; altpll.tdf                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altpll.tdf              ;
+; stratix_pll.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_pll.inc         ;
+; stratixii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratixii_pll.inc       ;
+; cycloneii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cycloneii_pll.inc       ;
+; db/altsyncram_7391.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_7391.tdf                     ;
+; db/decode_9oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/decode_9oa.tdf                          ;
+; db/mux_kib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_kib.tdf                             ;
+; lpm_mux.tdf                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.tdf             ;
+; muxlut.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/muxlut.inc              ;
+; bypassff.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/bypassff.inc            ;
+; altshift.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altshift.inc            ;
+; db/mux_1nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_1nc.tdf                             ;
+; db/mux_vmc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_vmc.tdf                             ;
+; db/altsyncram_u491.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_u491.tdf                     ;
+; db/mux_5nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mux_5nc.tdf                             ;
+; db/altsyncram_tu81.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/altsyncram_tu81.tdf                     ;
+; lpm_counter.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf         ;
+; lpm_constant.inc                                         ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc        ;
+; lpm_add_sub.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc         ;
+; cmpconst.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cmpconst.inc            ;
+; lpm_compare.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_compare.inc         ;
+; lpm_counter.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.inc         ;
+; dffeea.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/dffeea.inc              ;
+; alt_synch_counter.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter.inc   ;
+; alt_synch_counter_f.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter_f.inc ;
+; alt_counter_f10ke.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_f10ke.inc   ;
+; alt_counter_stratix.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_stratix.inc ;
+; db/cntr_4oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_4oi.tdf                            ;
+; db/cntr_3oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_3oi.tdf                            ;
+; lpm_add_sub.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;
+; addcore.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc             ;
+; look_add.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc            ;
+; alt_stratix_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;
+; alt_mercury_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_mercury_add_sub.inc ;
+; db/add_sub_big.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/add_sub_big.tdf                         ;
+; db/add_sub_aig.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/add_sub_aig.tdf                         ;
+; db/add_sub_llh.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/add_sub_llh.tdf                         ;
+; db/cntr_ldj.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_ldj.tdf                            ;
+; db/cntr_vgh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_vgh.tdf                            ;
+; db/cntr_hpi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_hpi.tdf                            ;
+; db/cntr_npi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/cntr_npi.tdf                            ;
+; lpm_mult.tdf                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf            ;
+; multcore.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/multcore.inc            ;
+; db/mult_6111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mult_6111.tdf                           ;
+; db/mult_8111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mult_8111.tdf                           ;
+; db/mult_p211.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/r20/main_state_machine/db/mult_p211.tdf                           ;
++----------------------------------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -297,20 +297,20 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 653      ;
+; Estimated Total logic elements              ; 662      ;
 ;                                             ;          ;
-; Total combinational functions               ; 653      ;
+; Total combinational functions               ; 662      ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 183      ;
-;     -- 3 input functions                    ; 208      ;
-;     -- <=2 input functions                  ; 262      ;
+;     -- 4 input functions                    ; 180      ;
+;     -- 3 input functions                    ; 223      ;
+;     -- <=2 input functions                  ; 259      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 369      ;
+;     -- normal mode                          ; 378      ;
 ;     -- arithmetic mode                      ; 284      ;
 ;                                             ;          ;
-; Total registers                             ; 190      ;
-;     -- Dedicated logic registers            ; 190      ;
+; Total registers                             ; 193      ;
+;     -- Dedicated logic registers            ; 193      ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
 ; I/O pins                                    ; 88       ;
@@ -318,9 +318,9 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 8        ;
 ; Total PLLs                                  ; 1        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
-; Maximum fan-out                             ; 246      ;
-; Total fan-out                               ; 4497     ;
-; Average fan-out                             ; 4.38     ;
+; Maximum fan-out                             ; 249      ;
+; Total fan-out                               ; 4531     ;
+; Average fan-out                             ; 4.36     ;
 +---------------------------------------------+----------+
 
 
@@ -329,7 +329,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                  ; Library Name ;
 +--------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |main_state_machine                                          ; 653 (110)         ; 190 (6)      ; 290448      ; 8            ; 0       ; 4         ; 88   ; 0            ; |main_state_machine                                                                                                                                                  ; work         ;
+; |main_state_machine                                          ; 662 (110)         ; 193 (6)      ; 290448      ; 8            ; 0       ; 4         ; 88   ; 0            ; |main_state_machine                                                                                                                                                  ; work         ;
 ;    |SpriteMem:character_mem|                                 ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem                                                                                                                          ; work         ;
 ;       |spriteROM0:MEM0|                                      ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0                                                                                                          ; work         ;
 ;          |altsyncram:altsyncram_component|                   ; 0 (0)             ; 0 (0)        ; 18432       ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component                                                                          ; work         ;
@@ -356,21 +356,21 @@ applicable agreement for further details.
 ;    |counter4b:score_cnt_out1|                                ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1                                                                                                                         ; work         ;
 ;       |lpm_counter:lpm_counter_component|                    ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1|lpm_counter:lpm_counter_component                                                                                       ; work         ;
 ;          |cntr_3oi:auto_generated|                           ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|counter4b:score_cnt_out1|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                                                               ; work         ;
-;    |detectBackgroundCollision:background_collision_detector| ; 81 (81)           ; 13 (13)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector                                                                                          ; work         ;
+;    |detectBackgroundCollision:background_collision_detector| ; 82 (82)           ; 14 (14)      ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector                                                                                          ; work         ;
 ;       |lpm_mult:Mult0|                                       ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0                                                                           ; work         ;
 ;          |mult_6111:auto_generated|                          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult0|mult_6111:auto_generated                                                  ; work         ;
 ;       |lpm_mult:Mult1|                                       ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1                                                                           ; work         ;
 ;          |mult_8111:auto_generated|                          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult1|mult_8111:auto_generated                                                  ; work         ;
 ;       |lpm_mult:Mult2|                                       ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2                                                                           ; work         ;
 ;          |mult_p211:auto_generated|                          ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|detectBackgroundCollision:background_collision_detector|lpm_mult:Mult2|mult_p211:auto_generated                                                  ; work         ;
-;    |drawBackground:draw_background|                          ; 107 (43)          ; 40 (3)       ; 9216        ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background                                                                                                                   ; work         ;
+;    |drawBackground:draw_background|                          ; 113 (49)          ; 41 (3)       ; 9216        ; 2            ; 0       ; 1         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background                                                                                                                   ; work         ;
 ;       |counter4b:tile_countery|                              ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery                                                                                           ; work         ;
 ;          |lpm_counter:lpm_counter_component|                 ; 5 (0)             ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component                                                         ; work         ;
 ;             |cntr_3oi:auto_generated|                        ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter4b:tile_countery|lpm_counter:lpm_counter_component|cntr_3oi:auto_generated                                 ; work         ;
 ;       |counter5b:tile_counterx|                              ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx                                                                                           ; work         ;
 ;          |lpm_counter:lpm_counter_component|                 ; 6 (0)             ; 5 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component                                                         ; work         ;
 ;             |cntr_4oi:auto_generated|                        ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|counter5b:tile_counterx|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated                                 ; work         ;
-;       |drawTile:tile_drawing_module|                         ; 53 (19)           ; 28 (6)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module                                                                                      ; work         ;
+;       |drawTile:tile_drawing_module|                         ; 53 (19)           ; 29 (7)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module                                                                                      ; work         ;
 ;          |addy:YoutAdder|                                    ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder                                                                       ; work         ;
 ;             |lpm_add_sub:lpm_add_sub_component|              ; 8 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component                                     ; work         ;
 ;                |add_sub_aig:auto_generated|                  ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated          ; work         ;
@@ -385,7 +385,7 @@ applicable agreement for further details.
 ;       |tileset:tileset0|                                     ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0                                                                                                  ; work         ;
 ;          |altsyncram:altsyncram_component|                   ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component                                                                  ; work         ;
 ;             |altsyncram_tu81:auto_generated|                 ; 0 (0)             ; 0 (0)        ; 9216        ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawBackground:draw_background|tileset:tileset0|altsyncram:altsyncram_component|altsyncram_tu81:auto_generated                                   ; work         ;
-;    |drawSprite:draw_character|                               ; 67 (27)           ; 21 (6)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character                                                                                                                        ; work         ;
+;    |drawSprite:draw_character|                               ; 69 (29)           ; 22 (7)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character                                                                                                                        ; work         ;
 ;       |addx:XoutAdder|                                       ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder                                                                                                         ; work         ;
 ;          |lpm_add_sub:lpm_add_sub_component|                 ; 18 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component                                                                       ; work         ;
 ;             |add_sub_big:auto_generated|                     ; 18 (18)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_state_machine|drawSprite:draw_character|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated                                            ; work         ;
@@ -465,77 +465,82 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q                                                                                                           ;
-+----------------------+---------------------+--------------------+----------------------+---------------------+-------------------+------------------+---------------------+------------+--------------------+
-; Name                 ; dbc_Q.READ_LEFT_DBC ; dbc_Q.SET_LEFT_DBC ; dbc_Q.READ_RIGHT_DBC ; dbc_Q.SET_RIGHT_DBC ; dbc_Q.READ_UP_DBC ; dbc_Q.SET_UP_DBC ; dbc_Q.READ_DOWN_DBC ; dbc_Q.0000 ; dbc_Q.SET_DOWN_DBC ;
-+----------------------+---------------------+--------------------+----------------------+---------------------+-------------------+------------------+---------------------+------------+--------------------+
-; dbc_Q.0000           ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 0          ; 0                  ;
-; dbc_Q.READ_DOWN_DBC  ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 1                   ; 1          ; 0                  ;
-; dbc_Q.SET_UP_DBC     ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 1                ; 0                   ; 1          ; 0                  ;
-; dbc_Q.READ_UP_DBC    ; 0                   ; 0                  ; 0                    ; 0                   ; 1                 ; 0                ; 0                   ; 1          ; 0                  ;
-; dbc_Q.SET_RIGHT_DBC  ; 0                   ; 0                  ; 0                    ; 1                   ; 0                 ; 0                ; 0                   ; 1          ; 0                  ;
-; dbc_Q.READ_RIGHT_DBC ; 0                   ; 0                  ; 1                    ; 0                   ; 0                 ; 0                ; 0                   ; 1          ; 0                  ;
-; dbc_Q.SET_LEFT_DBC   ; 0                   ; 1                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 1          ; 0                  ;
-; dbc_Q.READ_LEFT_DBC  ; 1                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 1          ; 0                  ;
-; dbc_Q.SET_DOWN_DBC   ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 1          ; 1                  ;
-+----------------------+---------------------+--------------------+----------------------+---------------------+-------------------+------------------+---------------------+------------+--------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q                                                                                                                            ;
++----------------------+----------------+---------------------+--------------------+----------------------+---------------------+-------------------+------------------+---------------------+--------------------+------------+
+; Name                 ; dbc_Q.DONE_DBC ; dbc_Q.READ_LEFT_DBC ; dbc_Q.SET_LEFT_DBC ; dbc_Q.READ_RIGHT_DBC ; dbc_Q.SET_RIGHT_DBC ; dbc_Q.READ_UP_DBC ; dbc_Q.SET_UP_DBC ; dbc_Q.READ_DOWN_DBC ; dbc_Q.SET_DOWN_DBC ; dbc_Q.0000 ;
++----------------------+----------------+---------------------+--------------------+----------------------+---------------------+-------------------+------------------+---------------------+--------------------+------------+
+; dbc_Q.0000           ; 0              ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 0                  ; 0          ;
+; dbc_Q.SET_DOWN_DBC   ; 0              ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 1                  ; 1          ;
+; dbc_Q.READ_DOWN_DBC  ; 0              ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 1                   ; 0                  ; 1          ;
+; dbc_Q.SET_UP_DBC     ; 0              ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 1                ; 0                   ; 0                  ; 1          ;
+; dbc_Q.READ_UP_DBC    ; 0              ; 0                   ; 0                  ; 0                    ; 0                   ; 1                 ; 0                ; 0                   ; 0                  ; 1          ;
+; dbc_Q.SET_RIGHT_DBC  ; 0              ; 0                   ; 0                  ; 0                    ; 1                   ; 0                 ; 0                ; 0                   ; 0                  ; 1          ;
+; dbc_Q.READ_RIGHT_DBC ; 0              ; 0                   ; 0                  ; 1                    ; 0                   ; 0                 ; 0                ; 0                   ; 0                  ; 1          ;
+; dbc_Q.SET_LEFT_DBC   ; 0              ; 0                   ; 1                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 0                  ; 1          ;
+; dbc_Q.READ_LEFT_DBC  ; 0              ; 1                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 0                  ; 1          ;
+; dbc_Q.DONE_DBC       ; 1              ; 0                   ; 0                  ; 0                    ; 0                   ; 0                 ; 0                ; 0                   ; 0                  ; 1          ;
++----------------------+----------------+---------------------+--------------------+----------------------+---------------------+-------------------+------------------+---------------------+--------------------+------------+
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------+
-; State Machine - |main_state_machine|drawSprite:draw_character|Q ;
-+---------+---------+--------+--------+--------+---------+--------+
-; Name    ; Q.INC_Y ; Q.IDLE ; Q.READ ; Q.DRAW ; Q.INC_X ; Q.000  ;
-+---------+---------+--------+--------+--------+---------+--------+
-; Q.000   ; 0       ; 0      ; 0      ; 0      ; 0       ; 0      ;
-; Q.INC_X ; 0       ; 0      ; 0      ; 0      ; 1       ; 1      ;
-; Q.DRAW  ; 0       ; 0      ; 0      ; 1      ; 0       ; 1      ;
-; Q.READ  ; 0       ; 0      ; 1      ; 0      ; 0       ; 1      ;
-; Q.IDLE  ; 0       ; 1      ; 0      ; 0      ; 0       ; 1      ;
-; Q.INC_Y ; 1       ; 0      ; 0      ; 0      ; 0       ; 1      ;
-+---------+---------+--------+--------+--------+---------+--------+
++--------------------------------------------------------------------------------+
+; State Machine - |main_state_machine|drawSprite:draw_character|Q                ;
++------------+------------+--------+--------+--------+---------+---------+-------+
+; Name       ; Q.FINISHED ; Q.IDLE ; Q.READ ; Q.DRAW ; Q.INC_X ; Q.INC_Y ; Q.000 ;
++------------+------------+--------+--------+--------+---------+---------+-------+
+; Q.000      ; 0          ; 0      ; 0      ; 0      ; 0       ; 0       ; 0     ;
+; Q.INC_Y    ; 0          ; 0      ; 0      ; 0      ; 0       ; 1       ; 1     ;
+; Q.INC_X    ; 0          ; 0      ; 0      ; 0      ; 1       ; 0       ; 1     ;
+; Q.DRAW     ; 0          ; 0      ; 0      ; 1      ; 0       ; 0       ; 1     ;
+; Q.READ     ; 0          ; 0      ; 1      ; 0      ; 0       ; 0       ; 1     ;
+; Q.IDLE     ; 0          ; 1      ; 0      ; 0      ; 0       ; 0       ; 1     ;
+; Q.FINISHED ; 1          ; 0      ; 0      ; 0      ; 0       ; 0       ; 1     ;
++------------+------------+--------+--------+--------+---------+---------+-------+
 
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------+
 ; State Machine - |main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q ;
-+---------+---------+--------+--------+--------+---------+------------------------------------------+
-; Name    ; Q.INC_Y ; Q.IDLE ; Q.READ ; Q.DRAW ; Q.INC_X ; Q.000                                    ;
-+---------+---------+--------+--------+--------+---------+------------------------------------------+
-; Q.000   ; 0       ; 0      ; 0      ; 0      ; 0       ; 0                                        ;
-; Q.INC_X ; 0       ; 0      ; 0      ; 0      ; 1       ; 1                                        ;
-; Q.DRAW  ; 0       ; 0      ; 0      ; 1      ; 0       ; 1                                        ;
-; Q.READ  ; 0       ; 0      ; 1      ; 0      ; 0       ; 1                                        ;
-; Q.IDLE  ; 0       ; 1      ; 0      ; 0      ; 0       ; 1                                        ;
-; Q.INC_Y ; 1       ; 0      ; 0      ; 0      ; 0       ; 1                                        ;
-+---------+---------+--------+--------+--------+---------+------------------------------------------+
++------------+------------+--------+--------+--------+---------+---------+--------------------------+
+; Name       ; Q.FINISHED ; Q.IDLE ; Q.READ ; Q.DRAW ; Q.INC_X ; Q.INC_Y ; Q.000                    ;
++------------+------------+--------+--------+--------+---------+---------+--------------------------+
+; Q.000      ; 0          ; 0      ; 0      ; 0      ; 0       ; 0       ; 0                        ;
+; Q.INC_Y    ; 0          ; 0      ; 0      ; 0      ; 0       ; 1       ; 1                        ;
+; Q.INC_X    ; 0          ; 0      ; 0      ; 0      ; 1       ; 0       ; 1                        ;
+; Q.DRAW     ; 0          ; 0      ; 0      ; 1      ; 0       ; 0       ; 1                        ;
+; Q.READ     ; 0          ; 0      ; 1      ; 0      ; 0       ; 0       ; 1                        ;
+; Q.IDLE     ; 0          ; 1      ; 0      ; 0      ; 0       ; 0       ; 1                        ;
+; Q.FINISHED ; 1          ; 0      ; 0      ; 0      ; 0       ; 0       ; 1                        ;
++------------+------------+--------+--------+--------+---------+---------+--------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Protected by Synthesis                                                                                                                                                    ;
-+---------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
-; Register Name                                                       ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
-+---------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
-; main_Q.DETECT_COLLISIONS                                            ; yes                                                              ; yes                                        ;
-; main_Q.DRAW_CHARACTER                                               ; yes                                                              ; yes                                        ;
-; main_Q.WAIT                                                         ; yes                                                              ; yes                                        ;
-; main_Q.DRAW_ENEMIES                                                 ; yes                                                              ; yes                                        ;
-; main_Q.MOVEMENT                                                     ; yes                                                              ; yes                                        ;
-; drawBackground:draw_background|drawTile:tile_drawing_module|Q.IDLE  ; yes                                                              ; yes                                        ;
-; drawSprite:draw_character|Q.DRAW                                    ; yes                                                              ; yes                                        ;
-; drawBackground:draw_background|drawTile:tile_drawing_module|Q.DRAW  ; yes                                                              ; yes                                        ;
-; drawSprite:draw_character|Q.IDLE                                    ; yes                                                              ; yes                                        ;
-; main_Q.000                                                          ; yes                                                              ; yes                                        ;
-; drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_Y ; yes                                                              ; yes                                        ;
-; drawBackground:draw_background|drawTile:tile_drawing_module|Q.000   ; yes                                                              ; yes                                        ;
-; drawSprite:draw_character|Q.INC_Y                                   ; yes                                                              ; yes                                        ;
-; drawSprite:draw_character|Q.000                                     ; yes                                                              ; yes                                        ;
-; drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_X ; yes                                                              ; yes                                        ;
-; drawSprite:draw_character|Q.INC_X                                   ; yes                                                              ; yes                                        ;
-; drawSprite:draw_character|Q.READ                                    ; yes                                                              ; yes                                        ;
-; drawBackground:draw_background|drawTile:tile_drawing_module|Q.READ  ; yes                                                              ; yes                                        ;
-+---------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Protected by Synthesis                                                                                                                                                       ;
++------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; Register Name                                                          ; Protected by Synthesis Attribute or Preserve Register Assignment ; Not to be Touched by Netlist Optimizations ;
++------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
+; main_Q.DETECT_COLLISIONS                                               ; yes                                                              ; yes                                        ;
+; main_Q.DRAW_CHARACTER                                                  ; yes                                                              ; yes                                        ;
+; main_Q.WAIT                                                            ; yes                                                              ; yes                                        ;
+; main_Q.DRAW_ENEMIES                                                    ; yes                                                              ; yes                                        ;
+; main_Q.MOVEMENT                                                        ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.DRAW                                       ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:tile_drawing_module|Q.DRAW     ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.FINISHED                                   ; yes                                                              ; yes                                        ;
+; main_Q.000                                                             ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_Y    ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:tile_drawing_module|Q.FINISHED ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:tile_drawing_module|Q.IDLE     ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:tile_drawing_module|Q.000      ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.INC_Y                                      ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.IDLE                                       ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.000                                        ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_X    ; yes                                                              ; yes                                        ;
+; drawBackground:draw_background|drawTile:tile_drawing_module|Q.READ     ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.INC_X                                      ; yes                                                              ; yes                                        ;
+; drawSprite:draw_character|Q.READ                                       ; yes                                                              ; yes                                        ;
++------------------------------------------------------------------------+------------------------------------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------+
@@ -567,13 +572,14 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; background_collision_detector/dbc_Q~14                                      ; Lost fanout        ;
 ; background_collision_detector/dbc_Q~15                                      ; Lost fanout        ;
 ; background_collision_detector/dbc_Q~16                                      ; Lost fanout        ;
-; draw_character/Q~22                                                         ; Lost fanout        ;
-; draw_character/Q~23                                                         ; Lost fanout        ;
-; draw_character/Q~24                                                         ; Lost fanout        ;
-; draw_background/tile_drawing_module/Q~22                                    ; Lost fanout        ;
-; draw_background/tile_drawing_module/Q~23                                    ; Lost fanout        ;
-; draw_background/tile_drawing_module/Q~24                                    ; Lost fanout        ;
-; Total Number of Removed Registers = 33                                      ;                    ;
+; background_collision_detector/dbc_Q~17                                      ; Lost fanout        ;
+; draw_character/Q~25                                                         ; Lost fanout        ;
+; draw_character/Q~26                                                         ; Lost fanout        ;
+; draw_character/Q~27                                                         ; Lost fanout        ;
+; draw_background/tile_drawing_module/Q~25                                    ; Lost fanout        ;
+; draw_background/tile_drawing_module/Q~26                                    ; Lost fanout        ;
+; draw_background/tile_drawing_module/Q~27                                    ; Lost fanout        ;
+; Total Number of Removed Registers = 34                                      ;                    ;
 +-----------------------------------------------------------------------------+--------------------+
 
 
@@ -582,10 +588,10 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 190   ;
+; Total registers                              ; 193   ;
 ; Number of registers using Synchronous Clear  ; 37    ;
 ; Number of registers using Synchronous Load   ; 82    ;
-; Number of registers using Asynchronous Clear ; 44    ;
+; Number of registers using Asynchronous Clear ; 45    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 56    ;
 ; Number of registers using Preset             ; 0     ;
@@ -597,11 +603,11 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_state_machine|characterMovement:character_movement|y_position[4] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_state_machine|characterMovement:character_movement|y_position[6] ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_state_machine|y_character_position[6]                            ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_state_machine|y_character_position[2]                            ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |main_state_machine|Selector41                                         ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |main_state_machine|Selector31                                         ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; No         ; |main_state_machine|Selector42                                         ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |main_state_machine|Selector33                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------+
 
 
@@ -703,6 +709,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +------------------------------+-------+------+--------------------------------------+
 ; Assignment                   ; Value ; From ; To                                   ;
 +------------------------------+-------+------+--------------------------------------+
+; PRESERVE_REGISTER            ; on    ; -    ; Q.FINISHED                           ;
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_Y                              ;
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X                              ;
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW                               ;
@@ -711,6 +718,8 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 ; PRESERVE_REGISTER            ; on    ; -    ; Q.000                                ;
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.READ                               ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.READ                               ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.FINISHED                           ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.FINISHED                           ;
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_X                              ;
 ; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_X                              ;
 ; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_Y                              ;
@@ -722,28 +731,31 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +------------------------------+-------+------+--------------------------------------+
 
 
-+-------------------------------------------------------+
-; Source assignments for drawSprite:draw_character      ;
-+------------------------------+-------+------+---------+
-; Assignment                   ; Value ; From ; To      ;
-+------------------------------+-------+------+---------+
-; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_Y ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW  ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.READ  ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.IDLE  ;
-; PRESERVE_REGISTER            ; on    ; -    ; Q.000   ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.READ  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.READ  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_X ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_X ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_Y ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_Y ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.DRAW  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.DRAW  ;
-; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE  ;
-; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE  ;
-+------------------------------+-------+------+---------+
++----------------------------------------------------------+
+; Source assignments for drawSprite:draw_character         ;
++------------------------------+-------+------+------------+
+; Assignment                   ; Value ; From ; To         ;
++------------------------------+-------+------+------------+
+; PRESERVE_REGISTER            ; on    ; -    ; Q.FINISHED ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_Y    ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.INC_X    ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.DRAW     ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.READ     ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.IDLE     ;
+; PRESERVE_REGISTER            ; on    ; -    ; Q.000      ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.READ     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.READ     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.FINISHED ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.FINISHED ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_X    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_X    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.INC_Y    ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.INC_Y    ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.DRAW     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.DRAW     ;
+; IGNORE_LCELL_BUFFERS         ; off   ; -    ; D.IDLE     ;
+; REMOVE_REDUNDANT_LOGIC_CELLS ; off   ; -    ; D.IDLE     ;
++------------------------------+-------+------+------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -1516,6 +1528,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; CHECK_PT       ; 011   ; Unsigned Binary                                    ;
 ; INCREMENT_PT   ; 100   ; Unsigned Binary                                    ;
 ; DROP_PT        ; 101   ; Unsigned Binary                                    ;
+; DONE_PT        ; 110   ; Unsigned Binary                                    ;
 +----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1644,6 +1657,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INC_X          ; 011   ; Unsigned Binary                                                                 ;
 ; INC_Y          ; 100   ; Unsigned Binary                                                                 ;
 ; READ           ; 101   ; Unsigned Binary                                                                 ;
+; FINISHED       ; 110   ; Unsigned Binary                                                                 ;
 +----------------+-------+---------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1857,6 +1871,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; INC_X          ; 011   ; Unsigned Binary                               ;
 ; INC_Y          ; 100   ; Unsigned Binary                               ;
 ; READ           ; 101   ; Unsigned Binary                               ;
+; FINISHED       ; 110   ; Unsigned Binary                               ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -1999,15 +2014,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                                                                        ;
 +----------------+-------+-----------------------------------------------------------------------------+
 ; tilemap_length ; 2000  ; Signed Integer                                                              ;
-; WAIT_DBC       ; 0     ; Signed Integer                                                              ;
-; READ_LEFT_DBC  ; 1     ; Signed Integer                                                              ;
-; SET_LEFT_DBC   ; 2     ; Signed Integer                                                              ;
-; READ_RIGHT_DBC ; 3     ; Signed Integer                                                              ;
-; SET_RIGHT_DBC  ; 4     ; Signed Integer                                                              ;
-; READ_UP_DBC    ; 5     ; Signed Integer                                                              ;
-; SET_UP_DBC     ; 6     ; Signed Integer                                                              ;
-; READ_DOWN_DBC  ; 7     ; Signed Integer                                                              ;
-; SET_DOWN_DBC   ; 8     ; Signed Integer                                                              ;
+; WAIT_DBC       ; 0000  ; Unsigned Binary                                                             ;
+; READ_LEFT_DBC  ; 0001  ; Unsigned Binary                                                             ;
+; SET_LEFT_DBC   ; 0010  ; Unsigned Binary                                                             ;
+; READ_RIGHT_DBC ; 0011  ; Unsigned Binary                                                             ;
+; SET_RIGHT_DBC  ; 0100  ; Unsigned Binary                                                             ;
+; READ_UP_DBC    ; 0101  ; Unsigned Binary                                                             ;
+; SET_UP_DBC     ; 0110  ; Unsigned Binary                                                             ;
+; READ_DOWN_DBC  ; 0111  ; Unsigned Binary                                                             ;
+; SET_DOWN_DBC   ; 1000  ; Unsigned Binary                                                             ;
+; DONE_DBC       ; 1001  ; Unsigned Binary                                                             ;
 +----------------+-------+-----------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -2412,7 +2428,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+--------------------------------------------------------------------------+
 ; Option               ; Usage                                                                    ;
 +----------------------+--------------------------------------------------------------------------+
-; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
+; Initialization file: ; C:\Documents and Settings\michniew/quartus.ini                           ;
 ; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
 +----------------------+--------------------------------------------------------------------------+
 
@@ -2423,7 +2439,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 24 12:51:49 2008
+    Info: Processing started: Mon Nov 24 13:20:27 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main_state_machine -c main_state_machine
 Info: Found 1 design units, including 1 entities, in source file ../characterMovement/counter4bdown.v
     Info: Found entity 1: counter4bdown
@@ -2634,8 +2650,6 @@ Info: Found 1 design units, including 1 entities, in source file db/add_sub_llh.
 Info: Elaborating entity "add_sub_llh" for hierarchy "drawBackground:draw_background|drawTile:tile_drawing_module|memCount:AddressCounter|lpm_add_sub:lpm_add_sub_component|add_sub_llh:auto_generated"
 Info: Elaborating entity "drawSprite" for hierarchy "drawSprite:draw_character"
 Info: Elaborating entity "detectBackgroundCollision" for hierarchy "detectBackgroundCollision:background_collision_detector"
-Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(139): truncated value with size 32 to match size of target (15)
-Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(140): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(141): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(142): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(143): truncated value with size 32 to match size of target (15)
@@ -2644,6 +2658,9 @@ Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(1
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(146): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(147): truncated value with size 32 to match size of target (15)
 Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(148): truncated value with size 32 to match size of target (15)
+Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(149): truncated value with size 32 to match size of target (15)
+Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(150): truncated value with size 32 to match size of target (15)
+Warning (10230): Verilog HDL assignment warning at detectBackgroundCollision.v(151): truncated value with size 32 to match size of target (15)
 Info: Elaborating entity "characterMovement" for hierarchy "characterMovement:character_movement"
 Warning (10230): Verilog HDL assignment warning at characterMovement.v(74): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at characterMovement.v(75): truncated value with size 32 to match size of target (2)
@@ -2689,9 +2706,9 @@ Warning: The following nets are missing source, defaulting to GND
 Warning: The following nets are missing source, defaulting to GND
     Warning: Net "tile_code[3]"
 Info: State machine "|main_state_machine|main_Q" contains 6 states
-Info: State machine "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q" contains 9 states
-Info: State machine "|main_state_machine|drawSprite:draw_character|Q" contains 6 states
-Info: State machine "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q" contains 6 states
+Info: State machine "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q" contains 10 states
+Info: State machine "|main_state_machine|drawSprite:draw_character|Q" contains 7 states
+Info: State machine "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q" contains 7 states
 Info: Selected Auto state machine encoding method for state machine "|main_state_machine|main_Q"
 Info: Encoding result for state machine "|main_state_machine|main_Q"
     Info: Completed encoding using 6 state bits
@@ -2709,7 +2726,8 @@ Info: Encoding result for state machine "|main_state_machine|main_Q"
     Info: State "|main_state_machine|main_Q.WAIT" uses code string "100001"
 Info: Selected Auto state machine encoding method for state machine "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q"
 Info: Encoding result for state machine "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q"
-    Info: Completed encoding using 9 state bits
+    Info: Completed encoding using 10 state bits
+        Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.DONE_DBC"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.READ_LEFT_DBC"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.SET_LEFT_DBC"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.READ_RIGHT_DBC"
@@ -2717,47 +2735,52 @@ Info: Encoding result for state machine "|main_state_machine|detectBackgroundCol
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.READ_UP_DBC"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.SET_UP_DBC"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.READ_DOWN_DBC"
-        Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.0000"
         Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.SET_DOWN_DBC"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.0000" uses code string "000000000"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_DOWN_DBC" uses code string "000000110"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_UP_DBC" uses code string "000001010"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_UP_DBC" uses code string "000010010"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_RIGHT_DBC" uses code string "000100010"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_RIGHT_DBC" uses code string "001000010"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_LEFT_DBC" uses code string "010000010"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_LEFT_DBC" uses code string "100000010"
-    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_DOWN_DBC" uses code string "000000011"
+        Info: Encoded state bit "detectBackgroundCollision:background_collision_detector|dbc_Q.0000"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.0000" uses code string "0000000000"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_DOWN_DBC" uses code string "0000000011"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_DOWN_DBC" uses code string "0000000101"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_UP_DBC" uses code string "0000001001"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_UP_DBC" uses code string "0000010001"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_RIGHT_DBC" uses code string "0000100001"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_RIGHT_DBC" uses code string "0001000001"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.SET_LEFT_DBC" uses code string "0010000001"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.READ_LEFT_DBC" uses code string "0100000001"
+    Info: State "|main_state_machine|detectBackgroundCollision:background_collision_detector|dbc_Q.DONE_DBC" uses code string "1000000001"
 Info: Selected Auto state machine encoding method for state machine "|main_state_machine|drawSprite:draw_character|Q"
 Info: Encoding result for state machine "|main_state_machine|drawSprite:draw_character|Q"
-    Info: Completed encoding using 6 state bits
-        Info: Encoded state bit "drawSprite:draw_character|Q.INC_Y"
+    Info: Completed encoding using 7 state bits
+        Info: Encoded state bit "drawSprite:draw_character|Q.FINISHED"
         Info: Encoded state bit "drawSprite:draw_character|Q.IDLE"
         Info: Encoded state bit "drawSprite:draw_character|Q.READ"
         Info: Encoded state bit "drawSprite:draw_character|Q.DRAW"
         Info: Encoded state bit "drawSprite:draw_character|Q.INC_X"
+        Info: Encoded state bit "drawSprite:draw_character|Q.INC_Y"
         Info: Encoded state bit "drawSprite:draw_character|Q.000"
-    Info: State "|main_state_machine|drawSprite:draw_character|Q.000" uses code string "000000"
-    Info: State "|main_state_machine|drawSprite:draw_character|Q.INC_X" uses code string "000011"
-    Info: State "|main_state_machine|drawSprite:draw_character|Q.DRAW" uses code string "000101"
-    Info: State "|main_state_machine|drawSprite:draw_character|Q.READ" uses code string "001001"
-    Info: State "|main_state_machine|drawSprite:draw_character|Q.IDLE" uses code string "010001"
-    Info: State "|main_state_machine|drawSprite:draw_character|Q.INC_Y" uses code string "100001"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.000" uses code string "0000000"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.INC_Y" uses code string "0000011"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.INC_X" uses code string "0000101"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.DRAW" uses code string "0001001"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.READ" uses code string "0010001"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.IDLE" uses code string "0100001"
+    Info: State "|main_state_machine|drawSprite:draw_character|Q.FINISHED" uses code string "1000001"
 Info: Selected Auto state machine encoding method for state machine "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q"
 Info: Encoding result for state machine "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q"
-    Info: Completed encoding using 6 state bits
-        Info: Encoded state bit "drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_Y"
+    Info: Completed encoding using 7 state bits
+        Info: Encoded state bit "drawBackground:draw_background|drawTile:tile_drawing_module|Q.FINISHED"
         Info: Encoded state bit "drawBackground:draw_background|drawTile:tile_drawing_module|Q.IDLE"
         Info: Encoded state bit "drawBackground:draw_background|drawTile:tile_drawing_module|Q.READ"
         Info: Encoded state bit "drawBackground:draw_background|drawTile:tile_drawing_module|Q.DRAW"
         Info: Encoded state bit "drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_X"
+        Info: Encoded state bit "drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_Y"
         Info: Encoded state bit "drawBackground:draw_background|drawTile:tile_drawing_module|Q.000"
-    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.000" uses code string "000000"
-    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_X" uses code string "000011"
-    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.DRAW" uses code string "000101"
-    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.READ" uses code string "001001"
-    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.IDLE" uses code string "010001"
-    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_Y" uses code string "100001"
+    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.000" uses code string "0000000"
+    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_Y" uses code string "0000011"
+    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.INC_X" uses code string "0000101"
+    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.DRAW" uses code string "0001001"
+    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.READ" uses code string "0010001"
+    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.IDLE" uses code string "0100001"
+    Info: State "|main_state_machine|drawBackground:draw_background|drawTile:tile_drawing_module|Q.FINISHED" uses code string "1000001"
 Info: Found 1 design units, including 1 entities, in source file c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf
     Info: Found entity 1: lpm_mult
 Info: Elaborated megafunction instantiation "drawBackground:draw_background|lpm_mult:Mult0"
@@ -2790,7 +2813,7 @@ Warning: Output pins are stuck at VCC or GND
     Warning: Pin "LEDG[5]" stuck at GND
     Warning: Pin "LEDG[6]" stuck at GND
     Warning: Pin "LEDG[7]" stuck at GND
-Info: 33 registers lost all their fanouts during netlist optimizations. The first 33 are displayed below.
+Info: 34 registers lost all their fanouts during netlist optimizations. The first 34 are displayed below.
     Info: Register "x_tile_position_counter/lpm_counter_component/auto_generated/safe_q[31]" lost all its fanouts during netlist optimizations.
     Info: Register "x_tile_position_counter/lpm_counter_component/auto_generated/safe_q[30]" lost all its fanouts during netlist optimizations.
     Info: Register "x_tile_position_counter/lpm_counter_component/auto_generated/safe_q[29]" lost all its fanouts during netlist optimizations.
@@ -2818,32 +2841,33 @@ Info: 33 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "background_collision_detector/dbc_Q~14" lost all its fanouts during netlist optimizations.
     Info: Register "background_collision_detector/dbc_Q~15" lost all its fanouts during netlist optimizations.
     Info: Register "background_collision_detector/dbc_Q~16" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_character/Q~22" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_character/Q~23" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_character/Q~24" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_background/tile_drawing_module/Q~22" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_background/tile_drawing_module/Q~23" lost all its fanouts during netlist optimizations.
-    Info: Register "draw_background/tile_drawing_module/Q~24" lost all its fanouts during netlist optimizations.
+    Info: Register "background_collision_detector/dbc_Q~17" lost all its fanouts during netlist optimizations.
+    Info: Register "draw_character/Q~25" lost all its fanouts during netlist optimizations.
+    Info: Register "draw_character/Q~26" lost all its fanouts during netlist optimizations.
+    Info: Register "draw_character/Q~27" lost all its fanouts during netlist optimizations.
+    Info: Register "draw_background/tile_drawing_module/Q~25" lost all its fanouts during netlist optimizations.
+    Info: Register "draw_background/tile_drawing_module/Q~26" lost all its fanouts during netlist optimizations.
+    Info: Register "draw_background/tile_drawing_module/Q~27" lost all its fanouts during netlist optimizations.
 Info: Removed 1 MSB VCC or GND address nodes from RAM block "SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ALTSYNCRAM"
-Info: Generated suppressed messages file W:/quartus/oldversion/main_state_machine/main_state_machine.map.smsg
+Info: Generated suppressed messages file W:/r20/main_state_machine/main_state_machine.map.smsg
 Warning: Design contains 1 input pin(s) that do not drive logic
     Warning: No output dependent on input pin "KEY[2]"
-Info: Implemented 865 device resources after synthesis - the final resource count might be different
+Info: Implemented 872 device resources after synthesis - the final resource count might be different
     Info: Implemented 6 input pins
     Info: Implemented 82 output pins
-    Info: Implemented 681 logic cells
+    Info: Implemented 688 logic cells
     Info: Implemented 87 RAM segments
     Info: Implemented 1 ClockLock PLLs
     Info: Implemented 8 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 72 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 73 warnings
     Info: Allocated 157 megabytes of memory during processing
-    Info: Processing ended: Mon Nov 24 12:52:36 2008
-    Info: Elapsed time: 00:00:47
+    Info: Processing ended: Mon Nov 24 13:21:10 2008
+    Info: Elapsed time: 00:00:43
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in W:/quartus/oldversion/main_state_machine/main_state_machine.map.smsg.
+The suppressed messages can be found in W:/r20/main_state_machine/main_state_machine.map.smsg.
 
 
