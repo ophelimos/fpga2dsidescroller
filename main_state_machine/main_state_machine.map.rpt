@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_state_machine
-Mon Nov 24 17:29:07 2008
+Wed Nov 26 09:06:22 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -117,7 +117,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Nov 24 17:29:06 2008         ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 26 09:06:22 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; main_state_machine                            ;
 ; Top-level Entity Name              ; main_state_machine                            ;
@@ -197,99 +197,99 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
-; File Name with User-Entered Path                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ;
-+----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
-; counterupdown7b.v                                        ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counterupdown7b.v                    ;
-; ../detectBackgroundCollision/detectBackgroundCollision.v ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/detectBackgroundCollision/detectBackgroundCollision.v   ;
-; ../SpriteMem/spriteROM0.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/spriteROM0.v                                  ;
-; hex_digits.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/hex_digits.v                         ;
-; counter26b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter26b.v                         ;
-; counter20b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter20b.v                         ;
-; ../drawSprite/drawSprite.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawSprite/drawSprite.v                                 ;
-; ../SpriteMem/W_H_Mux.v                                   ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/W_H_Mux.v                                     ;
-; ../SpriteMem/DataOut_Mux.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/DataOut_Mux.v                                 ;
-; ../SpriteMem/SpriteMem.v                                 ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/SpriteMem.v                                   ;
-; ../SpriteMem/AStep_Mux.v                                 ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/SpriteMem/AStep_Mux.v                                   ;
-; ../drawTileMichael/addx.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/addx.v                                  ;
-; ../drawTileMichael/addy.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/addy.v                                  ;
-; ../drawTileMichael/drawTile.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/drawTile.v                              ;
-; ../drawTileMichael/memCount.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/memCount.v                              ;
-; ../drawTileMichael/nBitRegister.v                        ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawTileMichael/nBitRegister.v                          ;
-; ../drawBackground/tileset.v                              ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/tileset.v                                ;
-; ../drawBackground/counter4b.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/counter4b.v                              ;
-; ../drawBackground/counter5b.v                            ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/counter5b.v                              ;
-; counter32b.v                                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/counter32b.v                         ;
-; ../drawBackground/level1.v                               ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/level1.v                                 ;
-; vga_adapter/vga_pll.v                                    ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_pll.v                ;
-; vga_adapter/vga_address_translator.v                     ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_address_translator.v ;
-; vga_adapter/vga_controller.v                             ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_controller.v         ;
-; vga_adapter/vga_adapter.v                                ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/vga_adapter/vga_adapter.v            ;
-; ../drawBackground/drawBackground.v                       ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/drawBackground/drawBackground.v                         ;
-; main_state_machine.v                                     ; yes             ; User Verilog HDL File        ; W:/quartus/oldversion/main_state_machine/main_state_machine.v                 ;
-; altsyncram.tdf                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf                   ;
-; stratix_ram_block.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_ram_block.inc            ;
-; lpm_mux.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.inc                      ;
-; lpm_decode.inc                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_decode.inc                   ;
-; aglobal71.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/aglobal71.inc                    ;
-; a_rdenreg.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/a_rdenreg.inc                    ;
-; altrom.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altrom.inc                       ;
-; altram.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc                       ;
-; altdpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc                     ;
-; altqpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc                     ;
-; db/altsyncram_p3g1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_p3g1.tdf               ;
-; db/altsyncram_ptq1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_ptq1.tdf               ;
-; db/decode_6oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/decode_6oa.tdf                    ;
-; db/mux_nib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_nib.tdf                       ;
-; altpll.tdf                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altpll.tdf                       ;
-; stratix_pll.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_pll.inc                  ;
-; stratixii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratixii_pll.inc                ;
-; cycloneii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cycloneii_pll.inc                ;
-; db/altsyncram_7391.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_7391.tdf               ;
-; db/decode_9oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/decode_9oa.tdf                    ;
-; db/mux_kib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_kib.tdf                       ;
-; lpm_mux.tdf                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.tdf                      ;
-; muxlut.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/muxlut.inc                       ;
-; bypassff.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/bypassff.inc                     ;
-; altshift.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altshift.inc                     ;
-; db/mux_1nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_1nc.tdf                       ;
-; db/mux_vmc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_vmc.tdf                       ;
-; db/altsyncram_u491.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_u491.tdf               ;
-; db/mux_5nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mux_5nc.tdf                       ;
-; db/altsyncram_tu81.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/altsyncram_tu81.tdf               ;
-; lpm_counter.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf                  ;
-; lpm_constant.inc                                         ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc                 ;
-; lpm_add_sub.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc                  ;
-; cmpconst.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cmpconst.inc                     ;
-; lpm_compare.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_compare.inc                  ;
-; lpm_counter.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.inc                  ;
-; dffeea.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/dffeea.inc                       ;
-; alt_synch_counter.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter.inc            ;
-; alt_synch_counter_f.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter_f.inc          ;
-; alt_counter_f10ke.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_f10ke.inc            ;
-; alt_counter_stratix.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_stratix.inc          ;
-; db/cntr_4oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_4oi.tdf                      ;
-; db/cntr_3oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_3oi.tdf                      ;
-; lpm_add_sub.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf                  ;
-; addcore.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc                      ;
-; look_add.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc                     ;
-; alt_stratix_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_stratix_add_sub.inc          ;
-; alt_mercury_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_mercury_add_sub.inc          ;
-; db/add_sub_big.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_big.tdf                   ;
-; db/add_sub_aig.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_aig.tdf                   ;
-; db/add_sub_llh.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/add_sub_llh.tdf                   ;
-; db/cntr_hfh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_hfh.tdf                      ;
-; db/cntr_vgh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_vgh.tdf                      ;
-; db/cntr_hpi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_hpi.tdf                      ;
-; db/cntr_npi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/cntr_npi.tdf                      ;
-; lpm_mult.tdf                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf                     ;
-; multcore.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/multcore.inc                     ;
-; db/mult_6111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_6111.tdf                     ;
-; db/mult_p211.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_p211.tdf                     ;
-; db/mult_8111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/quartus/oldversion/main_state_machine/db/mult_8111.tdf                     ;
-+----------------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                         ;
++----------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+
+; File Name with User-Entered Path                         ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                       ;
++----------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+
+; counterupdown7b.v                                        ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/counterupdown7b.v                    ;
+; ../detectBackgroundCollision/detectBackgroundCollision.v ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/detectBackgroundCollision/detectBackgroundCollision.v   ;
+; ../SpriteMem/spriteROM0.v                                ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/SpriteMem/spriteROM0.v                                  ;
+; hex_digits.v                                             ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/hex_digits.v                         ;
+; counter26b.v                                             ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/counter26b.v                         ;
+; counter20b.v                                             ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/counter20b.v                         ;
+; ../drawSprite/drawSprite.v                               ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawSprite/drawSprite.v                                 ;
+; ../SpriteMem/W_H_Mux.v                                   ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/SpriteMem/W_H_Mux.v                                     ;
+; ../SpriteMem/DataOut_Mux.v                               ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/SpriteMem/DataOut_Mux.v                                 ;
+; ../SpriteMem/SpriteMem.v                                 ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/SpriteMem/SpriteMem.v                                   ;
+; ../SpriteMem/AStep_Mux.v                                 ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/SpriteMem/AStep_Mux.v                                   ;
+; ../drawTileMichael/addx.v                                ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawTileMichael/addx.v                                  ;
+; ../drawTileMichael/addy.v                                ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawTileMichael/addy.v                                  ;
+; ../drawTileMichael/drawTile.v                            ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawTileMichael/drawTile.v                              ;
+; ../drawTileMichael/memCount.v                            ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawTileMichael/memCount.v                              ;
+; ../drawTileMichael/nBitRegister.v                        ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawTileMichael/nBitRegister.v                          ;
+; ../drawBackground/tileset.v                              ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawBackground/tileset.v                                ;
+; ../drawBackground/counter4b.v                            ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawBackground/counter4b.v                              ;
+; ../drawBackground/counter5b.v                            ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawBackground/counter5b.v                              ;
+; counter32b.v                                             ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/counter32b.v                         ;
+; ../drawBackground/level1.v                               ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawBackground/level1.v                                 ;
+; vga_adapter/vga_pll.v                                    ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/vga_adapter/vga_pll.v                ;
+; vga_adapter/vga_address_translator.v                     ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/vga_adapter/vga_address_translator.v ;
+; vga_adapter/vga_controller.v                             ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/vga_adapter/vga_controller.v         ;
+; vga_adapter/vga_adapter.v                                ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/vga_adapter/vga_adapter.v            ;
+; ../drawBackground/drawBackground.v                       ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/drawBackground/drawBackground.v                         ;
+; main_state_machine.v                                     ; yes             ; User Verilog HDL File        ; W:/Temp/fpga2dsidescroller/main_state_machine/main_state_machine.v                 ;
+; altsyncram.tdf                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altsyncram.tdf                        ;
+; stratix_ram_block.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_ram_block.inc                 ;
+; lpm_mux.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.inc                           ;
+; lpm_decode.inc                                           ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_decode.inc                        ;
+; aglobal71.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/aglobal71.inc                         ;
+; a_rdenreg.inc                                            ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/a_rdenreg.inc                         ;
+; altrom.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altrom.inc                            ;
+; altram.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altram.inc                            ;
+; altdpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altdpram.inc                          ;
+; altqpram.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altqpram.inc                          ;
+; db/altsyncram_p3g1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/altsyncram_p3g1.tdf               ;
+; db/altsyncram_ptq1.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/altsyncram_ptq1.tdf               ;
+; db/decode_6oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/decode_6oa.tdf                    ;
+; db/mux_nib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/mux_nib.tdf                       ;
+; altpll.tdf                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altpll.tdf                            ;
+; stratix_pll.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratix_pll.inc                       ;
+; stratixii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/stratixii_pll.inc                     ;
+; cycloneii_pll.inc                                        ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cycloneii_pll.inc                     ;
+; db/altsyncram_7391.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/altsyncram_7391.tdf               ;
+; db/decode_9oa.tdf                                        ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/decode_9oa.tdf                    ;
+; db/mux_kib.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/mux_kib.tdf                       ;
+; lpm_mux.tdf                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mux.tdf                           ;
+; muxlut.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/muxlut.inc                            ;
+; bypassff.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/bypassff.inc                          ;
+; altshift.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/altshift.inc                          ;
+; db/mux_1nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/mux_1nc.tdf                       ;
+; db/mux_vmc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/mux_vmc.tdf                       ;
+; db/altsyncram_u491.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/altsyncram_u491.tdf               ;
+; db/mux_5nc.tdf                                           ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/mux_5nc.tdf                       ;
+; db/altsyncram_tu81.tdf                                   ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/altsyncram_tu81.tdf               ;
+; lpm_counter.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.tdf                       ;
+; lpm_constant.inc                                         ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_constant.inc                      ;
+; lpm_add_sub.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.inc                       ;
+; cmpconst.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/cmpconst.inc                          ;
+; lpm_compare.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_compare.inc                       ;
+; lpm_counter.inc                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_counter.inc                       ;
+; dffeea.inc                                               ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/dffeea.inc                            ;
+; alt_synch_counter.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter.inc                 ;
+; alt_synch_counter_f.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_synch_counter_f.inc               ;
+; alt_counter_f10ke.inc                                    ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_f10ke.inc                 ;
+; alt_counter_stratix.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_counter_stratix.inc               ;
+; db/cntr_4oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/cntr_4oi.tdf                      ;
+; db/cntr_3oi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/cntr_3oi.tdf                      ;
+; lpm_add_sub.tdf                                          ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_add_sub.tdf                       ;
+; addcore.inc                                              ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/addcore.inc                           ;
+; look_add.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/look_add.inc                          ;
+; alt_stratix_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_stratix_add_sub.inc               ;
+; alt_mercury_add_sub.inc                                  ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/alt_mercury_add_sub.inc               ;
+; db/add_sub_big.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/add_sub_big.tdf                   ;
+; db/add_sub_aig.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/add_sub_aig.tdf                   ;
+; db/add_sub_llh.tdf                                       ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/add_sub_llh.tdf                   ;
+; db/cntr_hfh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/cntr_hfh.tdf                      ;
+; db/cntr_vgh.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/cntr_vgh.tdf                      ;
+; db/cntr_hpi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/cntr_hpi.tdf                      ;
+; db/cntr_npi.tdf                                          ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/cntr_npi.tdf                      ;
+; lpm_mult.tdf                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/lpm_mult.tdf                          ;
+; multcore.inc                                             ; yes             ; Megafunction                 ; c:/altera/71/quartus/libraries/megafunctions/multcore.inc                          ;
+; db/mult_6111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/mult_6111.tdf                     ;
+; db/mult_p211.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/mult_p211.tdf                     ;
+; db/mult_8111.tdf                                         ; yes             ; Auto-Generated Megafunction  ; W:/Temp/fpga2dsidescroller/main_state_machine/db/mult_8111.tdf                     ;
++----------------------------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -2463,7 +2463,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 24 17:28:25 2008
+    Info: Processing started: Wed Nov 26 09:05:39 2008
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off main_state_machine -c main_state_machine
 Info: Found 1 design units, including 1 entities, in source file counterupdown7b.v
     Info: Found entity 1: counterupdown7b
@@ -2546,8 +2546,7 @@ Info: Found 1 design units, including 1 entities, in source file ../drawBackgrou
     Info: Found entity 1: drawBackground
 Info: Found 1 design units, including 1 entities, in source file main_state_machine.v
     Info: Found entity 1: main_state_machine
-Info: Found 1 design units, including 1 entities, in source file ../characterMovement/jumpingCalc.v
-    Info: Found entity 1: jumpingCalc
+Warning: Can't analyze file -- file W:/Temp/fpga2dsidescroller/characterMovement/jumpingCalc.v is missing
 Info: Elaborating entity "main_state_machine" for the top level hierarchy
 Warning (10858): Verilog HDL warning at main_state_machine.v(373): object y_character_position_cnt_reset used but never assigned
 Warning (10858): Verilog HDL warning at main_state_machine.v(410): object x_tile_position_cnt_reset used but never assigned
@@ -2861,7 +2860,7 @@ Info: 34 registers lost all their fanouts during netlist optimizations. The firs
     Info: Register "draw_background/tile_drawing_module/Q~26" lost all its fanouts during netlist optimizations.
     Info: Register "draw_background/tile_drawing_module/Q~27" lost all its fanouts during netlist optimizations.
 Info: Removed 1 MSB VCC or GND address nodes from RAM block "SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ALTSYNCRAM"
-Info: Generated suppressed messages file W:/quartus/oldversion/main_state_machine/main_state_machine.map.smsg
+Info: Generated suppressed messages file W:/Temp/fpga2dsidescroller/main_state_machine/main_state_machine.map.smsg
 Info: Implemented 836 device resources after synthesis - the final resource count might be different
     Info: Implemented 6 input pins
     Info: Implemented 82 output pins
@@ -2869,15 +2868,15 @@ Info: Implemented 836 device resources after synthesis - the final resource coun
     Info: Implemented 87 RAM segments
     Info: Implemented 1 ClockLock PLLs
     Info: Implemented 8 DSP elements
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 50 warnings
-    Info: Allocated 158 megabytes of memory during processing
-    Info: Processing ended: Mon Nov 24 17:29:07 2008
-    Info: Elapsed time: 00:00:42
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 51 warnings
+    Info: Allocated 156 megabytes of memory during processing
+    Info: Processing ended: Wed Nov 26 09:06:23 2008
+    Info: Elapsed time: 00:00:44
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in W:/quartus/oldversion/main_state_machine/main_state_machine.map.smsg.
+The suppressed messages can be found in W:/Temp/fpga2dsidescroller/main_state_machine/main_state_machine.map.smsg.
 
 

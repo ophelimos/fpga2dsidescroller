@@ -1,5 +1,5 @@
 Flow report for main_state_machine
-Mon Nov 24 17:30:39 2008
+Wed Nov 26 09:07:54 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +------------------------------------------------------------------------------------+
 ; Flow Summary                                                                       ;
 +------------------------------------+-----------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 24 17:30:38 2008         ;
+; Flow Status                        ; Successful - Wed Nov 26 09:07:53 2008         ;
 ; Quartus II Version                 ; 7.1 Build 178 06/25/2007 SP 1 SJ Full Version ;
 ; Revision Name                      ; main_state_machine                            ;
 ; Top-level Entity Name              ; main_state_machine                            ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2008 17:28:28 ;
+; Start date & time ; 11/26/2008 09:05:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; main_state_machine  ;
 +-------------------+---------------------+
@@ -84,11 +84,11 @@ applicable agreement for further details.
 +-------------------------+--------------+
 ; Module Name             ; Elapsed Time ;
 +-------------------------+--------------+
-; Analysis & Synthesis    ; 00:00:39     ;
+; Analysis & Synthesis    ; 00:00:41     ;
 ; Fitter                  ; 00:00:45     ;
-; Assembler               ; 00:00:28     ;
+; Assembler               ; 00:00:29     ;
 ; Classic Timing Analyzer ; 00:00:07     ;
-; Total                   ; 00:01:59     ;
+; Total                   ; 00:02:02     ;
 +-------------------------+--------------+
 
 

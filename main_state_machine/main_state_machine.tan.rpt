@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for main_state_machine
-Mon Nov 24 17:30:39 2008
+Wed Nov 26 09:07:53 2008
 Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
 
 
@@ -1491,7 +1491,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
-    Info: Processing started: Mon Nov 24 17:30:31 2008
+    Info: Processing started: Wed Nov 26 09:07:46 2008
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off main_state_machine -c main_state_machine --timing_analysis_only
 Warning: Timing Analysis is analyzing one or more combinational loops as latches
     Warning: Node "character_facing_left" is a latch
@@ -1699,7 +1699,7 @@ Info: th for register "drawBackground:draw_background|drawTile:tile_drawing_modu
 Info: All timing requirements were met for slow timing model timing analysis. See Report window for more details.
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 3 warnings
     Info: Allocated 124 megabytes of memory during processing
-    Info: Processing ended: Mon Nov 24 17:30:40 2008
+    Info: Processing ended: Wed Nov 26 09:07:55 2008
     Info: Elapsed time: 00:00:09
 
 
