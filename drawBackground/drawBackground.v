@@ -1,4 +1,4 @@
-module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_tile_offset, x_pixel_offset, enable, plot, done, p_Q, p_D);
+module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_offset, enable, plot, done, p_Q, p_D);
 	//------------------------------------------
 	// Parameters
 	//------------------------------------------
@@ -8,8 +8,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_ti
 	// Inputs
 	//------------------------------------------
 	input clock;
-	input [10:0] x_tile_offset; // log2(tilemap_length) - 1
-	input [2:0] x_pixel_offset;	// 0-7 pixels
+	input [10:0] x_offset; // log2(tilemap_length) - 1
 	input enable;
 	input resetn;
 	input [3:0] tile_code; // debug
@@ -98,7 +97,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_ti
 	// Exact level calculations
 		// Level size: 2000 tiles in the x, 15 tiles in the y
 		// Therefore, each y-increase should increase the memory pointer by 2000
-	assign level_address = 0 + x_tile_offset + tile_x + (tile_y * tilemap_length);
+	assign level_address = 0 + x_offset + tile_x + (tile_y * tilemap_length);
 	
 	//------------------------------------------
 	// PickTile State Machine
@@ -112,17 +111,17 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_ti
 	
 	// PickTile state flipflops
 	reg [2:0] p_Q, p_D;
-	always @ (posedge clock)
+	always @ (posedge clock or negedge resetn)
 	begin: picktile_state_FFs
-		if (~resetn)
-			p_Q <= WAIT_PT;		// state to reset to
+		if (!resetn)
+			p_Q <= 0;
 		else
 			p_Q <= p_D;
 	end
 	
 	// PickTile State Machine
 	// Picks which tile to draw at which location by reading from a tilemap
-	parameter WAIT_PT = 3'd0, READ_PT = 3'd1, DRAW_PT = 3'd2, CHECK_PT = 3'd3, INCREMENT_PT = 3'd4, DROP_PT = 3'd5; //states
+	parameter WAIT_PT = 3'd0, READ_PT = 3'd1, DRAW_PT = 3'd2, CHECK_PT = 3'd3, INCREMENT_PT = 3'd4, DROP_PT = 3'd5, DONE_PT = 3'd6; //states
 	always @ (*)
 	begin: picktile_state_table
 		case (p_Q)
@@ -135,8 +134,10 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_ti
  			CHECK_PT: if (tile_x == 19) p_D <= DROP_PT;
  			else p_D <= INCREMENT_PT;
  			INCREMENT_PT: p_D <= READ_PT;
- 			DROP_PT: if (tile_y == 15) p_D <= WAIT_PT;
+ 			DROP_PT: if (tile_y == 15) p_D <= DONE_PT;
  			else p_D <= READ_PT;
+			DONE_PT: if (~enable) p_D <= WAIT_PT;
+			else p_D <= DONE_PT;
 			default: p_D <= 3'bx;
 		endcase
 	end
@@ -145,12 +146,13 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_ti
 	always @ (*)
 	begin: picktile_datapath
 		case (p_Q)
-			WAIT_PT: 		begin done_output = 1'b1; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b1; draw = 1'b0; end
+			WAIT_PT: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b1; draw = 1'b0; end
 			READ_PT:		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
 			DRAW_PT: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b1; end
 			CHECK_PT: 		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
 			INCREMENT_PT:	begin done_output = 1'b0; tile_cnt_en_x = 1'b1; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b0; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
 			DROP_PT:		begin done_output = 1'b0; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b1; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b0; draw = 1'b0; end
+			DONE_PT: 		begin done_output = 1'b1; tile_cnt_en_x = 1'b0; tile_cnt_en_y = 1'b0; tile_cnt_reset_x = 1'b1; tile_cnt_reset_y = 1'b1; draw = 1'b0; end
 			default: 		begin done_output = 1'bx; tile_cnt_en_x = 1'bx; tile_cnt_en_y = 1'bx; tile_cnt_reset_x = 1'bx; tile_cnt_reset_y = 1'bx; draw = 1'bx; end
 		endcase
 	end
@@ -159,7 +161,7 @@ module drawBackground(resetn, clock, color, level_address, tile_code, x, y, x_ti
 	
 	wire [7:0] tile_x_input;
 	wire [6:0] tile_y_input;
-	assign tile_x_input = (tile_x * 4'd8) + x_pixel_offset;
+	assign tile_x_input = tile_x * 4'd8;
 	assign tile_y_input = tile_y * 4'd8;
 	
 	drawTile tile_drawing_module (

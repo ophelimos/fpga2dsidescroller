@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 10.002 ns
-From           : KEY[1]
-To             : SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ram_block1a7~porta_address_reg10
+Actual Time    : 9.356 ns
+From           : KEY[3]
+To             : SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ram_block1a0~porta_address_reg9
 From Clock     : --
 To Clock       : CLOCK_50
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 16.322 ns
-From           : level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a7~porta_address_reg11
-To             : LEDR[1]
+Actual Time    : 12.420 ns
+From           : counter20b:count60fps|lpm_counter:lpm_counter_component|cntr_hpi:auto_generated|safe_q[15]
+To             : LEDR[14]
 From Clock     : CLOCK_50
 To Clock       : --
 Failed Paths   : 0
@@ -25,45 +25,45 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.445 ns
+Actual Time    : 0.286 ns
 From           : SW[0]
-To             : counter5b:char_anim_counter|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated|safe_q[0]
+To             : drawBackground:draw_background|drawTile:tile_drawing_module|Q.READ
 From Clock     : --
 To Clock       : CLOCK_50
 Failed Paths   : 0
 
 Type           : Clock Setup: 'CLOCK_50'
-Slack          : 7.685 ns
+Slack          : 7.257 ns
 Required Time  : 50.00 MHz ( period = 20.000 ns )
-Actual Time    : 81.20 MHz ( period = 12.315 ns )
-From           : counter32b:x_tile_position_counter|lpm_counter:lpm_counter_component|cntr_vgh:auto_generated|safe_q[0]
-To             : level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a9~porta_address_reg11
+Actual Time    : 78.47 MHz ( period = 12.743 ns )
+From           : counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component|cntr_hfh:auto_generated|safe_q[4]
+To             : level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a1~porta_address_reg11
 From Clock     : CLOCK_50
 To Clock       : CLOCK_50
 Failed Paths   : 0
 
 Type           : Clock Setup: 'vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0'
-Slack          : 31.165 ns
+Slack          : 29.893 ns
 Required Time  : 25.00 MHz ( period = 40.000 ns )
-Actual Time    : 113.19 MHz ( period = 8.835 ns )
-From           : vga_adapter:VGA|vga_controller:controller|yCounter[5]
+Actual Time    : 98.94 MHz ( period = 10.107 ns )
+From           : vga_adapter:VGA|vga_controller:controller|yCounter[2]
 To             : vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1|ram_block2a39~porta_address_reg11
 From Clock     : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
 To Clock       : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
 Failed Paths   : 0
 
 Type           : Clock Hold: 'CLOCK_50'
-Slack          : -0.259 ns
+Slack          : 0.391 ns
 Required Time  : 50.00 MHz ( period = 20.000 ns )
 Actual Time    : N/A
-From           : counter5b:char_anim_counter|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated|safe_q[4]
-To             : counter5b:char_anim_counter|lpm_counter:lpm_counter_component|cntr_4oi:auto_generated|safe_q[4]
+From           : detectBackgroundCollision:background_collision_detector|left_out
+To             : detectBackgroundCollision:background_collision_detector|left_out
 From Clock     : CLOCK_50
 To Clock       : CLOCK_50
-Failed Paths   : 2
+Failed Paths   : 0
 
 Type           : Clock Hold: 'vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0'
-Slack          : 0.558 ns
+Slack          : 0.641 ns
 Required Time  : 25.00 MHz ( period = 40.000 ns )
 Actual Time    : N/A
 From           : vga_adapter:VGA|vga_controller:controller|xCounter[8]
@@ -80,7 +80,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 2
+Failed Paths   : 0
 
 --------------------------------------------------------------------------------------
 
