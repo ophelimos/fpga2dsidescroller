@@ -1,0 +1,86 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 9.356 ns
+From           : KEY[3]
+To             : SpriteMem:character_mem|spriteROM0:MEM0|altsyncram:altsyncram_component|altsyncram_u491:auto_generated|ram_block1a0~porta_address_reg9
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.420 ns
+From           : counter20b:count60fps|lpm_counter:lpm_counter_component|cntr_hpi:auto_generated|safe_q[15]
+To             : LEDR[14]
+From Clock     : CLOCK_50
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 0.286 ns
+From           : SW[0]
+To             : drawBackground:draw_background|drawTile:tile_drawing_module|Q.READ
+From Clock     : --
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLOCK_50'
+Slack          : 7.257 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 78.47 MHz ( period = 12.743 ns )
+From           : counterupdown7b:y_character_position_counter|lpm_counter:lpm_counter_component|cntr_hfh:auto_generated|safe_q[4]
+To             : level1:level_mem|altsyncram:altsyncram_component|altsyncram_7391:auto_generated|ram_block1a1~porta_address_reg11
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Setup: 'vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0'
+Slack          : 29.893 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : 98.94 MHz ( period = 10.107 ns )
+From           : vga_adapter:VGA|vga_controller:controller|yCounter[2]
+To             : vga_adapter:VGA|altsyncram:VideoMemory|altsyncram_p3g1:auto_generated|altsyncram_ptq1:altsyncram1|ram_block2a39~porta_address_reg11
+From Clock     : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
+To Clock       : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLOCK_50'
+Slack          : 0.391 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : detectBackgroundCollision:background_collision_detector|left_out
+To             : detectBackgroundCollision:background_collision_detector|left_out
+From Clock     : CLOCK_50
+To Clock       : CLOCK_50
+Failed Paths   : 0
+
+Type           : Clock Hold: 'vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0'
+Slack          : 0.641 ns
+Required Time  : 25.00 MHz ( period = 40.000 ns )
+Actual Time    : N/A
+From           : vga_adapter:VGA|vga_controller:controller|xCounter[8]
+To             : vga_adapter:VGA|vga_controller:controller|VGA_HS1
+From Clock     : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
+To Clock       : vga_adapter:VGA|vga_pll:mypll|altpll:altpll_component|_clk0
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

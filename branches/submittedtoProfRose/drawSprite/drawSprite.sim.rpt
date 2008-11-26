@@ -1,0 +1,769 @@
+Simulator report for drawSprite
+Wed Nov 19 15:07:34 2008
+Quartus II Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2007 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 5.0 us       ;
+; Simulation Netlist Size     ; 204 nodes    ;
+; Simulation Coverage         ;      24.85 % ;
+; Total Number of Transitions ; 4958         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      24.85 % ;
+; Total nodes checked                                 ; 204          ;
+; Total output ports checked                          ; 342          ;
+; Total output ports with complete 1/0-value coverage ; 85           ;
+; Total output ports with no 1/0-value coverage       ; 255          ;
+; Total output ports with no 1-value coverage         ; 255          ;
+; Total output ports with no 0-value coverage         ; 257          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                                                                                                            ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                        ; Output Port Name                                                                                 ; Output Port Type ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+; |drawSprite|nBitRegister:XOffsetReg|Q[0]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[0]                                                         ; regout           ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[3]                                    ; dataout9         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[4]                                    ; dataout10        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[5]                                    ; dataout11        ;
+; |drawSprite|Add1~144                                                                             ; |drawSprite|Add1~144                                                                             ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[1]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[1]                                                         ; regout           ;
+; |drawSprite|Add1~146                                                                             ; |drawSprite|Add1~146                                                                             ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[2]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[2]                                                         ; regout           ;
+; |drawSprite|Add1~148                                                                             ; |drawSprite|Add1~148                                                                             ; combout          ;
+; |drawSprite|Add0~150                                                                             ; |drawSprite|Add0~150                                                                             ; combout          ;
+; |drawSprite|Add1~150                                                                             ; |drawSprite|Add1~150                                                                             ; combout          ;
+; |drawSprite|Add0~152                                                                             ; |drawSprite|Add0~152                                                                             ; combout          ;
+; |drawSprite|Add1~152                                                                             ; |drawSprite|Add1~152                                                                             ; combout          ;
+; |drawSprite|Add0~154                                                                             ; |drawSprite|Add0~154                                                                             ; combout          ;
+; |drawSprite|Add1~154                                                                             ; |drawSprite|Add1~154                                                                             ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~104 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~104 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~106 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~106 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~108 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~108 ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[0]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[0]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~91  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~91  ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[1]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[1]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~93  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~93  ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[2]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[2]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~95  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~95  ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[0]~74                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[0]~74                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[0]~74                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[0]~82                                                      ; cout             ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT3                           ; dataout9         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT4                           ; dataout10        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT5                           ; dataout11        ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[1]~75                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[1]~75                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[1]~75                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[1]~83                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[2]~76                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[2]~76                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[2]~76                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[2]~84                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[3]~77                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[3]~77                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[0]~65                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[0]~65                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[0]~65                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[0]~72                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[1]~66                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[1]~66                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[1]~66                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[1]~73                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[2]~67                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[2]~67                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[2]~67                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[2]~74                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[3]~68                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[3]~68                                                      ; combout          ;
+; |drawSprite|Q.IDLE                                                                               ; |drawSprite|Q.IDLE                                                                               ; regout           ;
+; |drawSprite|Q.DRAW                                                                               ; |drawSprite|Q.DRAW                                                                               ; regout           ;
+; |drawSprite|VGA_Draw~9                                                                           ; |drawSprite|VGA_Draw~9                                                                           ; combout          ;
+; |drawSprite|Q.INC_X                                                                              ; |drawSprite|Q.INC_X                                                                              ; regout           ;
+; |drawSprite|Q.INC_Y                                                                              ; |drawSprite|Q.INC_Y                                                                              ; regout           ;
+; |drawSprite|WideOr2                                                                              ; |drawSprite|WideOr2                                                                              ; combout          ;
+; |drawSprite|ResetY~2                                                                             ; |drawSprite|ResetY~2                                                                             ; combout          ;
+; |drawSprite|Q~84                                                                                 ; |drawSprite|Q~84                                                                                 ; combout          ;
+; |drawSprite|Q~85                                                                                 ; |drawSprite|Q~85                                                                                 ; combout          ;
+; |drawSprite|Q~86                                                                                 ; |drawSprite|Q~86                                                                                 ; combout          ;
+; |drawSprite|Q~87                                                                                 ; |drawSprite|Q~87                                                                                 ; combout          ;
+; |drawSprite|Selector1~22                                                                         ; |drawSprite|Selector1~22                                                                         ; combout          ;
+; |drawSprite|Equal1~158                                                                           ; |drawSprite|Equal1~158                                                                           ; combout          ;
+; |drawSprite|Equal1~159                                                                           ; |drawSprite|Equal1~159                                                                           ; combout          ;
+; |drawSprite|Equal1~160                                                                           ; |drawSprite|Equal1~160                                                                           ; combout          ;
+; |drawSprite|Equal1~162                                                                           ; |drawSprite|Equal1~162                                                                           ; combout          ;
+; |drawSprite|Equal0~151                                                                           ; |drawSprite|Equal0~151                                                                           ; combout          ;
+; |drawSprite|Equal0~152                                                                           ; |drawSprite|Equal0~152                                                                           ; combout          ;
+; |drawSprite|Equal0~153                                                                           ; |drawSprite|Equal0~153                                                                           ; combout          ;
+; |drawSprite|Equal0~154                                                                           ; |drawSprite|Equal0~154                                                                           ; combout          ;
+; |drawSprite|D.IDLE                                                                               ; |drawSprite|D.IDLE                                                                               ; combout          ;
+; |drawSprite|Q.READ                                                                               ; |drawSprite|Q.READ                                                                               ; regout           ;
+; |drawSprite|D.DRAW                                                                               ; |drawSprite|D.DRAW                                                                               ; combout          ;
+; |drawSprite|D.INC_X                                                                              ; |drawSprite|D.INC_X                                                                              ; combout          ;
+; |drawSprite|D.INC_Y                                                                              ; |drawSprite|D.INC_Y                                                                              ; combout          ;
+; |drawSprite|Q~88                                                                                 ; |drawSprite|Q~88                                                                                 ; combout          ;
+; |drawSprite|D.READ                                                                               ; |drawSprite|D.READ                                                                               ; combout          ;
+; |drawSprite|Address[0]                                                                           ; |drawSprite|Address[0]                                                                           ; padio            ;
+; |drawSprite|Address[1]                                                                           ; |drawSprite|Address[1]                                                                           ; padio            ;
+; |drawSprite|Address[2]                                                                           ; |drawSprite|Address[2]                                                                           ; padio            ;
+; |drawSprite|Address[3]                                                                           ; |drawSprite|Address[3]                                                                           ; padio            ;
+; |drawSprite|Address[4]                                                                           ; |drawSprite|Address[4]                                                                           ; padio            ;
+; |drawSprite|Address[5]                                                                           ; |drawSprite|Address[5]                                                                           ; padio            ;
+; |drawSprite|Xout[0]                                                                              ; |drawSprite|Xout[0]                                                                              ; padio            ;
+; |drawSprite|Xout[1]                                                                              ; |drawSprite|Xout[1]                                                                              ; padio            ;
+; |drawSprite|Xout[2]                                                                              ; |drawSprite|Xout[2]                                                                              ; padio            ;
+; |drawSprite|Yout[0]                                                                              ; |drawSprite|Yout[0]                                                                              ; padio            ;
+; |drawSprite|Yout[1]                                                                              ; |drawSprite|Yout[1]                                                                              ; padio            ;
+; |drawSprite|Yout[2]                                                                              ; |drawSprite|Yout[2]                                                                              ; padio            ;
+; |drawSprite|Done                                                                                 ; |drawSprite|Done                                                                                 ; padio            ;
+; |drawSprite|VGA_Draw                                                                             ; |drawSprite|VGA_Draw                                                                             ; padio            ;
+; |drawSprite|Clock                                                                                ; |drawSprite|Clock~corein                                                                         ; combout          ;
+; |drawSprite|Enable                                                                               ; |drawSprite|Enable~corein                                                                        ; combout          ;
+; |drawSprite|Clock~clkctrl                                                                        ; |drawSprite|Clock~clkctrl                                                                        ; outclk           ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                        ; Output Port Name                                                                                 ; Output Port Type ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[0]                                    ; dataout5         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[1]                                    ; dataout6         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[2]                                    ; dataout7         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[3]                                    ; dataout8         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[4]                                    ; dataout9         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[5]                                    ; dataout10        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[6]                                    ; dataout11        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[7]                                    ; dataout12        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[8]                                    ; dataout13        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[9]                                    ; dataout14        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[10]                                   ; dataout15        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[11]                                   ; dataout16        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[0]                                    ; dataout6         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[1]                                    ; dataout7         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[2]                                    ; dataout8         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[6]                                    ; dataout12        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[7]                                    ; dataout13        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[8]                                    ; dataout14        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[9]                                    ; dataout15        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[10]                                   ; dataout16        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[11]                                   ; dataout17        ;
+; |drawSprite|Add0~144                                                                             ; |drawSprite|Add0~144                                                                             ; combout          ;
+; |drawSprite|Add0~144                                                                             ; |drawSprite|Add0~145                                                                             ; cout             ;
+; |drawSprite|Add1~144                                                                             ; |drawSprite|Add1~145                                                                             ; cout             ;
+; |drawSprite|Add0~146                                                                             ; |drawSprite|Add0~146                                                                             ; combout          ;
+; |drawSprite|Add0~146                                                                             ; |drawSprite|Add0~147                                                                             ; cout             ;
+; |drawSprite|Add1~146                                                                             ; |drawSprite|Add1~147                                                                             ; cout             ;
+; |drawSprite|Add0~148                                                                             ; |drawSprite|Add0~148                                                                             ; combout          ;
+; |drawSprite|Add0~148                                                                             ; |drawSprite|Add0~149                                                                             ; cout             ;
+; |drawSprite|Add1~148                                                                             ; |drawSprite|Add1~149                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[3]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[3]                                                         ; regout           ;
+; |drawSprite|Add0~150                                                                             ; |drawSprite|Add0~151                                                                             ; cout             ;
+; |drawSprite|Add1~150                                                                             ; |drawSprite|Add1~151                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[4]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[4]                                                         ; regout           ;
+; |drawSprite|Add0~152                                                                             ; |drawSprite|Add0~153                                                                             ; cout             ;
+; |drawSprite|Add1~152                                                                             ; |drawSprite|Add1~153                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[5]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[5]                                                         ; regout           ;
+; |drawSprite|Add0~154                                                                             ; |drawSprite|Add0~155                                                                             ; cout             ;
+; |drawSprite|Add1~154                                                                             ; |drawSprite|Add1~155                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[6]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[6]                                                         ; regout           ;
+; |drawSprite|Add0~156                                                                             ; |drawSprite|Add0~156                                                                             ; combout          ;
+; |drawSprite|Add0~156                                                                             ; |drawSprite|Add0~157                                                                             ; cout             ;
+; |drawSprite|Add1~156                                                                             ; |drawSprite|Add1~156                                                                             ; combout          ;
+; |drawSprite|Add1~156                                                                             ; |drawSprite|Add1~157                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[7]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[7]                                                         ; regout           ;
+; |drawSprite|Add0~158                                                                             ; |drawSprite|Add0~158                                                                             ; combout          ;
+; |drawSprite|Add0~158                                                                             ; |drawSprite|Add0~159                                                                             ; cout             ;
+; |drawSprite|Add1~158                                                                             ; |drawSprite|Add1~158                                                                             ; combout          ;
+; |drawSprite|Add1~158                                                                             ; |drawSprite|Add1~159                                                                             ; cout             ;
+; |drawSprite|Add0~160                                                                             ; |drawSprite|Add0~160                                                                             ; combout          ;
+; |drawSprite|Add0~160                                                                             ; |drawSprite|Add0~161                                                                             ; cout             ;
+; |drawSprite|Add1~160                                                                             ; |drawSprite|Add1~160                                                                             ; combout          ;
+; |drawSprite|Add1~160                                                                             ; |drawSprite|Add1~161                                                                             ; cout             ;
+; |drawSprite|Add0~162                                                                             ; |drawSprite|Add0~162                                                                             ; combout          ;
+; |drawSprite|Add0~162                                                                             ; |drawSprite|Add0~163                                                                             ; cout             ;
+; |drawSprite|Add1~162                                                                             ; |drawSprite|Add1~162                                                                             ; combout          ;
+; |drawSprite|Add1~162                                                                             ; |drawSprite|Add1~163                                                                             ; cout             ;
+; |drawSprite|Add0~164                                                                             ; |drawSprite|Add0~164                                                                             ; combout          ;
+; |drawSprite|Add0~164                                                                             ; |drawSprite|Add0~165                                                                             ; cout             ;
+; |drawSprite|Add1~164                                                                             ; |drawSprite|Add1~164                                                                             ; combout          ;
+; |drawSprite|Add1~164                                                                             ; |drawSprite|Add1~165                                                                             ; cout             ;
+; |drawSprite|Add0~166                                                                             ; |drawSprite|Add0~166                                                                             ; combout          ;
+; |drawSprite|Add1~166                                                                             ; |drawSprite|Add1~166                                                                             ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~104 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~105 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~106 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~107 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~108 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~109 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~110 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~110 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~110 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~111 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~112 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~112 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~112 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~113 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~114 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~114 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~114 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~115 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~116 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~116 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~116 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~117 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~118 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~118 ; combout          ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~91  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~92  ; cout             ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~93  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~94  ; cout             ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~95  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~96  ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[3]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[3]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~97  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~97  ; combout          ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~97  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~98  ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[4]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[4]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~99  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~99  ; combout          ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~99  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~100 ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[5]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[5]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~101 ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~101 ; combout          ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~101 ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~102 ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[6]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[6]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~103 ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~103 ; combout          ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~0                                  ; dataout0         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~1                                  ; dataout1         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~2                                  ; dataout2         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~3                                  ; dataout3         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~4                                  ; dataout4         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; dataout5         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT1                           ; dataout6         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT2                           ; dataout7         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT3                           ; dataout8         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT4                           ; dataout9         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT5                           ; dataout10        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT6                           ; dataout11        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT7                           ; dataout12        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT8                           ; dataout13        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT9                           ; dataout14        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT10                          ; dataout15        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT11                          ; dataout16        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT12                          ; dataout17        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~0                                  ; dataout0         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~1                                  ; dataout1         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~2                                  ; dataout2         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~3                                  ; dataout3         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~4                                  ; dataout4         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~5                                  ; dataout5         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; dataout6         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT1                           ; dataout7         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT2                           ; dataout8         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT6                           ; dataout12        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT7                           ; dataout13        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT8                           ; dataout14        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT9                           ; dataout15        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT10                          ; dataout16        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT11                          ; dataout17        ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[3]~77                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[3]~85                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[4]~78                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[4]~78                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[4]~78                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[4]~86                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[5]~79                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[5]~79                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[5]~79                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[5]~87                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[6]~80                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[6]~80                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[6]~80                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[6]~88                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[7]~81                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[7]~81                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[3]~68                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[3]~75                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[4]~69                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[4]~69                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[4]~69                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[4]~76                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[5]~70                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[5]~70                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[5]~70                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[5]~77                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[6]~71                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[6]~71                                                      ; combout          ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[0]                                    ; dataout10        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[1]                                    ; dataout11        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[2]                                    ; dataout12        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[3]                                    ; dataout13        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[4]                                    ; dataout14        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[5]                                    ; dataout15        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[6]                                    ; dataout16        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[7]                                    ; dataout17        ;
+; |drawSprite|Add3~78                                                                              ; |drawSprite|Add3~78                                                                              ; combout          ;
+; |drawSprite|Add3~78                                                                              ; |drawSprite|Add3~79                                                                              ; cout             ;
+; |drawSprite|Add3~80                                                                              ; |drawSprite|Add3~80                                                                              ; combout          ;
+; |drawSprite|Add3~80                                                                              ; |drawSprite|Add3~81                                                                              ; cout             ;
+; |drawSprite|Add3~82                                                                              ; |drawSprite|Add3~82                                                                              ; combout          ;
+; |drawSprite|Add3~82                                                                              ; |drawSprite|Add3~83                                                                              ; cout             ;
+; |drawSprite|Add3~84                                                                              ; |drawSprite|Add3~84                                                                              ; combout          ;
+; |drawSprite|Add3~84                                                                              ; |drawSprite|Add3~85                                                                              ; cout             ;
+; |drawSprite|Add3~86                                                                              ; |drawSprite|Add3~86                                                                              ; combout          ;
+; |drawSprite|Add3~86                                                                              ; |drawSprite|Add3~87                                                                              ; cout             ;
+; |drawSprite|Add3~88                                                                              ; |drawSprite|Add3~88                                                                              ; combout          ;
+; |drawSprite|Add2~78                                                                              ; |drawSprite|Add2~78                                                                              ; combout          ;
+; |drawSprite|Add2~78                                                                              ; |drawSprite|Add2~79                                                                              ; cout             ;
+; |drawSprite|Add2~80                                                                              ; |drawSprite|Add2~80                                                                              ; combout          ;
+; |drawSprite|Add2~80                                                                              ; |drawSprite|Add2~81                                                                              ; cout             ;
+; |drawSprite|Add2~82                                                                              ; |drawSprite|Add2~82                                                                              ; combout          ;
+; |drawSprite|Add2~82                                                                              ; |drawSprite|Add2~83                                                                              ; cout             ;
+; |drawSprite|Add2~84                                                                              ; |drawSprite|Add2~84                                                                              ; combout          ;
+; |drawSprite|Add2~84                                                                              ; |drawSprite|Add2~85                                                                              ; cout             ;
+; |drawSprite|Add2~86                                                                              ; |drawSprite|Add2~86                                                                              ; combout          ;
+; |drawSprite|Add2~86                                                                              ; |drawSprite|Add2~87                                                                              ; cout             ;
+; |drawSprite|Add2~88                                                                              ; |drawSprite|Add2~88                                                                              ; combout          ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~0                                  ; dataout0         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~1                                  ; dataout1         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~2                                  ; dataout2         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~3                                  ; dataout3         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~4                                  ; dataout4         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~5                                  ; dataout5         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~6                                  ; dataout6         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~7                                  ; dataout7         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~8                                  ; dataout8         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~9                                  ; dataout9         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; dataout10        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT1                           ; dataout11        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT2                           ; dataout12        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT3                           ; dataout13        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT4                           ; dataout14        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT5                           ; dataout15        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT6                           ; dataout16        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT7                           ; dataout17        ;
+; |drawSprite|Equal2~80                                                                            ; |drawSprite|Equal2~80                                                                            ; combout          ;
+; |drawSprite|Equal2~81                                                                            ; |drawSprite|Equal2~81                                                                            ; combout          ;
+; |drawSprite|Equal1~161                                                                           ; |drawSprite|Equal1~161                                                                           ; combout          ;
+; |drawSprite|~GND                                                                                 ; |drawSprite|~GND                                                                                 ; combout          ;
+; |drawSprite|MemSel[0]                                                                            ; |drawSprite|MemSel[0]                                                                            ; padio            ;
+; |drawSprite|MemSel[1]                                                                            ; |drawSprite|MemSel[1]                                                                            ; padio            ;
+; |drawSprite|MemSel[2]                                                                            ; |drawSprite|MemSel[2]                                                                            ; padio            ;
+; |drawSprite|Address[6]                                                                           ; |drawSprite|Address[6]                                                                           ; padio            ;
+; |drawSprite|Address[7]                                                                           ; |drawSprite|Address[7]                                                                           ; padio            ;
+; |drawSprite|Address[8]                                                                           ; |drawSprite|Address[8]                                                                           ; padio            ;
+; |drawSprite|Address[9]                                                                           ; |drawSprite|Address[9]                                                                           ; padio            ;
+; |drawSprite|Address[10]                                                                          ; |drawSprite|Address[10]                                                                          ; padio            ;
+; |drawSprite|Address[11]                                                                          ; |drawSprite|Address[11]                                                                          ; padio            ;
+; |drawSprite|Xout[3]                                                                              ; |drawSprite|Xout[3]                                                                              ; padio            ;
+; |drawSprite|Xout[4]                                                                              ; |drawSprite|Xout[4]                                                                              ; padio            ;
+; |drawSprite|Xout[5]                                                                              ; |drawSprite|Xout[5]                                                                              ; padio            ;
+; |drawSprite|Xout[6]                                                                              ; |drawSprite|Xout[6]                                                                              ; padio            ;
+; |drawSprite|Xout[7]                                                                              ; |drawSprite|Xout[7]                                                                              ; padio            ;
+; |drawSprite|Yout[3]                                                                              ; |drawSprite|Yout[3]                                                                              ; padio            ;
+; |drawSprite|Yout[4]                                                                              ; |drawSprite|Yout[4]                                                                              ; padio            ;
+; |drawSprite|Yout[5]                                                                              ; |drawSprite|Yout[5]                                                                              ; padio            ;
+; |drawSprite|Yout[6]                                                                              ; |drawSprite|Yout[6]                                                                              ; padio            ;
+; |drawSprite|Color[0]                                                                             ; |drawSprite|Color[0]                                                                             ; padio            ;
+; |drawSprite|Color[1]                                                                             ; |drawSprite|Color[1]                                                                             ; padio            ;
+; |drawSprite|Color[2]                                                                             ; |drawSprite|Color[2]                                                                             ; padio            ;
+; |drawSprite|Color[3]                                                                             ; |drawSprite|Color[3]                                                                             ; padio            ;
+; |drawSprite|Color[4]                                                                             ; |drawSprite|Color[4]                                                                             ; padio            ;
+; |drawSprite|Color[5]                                                                             ; |drawSprite|Color[5]                                                                             ; padio            ;
+; |drawSprite|Color[6]                                                                             ; |drawSprite|Color[6]                                                                             ; padio            ;
+; |drawSprite|Color[7]                                                                             ; |drawSprite|Color[7]                                                                             ; padio            ;
+; |drawSprite|Color[8]                                                                             ; |drawSprite|Color[8]                                                                             ; padio            ;
+; |drawSprite|Sprite[0]                                                                            ; |drawSprite|Sprite[0]~corein                                                                     ; combout          ;
+; |drawSprite|Sprite[1]                                                                            ; |drawSprite|Sprite[1]~corein                                                                     ; combout          ;
+; |drawSprite|Sprite[2]                                                                            ; |drawSprite|Sprite[2]~corein                                                                     ; combout          ;
+; |drawSprite|Xin[0]                                                                               ; |drawSprite|Xin[0]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[1]                                                                               ; |drawSprite|Xin[1]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[2]                                                                               ; |drawSprite|Xin[2]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[3]                                                                               ; |drawSprite|Xin[3]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[4]                                                                               ; |drawSprite|Xin[4]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[5]                                                                               ; |drawSprite|Xin[5]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[6]                                                                               ; |drawSprite|Xin[6]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[7]                                                                               ; |drawSprite|Xin[7]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[0]                                                                               ; |drawSprite|Yin[0]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[1]                                                                               ; |drawSprite|Yin[1]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[2]                                                                               ; |drawSprite|Yin[2]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[3]                                                                               ; |drawSprite|Yin[3]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[4]                                                                               ; |drawSprite|Yin[4]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[5]                                                                               ; |drawSprite|Yin[5]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[6]                                                                               ; |drawSprite|Yin[6]~corein                                                                        ; combout          ;
+; |drawSprite|DataIn[0]                                                                            ; |drawSprite|DataIn[0]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[1]                                                                            ; |drawSprite|DataIn[1]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[2]                                                                            ; |drawSprite|DataIn[2]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[3]                                                                            ; |drawSprite|DataIn[3]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[4]                                                                            ; |drawSprite|DataIn[4]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[5]                                                                            ; |drawSprite|DataIn[5]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[6]                                                                            ; |drawSprite|DataIn[6]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[7]                                                                            ; |drawSprite|DataIn[7]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[8]                                                                            ; |drawSprite|DataIn[8]~corein                                                                     ; combout          ;
+; |drawSprite|Height[0]                                                                            ; |drawSprite|Height[0]~corein                                                                     ; combout          ;
+; |drawSprite|Height[1]                                                                            ; |drawSprite|Height[1]~corein                                                                     ; combout          ;
+; |drawSprite|Height[2]                                                                            ; |drawSprite|Height[2]~corein                                                                     ; combout          ;
+; |drawSprite|Height[3]                                                                            ; |drawSprite|Height[3]~corein                                                                     ; combout          ;
+; |drawSprite|Height[4]                                                                            ; |drawSprite|Height[4]~corein                                                                     ; combout          ;
+; |drawSprite|Width[0]                                                                             ; |drawSprite|Width[0]~corein                                                                      ; combout          ;
+; |drawSprite|Width[1]                                                                             ; |drawSprite|Width[1]~corein                                                                      ; combout          ;
+; |drawSprite|Width[2]                                                                             ; |drawSprite|Width[2]~corein                                                                      ; combout          ;
+; |drawSprite|Width[3]                                                                             ; |drawSprite|Width[3]~corein                                                                      ; combout          ;
+; |drawSprite|Width[4]                                                                             ; |drawSprite|Width[4]~corein                                                                      ; combout          ;
+; |drawSprite|AnimStep[0]                                                                          ; |drawSprite|AnimStep[0]~corein                                                                   ; combout          ;
+; |drawSprite|AnimStep[1]                                                                          ; |drawSprite|AnimStep[1]~corein                                                                   ; combout          ;
+; |drawSprite|AnimStep[2]                                                                          ; |drawSprite|AnimStep[2]~corein                                                                   ; combout          ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                                                                                                               ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+; Node Name                                                                                        ; Output Port Name                                                                                 ; Output Port Type ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[0]                                    ; dataout5         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[1]                                    ; dataout6         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[2]                                    ; dataout7         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[3]                                    ; dataout8         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[4]                                    ; dataout9         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[5]                                    ; dataout10        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[6]                                    ; dataout11        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[7]                                    ; dataout12        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[8]                                    ; dataout13        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[9]                                    ; dataout14        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[10]                                   ; dataout15        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|result[11]                                   ; dataout16        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[0]                                    ; dataout6         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[1]                                    ; dataout7         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[2]                                    ; dataout8         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[6]                                    ; dataout12        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[7]                                    ; dataout13        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[8]                                    ; dataout14        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[9]                                    ; dataout15        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[10]                                   ; dataout16        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|result[11]                                   ; dataout17        ;
+; |drawSprite|Add0~144                                                                             ; |drawSprite|Add0~144                                                                             ; combout          ;
+; |drawSprite|Add0~144                                                                             ; |drawSprite|Add0~145                                                                             ; cout             ;
+; |drawSprite|Add1~144                                                                             ; |drawSprite|Add1~145                                                                             ; cout             ;
+; |drawSprite|Add0~146                                                                             ; |drawSprite|Add0~146                                                                             ; combout          ;
+; |drawSprite|Add0~146                                                                             ; |drawSprite|Add0~147                                                                             ; cout             ;
+; |drawSprite|Add1~146                                                                             ; |drawSprite|Add1~147                                                                             ; cout             ;
+; |drawSprite|Add0~148                                                                             ; |drawSprite|Add0~148                                                                             ; combout          ;
+; |drawSprite|Add0~148                                                                             ; |drawSprite|Add0~149                                                                             ; cout             ;
+; |drawSprite|Add1~148                                                                             ; |drawSprite|Add1~149                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[3]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[3]                                                         ; regout           ;
+; |drawSprite|Add0~150                                                                             ; |drawSprite|Add0~151                                                                             ; cout             ;
+; |drawSprite|Add1~150                                                                             ; |drawSprite|Add1~151                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[4]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[4]                                                         ; regout           ;
+; |drawSprite|Add0~152                                                                             ; |drawSprite|Add0~153                                                                             ; cout             ;
+; |drawSprite|Add1~152                                                                             ; |drawSprite|Add1~153                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[5]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[5]                                                         ; regout           ;
+; |drawSprite|Add0~154                                                                             ; |drawSprite|Add0~155                                                                             ; cout             ;
+; |drawSprite|Add1~154                                                                             ; |drawSprite|Add1~155                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[6]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[6]                                                         ; regout           ;
+; |drawSprite|Add0~156                                                                             ; |drawSprite|Add0~156                                                                             ; combout          ;
+; |drawSprite|Add0~156                                                                             ; |drawSprite|Add0~157                                                                             ; cout             ;
+; |drawSprite|Add1~156                                                                             ; |drawSprite|Add1~156                                                                             ; combout          ;
+; |drawSprite|Add1~156                                                                             ; |drawSprite|Add1~157                                                                             ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[7]                                                         ; |drawSprite|nBitRegister:XOffsetReg|Q[7]                                                         ; regout           ;
+; |drawSprite|Add0~158                                                                             ; |drawSprite|Add0~158                                                                             ; combout          ;
+; |drawSprite|Add0~158                                                                             ; |drawSprite|Add0~159                                                                             ; cout             ;
+; |drawSprite|Add1~158                                                                             ; |drawSprite|Add1~158                                                                             ; combout          ;
+; |drawSprite|Add1~158                                                                             ; |drawSprite|Add1~159                                                                             ; cout             ;
+; |drawSprite|Add0~160                                                                             ; |drawSprite|Add0~160                                                                             ; combout          ;
+; |drawSprite|Add0~160                                                                             ; |drawSprite|Add0~161                                                                             ; cout             ;
+; |drawSprite|Add1~160                                                                             ; |drawSprite|Add1~160                                                                             ; combout          ;
+; |drawSprite|Add1~160                                                                             ; |drawSprite|Add1~161                                                                             ; cout             ;
+; |drawSprite|Add0~162                                                                             ; |drawSprite|Add0~162                                                                             ; combout          ;
+; |drawSprite|Add0~162                                                                             ; |drawSprite|Add0~163                                                                             ; cout             ;
+; |drawSprite|Add1~162                                                                             ; |drawSprite|Add1~162                                                                             ; combout          ;
+; |drawSprite|Add1~162                                                                             ; |drawSprite|Add1~163                                                                             ; cout             ;
+; |drawSprite|Add0~164                                                                             ; |drawSprite|Add0~164                                                                             ; combout          ;
+; |drawSprite|Add0~164                                                                             ; |drawSprite|Add0~165                                                                             ; cout             ;
+; |drawSprite|Add1~164                                                                             ; |drawSprite|Add1~164                                                                             ; combout          ;
+; |drawSprite|Add1~164                                                                             ; |drawSprite|Add1~165                                                                             ; cout             ;
+; |drawSprite|Add0~166                                                                             ; |drawSprite|Add0~166                                                                             ; combout          ;
+; |drawSprite|Add1~166                                                                             ; |drawSprite|Add1~166                                                                             ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~104 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~105 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~106 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~107 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~108 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~109 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~110 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~110 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~110 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~111 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~112 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~112 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~112 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~113 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~114 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~114 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~114 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~115 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~116 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~116 ; combout          ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~116 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~117 ; cout             ;
+; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~118 ; |drawSprite|addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~118 ; combout          ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~91  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~92  ; cout             ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~93  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~94  ; cout             ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~95  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~96  ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[3]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[3]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~97  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~97  ; combout          ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~97  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~98  ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[4]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[4]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~99  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~99  ; combout          ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~99  ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~100 ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[5]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[5]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~101 ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~101 ; combout          ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~101 ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~102 ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[6]                                                         ; |drawSprite|nBitRegister:YOffsetReg|Q[6]                                                         ; regout           ;
+; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~103 ; |drawSprite|addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~103 ; combout          ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~0                                  ; dataout0         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~1                                  ; dataout1         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~2                                  ; dataout2         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~3                                  ; dataout3         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~4                                  ; dataout4         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; dataout5         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT1                           ; dataout6         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT2                           ; dataout7         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT3                           ; dataout8         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT4                           ; dataout9         ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT5                           ; dataout10        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT6                           ; dataout11        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT7                           ; dataout12        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT8                           ; dataout13        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT9                           ; dataout14        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT10                          ; dataout15        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT11                          ; dataout16        ;
+; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT12                          ; dataout17        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~0                                  ; dataout0         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~1                                  ; dataout1         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~2                                  ; dataout2         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~3                                  ; dataout3         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~4                                  ; dataout4         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~5                                  ; dataout5         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; dataout6         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT1                           ; dataout7         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT2                           ; dataout8         ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT6                           ; dataout12        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT7                           ; dataout13        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT8                           ; dataout14        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT9                           ; dataout15        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT10                          ; dataout16        ;
+; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT11                          ; dataout17        ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[3]~77                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[3]~85                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[4]~78                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[4]~78                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[4]~78                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[4]~86                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[5]~79                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[5]~79                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[5]~79                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[5]~87                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[6]~80                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[6]~80                                                      ; combout          ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[6]~80                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[6]~88                                                      ; cout             ;
+; |drawSprite|nBitRegister:XOffsetReg|Q[7]~81                                                      ; |drawSprite|nBitRegister:XOffsetReg|Q[7]~81                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[3]~68                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[3]~75                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[4]~69                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[4]~69                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[4]~69                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[4]~76                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[5]~70                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[5]~70                                                      ; combout          ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[5]~70                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[5]~77                                                      ; cout             ;
+; |drawSprite|nBitRegister:YOffsetReg|Q[6]~71                                                      ; |drawSprite|nBitRegister:YOffsetReg|Q[6]~71                                                      ; combout          ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[0]                                    ; dataout10        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[1]                                    ; dataout11        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[2]                                    ; dataout12        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[3]                                    ; dataout13        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[4]                                    ; dataout14        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[5]                                    ; dataout15        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[6]                                    ; dataout16        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_out2                                     ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|result[7]                                    ; dataout17        ;
+; |drawSprite|Add3~78                                                                              ; |drawSprite|Add3~78                                                                              ; combout          ;
+; |drawSprite|Add3~78                                                                              ; |drawSprite|Add3~79                                                                              ; cout             ;
+; |drawSprite|Add3~80                                                                              ; |drawSprite|Add3~80                                                                              ; combout          ;
+; |drawSprite|Add3~80                                                                              ; |drawSprite|Add3~81                                                                              ; cout             ;
+; |drawSprite|Add3~82                                                                              ; |drawSprite|Add3~82                                                                              ; combout          ;
+; |drawSprite|Add3~82                                                                              ; |drawSprite|Add3~83                                                                              ; cout             ;
+; |drawSprite|Add3~84                                                                              ; |drawSprite|Add3~84                                                                              ; combout          ;
+; |drawSprite|Add3~84                                                                              ; |drawSprite|Add3~85                                                                              ; cout             ;
+; |drawSprite|Add3~86                                                                              ; |drawSprite|Add3~86                                                                              ; combout          ;
+; |drawSprite|Add3~86                                                                              ; |drawSprite|Add3~87                                                                              ; cout             ;
+; |drawSprite|Add3~88                                                                              ; |drawSprite|Add3~88                                                                              ; combout          ;
+; |drawSprite|Add2~78                                                                              ; |drawSprite|Add2~78                                                                              ; combout          ;
+; |drawSprite|Add2~78                                                                              ; |drawSprite|Add2~79                                                                              ; cout             ;
+; |drawSprite|Add2~80                                                                              ; |drawSprite|Add2~80                                                                              ; combout          ;
+; |drawSprite|Add2~80                                                                              ; |drawSprite|Add2~81                                                                              ; cout             ;
+; |drawSprite|Add2~82                                                                              ; |drawSprite|Add2~82                                                                              ; combout          ;
+; |drawSprite|Add2~82                                                                              ; |drawSprite|Add2~83                                                                              ; cout             ;
+; |drawSprite|Add2~84                                                                              ; |drawSprite|Add2~84                                                                              ; combout          ;
+; |drawSprite|Add2~84                                                                              ; |drawSprite|Add2~85                                                                              ; cout             ;
+; |drawSprite|Add2~86                                                                              ; |drawSprite|Add2~86                                                                              ; combout          ;
+; |drawSprite|Add2~86                                                                              ; |drawSprite|Add2~87                                                                              ; cout             ;
+; |drawSprite|Add2~88                                                                              ; |drawSprite|Add2~88                                                                              ; combout          ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~0                                  ; dataout0         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~1                                  ; dataout1         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~2                                  ; dataout2         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~3                                  ; dataout3         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~4                                  ; dataout4         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~5                                  ; dataout5         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~6                                  ; dataout6         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~7                                  ; dataout7         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~8                                  ; dataout8         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~9                                  ; dataout9         ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; dataout10        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT1                           ; dataout11        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT2                           ; dataout12        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT3                           ; dataout13        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT4                           ; dataout14        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT5                           ; dataout15        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT6                           ; dataout16        ;
+; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1                                    ; |drawSprite|lpm_mult:Mult1|mult_lq01:auto_generated|mac_mult1~DATAOUT7                           ; dataout17        ;
+; |drawSprite|Equal2~80                                                                            ; |drawSprite|Equal2~80                                                                            ; combout          ;
+; |drawSprite|Equal2~81                                                                            ; |drawSprite|Equal2~81                                                                            ; combout          ;
+; |drawSprite|Q.000                                                                                ; |drawSprite|Q.000                                                                                ; regout           ;
+; |drawSprite|Equal1~161                                                                           ; |drawSprite|Equal1~161                                                                           ; combout          ;
+; |drawSprite|~GND                                                                                 ; |drawSprite|~GND                                                                                 ; combout          ;
+; |drawSprite|MemSel[0]                                                                            ; |drawSprite|MemSel[0]                                                                            ; padio            ;
+; |drawSprite|MemSel[1]                                                                            ; |drawSprite|MemSel[1]                                                                            ; padio            ;
+; |drawSprite|MemSel[2]                                                                            ; |drawSprite|MemSel[2]                                                                            ; padio            ;
+; |drawSprite|Address[6]                                                                           ; |drawSprite|Address[6]                                                                           ; padio            ;
+; |drawSprite|Address[7]                                                                           ; |drawSprite|Address[7]                                                                           ; padio            ;
+; |drawSprite|Address[8]                                                                           ; |drawSprite|Address[8]                                                                           ; padio            ;
+; |drawSprite|Address[9]                                                                           ; |drawSprite|Address[9]                                                                           ; padio            ;
+; |drawSprite|Address[10]                                                                          ; |drawSprite|Address[10]                                                                          ; padio            ;
+; |drawSprite|Address[11]                                                                          ; |drawSprite|Address[11]                                                                          ; padio            ;
+; |drawSprite|Xout[3]                                                                              ; |drawSprite|Xout[3]                                                                              ; padio            ;
+; |drawSprite|Xout[4]                                                                              ; |drawSprite|Xout[4]                                                                              ; padio            ;
+; |drawSprite|Xout[5]                                                                              ; |drawSprite|Xout[5]                                                                              ; padio            ;
+; |drawSprite|Xout[6]                                                                              ; |drawSprite|Xout[6]                                                                              ; padio            ;
+; |drawSprite|Xout[7]                                                                              ; |drawSprite|Xout[7]                                                                              ; padio            ;
+; |drawSprite|Yout[3]                                                                              ; |drawSprite|Yout[3]                                                                              ; padio            ;
+; |drawSprite|Yout[4]                                                                              ; |drawSprite|Yout[4]                                                                              ; padio            ;
+; |drawSprite|Yout[5]                                                                              ; |drawSprite|Yout[5]                                                                              ; padio            ;
+; |drawSprite|Yout[6]                                                                              ; |drawSprite|Yout[6]                                                                              ; padio            ;
+; |drawSprite|Color[0]                                                                             ; |drawSprite|Color[0]                                                                             ; padio            ;
+; |drawSprite|Color[1]                                                                             ; |drawSprite|Color[1]                                                                             ; padio            ;
+; |drawSprite|Color[2]                                                                             ; |drawSprite|Color[2]                                                                             ; padio            ;
+; |drawSprite|Color[3]                                                                             ; |drawSprite|Color[3]                                                                             ; padio            ;
+; |drawSprite|Color[4]                                                                             ; |drawSprite|Color[4]                                                                             ; padio            ;
+; |drawSprite|Color[5]                                                                             ; |drawSprite|Color[5]                                                                             ; padio            ;
+; |drawSprite|Color[6]                                                                             ; |drawSprite|Color[6]                                                                             ; padio            ;
+; |drawSprite|Color[7]                                                                             ; |drawSprite|Color[7]                                                                             ; padio            ;
+; |drawSprite|Color[8]                                                                             ; |drawSprite|Color[8]                                                                             ; padio            ;
+; |drawSprite|Sprite[0]                                                                            ; |drawSprite|Sprite[0]~corein                                                                     ; combout          ;
+; |drawSprite|Sprite[1]                                                                            ; |drawSprite|Sprite[1]~corein                                                                     ; combout          ;
+; |drawSprite|Sprite[2]                                                                            ; |drawSprite|Sprite[2]~corein                                                                     ; combout          ;
+; |drawSprite|Xin[0]                                                                               ; |drawSprite|Xin[0]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[1]                                                                               ; |drawSprite|Xin[1]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[2]                                                                               ; |drawSprite|Xin[2]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[3]                                                                               ; |drawSprite|Xin[3]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[4]                                                                               ; |drawSprite|Xin[4]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[5]                                                                               ; |drawSprite|Xin[5]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[6]                                                                               ; |drawSprite|Xin[6]~corein                                                                        ; combout          ;
+; |drawSprite|Xin[7]                                                                               ; |drawSprite|Xin[7]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[0]                                                                               ; |drawSprite|Yin[0]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[1]                                                                               ; |drawSprite|Yin[1]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[2]                                                                               ; |drawSprite|Yin[2]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[3]                                                                               ; |drawSprite|Yin[3]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[4]                                                                               ; |drawSprite|Yin[4]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[5]                                                                               ; |drawSprite|Yin[5]~corein                                                                        ; combout          ;
+; |drawSprite|Yin[6]                                                                               ; |drawSprite|Yin[6]~corein                                                                        ; combout          ;
+; |drawSprite|DataIn[0]                                                                            ; |drawSprite|DataIn[0]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[1]                                                                            ; |drawSprite|DataIn[1]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[2]                                                                            ; |drawSprite|DataIn[2]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[3]                                                                            ; |drawSprite|DataIn[3]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[4]                                                                            ; |drawSprite|DataIn[4]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[5]                                                                            ; |drawSprite|DataIn[5]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[6]                                                                            ; |drawSprite|DataIn[6]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[7]                                                                            ; |drawSprite|DataIn[7]~corein                                                                     ; combout          ;
+; |drawSprite|DataIn[8]                                                                            ; |drawSprite|DataIn[8]~corein                                                                     ; combout          ;
+; |drawSprite|Resetn                                                                               ; |drawSprite|Resetn~corein                                                                        ; combout          ;
+; |drawSprite|Height[0]                                                                            ; |drawSprite|Height[0]~corein                                                                     ; combout          ;
+; |drawSprite|Height[1]                                                                            ; |drawSprite|Height[1]~corein                                                                     ; combout          ;
+; |drawSprite|Height[2]                                                                            ; |drawSprite|Height[2]~corein                                                                     ; combout          ;
+; |drawSprite|Height[3]                                                                            ; |drawSprite|Height[3]~corein                                                                     ; combout          ;
+; |drawSprite|Height[4]                                                                            ; |drawSprite|Height[4]~corein                                                                     ; combout          ;
+; |drawSprite|Width[0]                                                                             ; |drawSprite|Width[0]~corein                                                                      ; combout          ;
+; |drawSprite|Width[1]                                                                             ; |drawSprite|Width[1]~corein                                                                      ; combout          ;
+; |drawSprite|Width[2]                                                                             ; |drawSprite|Width[2]~corein                                                                      ; combout          ;
+; |drawSprite|Width[3]                                                                             ; |drawSprite|Width[3]~corein                                                                      ; combout          ;
+; |drawSprite|Width[4]                                                                             ; |drawSprite|Width[4]~corein                                                                      ; combout          ;
+; |drawSprite|AnimStep[0]                                                                          ; |drawSprite|AnimStep[0]~corein                                                                   ; combout          ;
+; |drawSprite|AnimStep[1]                                                                          ; |drawSprite|AnimStep[1]~corein                                                                   ; combout          ;
+; |drawSprite|AnimStep[2]                                                                          ; |drawSprite|AnimStep[2]~corein                                                                   ; combout          ;
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------+------------------+
+
+
++-------------------------------------------------------------------------------------------------+
+; Simulator INI Usage                                                                             ;
++----------------------+--------------------------------------------------------------------------+
+; Option               ; Usage                                                                    ;
++----------------------+--------------------------------------------------------------------------+
+; Initialization file: ; C:\Documents and Settings\robin162/quartus.ini                           ;
+; dev_password         ; bd7be08e3faf96f21f7f12099b27ecfb8b18023351152004322560156215233350005516 ;
++----------------------+--------------------------------------------------------------------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 7.1 Build 178 06/25/2007 Service Pack 1 SJ Full Version
+    Info: Processing started: Wed Nov 19 15:07:30 2008
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off drawSprite -c drawSprite
+Info: Using vector source file "W:/quartus/fpga2dsidescroller/drawSprite/drawSprite.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "D" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Address[15]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Address[14]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Address[13]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Address[12]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Height[5]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "Width[5]" in design.
+Warning: Wrong node type and/or width for node "|drawSprite|Q" in vector source file. Node in design is of type Enum and of width 1, but node in vector source file is of type 9-Level and of width 1.
+Warning: Signal name "|drawSprite|Q" changed to enum type
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      24.85 %
+Info: Number of transitions in simulation is 4958
+Info: Quartus II Simulator was successful. 0 errors, 9 warnings
+    Info: Allocated 97 megabytes of memory during processing
+    Info: Processing ended: Wed Nov 19 15:07:36 2008
+    Info: Elapsed time: 00:00:06
+
+

@@ -1,0 +1,1266 @@
+-- Copyright (C) 1991-2008 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+--C1_Q[0] is nBitRegister:XOffsetReg|Q[0]
+C1_Q[0] = DFFEAS(C1L3, Clock,  ,  ,  ,  ,  , A1L147,  );
+
+
+--N1_result[0] is lpm_mult:Mult2|mult_6s01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (9-bit)
+N1_result[0] = N1_mac_mult1;
+
+--N1_result[1] is lpm_mult:Mult2|mult_6s01:auto_generated|result[1]
+N1_result[1] = N1L2;
+
+--N1_result[2] is lpm_mult:Mult2|mult_6s01:auto_generated|result[2]
+N1_result[2] = N1L3;
+
+--N1_result[3] is lpm_mult:Mult2|mult_6s01:auto_generated|result[3]
+N1_result[3] = N1L4;
+
+--N1_result[4] is lpm_mult:Mult2|mult_6s01:auto_generated|result[4]
+N1_result[4] = N1L5;
+
+--N1_result[5] is lpm_mult:Mult2|mult_6s01:auto_generated|result[5]
+N1_result[5] = N1L6;
+
+--N1_result[6] is lpm_mult:Mult2|mult_6s01:auto_generated|result[6]
+N1_result[6] = N1L7;
+
+--N1_result[7] is lpm_mult:Mult2|mult_6s01:auto_generated|result[7]
+N1_result[7] = N1L8;
+
+--N1_result[8] is lpm_mult:Mult2|mult_6s01:auto_generated|result[8]
+N1_result[8] = N1L9;
+
+--N1_result[9] is lpm_mult:Mult2|mult_6s01:auto_generated|result[9]
+N1_result[9] = N1L10;
+
+--N1_result[10] is lpm_mult:Mult2|mult_6s01:auto_generated|result[10]
+N1_result[10] = N1L11;
+
+--N1_result[11] is lpm_mult:Mult2|mult_6s01:auto_generated|result[11]
+N1_result[11] = N1L12;
+
+
+--F1_result[0] is lpm_mult:Mult0|mult_4s01:auto_generated|result[0]
+--DSP Block Operation Mode: Simple Multiplier (9-bit)
+F1_result[0] = F1_mac_mult1;
+
+--F1_result[1] is lpm_mult:Mult0|mult_4s01:auto_generated|result[1]
+F1_result[1] = F1L2;
+
+--F1_result[2] is lpm_mult:Mult0|mult_4s01:auto_generated|result[2]
+F1_result[2] = F1L3;
+
+--F1_result[3] is lpm_mult:Mult0|mult_4s01:auto_generated|result[3]
+F1_result[3] = F1L4;
+
+--F1_result[4] is lpm_mult:Mult0|mult_4s01:auto_generated|result[4]
+F1_result[4] = F1L5;
+
+--F1_result[5] is lpm_mult:Mult0|mult_4s01:auto_generated|result[5]
+F1_result[5] = F1L6;
+
+--F1_result[6] is lpm_mult:Mult0|mult_4s01:auto_generated|result[6]
+F1_result[6] = F1L7;
+
+--F1_result[7] is lpm_mult:Mult0|mult_4s01:auto_generated|result[7]
+F1_result[7] = F1L8;
+
+--F1_result[8] is lpm_mult:Mult0|mult_4s01:auto_generated|result[8]
+F1_result[8] = F1L9;
+
+--F1_result[9] is lpm_mult:Mult0|mult_4s01:auto_generated|result[9]
+F1_result[9] = F1L10;
+
+--F1_result[10] is lpm_mult:Mult0|mult_4s01:auto_generated|result[10]
+F1_result[10] = F1L11;
+
+--F1_result[11] is lpm_mult:Mult0|mult_4s01:auto_generated|result[11]
+F1_result[11] = F1L12;
+
+
+--A1L1 is Add0~144
+A1L1 = N1_result[0] & (F1_result[0] $ VCC) # !N1_result[0] & F1_result[0] & VCC;
+
+--A1L2 is Add0~145
+A1L2 = CARRY(N1_result[0] & F1_result[0]);
+
+
+--A1L25 is Add1~144
+A1L25 = C1_Q[0] & (A1L1 $ VCC) # !C1_Q[0] & A1L1 & VCC;
+
+--A1L26 is Add1~145
+A1L26 = CARRY(C1_Q[0] & A1L1);
+
+
+--C1_Q[1] is nBitRegister:XOffsetReg|Q[1]
+C1_Q[1] = DFFEAS(C1L6, Clock,  ,  ,  ,  ,  , A1L147,  );
+
+
+--A1L3 is Add0~146
+A1L3 = N1_result[1] & (F1_result[1] & A1L2 & VCC # !F1_result[1] & !A1L2) # !N1_result[1] & (F1_result[1] & !A1L2 # !F1_result[1] & (A1L2 # GND));
+
+--A1L4 is Add0~147
+A1L4 = CARRY(N1_result[1] & !F1_result[1] & !A1L2 # !N1_result[1] & (!A1L2 # !F1_result[1]));
+
+
+--A1L27 is Add1~146
+A1L27 = C1_Q[1] & (A1L3 & A1L26 & VCC # !A1L3 & !A1L26) # !C1_Q[1] & (A1L3 & !A1L26 # !A1L3 & (A1L26 # GND));
+
+--A1L28 is Add1~147
+A1L28 = CARRY(C1_Q[1] & !A1L3 & !A1L26 # !C1_Q[1] & (!A1L26 # !A1L3));
+
+
+--C1_Q[2] is nBitRegister:XOffsetReg|Q[2]
+C1_Q[2] = DFFEAS(C1L9, Clock,  ,  ,  ,  ,  , A1L147,  );
+
+
+--A1L5 is Add0~148
+A1L5 = (N1_result[2] $ F1_result[2] $ !A1L4) # GND;
+
+--A1L6 is Add0~149
+A1L6 = CARRY(N1_result[2] & (F1_result[2] # !A1L4) # !N1_result[2] & F1_result[2] & !A1L4);
+
+
+--A1L29 is Add1~148
+A1L29 = (C1_Q[2] $ A1L5 $ !A1L28) # GND;
+
+--A1L30 is Add1~149
+A1L30 = CARRY(C1_Q[2] & (A1L5 # !A1L28) # !C1_Q[2] & A1L5 & !A1L28);
+
+
+--C1_Q[3] is nBitRegister:XOffsetReg|Q[3]
+C1_Q[3] = DFFEAS(C1L12, Clock,  ,  ,  ,  ,  , A1L147,  );
+
+
+--A1L7 is Add0~150
+A1L7 = N1_result[3] & (F1_result[3] & A1L6 & VCC # !F1_result[3] & !A1L6) # !N1_result[3] & (F1_result[3] & !A1L6 # !F1_result[3] & (A1L6 # GND));
+
+--A1L8 is Add0~151
+A1L8 = CARRY(N1_result[3] & !F1_result[3] & !A1L6 # !N1_result[3] & (!A1L6 # !F1_result[3]));
+
+
+--A1L31 is Add1~150
+A1L31 = C1_Q[3] & (A1L7 & A1L30 & VCC # !A1L7 & !A1L30) # !C1_Q[3] & (A1L7 & !A1L30 # !A1L7 & (A1L30 # GND));
+
+--A1L32 is Add1~151
+A1L32 = CARRY(C1_Q[3] & !A1L7 & !A1L30 # !C1_Q[3] & (!A1L30 # !A1L7));
+
+
+--C1_Q[4] is nBitRegister:XOffsetReg|Q[4]
+C1_Q[4] = DFFEAS(C1L15, Clock,  ,  ,  ,  ,  , A1L147,  );
+
+
+--A1L9 is Add0~152
+A1L9 = (N1_result[4] $ F1_result[4] $ !A1L8) # GND;
+
+--A1L10 is Add0~153
+A1L10 = CARRY(N1_result[4] & (F1_result[4] # !A1L8) # !N1_result[4] & F1_result[4] & !A1L8);
+
+
+--A1L33 is Add1~152
+A1L33 = (C1_Q[4] $ A1L9 $ !A1L32) # GND;
+
+--A1L34 is Add1~153
+A1L34 = CARRY(C1_Q[4] & (A1L9 # !A1L32) # !C1_Q[4] & A1L9 & !A1L32);
+
+
+--C1_Q[5] is nBitRegister:XOffsetReg|Q[5]
+C1_Q[5] = DFFEAS(C1L18, Clock,  ,  ,  ,  ,  , A1L147,  );
+
+
+--A1L11 is Add0~154
+A1L11 = N1_result[5] & (F1_result[5] & A1L10 & VCC # !F1_result[5] & !A1L10) # !N1_result[5] & (F1_result[5] & !A1L10 # !F1_result[5] & (A1L10 # GND));
+
+--A1L12 is Add0~155
+A1L12 = CARRY(N1_result[5] & !F1_result[5] & !A1L10 # !N1_result[5] & (!A1L10 # !F1_result[5]));
+
+
+--A1L35 is Add1~154
+A1L35 = C1_Q[5] & (A1L11 & A1L34 & VCC # !A1L11 & !A1L34) # !C1_Q[5] & (A1L11 & !A1L34 # !A1L11 & (A1L34 # GND));
+
+--A1L36 is Add1~155
+A1L36 = CARRY(C1_Q[5] & !A1L11 & !A1L34 # !C1_Q[5] & (!A1L34 # !A1L11));
+
+
+--C1_Q[6] is nBitRegister:XOffsetReg|Q[6]
+C1_Q[6] = DFFEAS(C1L21, Clock,  ,  ,  ,  ,  , A1L147,  );
+
+
+--A1L13 is Add0~156
+A1L13 = (N1_result[6] $ F1_result[6] $ !A1L12) # GND;
+
+--A1L14 is Add0~157
+A1L14 = CARRY(N1_result[6] & (F1_result[6] # !A1L12) # !N1_result[6] & F1_result[6] & !A1L12);
+
+
+--A1L37 is Add1~156
+A1L37 = (C1_Q[6] $ A1L13 $ !A1L36) # GND;
+
+--A1L38 is Add1~157
+A1L38 = CARRY(C1_Q[6] & (A1L13 # !A1L36) # !C1_Q[6] & A1L13 & !A1L36);
+
+
+--C1_Q[7] is nBitRegister:XOffsetReg|Q[7]
+C1_Q[7] = DFFEAS(C1L24, Clock,  ,  ,  ,  ,  , A1L147,  );
+
+
+--A1L15 is Add0~158
+A1L15 = N1_result[7] & (F1_result[7] & A1L14 & VCC # !F1_result[7] & !A1L14) # !N1_result[7] & (F1_result[7] & !A1L14 # !F1_result[7] & (A1L14 # GND));
+
+--A1L16 is Add0~159
+A1L16 = CARRY(N1_result[7] & !F1_result[7] & !A1L14 # !N1_result[7] & (!A1L14 # !F1_result[7]));
+
+
+--A1L39 is Add1~158
+A1L39 = C1_Q[7] & (A1L15 & A1L38 & VCC # !A1L15 & !A1L38) # !C1_Q[7] & (A1L15 & !A1L38 # !A1L15 & (A1L38 # GND));
+
+--A1L40 is Add1~159
+A1L40 = CARRY(C1_Q[7] & !A1L15 & !A1L38 # !C1_Q[7] & (!A1L38 # !A1L15));
+
+
+--A1L17 is Add0~160
+A1L17 = (N1_result[8] $ F1_result[8] $ !A1L16) # GND;
+
+--A1L18 is Add0~161
+A1L18 = CARRY(N1_result[8] & (F1_result[8] # !A1L16) # !N1_result[8] & F1_result[8] & !A1L16);
+
+
+--A1L41 is Add1~160
+A1L41 = A1L17 & (A1L40 $ GND) # !A1L17 & !A1L40 & VCC;
+
+--A1L42 is Add1~161
+A1L42 = CARRY(A1L17 & !A1L40);
+
+
+--A1L19 is Add0~162
+A1L19 = N1_result[9] & (F1_result[9] & A1L18 & VCC # !F1_result[9] & !A1L18) # !N1_result[9] & (F1_result[9] & !A1L18 # !F1_result[9] & (A1L18 # GND));
+
+--A1L20 is Add0~163
+A1L20 = CARRY(N1_result[9] & !F1_result[9] & !A1L18 # !N1_result[9] & (!A1L18 # !F1_result[9]));
+
+
+--A1L43 is Add1~162
+A1L43 = A1L19 & !A1L42 # !A1L19 & (A1L42 # GND);
+
+--A1L44 is Add1~163
+A1L44 = CARRY(!A1L42 # !A1L19);
+
+
+--A1L21 is Add0~164
+A1L21 = (N1_result[10] $ F1_result[10] $ !A1L20) # GND;
+
+--A1L22 is Add0~165
+A1L22 = CARRY(N1_result[10] & (F1_result[10] # !A1L20) # !N1_result[10] & F1_result[10] & !A1L20);
+
+
+--A1L45 is Add1~164
+A1L45 = A1L21 & (A1L44 $ GND) # !A1L21 & !A1L44 & VCC;
+
+--A1L46 is Add1~165
+A1L46 = CARRY(A1L21 & !A1L44);
+
+
+--A1L23 is Add0~166
+A1L23 = N1_result[11] $ F1_result[11] $ A1L22;
+
+
+--A1L47 is Add1~166
+A1L47 = A1L23 $ A1L46;
+
+
+--P2L1 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~104
+P2L1 = C1_Q[0] & (Xin[0] $ VCC) # !C1_Q[0] & Xin[0] & VCC;
+
+--P2L2 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~105
+P2L2 = CARRY(C1_Q[0] & Xin[0]);
+
+
+--P2L3 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~106
+P2L3 = C1_Q[1] & (Xin[1] & P2L2 & VCC # !Xin[1] & !P2L2) # !C1_Q[1] & (Xin[1] & !P2L2 # !Xin[1] & (P2L2 # GND));
+
+--P2L4 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~107
+P2L4 = CARRY(C1_Q[1] & !Xin[1] & !P2L2 # !C1_Q[1] & (!P2L2 # !Xin[1]));
+
+
+--P2L5 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~108
+P2L5 = (C1_Q[2] $ Xin[2] $ !P2L4) # GND;
+
+--P2L6 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~109
+P2L6 = CARRY(C1_Q[2] & (Xin[2] # !P2L4) # !C1_Q[2] & Xin[2] & !P2L4);
+
+
+--P2L7 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~110
+P2L7 = C1_Q[3] & (Xin[3] & P2L6 & VCC # !Xin[3] & !P2L6) # !C1_Q[3] & (Xin[3] & !P2L6 # !Xin[3] & (P2L6 # GND));
+
+--P2L8 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~111
+P2L8 = CARRY(C1_Q[3] & !Xin[3] & !P2L6 # !C1_Q[3] & (!P2L6 # !Xin[3]));
+
+
+--P2L9 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~112
+P2L9 = (C1_Q[4] $ Xin[4] $ !P2L8) # GND;
+
+--P2L10 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~113
+P2L10 = CARRY(C1_Q[4] & (Xin[4] # !P2L8) # !C1_Q[4] & Xin[4] & !P2L8);
+
+
+--P2L11 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~114
+P2L11 = C1_Q[5] & (Xin[5] & P2L10 & VCC # !Xin[5] & !P2L10) # !C1_Q[5] & (Xin[5] & !P2L10 # !Xin[5] & (P2L10 # GND));
+
+--P2L12 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~115
+P2L12 = CARRY(C1_Q[5] & !Xin[5] & !P2L10 # !C1_Q[5] & (!P2L10 # !Xin[5]));
+
+
+--P2L13 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~116
+P2L13 = (C1_Q[6] $ Xin[6] $ !P2L12) # GND;
+
+--P2L14 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~117
+P2L14 = CARRY(C1_Q[6] & (Xin[6] # !P2L12) # !C1_Q[6] & Xin[6] & !P2L12);
+
+
+--P2L15 is addx:XoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_big:auto_generated|op_1~118
+P2L15 = C1_Q[7] $ Xin[7] $ P2L14;
+
+
+--C2_Q[0] is nBitRegister:YOffsetReg|Q[0]
+C2_Q[0] = DFFEAS(C2L3, Clock,  ,  ,  ,  ,  , A1L148,  );
+
+
+--Q2L1 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~91
+Q2L1 = C2_Q[0] & (Yin[0] $ VCC) # !C2_Q[0] & Yin[0] & VCC;
+
+--Q2L2 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~92
+Q2L2 = CARRY(C2_Q[0] & Yin[0]);
+
+
+--C2_Q[1] is nBitRegister:YOffsetReg|Q[1]
+C2_Q[1] = DFFEAS(C2L6, Clock,  ,  ,  ,  ,  , A1L148,  );
+
+
+--Q2L3 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~93
+Q2L3 = C2_Q[1] & (Yin[1] & Q2L2 & VCC # !Yin[1] & !Q2L2) # !C2_Q[1] & (Yin[1] & !Q2L2 # !Yin[1] & (Q2L2 # GND));
+
+--Q2L4 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~94
+Q2L4 = CARRY(C2_Q[1] & !Yin[1] & !Q2L2 # !C2_Q[1] & (!Q2L2 # !Yin[1]));
+
+
+--C2_Q[2] is nBitRegister:YOffsetReg|Q[2]
+C2_Q[2] = DFFEAS(C2L9, Clock,  ,  ,  ,  ,  , A1L148,  );
+
+
+--Q2L5 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~95
+Q2L5 = (C2_Q[2] $ Yin[2] $ !Q2L4) # GND;
+
+--Q2L6 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~96
+Q2L6 = CARRY(C2_Q[2] & (Yin[2] # !Q2L4) # !C2_Q[2] & Yin[2] & !Q2L4);
+
+
+--C2_Q[3] is nBitRegister:YOffsetReg|Q[3]
+C2_Q[3] = DFFEAS(C2L12, Clock,  ,  ,  ,  ,  , A1L148,  );
+
+
+--Q2L7 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~97
+Q2L7 = C2_Q[3] & (Yin[3] & Q2L6 & VCC # !Yin[3] & !Q2L6) # !C2_Q[3] & (Yin[3] & !Q2L6 # !Yin[3] & (Q2L6 # GND));
+
+--Q2L8 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~98
+Q2L8 = CARRY(C2_Q[3] & !Yin[3] & !Q2L6 # !C2_Q[3] & (!Q2L6 # !Yin[3]));
+
+
+--C2_Q[4] is nBitRegister:YOffsetReg|Q[4]
+C2_Q[4] = DFFEAS(C2L15, Clock,  ,  ,  ,  ,  , A1L148,  );
+
+
+--Q2L9 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~99
+Q2L9 = (C2_Q[4] $ Yin[4] $ !Q2L8) # GND;
+
+--Q2L10 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~100
+Q2L10 = CARRY(C2_Q[4] & (Yin[4] # !Q2L8) # !C2_Q[4] & Yin[4] & !Q2L8);
+
+
+--C2_Q[5] is nBitRegister:YOffsetReg|Q[5]
+C2_Q[5] = DFFEAS(C2L18, Clock,  ,  ,  ,  ,  , A1L148,  );
+
+
+--Q2L11 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~101
+Q2L11 = C2_Q[5] & (Yin[5] & Q2L10 & VCC # !Yin[5] & !Q2L10) # !C2_Q[5] & (Yin[5] & !Q2L10 # !Yin[5] & (Q2L10 # GND));
+
+--Q2L12 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~102
+Q2L12 = CARRY(C2_Q[5] & !Yin[5] & !Q2L10 # !C2_Q[5] & (!Q2L10 # !Yin[5]));
+
+
+--C2_Q[6] is nBitRegister:YOffsetReg|Q[6]
+C2_Q[6] = DFFEAS(C2L21, Clock,  ,  ,  ,  ,  , A1L148,  );
+
+
+--Q2L13 is addy:YoutAdder|lpm_add_sub:lpm_add_sub_component|add_sub_aig:auto_generated|op_1~103
+Q2L13 = C2_Q[6] $ Yin[6] $ !Q2L12;
+
+
+--C1L3 is nBitRegister:XOffsetReg|Q[0]~90
+C1L3 = Q.INC_X & (C1_Q[0] $ VCC) # !Q.INC_X & C1_Q[0] & VCC;
+
+--C1L4 is nBitRegister:XOffsetReg|Q[0]~91
+C1L4 = CARRY(Q.INC_X & C1_Q[0]);
+
+
+--N1_mac_mult1 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1
+--DSP Block Multiplier Base Width: 9-bits
+N1_mac_mult1_a_data = DATA(M1L11, M1L9, M1L7, M1L5, M1L3, M1L1, L1L1, H1_decoder_node[0][0]);
+N1_mac_mult1_a_rep = A1L197 ? SIGNED(N1_mac_mult1_a_data) : UNSIGNED(N1_mac_mult1_a_data);
+N1_mac_mult1_b_data = DATA(Height[4], Height[3], Height[2], Height[1], Height[0]);
+N1_mac_mult1_b_rep = A1L197 ? SIGNED(N1_mac_mult1_b_data) : UNSIGNED(N1_mac_mult1_b_data);
+N1_mac_mult1_result = N1_mac_mult1_a_rep * N1_mac_mult1_b_rep;
+N1_mac_mult1 = N1_mac_mult1_result[0];
+
+--N1L2 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT1
+N1L2 = N1_mac_mult1_result[1];
+
+--N1L3 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT2
+N1L3 = N1_mac_mult1_result[2];
+
+--N1L4 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT3
+N1L4 = N1_mac_mult1_result[3];
+
+--N1L5 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT4
+N1L5 = N1_mac_mult1_result[4];
+
+--N1L6 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT5
+N1L6 = N1_mac_mult1_result[5];
+
+--N1L7 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT6
+N1L7 = N1_mac_mult1_result[6];
+
+--N1L8 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT7
+N1L8 = N1_mac_mult1_result[7];
+
+--N1L9 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT8
+N1L9 = N1_mac_mult1_result[8];
+
+--N1L10 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT9
+N1L10 = N1_mac_mult1_result[9];
+
+--N1L11 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT10
+N1L11 = N1_mac_mult1_result[10];
+
+--N1L12 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT11
+N1L12 = N1_mac_mult1_result[11];
+
+--N1L13 is lpm_mult:Mult2|mult_6s01:auto_generated|mac_mult1~DATAOUT12
+N1L13 = N1_mac_mult1_result[12];
+
+
+--F1_mac_mult1 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1
+--DSP Block Multiplier Base Width: 9-bits
+F1_mac_mult1_a_data = DATA(C2_Q[6], C2_Q[5], C2_Q[4], C2_Q[3], C2_Q[2], C2_Q[1], C2_Q[0]);
+F1_mac_mult1_a_rep = A1L197 ? SIGNED(F1_mac_mult1_a_data) : UNSIGNED(F1_mac_mult1_a_data);
+F1_mac_mult1_b_data = DATA(Width[4], Width[3], Width[2], Width[1], Width[0]);
+F1_mac_mult1_b_rep = A1L197 ? SIGNED(F1_mac_mult1_b_data) : UNSIGNED(F1_mac_mult1_b_data);
+F1_mac_mult1_result = F1_mac_mult1_a_rep * F1_mac_mult1_b_rep;
+F1_mac_mult1 = F1_mac_mult1_result[0];
+
+--F1L2 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT1
+F1L2 = F1_mac_mult1_result[1];
+
+--F1L3 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT2
+F1L3 = F1_mac_mult1_result[2];
+
+--F1L4 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT3
+F1L4 = F1_mac_mult1_result[3];
+
+--F1L5 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT4
+F1L5 = F1_mac_mult1_result[4];
+
+--F1L6 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT5
+F1L6 = F1_mac_mult1_result[5];
+
+--F1L7 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT6
+F1L7 = F1_mac_mult1_result[6];
+
+--F1L8 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT7
+F1L8 = F1_mac_mult1_result[7];
+
+--F1L9 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT8
+F1L9 = F1_mac_mult1_result[8];
+
+--F1L10 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT9
+F1L10 = F1_mac_mult1_result[9];
+
+--F1L11 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT10
+F1L11 = F1_mac_mult1_result[10];
+
+--F1L12 is lpm_mult:Mult0|mult_4s01:auto_generated|mac_mult1~DATAOUT11
+F1L12 = F1_mac_mult1_result[11];
+
+
+--C1L6 is nBitRegister:XOffsetReg|Q[1]~92
+C1L6 = C1_Q[1] & !C1L4 # !C1_Q[1] & (C1L4 # GND);
+
+--C1L7 is nBitRegister:XOffsetReg|Q[1]~93
+C1L7 = CARRY(!C1L4 # !C1_Q[1]);
+
+
+--C1L9 is nBitRegister:XOffsetReg|Q[2]~94
+C1L9 = C1_Q[2] & (C1L7 $ GND) # !C1_Q[2] & !C1L7 & VCC;
+
+--C1L10 is nBitRegister:XOffsetReg|Q[2]~95
+C1L10 = CARRY(C1_Q[2] & !C1L7);
+
+
+--C1L12 is nBitRegister:XOffsetReg|Q[3]~96
+C1L12 = C1_Q[3] & !C1L10 # !C1_Q[3] & (C1L10 # GND);
+
+--C1L13 is nBitRegister:XOffsetReg|Q[3]~97
+C1L13 = CARRY(!C1L10 # !C1_Q[3]);
+
+
+--C1L15 is nBitRegister:XOffsetReg|Q[4]~98
+C1L15 = C1_Q[4] & (C1L13 $ GND) # !C1_Q[4] & !C1L13 & VCC;
+
+--C1L16 is nBitRegister:XOffsetReg|Q[4]~99
+C1L16 = CARRY(C1_Q[4] & !C1L13);
+
+
+--C1L18 is nBitRegister:XOffsetReg|Q[5]~100
+C1L18 = C1_Q[5] & !C1L16 # !C1_Q[5] & (C1L16 # GND);
+
+--C1L19 is nBitRegister:XOffsetReg|Q[5]~101
+C1L19 = CARRY(!C1L16 # !C1_Q[5]);
+
+
+--C1L21 is nBitRegister:XOffsetReg|Q[6]~102
+C1L21 = C1_Q[6] & (C1L19 $ GND) # !C1_Q[6] & !C1L19 & VCC;
+
+--C1L22 is nBitRegister:XOffsetReg|Q[6]~103
+C1L22 = CARRY(C1_Q[6] & !C1L19);
+
+
+--C1L24 is nBitRegister:XOffsetReg|Q[7]~104
+C1L24 = C1_Q[7] $ C1L22;
+
+
+--C2L3 is nBitRegister:YOffsetReg|Q[0]~79
+C2L3 = Q.INC_Y & (C2_Q[0] $ VCC) # !Q.INC_Y & C2_Q[0] & VCC;
+
+--C2L4 is nBitRegister:YOffsetReg|Q[0]~80
+C2L4 = CARRY(Q.INC_Y & C2_Q[0]);
+
+
+--C2L6 is nBitRegister:YOffsetReg|Q[1]~81
+C2L6 = C2_Q[1] & !C2L4 # !C2_Q[1] & (C2L4 # GND);
+
+--C2L7 is nBitRegister:YOffsetReg|Q[1]~82
+C2L7 = CARRY(!C2L4 # !C2_Q[1]);
+
+
+--C2L9 is nBitRegister:YOffsetReg|Q[2]~83
+C2L9 = C2_Q[2] & (C2L7 $ GND) # !C2_Q[2] & !C2L7 & VCC;
+
+--C2L10 is nBitRegister:YOffsetReg|Q[2]~84
+C2L10 = CARRY(C2_Q[2] & !C2L7);
+
+
+--C2L12 is nBitRegister:YOffsetReg|Q[3]~85
+C2L12 = C2_Q[3] & !C2L10 # !C2_Q[3] & (C2L10 # GND);
+
+--C2L13 is nBitRegister:YOffsetReg|Q[3]~86
+C2L13 = CARRY(!C2L10 # !C2_Q[3]);
+
+
+--C2L15 is nBitRegister:YOffsetReg|Q[4]~87
+C2L15 = C2_Q[4] & (C2L13 $ GND) # !C2_Q[4] & !C2L13 & VCC;
+
+--C2L16 is nBitRegister:YOffsetReg|Q[4]~88
+C2L16 = CARRY(C2_Q[4] & !C2L13);
+
+
+--C2L18 is nBitRegister:YOffsetReg|Q[5]~89
+C2L18 = C2_Q[5] & !C2L16 # !C2_Q[5] & (C2L16 # GND);
+
+--C2L19 is nBitRegister:YOffsetReg|Q[5]~90
+C2L19 = CARRY(!C2L16 # !C2_Q[5]);
+
+
+--C2L21 is nBitRegister:YOffsetReg|Q[6]~91
+C2L21 = C2_Q[6] $ !C2L19;
+
+
+--L1L1 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~27
+L1L1 = H1_decoder_node[0][1] & (H1_decoder_node[1][0] $ VCC) # !H1_decoder_node[0][1] & H1_decoder_node[1][0] & VCC;
+
+--L1L2 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~28
+L1L2 = CARRY(H1_decoder_node[0][1] & H1_decoder_node[1][0]);
+
+
+--L1L3 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~29
+L1L3 = H1_decoder_node[0][2] & (H1_decoder_node[1][1] & L1L2 & VCC # !H1_decoder_node[1][1] & !L1L2) # !H1_decoder_node[0][2] & (H1_decoder_node[1][1] & !L1L2 # !H1_decoder_node[1][1] & (L1L2 # GND));
+
+--L1L4 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~30
+L1L4 = CARRY(H1_decoder_node[0][2] & !H1_decoder_node[1][1] & !L1L2 # !H1_decoder_node[0][2] & (!L1L2 # !H1_decoder_node[1][1]));
+
+
+--M1L1 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~33
+M1L1 = L1L3 & (H1_decoder_node[2][0] $ VCC) # !L1L3 & H1_decoder_node[2][0] & VCC;
+
+--M1L2 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~34
+M1L2 = CARRY(L1L3 & H1_decoder_node[2][0]);
+
+
+--L1L5 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~31
+L1L5 = (H1_decoder_node[0][3] $ H1_decoder_node[1][2] $ !L1L4) # GND;
+
+--L1L6 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~32
+L1L6 = CARRY(H1_decoder_node[0][3] & (H1_decoder_node[1][2] # !L1L4) # !H1_decoder_node[0][3] & H1_decoder_node[1][2] & !L1L4);
+
+
+--M1L3 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~35
+M1L3 = L1L5 & (H1_decoder_node[2][1] & M1L2 & VCC # !H1_decoder_node[2][1] & !M1L2) # !L1L5 & (H1_decoder_node[2][1] & !M1L2 # !H1_decoder_node[2][1] & (M1L2 # GND));
+
+--M1L4 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~36
+M1L4 = CARRY(L1L5 & !H1_decoder_node[2][1] & !M1L2 # !L1L5 & (!M1L2 # !H1_decoder_node[2][1]));
+
+
+--L1L7 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~33
+L1L7 = H1_decoder_node[0][4] & (H1_decoder_node[1][3] & L1L6 & VCC # !H1_decoder_node[1][3] & !L1L6) # !H1_decoder_node[0][4] & (H1_decoder_node[1][3] & !L1L6 # !H1_decoder_node[1][3] & (L1L6 # GND));
+
+--L1L8 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~34
+L1L8 = CARRY(H1_decoder_node[0][4] & !H1_decoder_node[1][3] & !L1L6 # !H1_decoder_node[0][4] & (!L1L6 # !H1_decoder_node[1][3]));
+
+
+--M1L5 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~37
+M1L5 = (L1L7 $ H1_decoder_node[2][2] $ !M1L4) # GND;
+
+--M1L6 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~38
+M1L6 = CARRY(L1L7 & (H1_decoder_node[2][2] # !M1L4) # !L1L7 & H1_decoder_node[2][2] & !M1L4);
+
+
+--L1L9 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~35
+L1L9 = H1_decoder_node[1][4] & (L1L8 $ GND) # !H1_decoder_node[1][4] & !L1L8 & VCC;
+
+--L1L10 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~36
+L1L10 = CARRY(H1_decoder_node[1][4] & !L1L8);
+
+
+--M1L7 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~39
+M1L7 = L1L9 & (H1_decoder_node[2][3] & M1L6 & VCC # !H1_decoder_node[2][3] & !M1L6) # !L1L9 & (H1_decoder_node[2][3] & !M1L6 # !H1_decoder_node[2][3] & (M1L6 # GND));
+
+--M1L8 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~40
+M1L8 = CARRY(L1L9 & !H1_decoder_node[2][3] & !M1L6 # !L1L9 & (!M1L6 # !H1_decoder_node[2][3]));
+
+
+--L1L11 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]|add_sub_27h:auto_generated|op_1~37
+L1L11 = L1L10;
+
+
+--M1L9 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~41
+M1L9 = (L1L11 $ H1_decoder_node[2][4] $ !M1L8) # GND;
+
+--M1L10 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~42
+M1L10 = CARRY(L1L11 & (H1_decoder_node[2][4] # !M1L8) # !L1L11 & H1_decoder_node[2][4] & !M1L8);
+
+
+--M1L11 is lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]|add_sub_37h:auto_generated|op_1~43
+M1L11 = M1L10;
+
+
+--A1L61 is Add3~78
+A1L61 = Width[0] $ VCC;
+
+--A1L62 is Add3~79
+A1L62 = CARRY(Width[0]);
+
+
+--A1L63 is Add3~80
+A1L63 = Width[1] & A1L62 & VCC # !Width[1] & !A1L62;
+
+--A1L64 is Add3~81
+A1L64 = CARRY(!Width[1] & !A1L62);
+
+
+--A1L65 is Add3~82
+A1L65 = Width[2] & (GND # !A1L64) # !Width[2] & (A1L64 $ GND);
+
+--A1L66 is Add3~83
+A1L66 = CARRY(Width[2] # !A1L64);
+
+
+--A1L67 is Add3~84
+A1L67 = Width[3] & A1L66 & VCC # !Width[3] & !A1L66;
+
+--A1L68 is Add3~85
+A1L68 = CARRY(!Width[3] & !A1L66);
+
+
+--A1L69 is Add3~86
+A1L69 = Width[4] & (GND # !A1L68) # !Width[4] & (A1L68 $ GND);
+
+--A1L70 is Add3~87
+A1L70 = CARRY(Width[4] # !A1L68);
+
+
+--A1L71 is Add3~88
+A1L71 = A1L70;
+
+
+--A1L49 is Add2~78
+A1L49 = Height[0] $ VCC;
+
+--A1L50 is Add2~79
+A1L50 = CARRY(Height[0]);
+
+
+--A1L51 is Add2~80
+A1L51 = Height[1] & A1L50 & VCC # !Height[1] & !A1L50;
+
+--A1L52 is Add2~81
+A1L52 = CARRY(!Height[1] & !A1L50);
+
+
+--A1L53 is Add2~82
+A1L53 = Height[2] & (GND # !A1L52) # !Height[2] & (A1L52 $ GND);
+
+--A1L54 is Add2~83
+A1L54 = CARRY(Height[2] # !A1L52);
+
+
+--A1L55 is Add2~84
+A1L55 = Height[3] & A1L54 & VCC # !Height[3] & !A1L54;
+
+--A1L56 is Add2~85
+A1L56 = CARRY(!Height[3] & !A1L54);
+
+
+--A1L57 is Add2~86
+A1L57 = Height[4] & (GND # !A1L56) # !Height[4] & (A1L56 $ GND);
+
+--A1L58 is Add2~87
+A1L58 = CARRY(Height[4] # !A1L56);
+
+
+--A1L59 is Add2~88
+A1L59 = A1L58;
+
+
+--MemSel[0] is MemSel[0]
+MemSel[0] = OUTPUT(Sprite[0]);
+
+
+--MemSel[1] is MemSel[1]
+MemSel[1] = OUTPUT(Sprite[1]);
+
+
+--MemSel[2] is MemSel[2]
+MemSel[2] = OUTPUT(Sprite[2]);
+
+
+--Address[0] is Address[0]
+Address[0] = OUTPUT(A1L25);
+
+
+--Address[1] is Address[1]
+Address[1] = OUTPUT(A1L27);
+
+
+--Address[2] is Address[2]
+Address[2] = OUTPUT(A1L29);
+
+
+--Address[3] is Address[3]
+Address[3] = OUTPUT(A1L31);
+
+
+--Address[4] is Address[4]
+Address[4] = OUTPUT(A1L33);
+
+
+--Address[5] is Address[5]
+Address[5] = OUTPUT(A1L35);
+
+
+--Address[6] is Address[6]
+Address[6] = OUTPUT(A1L37);
+
+
+--Address[7] is Address[7]
+Address[7] = OUTPUT(A1L39);
+
+
+--Address[8] is Address[8]
+Address[8] = OUTPUT(A1L41);
+
+
+--Address[9] is Address[9]
+Address[9] = OUTPUT(A1L43);
+
+
+--Address[10] is Address[10]
+Address[10] = OUTPUT(A1L45);
+
+
+--Address[11] is Address[11]
+Address[11] = OUTPUT(A1L47);
+
+
+--Xout[0] is Xout[0]
+Xout[0] = OUTPUT(P2L1);
+
+
+--Xout[1] is Xout[1]
+Xout[1] = OUTPUT(P2L3);
+
+
+--Xout[2] is Xout[2]
+Xout[2] = OUTPUT(P2L5);
+
+
+--Xout[3] is Xout[3]
+Xout[3] = OUTPUT(P2L7);
+
+
+--Xout[4] is Xout[4]
+Xout[4] = OUTPUT(P2L9);
+
+
+--Xout[5] is Xout[5]
+Xout[5] = OUTPUT(P2L11);
+
+
+--Xout[6] is Xout[6]
+Xout[6] = OUTPUT(P2L13);
+
+
+--Xout[7] is Xout[7]
+Xout[7] = OUTPUT(P2L15);
+
+
+--Yout[0] is Yout[0]
+Yout[0] = OUTPUT(Q2L1);
+
+
+--Yout[1] is Yout[1]
+Yout[1] = OUTPUT(Q2L3);
+
+
+--Yout[2] is Yout[2]
+Yout[2] = OUTPUT(Q2L5);
+
+
+--Yout[3] is Yout[3]
+Yout[3] = OUTPUT(Q2L7);
+
+
+--Yout[4] is Yout[4]
+Yout[4] = OUTPUT(Q2L9);
+
+
+--Yout[5] is Yout[5]
+Yout[5] = OUTPUT(Q2L11);
+
+
+--Yout[6] is Yout[6]
+Yout[6] = OUTPUT(Q2L13);
+
+
+--Color[0] is Color[0]
+Color[0] = OUTPUT(DataIn[0]);
+
+
+--Color[1] is Color[1]
+Color[1] = OUTPUT(DataIn[1]);
+
+
+--Color[2] is Color[2]
+Color[2] = OUTPUT(DataIn[2]);
+
+
+--Color[3] is Color[3]
+Color[3] = OUTPUT(DataIn[3]);
+
+
+--Color[4] is Color[4]
+Color[4] = OUTPUT(DataIn[4]);
+
+
+--Color[5] is Color[5]
+Color[5] = OUTPUT(DataIn[5]);
+
+
+--Color[6] is Color[6]
+Color[6] = OUTPUT(DataIn[6]);
+
+
+--Color[7] is Color[7]
+Color[7] = OUTPUT(DataIn[7]);
+
+
+--Color[8] is Color[8]
+Color[8] = OUTPUT(DataIn[8]);
+
+
+--Done is Done
+Done = OUTPUT(Q.IDLE);
+
+
+--VGA_Draw is VGA_Draw
+VGA_Draw = OUTPUT(A1L156);
+
+
+--Sprite[0] is Sprite[0]
+Sprite[0] = INPUT();
+
+
+--Sprite[1] is Sprite[1]
+Sprite[1] = INPUT();
+
+
+--Sprite[2] is Sprite[2]
+Sprite[2] = INPUT();
+
+
+--Xin[0] is Xin[0]
+Xin[0] = INPUT();
+
+
+--Xin[1] is Xin[1]
+Xin[1] = INPUT();
+
+
+--Xin[2] is Xin[2]
+Xin[2] = INPUT();
+
+
+--Xin[3] is Xin[3]
+Xin[3] = INPUT();
+
+
+--Xin[4] is Xin[4]
+Xin[4] = INPUT();
+
+
+--Xin[5] is Xin[5]
+Xin[5] = INPUT();
+
+
+--Xin[6] is Xin[6]
+Xin[6] = INPUT();
+
+
+--Xin[7] is Xin[7]
+Xin[7] = INPUT();
+
+
+--Yin[0] is Yin[0]
+Yin[0] = INPUT();
+
+
+--Yin[1] is Yin[1]
+Yin[1] = INPUT();
+
+
+--Yin[2] is Yin[2]
+Yin[2] = INPUT();
+
+
+--Yin[3] is Yin[3]
+Yin[3] = INPUT();
+
+
+--Yin[4] is Yin[4]
+Yin[4] = INPUT();
+
+
+--Yin[5] is Yin[5]
+Yin[5] = INPUT();
+
+
+--Yin[6] is Yin[6]
+Yin[6] = INPUT();
+
+
+--DataIn[0] is DataIn[0]
+DataIn[0] = INPUT();
+
+
+--DataIn[1] is DataIn[1]
+DataIn[1] = INPUT();
+
+
+--DataIn[2] is DataIn[2]
+DataIn[2] = INPUT();
+
+
+--DataIn[3] is DataIn[3]
+DataIn[3] = INPUT();
+
+
+--DataIn[4] is DataIn[4]
+DataIn[4] = INPUT();
+
+
+--DataIn[5] is DataIn[5]
+DataIn[5] = INPUT();
+
+
+--DataIn[6] is DataIn[6]
+DataIn[6] = INPUT();
+
+
+--DataIn[7] is DataIn[7]
+DataIn[7] = INPUT();
+
+
+--DataIn[8] is DataIn[8]
+DataIn[8] = INPUT();
+
+
+--Q.IDLE is Q.IDLE
+Q.IDLE = DFFEAS(A1L143, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--Q.DRAW is Q.DRAW
+Q.DRAW = DFFEAS(A1L144, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L126 is Equal2~80
+A1L126 = DataIn[0] & DataIn[1] & DataIn[2] & !DataIn[3];
+
+
+--A1L127 is Equal2~81
+A1L127 = DataIn[6] & DataIn[7] & !DataIn[4] & !DataIn[5];
+
+
+--A1L156 is VGA_Draw~9
+A1L156 = Q.DRAW & (!A1L127 # !A1L126 # !DataIn[8]);
+
+
+--Clock is Clock
+Clock = INPUT();
+
+
+--Q.INC_X is Q.INC_X
+Q.INC_X = DFFEAS(A1L145, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L147 is ResetX~0
+A1L147 = !Q.DRAW & !Q.INC_X;
+
+
+--Q.INC_Y is Q.INC_Y
+Q.INC_Y = DFFEAS(A1L146, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--Q.000 is Q.000
+Q.000 = DFFEAS(Resetn, Clock,  ,  ,  ,  ,  ,  ,  );
+
+
+--A1L148 is ResetY~0
+A1L148 = Q.IDLE # !Q.000;
+
+
+--Resetn is Resetn
+Resetn = INPUT();
+
+
+--A1L143 is Q~67
+A1L143 = D.IDLE & Resetn;
+
+
+--A1L144 is Q~68
+A1L144 = Resetn & D.DRAW;
+
+
+--A1L145 is Q~69
+A1L145 = Resetn & D.INC_X;
+
+
+--Height[0] is Height[0]
+Height[0] = INPUT();
+
+
+--Height[1] is Height[1]
+Height[1] = INPUT();
+
+
+--Height[2] is Height[2]
+Height[2] = INPUT();
+
+
+--Height[3] is Height[3]
+Height[3] = INPUT();
+
+
+--Height[4] is Height[4]
+Height[4] = INPUT();
+
+
+--Width[0] is Width[0]
+Width[0] = INPUT();
+
+
+--Width[1] is Width[1]
+Width[1] = INPUT();
+
+
+--Width[2] is Width[2]
+Width[2] = INPUT();
+
+
+--Width[3] is Width[3]
+Width[3] = INPUT();
+
+
+--Width[4] is Width[4]
+Width[4] = INPUT();
+
+
+--A1L146 is Q~70
+A1L146 = Resetn & D.INC_Y;
+
+
+--Enable is Enable
+Enable = INPUT();
+
+
+--A1L150 is Selector0~22
+A1L150 = Q.IDLE & !Enable # !Q.000;
+
+
+--A1L121 is Equal1~158
+A1L121 = C1_Q[2] & A1L65 & (C1_Q[3] $ !A1L67) # !C1_Q[2] & !A1L65 & (C1_Q[3] $ !A1L67);
+
+
+--A1L122 is Equal1~159
+A1L122 = C1_Q[1] & A1L63 & (C1_Q[4] $ !A1L69) # !C1_Q[1] & !A1L63 & (C1_Q[4] $ !A1L69);
+
+
+--A1L123 is Equal1~160
+A1L123 = !C1_Q[5] & !C1_Q[6] & (C1_Q[0] $ !A1L61);
+
+
+--A1L124 is Equal1~161
+A1L124 = A1L71 & !C1_Q[7];
+
+
+--A1L125 is Equal1~162
+A1L125 = A1L121 & A1L122 & A1L123 & A1L124;
+
+
+--A1L117 is Equal0~151
+A1L117 = C2_Q[2] & A1L53 & (C2_Q[3] $ !A1L55) # !C2_Q[2] & !A1L53 & (C2_Q[3] $ !A1L55);
+
+
+--A1L118 is Equal0~152
+A1L118 = C2_Q[1] & A1L51 & (C2_Q[4] $ !A1L57) # !C2_Q[1] & !A1L51 & (C2_Q[4] $ !A1L57);
+
+
+--A1L119 is Equal0~153
+A1L119 = !C2_Q[5] & !C2_Q[6] & (C2_Q[0] $ !A1L49);
+
+
+--A1L120 is Equal0~154
+A1L120 = A1L59 & A1L117 & A1L118 & A1L119;
+
+
+--D.IDLE is D.IDLE
+D.IDLE = LCELL(A1L150 # Q.DRAW & A1L125 & A1L120);
+
+
+--D.DRAW is D.DRAW
+D.DRAW = LCELL(Q.INC_X # Q.INC_Y # Q.IDLE & Enable);
+
+
+--D.INC_X is D.INC_X
+D.INC_X = LCELL(Q.DRAW & !A1L125);
+
+
+--AnimStep[0] is AnimStep[0]
+AnimStep[0] = INPUT();
+
+
+--H1_decoder_node[0][0] is lpm_mult:Mult1|multcore:mult_core|decoder_node[0][0]
+H1_decoder_node[0][0] = LCELL(Width[0] & AnimStep[0]);
+
+
+--H1_decoder_node[0][1] is lpm_mult:Mult1|multcore:mult_core|decoder_node[0][1]
+H1_decoder_node[0][1] = LCELL(Width[1] & AnimStep[0]);
+
+
+--AnimStep[1] is AnimStep[1]
+AnimStep[1] = INPUT();
+
+
+--H1_decoder_node[1][0] is lpm_mult:Mult1|multcore:mult_core|decoder_node[1][0]
+H1_decoder_node[1][0] = LCELL(Width[0] & AnimStep[1]);
+
+
+--H1_decoder_node[0][2] is lpm_mult:Mult1|multcore:mult_core|decoder_node[0][2]
+H1_decoder_node[0][2] = LCELL(Width[2] & AnimStep[0]);
+
+
+--H1_decoder_node[1][1] is lpm_mult:Mult1|multcore:mult_core|decoder_node[1][1]
+H1_decoder_node[1][1] = LCELL(Width[1] & AnimStep[1]);
+
+
+--AnimStep[2] is AnimStep[2]
+AnimStep[2] = INPUT();
+
+
+--H1_decoder_node[2][0] is lpm_mult:Mult1|multcore:mult_core|decoder_node[2][0]
+H1_decoder_node[2][0] = LCELL(Width[0] & AnimStep[2]);
+
+
+--H1_decoder_node[0][3] is lpm_mult:Mult1|multcore:mult_core|decoder_node[0][3]
+H1_decoder_node[0][3] = LCELL(Width[3] & AnimStep[0]);
+
+
+--H1_decoder_node[1][2] is lpm_mult:Mult1|multcore:mult_core|decoder_node[1][2]
+H1_decoder_node[1][2] = LCELL(Width[2] & AnimStep[1]);
+
+
+--H1_decoder_node[2][1] is lpm_mult:Mult1|multcore:mult_core|decoder_node[2][1]
+H1_decoder_node[2][1] = LCELL(Width[1] & AnimStep[2]);
+
+
+--H1_decoder_node[0][4] is lpm_mult:Mult1|multcore:mult_core|decoder_node[0][4]
+H1_decoder_node[0][4] = LCELL(Width[4] & AnimStep[0]);
+
+
+--H1_decoder_node[1][3] is lpm_mult:Mult1|multcore:mult_core|decoder_node[1][3]
+H1_decoder_node[1][3] = LCELL(Width[3] & AnimStep[1]);
+
+
+--H1_decoder_node[2][2] is lpm_mult:Mult1|multcore:mult_core|decoder_node[2][2]
+H1_decoder_node[2][2] = LCELL(Width[2] & AnimStep[2]);
+
+
+--H1_decoder_node[1][4] is lpm_mult:Mult1|multcore:mult_core|decoder_node[1][4]
+H1_decoder_node[1][4] = LCELL(Width[4] & AnimStep[1]);
+
+
+--H1_decoder_node[2][3] is lpm_mult:Mult1|multcore:mult_core|decoder_node[2][3]
+H1_decoder_node[2][3] = LCELL(Width[3] & AnimStep[2]);
+
+
+--H1_decoder_node[2][4] is lpm_mult:Mult1|multcore:mult_core|decoder_node[2][4]
+H1_decoder_node[2][4] = LCELL(Width[4] & AnimStep[2]);
+
+
+--D.INC_Y is D.INC_Y
+D.INC_Y = LCELL(Q.DRAW & A1L125 & !A1L120);
+
+
+--A1L197 is ~GND
+A1L197 = GND;
+
+

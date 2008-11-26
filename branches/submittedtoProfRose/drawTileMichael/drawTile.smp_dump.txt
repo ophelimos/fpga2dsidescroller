@@ -1,0 +1,8 @@
+
+State Machine - |drawTile|Q
+Name Q.INC_X Q.DRAW Q.IDLE Q.000 Q.INC_Y 
+Q.000 0 0 0 0 0 
+Q.IDLE 0 0 1 1 0 
+Q.DRAW 0 1 0 1 0 
+Q.INC_X 1 0 0 1 0 
+Q.INC_Y 0 0 0 1 1 
