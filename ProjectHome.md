@@ -1,0 +1,1 @@
+A 2d side scrolling platformer inspired by the classic super mario bros game. The game is designed for the altera de2 development board (cyclone 2 fpga) and outputs video to a vga display.
